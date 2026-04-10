@@ -15,6 +15,9 @@ PROMPT="$1"
 MAX_ITERATIONS=${2:-10}
 ITERATION=1
 
+PREVIOUS_OUTPUT=""
+CIRCUIT_BREAKER_STRIKES=0
+
 echo "🚂 Starting Ralph Loop for '$PROMPT'"
 echo "Max Iterations: $MAX_ITERATIONS"
 
@@ -24,13 +27,36 @@ while [ $ITERATION -le $MAX_ITERATIONS ]; do
     
     # Check if Claude Code is installed
     if command -v claude &> /dev/null; then
-        claude -p "$PROMPT"
+        # Capture output to detect infinite loops
+        TMP_FILE=$(mktemp)
+        claude -p "$PROMPT" > "$TMP_FILE" 2>&1 || true
+        CURRENT_OUTPUT=$(cat "$TMP_FILE")
+        cat "$TMP_FILE"
+        rm "$TMP_FILE"
     else
         echo "❌ Error: Claude CLI not found. Ralph Loop requires the 'claude' command line tool."
         exit 1
     fi
     
-    # We could check an exit condition via a file, e.g., if the agent touches 'DONE.flag'
+    # --------------------------------
+    # CIRCUIT BREAKERS
+    # --------------------------------
+    # 1. Identical Output Detection
+    if [ "$CURRENT_OUTPUT" == "$PREVIOUS_OUTPUT" ] && [ -n "$CURRENT_OUTPUT" ]; then
+        echo "⚠️ Circuit Breaker: Agent returned exact same output as previous iteration."
+        CIRCUIT_BREAKER_STRIKES=$((CIRCUIT_BREAKER_STRIKES+1))
+    else
+        CIRCUIT_BREAKER_STRIKES=0
+    fi
+
+    if [ $CIRCUIT_BREAKER_STRIKES -ge 2 ]; then
+        echo "🛑 FATAL: Circuit Breaker triggered. Agent is stuck in an infinite loop. Exiting."
+        exit 1
+    fi
+
+    PREVIOUS_OUTPUT="$CURRENT_OUTPUT"
+
+    # 2. DONE.flag detection
     if [ -f "DONE.flag" ]; then
         echo "🏁 DONE.flag found! Agent signaled task completion."
         rm DONE.flag
@@ -43,4 +69,8 @@ while [ $ITERATION -le $MAX_ITERATIONS ]; do
     sleep 5
 done
 
-echo "🎉 Ralph Loop Complete."
+if [ $ITERATION -gt $MAX_ITERATIONS ]; then
+    echo "⚠️ Ralph Loop reached max iterations ($MAX_ITERATIONS) without completing."
+else
+    echo "🎉 Ralph Loop Complete."
+fi

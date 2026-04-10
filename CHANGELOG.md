@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-10 6:53 PM CT — v1.3.0 — Autonomous Execution Hardening
+
+### Added
+- Created `tools/ccflare.py` local executive dashboard to accurately calculate and display total agent token burn factoring in cache tokens natively.
+- Integrated `tools/gfv-dream.sh` and `/gfv-dream-mode` to synthesize and compress fragmented session transcripts into durable knowledge natively via JSONL parsing.
+- Added `skills/review-pr` skill to perform secure 3-pass reviews (Security, Logic, GTM Strategy) on deployment candidates.
+- Added `tools/lint-agent.sh` to enforce AST integrity and formatting validations on `AGENT.md`.
+- Added new workflows `project-release` to structure repo deployments.
+
+### Changed
+- Promoted `README.md` to version 1.3.0.
+- Enhanced `AGENT.md` to formally adopt multi-model agent routing, multi-agent pipelining, and parallel planning frameworks.
+- Updated `skills/autoresearch` to require an explicit context 'Interview Phase' prior to arbitrary code mutations.
+
+
 ## 2026-04-10 10:10 AM CT — v1.2.0 — Awesome Claude Edition
 
 ### Added

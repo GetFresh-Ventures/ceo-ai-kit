@@ -1,10 +1,17 @@
 # Growth by Design
-**Version**: v1.1.0
+**Version**: v1.3.0
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
 
 Growth by Design is a plug-and-play enablement kit that integrates directly into your Claude Code environment. It packages battle-tested Go-To-Market (GTM) methodologies, workflows, and prompts into a system that acts as your autonomous Chief of Staff.
+
+## What's New in v1.3.0 (Autonomous Execution Hardening)
+- **Precise Token Monitoring (`ccflare.py`):** An executive token burn dashboard executing locally ensuring CEOs actively track Claude usage costs including cache creation/reads.
+- **Autonomous Memory Consolidation (`gfv-dream.sh`):** A robust script to natively search through your Claude session `jsonl` logs and compress insights directly into persistent memory.
+- **Strict Code/Deployment Pipeline (`/review-pr`):** Instantiates the rigorous Anthropic security prompt architecture to safeguard your GitHub / Tracking deploy loops.
+- **Multi-Level Agent Validations (`lint-agent.sh`):** Failsafe scripts ensuring that prompt/agent configuration structures never break IDE tooling silently.
+- **Smarter Auto-researching (`/autoresearch`):** Updated meta-skills to require explicit interview phases prior to applying environment mutations.
 
 ## What's New in v1.2.0 (Awesome Claude Edition)
 - **Persistent State Vector DB (`claude-mem`):** Integrates an autonomous background memory system that hooks into CLI tools, allowing you to ask "what did I do yesterday" and instantly pull relevant terminal context via MCP.

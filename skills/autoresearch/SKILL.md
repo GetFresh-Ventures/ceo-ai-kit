@@ -38,16 +38,16 @@ Take any existing skill, define what "good output" looks like as binary yes/no c
 
 ---
 
-## step 1: read the skill
+## step 1: read the skill & environment (The Interview Phase)
 
-Before changing anything, read and understand the target skill completely.
+Before changing anything, read and understand the target skill completely, AND explore the environment where it runs.
 
-1. Read the full SKILL.md file
-2. Read any files in `references/` that the skill links to
-3. Identify the skill's core job, process steps, and output format
-4. Note any existing quality checks or anti-patterns already in the skill
+1. **Explore:** Launch a subagent or autonomously review manifest files, build systems, `.claude/rules`, and directory structures relevant to the skill.
+2. **Read the Skill:** Read the full `SKILL.md` file and any files in `references/` that the skill links to. Identify its core job, steps, and outputs.
+3. **Interview the CEO:** After exploring, explicitly find what the codebase *cannot* tell you. Wait and ask the CEO for missing domain-specific context (e.g., personal environment quirks, unwritten preferences, expected tone).
+4. **Propose:** Before running massive mutational edits, summarize your understanding and show the CEO a proposed evaluation structure or test parameters.
 
-Do NOT skip this. You need to understand what the skill does before you can improve it.
+Do NOT skip this. You need to understand both what the skill does AND the environment it runs in before you can improve it.
 
 ---
 
