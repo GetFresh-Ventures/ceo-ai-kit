@@ -1,9 +1,15 @@
 # Growth by Design
+**Version**: v1.0.0
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
 
 Growth by Design is a plug-and-play enablement kit that integrates directly into your Claude Code environment. It packages battle-tested Go-To-Market (GTM) methodologies, workflows, and prompts into a system that acts as your autonomous Chief of Staff.
+
+## What's New in v1.0.0
+- **Initial Release:** Complete architecture mapping for GFV Growth By Design.
+- **Bootstrapping Script:** Fully functional `bootstrap.sh` added for fast installation.
+- **Core Framework:** Foundational skills, workflows, and hooks configured for executives.
 
 ## Why This Exists
 As a CEO, your time is your most constrained asset. You don't have time to write 5-touch email sequences from scratch, manually synthesize pipeline reports, or dig through CRM notes before a critical meeting. 
