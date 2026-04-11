@@ -350,6 +350,18 @@ If a skill requires reading massive documents (>1,000 lines, e.g. Fathom transcr
 ### Pattern 22: The Generalist Sponge (Headless Offloading)
 Any orchestrated task projected to take more than 5 sequential tool bounds (e.g., bulk file renaming, mass CRM syncing, multi-line refactors) MUST be offloaded to a background thread to prevent session degradation. The agent must generate a standalone script and execute it via `nohup` (`tools/gfv-generalist.sh`) so the orchestrator immediately returns control to the CEO.
 
+### Pattern 23: The Subagent Reporting Contract (Evidence Prioritization)
+For orchestrator agents deploying subagents (or executing research tools), you MUST enforce a strict reporting contract: Responses must cite actual file paths, exact API names, and copy-ready snippets. If conclusions or summaries are returned without citing hard evidence or logging known gaps, the orchestrator MUST reject the response and redeploy to gather proof.
+
+### Pattern 24: Phase 0 Documentation Discovery
+To prevent hallucinating APIs that "should" exist, agents must execute a "Phase 0" loop before planning complex multi-step implementations. Deploy a discovery pass to read docs and identify actual available methods and anti-patterns. Implementation tasks must be framed as "COPY from these documented patterns" rather than "Invent this feature".
+
+### Pattern 25: Progressive Disclosure Memory Loop (10x Context Efficiency)
+When searching massive databases, vector stores, or the PIL, agents MUST NOT execute sweeping blanket pulls. You must use a 3-Layer workflow: **Index (Search for IDs/Headers) -> Timeline (Chronological Context) -> Fetch (Pull only 1-2 exact IDs for full detail)**. This limits token destruction and enhances synthesis focus.
+
+### Pattern 26: Post-Execution Verification Isolation
+An agent writing code must not be the agent verifying its own code. After an implementation step, the orchestrator must execute verification in isolated logic bounds via subagents: a "Verification pass" (run tests/scripts), an "Anti-Pattern pass" (grep for forbidden code), and a "Code Quality pass". Only commit upon successful isolated verification.
+
 ---
 
 ## Quality Checklist

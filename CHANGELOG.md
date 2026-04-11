@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 11:58 AM PT — v1.8.0 — The Subagent Verification Protocol
+
+### Why it matters
+This release systematically eliminates "Orchestrator Hallucination" by grafting four core patterns extracted from the dotmack `claude-mem` codebase. It fundamentally alters the agent execution loop by removing execution authority from the main orchestrator, mandating evidence-based subagent reporting, and enforcing isolated post-execution verification to mathematically guarantee commit integrity.
+
+### Added
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 23: The Subagent Reporting Contract to enforce hard citations (file paths, exact APIs) from any data-gathering step.
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 24: Phase 0 Documentation Discovery to require explicit, isolated API verification prior to any code generation.
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 25: Progressive Disclosure Memory Loop to enforce 10x token efficiency (Index -> Timeline -> Fetch) for all search tools.
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Pattern 26: Post-Execution Verification Isolation to mandate parallel verification and anti-pattern grep checks before an agent can commit.
+- **`.agents/workflows/pil-context-synthesis.md`** — Mandated Progressive Disclosure 3-Layer fetching parameters for all PIL querying commands.
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILL-AUTHORING-STANDARD.md
+- /workflows/pil-context-synthesis.md (outside repo, internal state)
+
 ## 2026-04-11 11:55 AM PT — v1.7.0 — Deep Infrastructure Safeguards
 
 ### Why it matters

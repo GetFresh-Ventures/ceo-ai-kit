@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.7.0  
+**Version**: v1.8.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -297,6 +297,12 @@ To add a new workflow:
 ---
 
 ## Release History
+
+### What's New in v1.8.0 (The Subagent Verification Protocol)
+- **Subagent Reporting Contract (Pattern 23):** Orchestrators must reject any findings that do not cite file paths, API names, and copyable snippets. 
+- **Phase 0 Discovery (Pattern 24):** Agents must read documentation explicitly prior to any execution to ban API hallucination.
+- **Progressive Disclosure Loops (Pattern 25):** Strict 3-Layer memory gating (Index -> Timeline -> Fetch) applied to all PIL queries for 10x token efficiency.
+- **Verification Isolation (Pattern 26):** Agents are banned from verifying their own execution. Orchestrators must deploy isolated Verification, Anti-Pattern, and Code Review bounds before creating a git commit.
 
 ### What's New in v1.7.0 (Deep Infrastructure Safeguards)
 - **Untrusted Browser Paranoia:** New meta-rules to safeguard against prompt injection when reading visual DOM elements.
