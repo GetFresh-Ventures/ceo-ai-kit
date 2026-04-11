@@ -1,16 +1,48 @@
 ---
 name: weekly-ceo-brief
-description: Synthesize the week into a CEO-level summary — pipeline movement, key meetings, commitments, wins, risks, and priorities for next week.
+description: "Synthesize the week into a CEO-level summary — pipeline movement, key meetings, commitments, wins, risks, and priorities for next week. Resolves open items during synthesis, doesn't just report them. Use when the CEO asks 'how was the week,' 'weekly update,' 'board summary,' or on Friday afternoon."
+metadata:
+  version: 2.0.0
+  category: daily-operations
+  origin: GFV v1 + clawchief priority map + autoagent simplicity criterion
+  triggers:
+    - weekly brief
+    - how was the week
+    - weekly update
+    - board summary
+    - end of week
 ---
 
 # Weekly CEO Brief
 
-Your week distilled into what actually matters.
+Your week distilled into what actually matters — with open items resolved, not just listed.
 
-## When to Use
+## When to Activate
+
 - Friday afternoon / Sunday evening
 - Before weekly leadership standup
 - For investor or board reporting
+- Any time the CEO asks "how was the week"
+
+## The Resolve-First Rule
+
+**Don't just report the week — close loops during the synthesis.**
+
+| Bad Brief | Good Brief |
+|-----------|------------|
+| "Deal X had no activity" | "Deal X stalled 12 days. Follow-up drafted and task created (GFV-XXX). Recommend sending Monday." |
+| "Meeting with Acme happened" | "Met Acme. They're interested. Follow-up email drafted. HubSpot updated to Qualified. Next meeting Thursday." |
+| "We had 3 risks" | "3 risks identified. Risk A mitigated (changed approach). Risk B needs your decision by Tuesday. Risk C is monitoring only." |
+
+## Data Sources
+
+Pull from (in priority order) — **never from memory alone:**
+1. **HubSpot** — deal movement, new opportunities, stage changes
+2. **Linear** — tasks completed, tasks created, blockers
+3. **Calendar** — meetings attended this week
+4. **Email** — commitments made, follow-ups pending
+5. **Previous brief** — week-over-week comparison (is pipeline growing?)
+6. **PIL** — relationship context, entity history
 
 ## Output Format
 
@@ -18,58 +50,72 @@ Your week distilled into what actually matters.
 # CEO Brief — Week of [Date]
 
 ## 🎯 This Week in One Sentence
-[One sentence that captures the most important thing that happened]
+[The single most important thing]
 
 ## Pipeline
 - **New opportunities**: X ($X)
 - **Deals progressed**: X
 - **Deals won**: X ($X)
 - **Deals lost**: X ($X)
-- **Net change**: +/- $X
-- **Total active pipeline**: $X
+- **Net change**: +/- $X vs last week
+- **Total active pipeline**: $X (↑/↓ from $X)
 
 ## Key Meetings (What Mattered)
-| Meeting | With | Outcome | Next Step |
-|---------|------|---------|-----------|
+| Meeting | With | Outcome | Next Step | System Updated? |
+|---------|------|---------|-----------|----------------|
+| [meeting] | [who] | [what happened] | [specific next] | ✅ Linear/HubSpot |
 
-## Commitments Made
+## Commitments Tracker
 ### We Owe
-| What | To Whom | By When | Status |
-|------|---------|---------|--------|
+| What | To Whom | By When | Status | Action Taken |
+|------|---------|---------|--------|--------------|
 
 ### They Owe Us
-| What | From Whom | Expected | Status |
-|------|-----------|----------|--------|
+| What | From Whom | Expected | Status | Follow-up Created? |
+|------|-----------|----------|--------|-------------------|
 
 ## Wins 🎉
-- [Concrete win with numbers]
+- [Concrete win with numbers and attribution]
 
 ## Risks ⚠️
-- [Risk with mitigation plan]
+| Risk | Severity | Mitigation | Owner | Status |
+|------|----------|-----------|-------|--------|
+| [risk] | 🔴/🟡 | [specific action] | [who] | [done/pending/needs decision] |
+
+## Open Loops Resolved This Synthesis
+- [x] Created follow-up task for Deal X (GFV-XXX)
+- [x] Drafted follow-up email for Acme meeting
+- [ ] Needs Diraj: Decision on Risk B by Tuesday
 
 ## Next Week Priorities
-1. [Most important thing]
-2. [Second priority]
-3. [Third priority]
+1. [Most important — tied to revenue]
+2. [Second — what moves the needle]
+3. [Third — what prevents regression]
 ```
-
-## Data Sources
-Pull from (in order):
-1. CRM — deal movement, new opportunities
-2. Calendar — meetings attended
-3. Email — commitments, follow-ups
-4. Brain files — previous week's brief for comparison
 
 ## Rules
-- Lead with "so what" — not a data dump
-- Every risk must have a mitigation idea
-- Every commitment must have a deadline
-- Compare against last week (is pipeline growing or shrinking?)
-- Be honest about losses — don't bury them
 
-## Example Prompt
-```
-Generate my weekly CEO brief for this week.
-Pull pipeline data from CRM and compare to last week's brief
-in brain/weekly/. Use the weekly-ceo-brief skill.
-```
+1. **Lead with "so what"** — not a data dump
+2. **Every risk must have a mitigation plan with an owner** — not just "risk exists"
+3. **Every commitment must have a deadline and status** — not just "we owe them"
+4. **Compare against last week** — is pipeline growing or shrinking?
+5. **Be honest about losses** — don't bury them
+6. **Resolve during synthesis** — create tasks, draft emails, update systems while building the brief
+7. **Simplicity criterion** — if the brief is > 1 page, cut the noise. The CEO should scan this in 3 minutes.
+
+## Quality Gate
+
+Before delivering:
+- [ ] All data sourced from live systems (not memory)
+- [ ] Open loops identified and resolved where possible
+- [ ] Every risk has a mitigation and owner
+- [ ] Week-over-week comparison included
+- [ ] Brief is scannable in < 3 minutes
+- [ ] Systems updated during synthesis (not left as TODOs)
+
+## Related Skills
+
+- `pipeline-pulse` — Detailed pipeline health (weekly-ceo-brief is the summary layer)
+- `chief-of-staff` — Daily heartbeat (weekly-ceo-brief is the weekly layer)
+- `deal-review` — Deep dive into specific deals flagged in this brief
+- `board-deck-builder` — For turning weekly briefs into board materials
