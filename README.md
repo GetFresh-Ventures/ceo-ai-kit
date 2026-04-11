@@ -128,6 +128,7 @@ Once installed, you have access to **48 pre-built skills** and **4 multi-step wo
 | `/autoresearch` | Meta-skill: autonomously benchmarks and improves any other skill using experimental loops |
 | `/verify-execution` | Verifies changes via runtime observation instead of just reading diffs |
 | `/project-release` | Governed release workflow: version bump → CHANGELOG → README → git → GitHub Release → Linear |
+| `/ui-ux-pro-max` | AI-powered design intelligence mathematically scaling 161 industry-specific UI systems |
 | `/onboard` | Interactive setup wizard for first-time configuration |
 | `/google-doc-creation` | Professional Google Docs creation with branded styling |
 
@@ -224,6 +225,13 @@ Pre-built templates that `bootstrap.sh` copies into your `~/brain` directory:
 - `pipeline-report.md` — Template for weekly pipeline snapshots
 - `meeting-brief.md` — Template for pre-meeting intelligence dossiers
 - `weekly-pulse.md` — Template for the weekly CEO brief
+
+### 8. Security & Governance (`SKILL-AUTHORING-STANDARD.md`)
+
+The kit operates under strict mathematical and structural guardrails to prevent hallucination and prompt-injection attacks:
+- **Subagent Verification Protocol (Patterns 23-26):** Agents are strictly banned from verifying their own execution. The Primary Orchestrator must spawn isolated subagents to independently verify changes or review code.
+- **Structural Map Priority (Pattern 27):** Forbids dumping large files (500+ lines) directly into the agent's context window. The agent must sequentially execute `Index -> Outline -> Unfold` to preserve reasoning capability.
+- **Untrusted DOM Paranoia (Pattern 28):** The Primary Orchestrator is banned from directly parsing unverified remote DOMs/UIs. All external data scraping is shunted to sandboxed subagents to mitigate adversarial prompt injection.
 
 ---
 
@@ -378,6 +386,7 @@ gfv_growth_by_design/
 ├── CHANGELOG.md                     ← Versioned release history
 ├── ONBOARDING_PROMPT.md             ← Copy-paste prompt for first session
 ├── README.md                        ← This file
+├── SKILL-AUTHORING-STANDARD.md      ← The 28 absolute rules for structural integrity
 ├── bootstrap.sh                     ← One-command setup script
 ├── claude_settings.template.json    ← Claude Code settings template
 ├── SKILLS-REGISTRY.md               ← Complete skill registry (48 skills, 6 categories)
