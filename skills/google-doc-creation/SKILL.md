@@ -109,6 +109,41 @@ Lines containing these keywords are automatically styled **bold red** (`#CC1919`
 - 6pt padding below the border
 - Do NOT use on the title paragraph — only between major sections
 
+### Title / Cover Page — MANDATORY
+
+Every professional report MUST include a branded title page. Pass `cover_page` dict to `create_formatted_doc()`.
+
+**Layout (top → bottom, all centered):**
+
+| Element | Style |
+|---------|-------|
+| **Vertical push** | 9 blank lines (~40% down the page) |
+| **Main title** | 36pt, bold, Navy `#1B2A4A`, centered |
+| **Subtitle** | 28pt, regular, Gray `#666666`, centered, 16pt below |
+| **Domain** | 14pt, italic, Navy, centered, with 2pt navy `borderBottom` divider |
+| **Prepared by** | 13pt, Gray, centered, 8pt above |
+| **Date** | 13pt, Gray, centered |
+| **CONFIDENTIAL** | 10pt, Light Gray `#999999`, centered, 24pt above |
+| **Page break** | Separates title page from body content |
+
+**Usage:**
+
+```python
+url = create_formatted_doc(
+    markdown_content,
+    title="Client — Report Title",
+    folder_id="DRIVE_FOLDER_ID",
+    cover_page={
+        "title": "SEO Growth Strategy",
+        "subtitle": "Aprio Board Portal",
+        "domain": "aprioboardportal.com",
+        "prepared_by": "GetFresh Ventures",
+        "date": "April 2026",
+        "confidential": True,
+    }
+)
+```
+
 ## Writing Content for the Doc
 
 ### Markdown Format
