@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.5.0  
+**Version**: v1.5.1  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*

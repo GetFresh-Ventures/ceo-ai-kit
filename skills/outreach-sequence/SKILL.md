@@ -100,6 +100,14 @@ building at [company]."]
 **CRM Update**: Mark sequence complete. Set 90-day re-engagement reminder.
 ```
 
+## Sequence Quality Critique (3-Persona LLM-as-a-Judge)
+
+Before finalizing any outbound sequence, process the drafted sequence through the Reflexion Critique mechanism:
+1. **Persona A (Requirements Validator):** Does this sequence actually address the specific pain point of the prospect? Does it offer real value?
+2. **Persona B (Solution Architect):** Is the escalation path (Touch 1->5) logically sound, appropriately spaced, and non-annoying?
+3. **Persona C (Quality Reviewer):** Are the banned words completely removed? Is the tone perfectly matched to the CEO voice model?
+If any judge rejects the sequence, rewrite the failing touches before presenting to Diraj.
+
 ## Pre-Launch Checks (from clawchief)
 
 Before sending the first touch:

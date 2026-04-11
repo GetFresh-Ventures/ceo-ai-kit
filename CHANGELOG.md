@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 11:30 AM PT — v1.5.1 — Meta-Agentic Hardening
+
+### Why it matters
+This patch release implements the advanced "Context Engineering" and "Reflexion" mechanisms required to resolve context degradation (hallucinations resulting from oversized prompt windows) and eliminate unverified assumptions within the agent runtime. It establishes the "Ruthless Gatekeeper" identity constraint and formalizes a multi-persona LLM-as-a-Judge mechanism.
+
+### Changed
+- **`skills/verify-execution`** — Enforced the **Dependency & Impact Verification (HARD RULE)**. The agent now acts as a Ruthless Gatekeeper, strictly bound to verify downstream dependencies before declaring an execution complete.
+- **`skills/chief-of-staff`** — Added the **Task Complexity Triage** protocol, forcing deep validation on highly complex inputs instead of immediately auto-resolving.
+- **`skills/deal-review`** — Added strict gatekeeping constraint: agents must assume stale deals are dead until proven otherwise, rejecting optimistic CRM statuses.
+- **`skills/email-composer` & `skills/outreach-sequence`** — Implemented the **3-Persona Sequence Quality Critique (LLM-as-a-Judge)** loop: Requirements Validator, Solution Architect, and Quality Reviewer must independently co-sign high-stakes outbound emails or sequences.
+- **`workflows/pil-context-synthesis.md`** — Codified the **4-Bucket Context Degradation Framework**: Write, Select, Compress (Observation Masking), and Isolate. Enforced RULER U-curve limitations and the strict "Truncate, Don't Correct" rule to avoid context poisoning.
+
 ## 2026-04-11 10:50 AM PT — v1.5.0 — Battle-Tested Skill Elevation
 
 ### Why it matters

@@ -83,7 +83,15 @@ Apply the auto-resolver boundary:
 | Press/public-facing | 🔴 Escalate (CEO voice critical) |
 | Emotionally sensitive | 🔴 Escalate (judgment call) |
 
-### Step 5: Present for Approval
+### Step 5: High-Stakes Critique (3-Persona LLM-as-a-Judge)
+
+For Investor/Board, Legal, or High-Value Prospect emails, **do not** just present a single draft. Employ the Reflexion Critique mechanism instead:
+1. **Persona A (Requirements Validator):** CoVe (Chain-of-Verification) - Does this email meet the exact intent of the goal?
+2. **Persona B (Solution Architect):** CoVe - Is this the right strategic angle/leverage?
+3. **Persona C (Quality Reviewer):** CoVe - Is the tone exact? Does it strictly adhere to the banned words list?
+If they disagree, synthesize an executive summary of the debate, and present the final perfected draft based on this strict critique.
+
+### Step 6: Present for Approval
 
 Show the full email inline. Wait for explicit **"send it"** before any action.
 
