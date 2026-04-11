@@ -2,6 +2,49 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-11 8:40 AM PT — v1.4.0 — CEO Enablement Infrastructure
+
+### Why it matters
+This release transforms the GFV Enablement Kit from an advisory skill collection into a governed orchestration platform. CEOs now get inter-agent communication standards (preventing circular reasoning and groupthink), two-layer decision memory (so rejected proposals don't resurface), cascading risk modeling (modeling compound adversity across all business functions), and competitive intelligence systems. The chief-of-staff orchestrator was upgraded to v2.0 with 34-skill awareness, 5-phase consultation protocol, and formal quality verification loops before any output reaches the founder.
+
+### Added
+- **`skills/agent-protocol`** — Inter-agent communication standard: invoke/response syntax, loop prevention (depth=2, no circular), 4-step quality verification loop (self-verify → peer-verify → critic pre-screen → course correction), 3 standardized output formats, 10 non-negotiable communication rules
+- **`skills/context-engine`** — Company context loading with staleness detection (<30d/30-90d/>90d confidence tiers), privacy/anonymization rules, enrichment loop for capturing new context mid-session, /cs:setup onboarding questionnaire, PIL/HubSpot/Linear integration
+- **`skills/decision-logger`** — Two-layer decision memory: Layer 1 (raw transcripts, never auto-loaded), Layer 2 (approved-only decisions, loaded every session). DO_NOT_RESURFACE enforcement, conflict detection before logging, supersession tracking, /cs:decisions and /cs:review slash commands
+- **`skills/scenario-war-room`** — Cascading multi-variable risk modeling (max 3 variables): domain impact mapping across all C-suite roles, cascade effect mapping with interrupt points, 3 severity levels (base/stress/severe), early warning signals, hedging strategies with cost/impact/owner/deadline, stage-specific templates (pre-seed through Series B+, home services)
+- **`skills/competitive-intel`** — 5-layer competitive intelligence: competitor identification (2x2 threat matrix), 8-dimension tracking, analysis frameworks (SWOT, positioning maps, feature gap analysis), battlecard templates for sales, intelligence cadence (monthly scheduled + triggered events), win/loss analysis framework
+- **`skills/google-doc-creation`** — Professional Google Docs creation with branded styling via service account
+- **`skills/ceo-advisor`** — CEO strategic advisor with GFV portfolio context
+- **`skills/cfo-advisor`** — CFO financial advisor with burn/runway/fundraise frameworks
+- **`skills/coo-advisor`** — COO operational advisor with process/OKR/scaling guidance
+- **`skills/cmo-advisor`** — CMO marketing advisor with channel/brand/GTM strategy
+- **`skills/cro-advisor`** — CRO revenue advisor with pipeline/pricing/sales methodology
+- **`skills/founder-coach`** — Founder psychology, co-founder dynamics, personal development
+- **`skills/executive-mentor`** — Stress-testing, pre-mortem analysis, career navigation
+- **`skills/board-deck-builder`** — Board/investor update deck construction
+- **`skills/change-management`** — Organizational change, reorg, pivot communications
+- **`skills/launch-strategy`** — Product/service launch playbooks
+- **`skills/financial-analyst`** — Financial modeling, ratio analysis, valuation
+- **`skills/deal-review`** — Deal evaluation and pipeline health checks
+
+### Changed
+- **`skills/chief-of-staff`** — Major upgrade to v2.0: formal `[INVOKE:role|question]` syntax, 5-phase multi-role consultation protocol (framing → isolation → critique → synthesis → decision), 34-skill routing matrix, decision-logger integration, agent-protocol quality enforcement, loop prevention rules
+- **`SKILL-AUTHORING-STANDARD.md`** — Added Patterns 10-12: agent protocol compliance, standard output format specs (single-role, proactive alert, multi-role synthesis), decision memory integration requirement
+- **`skills/project-release`** — Upgraded with GitHub Releases via `gh` CLI, PT timezone enforcement, "Why it matters" requirement, Files Modified mandate, comprehensive README quality gate
+- **`README.md`** — Promoted to v1.4.0 with comprehensive CEO-first documentation
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILL-AUTHORING-STANDARD.md
+- skills/agent-protocol/SKILL.md, skills/context-engine/SKILL.md, skills/decision-logger/SKILL.md
+- skills/scenario-war-room/SKILL.md, skills/competitive-intel/SKILL.md
+- skills/chief-of-staff/SKILL.md, skills/ceo-advisor/SKILL.md
+- skills/cfo-advisor/SKILL.md, skills/coo-advisor/SKILL.md, skills/cmo-advisor/SKILL.md
+- skills/cro-advisor/SKILL.md, skills/founder-coach/SKILL.md, skills/executive-mentor/SKILL.md
+- skills/board-deck-builder/SKILL.md, skills/change-management/SKILL.md
+- skills/launch-strategy/SKILL.md, skills/financial-analyst/SKILL.md
+- skills/deal-review/SKILL.md, skills/google-doc-creation/SKILL.md
+- skills/project-release/SKILL.md
+
 ## 2026-04-10 4:53 PM PT — v1.3.0 — Autonomous Execution Hardening
 
 ### Why it matters

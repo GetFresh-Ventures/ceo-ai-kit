@@ -1,5 +1,5 @@
 # Growth by Design
-**Version**: v1.3.0  
+**Version**: v1.4.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 
 *An exclusive framework for GFV Portfolio CEOs.*
@@ -71,7 +71,7 @@ The AI will walk you through an interactive wizard to configure your voice model
 
 ## What Can It Do?
 
-Once installed, you have access to **17 pre-built skills** and **4 multi-step workflows** that cover the core daily and weekly activities of a growth CEO. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
+Once installed, you have access to **35 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
 
 ### Skills — Day-to-Day Execution
 
@@ -86,6 +86,34 @@ Once installed, you have access to **17 pre-built skills** and **4 multi-step wo
 | `/outreach-sequence` | Designs multi-touch outreach sequences — strategic, personalized, voice-model-compliant |
 | `/voice-model` | Build and evolve your personal writing voice model over time |
 
+### Skills — C-Suite Advisory (New in v1.4.0)
+
+| Skill | What it does |
+|-------|-------------|
+| `/chief-of-staff` | Orchestration layer — routes questions to the right advisor(s), triggers multi-role consultations, synthesizes output, manages decisions |
+| `/ceo-advisor` | Strategic direction, vision setting, investor narrative, company positioning |
+| `/cfo-advisor` | Cash management, fundraise strategy, burn rate, financial modeling |
+| `/coo-advisor` | Process design, OKR management, operational scaling, execution velocity |
+| `/cmo-advisor` | Brand positioning, channel strategy, CAC optimization, competitive messaging |
+| `/cro-advisor` | Pipeline management, pricing strategy, sales methodology, revenue acceleration |
+| `/founder-coach` | Founder psychology, co-founder dynamics, hiring decisions, personal development |
+| `/executive-mentor` | Stress-testing ideas, pre-mortem analysis, career navigation, uncomfortable truths |
+| `/board-deck-builder` | Board/investor update construction with stage-specific templates |
+| `/financial-analyst` | Financial modeling, ratio analysis, DCF valuation, budget variance |
+| `/scenario-war-room` | Cascading multi-variable risk modeling — "what if X AND Y both happen?" |
+| `/competitive-intel` | 5-layer competitive tracking with battlecard templates and win/loss analysis |
+
+### Skills — Infrastructure (New in v1.4.0)
+
+| Skill | What it does |
+|-------|-------------|
+| `/agent-protocol` | Inter-agent communication standard — prevents loops, enforces quality, standardizes output |
+| `/context-engine` | Company context loading with staleness detection, privacy rules, and enrichment |
+| `/decision-logger` | Two-layer decision memory — raw transcripts vs approved-only, conflict detection |
+| `/change-management` | Organizational change, reorg planning, pivot communications |
+| `/launch-strategy` | Product/service launch playbooks with GTM alignment |
+| `/deal-review` | Deal evaluation and pipeline health checks |
+
 ### Skills — Technical / Builder
 
 | Skill | What it does |
@@ -99,6 +127,7 @@ Once installed, you have access to **17 pre-built skills** and **4 multi-step wo
 | `/verify-execution` | Verifies changes via runtime observation instead of just reading diffs |
 | `/project-release` | Governed release workflow: version bump → CHANGELOG → README → git → GitHub Release → Linear |
 | `/onboard` | Interactive setup wizard for first-time configuration |
+| `/google-doc-creation` | Professional Google Docs creation with branded styling |
 
 ### Workflows — Recurring Rhythms
 
@@ -265,6 +294,16 @@ To add a new workflow:
 
 ## Release History
 
+### What's New in v1.4.0 (CEO Enablement Infrastructure)
+- **Full C-Suite Advisory System:** 12 advisory skills (CEO, CFO, COO, CMO, CRO, Founder Coach, Executive Mentor, Board Deck Builder, Financial Analyst, Scenario War Room, Competitive Intel, Chief of Staff v2.0)
+- **Agent Protocol:** Formal inter-agent communication standard — `[INVOKE:role|question]` syntax, loop prevention, 4-step quality verification before any output reaches the CEO
+- **Context Engine:** Company context loading with staleness detection (<30d/30-90d/>90d confidence tiers), privacy rules, and mid-session enrichment
+- **Decision Logger:** Two-layer memory — raw transcripts never auto-loaded, approved decisions loaded every session. `DO_NOT_RESURFACE` enforcement prevents re-litigating rejected proposals
+- **Scenario War Room:** Cascading multi-variable risk modeling — model compound adversity across all functions with severity levels, early warning signals, and hedging strategies
+- **Competitive Intelligence:** 5-layer tracking system with battlecard templates, win/loss analysis, and intelligence cadence scheduling
+- **Skill Authoring Standard v2:** New Patterns 10-12 mandate agent protocol compliance, standardized output formats, and decision memory integration for all advisory skills
+- **Skill count: 17 → 35** across advisory, operational, technical, and infrastructure categories
+
 ### What's New in v1.3.0 (Autonomous Execution Hardening)
 - **Precise Token Monitoring (`ccflare.py`):** Executive dashboard for real-time Claude usage costs including cache creation/read tokens
 - **Autonomous Memory Consolidation (`gfv-dream.sh`):** Natively parses Claude session `.jsonl` logs and compresses insights into persistent memory
@@ -302,11 +341,19 @@ gfv_growth_by_design/
 ├── README.md                        ← This file
 ├── bootstrap.sh                     ← One-command setup script
 ├── claude_settings.template.json    ← Claude Code settings template
-├── skills/                          ← 17 pre-built skills (slash commands)
+├── skills/                          ← 35 pre-built skills (slash commands)
+│   ├── agent-protocol/              ← Inter-agent communication standard
+│   ├── chief-of-staff/              ← C-suite orchestration layer
+│   ├── ceo-advisor/                 ← Strategic advisory
+│   ├── cfo-advisor/                 ← Financial advisory
+│   ├── context-engine/              ← Company context management
+│   ├── decision-logger/             ← Two-layer decision memory
+│   ├── scenario-war-room/           ← Cascading risk modeling
+│   ├── competitive-intel/           ← Competitive intelligence
 │   ├── email-composer/
 │   ├── meeting-prep/
 │   ├── pipeline-pulse/
-│   ├── ... (14 more)
+│   ├── ... (24 more)
 ├── workflows/                       ← Multi-step recurring routines
 │   ├── weekly-pipeline-review.md
 │   ├── meeting-day.md
