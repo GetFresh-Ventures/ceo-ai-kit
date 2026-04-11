@@ -172,6 +172,61 @@ Every finding tagged:
 If data is available from a connected system, the skill MUST pull it.
 Generic advice when live data exists is a failure mode.
 
+### Pattern 10: Agent Protocol Compliance
+All C-suite advisory skills MUST follow the agent-protocol skill:
+- **Invocation syntax:** `[INVOKE:role|question]` for cross-role queries
+- **Loop prevention:** No self-invocation, max depth 2, no circular calls
+- **Quality loop:** Self-verify → peer-verify → critic pre-screen (by stakes)
+- **Standard output formats:** Use the three formats defined in agent-protocol
+- **Communication rules:** Bottom line first, max 5 bullets, owners + deadlines on actions
+
+### Pattern 11: Standard Output Formats
+Three output formats — use the right one for the situation:
+
+**Single-Role Response:**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 [ROLE] — [Topic]
+BOTTOM LINE: [One sentence. No preamble.]
+WHAT: [Max 5 bullets with confidence tags]
+WHY THIS MATTERS: [Business impact]
+HOW TO ACT: [Actions with owners + deadlines]
+⚠️ RISKS: [Concrete — if X, then Y, costs $Z]
+🔑 YOUR DECISION: [Option A vs B with trade-offs]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**Proactive Alert:**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚩 [ROLE] — Proactive Alert
+WHAT I NOTICED: [Specific trigger]
+WHY IT MATTERS: [Business consequence]
+RECOMMENDED ACTION: [Who does what by when]
+URGENCY: 🔴 Act today | 🟡 This week | ⚪ Next review
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**Multi-Role Synthesis:**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 CONSULTATION — [Date] — [Topic]
+DECISION REQUIRED: [One sentence]
+PERSPECTIVES: [Each role, one line]
+WHERE THEY AGREE / DISAGREE: [Named conflicts]
+CRITIC'S VIEW: [The uncomfortable truth]
+ACTION ITEMS: [Owned + deadlined]
+🔑 YOUR CALL: [Options if you disagree]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+### Pattern 12: Decision Memory Integration
+Any skill that produces a CEO decision MUST log it via the decision-logger skill:
+- Layer 2 (approved decisions) loaded at session start
+- Rejected proposals tagged with `DO_NOT_RESURFACE`
+- Action items tracked with owners and deadlines
+- Review dates flagged when passed
+
 ---
 
 ## Quality Checklist
