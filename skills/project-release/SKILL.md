@@ -1,76 +1,211 @@
 ---
 name: project-release
-description: Governed release workflow for CEO enablement projects. Bumps semantic version, updates CHANGELOG and README, tags git, pushes to remote, and optionally syncs release notes to Linear.
+description: Governed release workflow for CEO enablement projects. Bumps semantic version, updates CHANGELOG and README, tags git, publishes GitHub Release, pushes to remote, and syncs release notes to Linear. Hard gates enforce no skipped steps.
 ---
 
 # `project-release`
 
-This skill provides a structured release process for AI-powered executives managing their own codebase and infrastructure. It ensures every release is documented, cleanly versioned, and broadcasted to tracking systems.
+// turbo-all
+
+This skill provides a structured release process for AI-powered executives managing their own codebase and infrastructure. It ensures every release is documented, cleanly versioned, published to GitHub Releases, and broadcasted to Linear.
 
 ## Prerequisites
 - A git repository initialized with a `README.md` and `CHANGELOG.md`.
 - Ensure there are no uncommitted changes or dirty working states prior to running this release.
-- GitHub CLI (`gh`) installed and authenticated for publishing formal releases.
-- (Optional) Linear Project ID + Linear API Key for project board synchronization.
+- GitHub CLI (`gh`) installed and authenticated (`/opt/homebrew/bin/gh auth status`).
+- (Optional) Linear Project ID for project board synchronization.
 
-## Phase 1: Determine Version Details
-1. Review the git history since the last tag. If a tag exists, run `git log $(git describe --tags --abbrev=0)..HEAD --oneline` to see what changed.
-2. Determine the new Semantic Version:
-   - **MAJOR (`v2.0.0`)**: Breaking framework changes or massive structural refactors.
-   - **MINOR (`v1.2.0`)**: New skills, workflows, or significant system additions.
-   - **PATCH (`v1.1.1`)**: Small fixes, prompt tweaks, or documentation updates.
-3. Formulate a short, punchy release title (e.g., `Awesome Claude Edition`).
-4. **Pause here** if running interactively. Ensure the CEO confirms the version bump and title before proceeding to writes.
+## Version Format
+`vMAJOR.MINOR.PATCH` — Example: `v1.3.0`
+- **MAJOR (`v2.0.0`)**: Breaking framework changes or massive structural refactors.
+- **MINOR (`v1.2.0`)**: New skills, workflows, or significant system additions.
+- **PATCH (`v1.1.1`)**: Small fixes, prompt tweaks, or documentation updates.
 
-## Phase 2: Documentation Upgrades
+---
 
-### 1. Update `CHANGELOG.md`
-Inject a new version header at the top of the `CHANGELOG.md` (right below the main `# Changelog` headers) tracking exactly this format:
+## STEP 1: Determine Version (GATE: must decide before proceeding)
+
+Check the latest tags and unreleased commits:
+```bash
+git describe --tags --abbrev=0 2>/dev/null || echo "No tags"
+git log $(git describe --tags --abbrev=0)..HEAD --oneline
+```
+
+Decide the new version number based on what changed since the last tag.
+Formulate a short, punchy release title (e.g., `Autonomous Execution Hardening`).
+
+**GATE: Do NOT proceed until the version bump and title are confirmed.**
+
+---
+
+## STEP 2: Pre-Flight Checks (GATE: all must pass)
+
+Run all checks:
+```bash
+echo "=== GIT STATUS ===" && git status --short && echo "=== UNCOMMITTED ===" && git diff --stat
+```
+
+**GATE: The following must ALL be true before proceeding:**
+- [ ] Version number decided (Step 1)
+- [ ] No unexpected uncommitted changes (or they are intentional for this release)
+
+---
+
+## STEP 3: Update CHANGELOG.md (GATE: must include version entry)
+
+Add a new entry at the TOP of `CHANGELOG.md` (right below the main `# Changelog` header) following this exact format:
 
 ```markdown
-## YYYY-MM-DD h:mm A CT — vX.Y.Z — Release Title
+## YYYY-MM-DD H:MM AM/PM CT — vX.Y.Z — Release Title
+
+### Why it matters
+A 1-3 sentence summary of the strategic impact of this release and why the changes were necessary.
 
 ### Added
-- [Feature 1 detail]
+- **`component/file`** — Description of feature or addition
 
 ### Changed
-- [Modification detail]
+- **`component/file`** — Description of what was modified
 
 ### Fixed
-- [Fix detail]
-```
-*Note: Timestamp must always be converted to Central Time (CT).*
+- **`component/file`** — Description of what was fixed
 
-### 2. Update `README.md`
+### Files Modified
+- file1.ext, file2.ext
+- path/to/file3.ext, path/to/file4.ext
+```
+
+Rules:
+- Time must be in **Central Time (CT)**
+- Use sections: Added, Changed, Fixed, Removed (only include non-empty sections)
+- Each item must be a concrete change with the component/file bolded, not vague
+- "Why it matters" is **mandatory** — explain the strategic impact
+- "Files Modified" is **mandatory** — list every file touched
+- Reference Linear issue IDs where applicable
+
+**GATE: CHANGELOG.md must have the new version entry before proceeding.**
+
+---
+
+## STEP 4: Update README.md
+
 - Locate the version identifier at the top (e.g., `**Version**: vX.Y.Z`) and increment it.
 - Locate or create the `"What's New in vX.Y.Z"` section to highlight the critical changes being pushed in this release.
+- Previous "What's New" section should remain below the new one.
 
-## Phase 3: Git Tagging and Push
-Execute the following to commit the version into history:
+**GATE: README.md must reference the new version before proceeding.**
 
-1. Stage the files:
-   `git add README.md CHANGELOG.md`
-2. Commit:
-   `git commit -m "vX.Y.Z: Release Title"`
-3. Tag the release:
-   `git tag -a "vX.Y.Z" -m "vX.Y.Z: Release Title"`
-4. Push to remote:
-   `git push origin main --tags --force-with-lease`
+---
 
-## Phase 4: GitHub Release Publish
-After the tag is pushed to origin, you must formally publish the release to the GitHub UI using the GitHub CLI (`gh`).
-1. Extract the exact bulleted body of the new release from `CHANGELOG.md` into a temporary file (e.g. `/tmp/vX.Y.Z_release_notes.md`).
-2. Run the GitHub CLI release creator:
-   `/opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z: Release Title" -F /tmp/vX.Y.Z_release_notes.md`
+## STEP 5: Git Commit + Tag
 
-## Phase 5: Linear Sync (If Applicable)
+Stage and commit:
+```bash
+git add -A && git status
+```
+
+Then commit and tag:
+```bash
+git commit -m "vX.Y.Z: Release Title" && git tag -a "vX.Y.Z" -m "vX.Y.Z: Release Title"
+```
+
+**GATE: Commit and tag must exist. Verify:**
+```bash
+git log -1 --oneline && git describe --tags --exact-match HEAD
+```
+
+---
+
+## STEP 6: Push to GitHub
+
+```bash
+git push origin main --tags --force-with-lease
+```
+
+**GATE: Push must succeed. Verify:**
+```bash
+git log -1 --oneline origin/main
+```
+
+---
+
+## STEP 7: Publish GitHub Release
+
+Extract the changelog body into a temp file and publish using the GitHub CLI:
+```bash
+/opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z: Release Title" -F /tmp/vX.Y.Z_release_notes.md
+```
+
+The release notes file must include:
+- "Why it matters" summary
+- All Added/Changed/Fixed sections
+- Files Modified listing
+- Link to the git commit hash
+
+**GATE: `gh release create` must succeed and return the GitHub release URL.**
+
+---
+
+## STEP 8: Linear Sync (If Applicable)
+
 If the active environment is tied to a Linear Project:
-1. Extract the new `CHANGELOG.md` entry.
-2. Formulate a markdown payload summarizing the release, including a direct link to the `git commit` hash on GitHub.
-3. Use the `mcp_linear-mcp-server_save_status_update` tool (or a graphql bash script) to publish the payload as a Project Update to the designated Linear Project. Set health to `onTrack`.
+1. Draft a markdown payload matching this format:
 
-## Verification & Execution Gates
-- **GATE**: Ensure `CHANGELOG.md` and `README.md` are correctly formatted before committing.
-- **GATE**: Verify `git push` succeeded and did not reject the tag.
-- **GATE**: Verify `gh release create` successfully returning the GitHub URL for the release.
-- **GATE**: Ensure Linear sync returned a `success` response.
+```markdown
+## vX.Y.Z — Release Title (Date)
+
+### Why it matters
+Strategic summary...
+
+**Key Changes:**
+- Detail 1
+- Detail 2
+
+**Files Modified:**
+- file1.ext, file2.ext
+
+**Git:** [commit_hash](https://github.com/ORG/REPO/commit/FULL_HASH)
+```
+
+2. Use the `mcp_linear-mcp-server_save_status_update` tool to publish the payload as a Project Update. Set health to `onTrack`.
+
+**GATE: Linear update must be created successfully.**
+
+---
+
+## STEP 9: Post-Release Verification
+
+Final verification:
+```bash
+echo "=== LAST COMMIT ===" && git log -1 --format="%H %s (%ai)" && echo "=== TAG ===" && git describe --tags --exact-match HEAD && echo "=== REMOTE SYNC ===" && git status -sb
+```
+
+**ALL gates must pass:**
+- [ ] CHANGELOG.md has new version entry with CT timestamp and "Why it matters"
+- [ ] README.md references new version in badge and What's New
+- [ ] Git commit message follows format `vX.Y.Z: Title`
+- [ ] Git tag matches version
+- [ ] Pushed to origin/main with tags
+- [ ] GitHub Release published (visible in repo Releases tab)
+- [ ] Linear project update created (if applicable)
+- [ ] No uncommitted changes remain
+
+---
+
+## Quick Reference
+
+### Commit Message Examples
+```
+v1.3.0: Autonomous Execution Hardening
+v1.2.1: Fix ccflare cache token parsing
+v2.0.0: Multi-agent orchestration rebuild
+```
+
+### Linear Health Status
+- `onTrack` — Default for routine releases
+- `atRisk` — When blockers exist or timeline is slipping
+- `offTrack` — When critical systems are broken
+
+### Time Conversion
+- PDT → CDT: add 2 hours (e.g., 3:00 PM PDT = 5:00 PM CDT)
+- UTC → CDT: subtract 5 hours (e.g., 22:00 UTC = 5:00 PM CDT)

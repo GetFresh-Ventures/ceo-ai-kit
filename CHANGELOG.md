@@ -4,17 +4,30 @@ All notable changes to this project will be documented in this file.
 
 ## 2026-04-10 6:53 PM CT — v1.3.0 — Autonomous Execution Hardening
 
+### Why it matters
+This release hardens the GFV Enablement Kit from a static prompt library into a self-monitoring autonomous agent framework. CEOs now have native tooling for token cost visibility, secure deployment reviews, and persistent memory consolidation — closing the gap between ad-hoc AI usage and governed, repeatable execution.
+
 ### Added
-- Created `tools/ccflare.py` local executive dashboard to accurately calculate and display total agent token burn factoring in cache tokens natively.
-- Integrated `tools/gfv-dream.sh` and `/gfv-dream-mode` to synthesize and compress fragmented session transcripts into durable knowledge natively via JSONL parsing.
-- Added `skills/review-pr` skill to perform secure 3-pass reviews (Security, Logic, GTM Strategy) on deployment candidates.
-- Added `tools/lint-agent.sh` to enforce AST integrity and formatting validations on `AGENT.md`.
-- Added new workflows `project-release` to structure repo deployments.
+- **`tools/ccflare.py`** — Local executive dashboard for real-time Claude token burn tracking, including cache creation/read costs
+- **`tools/gfv-dream.sh`** — Autonomous memory consolidation script that parses Claude `.jsonl` session logs and compresses insights into durable knowledge
+- **`skills/review-pr`** — 3-pass deployment review skill (Security, Logic, GTM Strategy) modeled on Anthropic's internal security protocols
+- **`tools/lint-agent.sh`** — AST integrity validator for `AGENT.md` to prevent silent IDE tooling failures
+- **`skills/project-release`** — Governed release workflow for version management
+- **`skills/verify-execution`** — Post-task verification skill
+- **`skills/onboard`** — Zero-friction CEO onboarding skill
 
 ### Changed
-- Promoted `README.md` to version 1.3.0.
-- Enhanced `AGENT.md` to formally adopt multi-model agent routing, multi-agent pipelining, and parallel planning frameworks.
-- Updated `skills/autoresearch` to require an explicit context 'Interview Phase' prior to arbitrary code mutations.
+- **`AGENT.md`** — Formally adopted multi-model agent routing, multi-agent pipelining, and parallel planning frameworks
+- **`skills/autoresearch`** — Now requires explicit "Interview Phase" before applying environment mutations
+- **`ONBOARDING_PROMPT.md`** — Updated for v1.3.0 capabilities
+- **`bootstrap.sh`** — Refined for new tool registrations
+- Promoted `README.md` to version 1.3.0
+
+### Files Modified
+- AGENT.md, CHANGELOG.md, ONBOARDING_PROMPT.md, README.md, bootstrap.sh
+- skills/autoresearch/SKILL.md, skills/onboard/SKILL.md, skills/project-release/SKILL.md
+- skills/review-pr/SKILL.md, skills/verify-execution/SKILL.md
+- tools/ccflare.py, tools/gfv-audit.sh, tools/gfv-dream.sh, tools/gfv-ralph.sh, tools/lint-agent.sh
 
 
 ## 2026-04-10 10:10 AM CT — v1.2.0 — Awesome Claude Edition
