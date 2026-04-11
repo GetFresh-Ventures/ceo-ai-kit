@@ -315,6 +315,26 @@ Skills that interact with external systems or produce decisions MUST define thei
 3. Per-agent hooks in agent frontmatter
 4. Per-skill hooks in skill frontmatter
 
+### Pattern 16: Clean Multi-Agent Handoffs
+
+Any workflow or skill transferring state to another skill MUST use this explicit YAML-style protocol to prevent context degradation:
+
+```yaml
+Handoff Complete.
+Phase: [Name of completed phase]
+Decisions Made: [List of locked decisions]
+Open Items/Constraints: [List]
+Switching to: [Skill Name / Persona]
+```
+
+### Pattern 17: Decision Complexity Scoring
+
+Orchestrator and C-Suite skills MUST formally score inputs from 1-5 to determine the correct execution routing:
+- **Score 1-2 (Operational):** Single skill, execute immediately (Auto-Resolve).
+- **Score 3 (Strategic):** Single skill, Draft-First (Await approval).
+- **Score 4 (High Risk):** Multi-skill sequential handoff.
+- **Score 5 (Critical):** "Board Meeting" protocol (3+ personas independently debating via Reflexion).
+
 ---
 
 ## Quality Checklist
