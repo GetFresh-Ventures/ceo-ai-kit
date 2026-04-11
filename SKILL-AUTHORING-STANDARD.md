@@ -227,6 +227,94 @@ Any skill that produces a CEO decision MUST log it via the decision-logger skill
 - Action items tracked with owners and deadlines
 - Review dates flagged when passed
 
+### Pattern 13: Agent Definition Standard
+
+When building agents (not just skills), use the full 16-field YAML frontmatter spec:
+
+```yaml
+---
+name: agent-name                    # Required. Lowercase with hyphens
+description: "When to invoke"       # Required. Use "PROACTIVELY" for auto-invoke
+tools: Read, Write, Edit, Bash      # Optional. Comma-separated allowlist (inherits all if omitted)
+disallowedTools: rm, deploy         # Optional. Tools to deny
+model: sonnet                       # Optional. haiku|sonnet|opus|inherit (default: inherit)
+permissionMode: acceptEdits         # Optional. default|acceptEdits|auto|plan|bypassPermissions
+maxTurns: 10                        # Optional. Max agentic turns before agent stops
+skills:                             # Optional. Skills preloaded into agent context at startup
+  - skill-name-1
+  - skill-name-2
+mcpServers:                         # Optional. MCP servers for this agent
+  - server-name
+hooks:                              # Optional. Per-agent lifecycle hooks
+  PreToolUse:
+    - matcher: ".*"
+      hooks:
+        - type: command
+          command: "python3 hooks_handler.py"
+memory: project                     # Optional. user|project|local — persistent memory scope
+background: false                   # Optional. Run as background task
+effort: high                        # Optional. low|medium|high|max — reasoning depth
+isolation: worktree                 # Optional. Run in temporary git worktree
+color: green                        # Optional. Terminal display color
+initialPrompt: "/context-prime"     # Optional. Auto-submitted first message
+---
+```
+
+**Agent vs. Skill:** Use an agent when the work requires tool execution (reading files, making API calls, running scripts). Use a skill when providing instructions/knowledge that the calling agent follows.
+
+**Two skill loading patterns:**
+1. **Agent skill** (preloaded) — listed in agent's `skills:` field; content injected at startup
+2. **Invoked skill** — called via Skill tool from a command; runs in command context
+
+### Pattern 14: Skill Frontmatter Extended Fields
+
+Beyond `name` and `description`, skills support these fields:
+
+| Field | Type | Use When |
+|-------|------|----------|
+| `argument-hint` | string | Skill accepts input (e.g., `[company-name]`, `[issue-id]`) |
+| `disable-model-invocation` | boolean | Prevent auto-invocation — require explicit `/slash-command` |
+| `user-invocable` | boolean | Set `false` for background knowledge skills (preloaded into agents only) |
+| `allowed-tools` | string | Tools allowed without permission prompts |
+| `model` | string | Override model when skill runs (`haiku` for fast, `opus` for deep) |
+| `effort` | string | Override reasoning depth (`low`, `medium`, `high`, `max`) |
+| `context` | string | Set to `fork` to run in isolated subagent context |
+| `agent` | string | Which agent type for forked context (default: `general-purpose`) |
+| `paths` | string/list | Auto-activate when working with matching files (e.g., `*.py`, `financials/*`) |
+| `hooks` | object | Per-skill lifecycle hooks |
+| `shell` | string | Shell for command blocks — `bash` (default) or `powershell` |
+
+**Path-scoped auto-activation example:**
+```yaml
+---
+name: cfo-advisor
+description: "Financial guidance for the CEO"
+paths: "*.xlsx, financials/*, budgets/*"
+---
+```
+This auto-loads the CFO advisor when the CEO opens any spreadsheet or financial file.
+
+### Pattern 15: Hooks Integration Standard
+
+Skills that interact with external systems or produce decisions MUST define their hook touchpoints:
+
+| Hook Event | Skill Responsibility |
+|-----------|---------------------|
+| `SessionStart` | Load company context, check for stale data |
+| `SessionEnd` | Persist decisions, save session summary |
+| `PreToolUse` | Gate dangerous operations (email sends, deploys, deletes) |
+| `PostToolUse` | Log actions to audit trail |
+| `PostToolUseFailure` | Alert on API failures, suggest remediation |
+| `PreCompact` | Save critical context before compression |
+
+**Implementation:** See the `gfv-hooks` skill for the complete hooks infrastructure. Skills do not implement hooks directly; they declare which events they care about and the hooks system routes accordingly.
+
+**Configuration cascade:**
+1. `hooks-config.json` — team defaults (committed to git)
+2. `hooks-config.local.json` — personal overrides (git-ignored)
+3. Per-agent hooks in agent frontmatter
+4. Per-skill hooks in skill frontmatter
+
 ---
 
 ## Quality Checklist
