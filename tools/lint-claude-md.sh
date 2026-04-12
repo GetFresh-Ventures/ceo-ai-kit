@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GFV GFV CEO Enablement Kit - AGENT.md / CLAUDE.md Linter
+# GFV GetFresh CEO Enablement Kit for AI - AGENT.md / CLAUDE.md Linter
 # Scans for formatting errors and leaked API keys.
 
 set -e

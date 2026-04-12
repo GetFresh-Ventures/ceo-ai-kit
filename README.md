@@ -1,18 +1,19 @@
-# GetFresh Ventures (GFV) CEO Enablement Kit
+# GetFresh CEO Enablement Kit for AI
 **Version**: v1.13.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
+*Leveraging our Growth by Design (GxD) GTM model.*
 
-*An exclusive framework for GFV Portfolio CEOs.*
+*An exclusive framework for our GetFresh Ventures (GFV) portfolio and the CEOs and leaders we work with.*
 
 ---
 
 ## What is this?
 
-This GetFresh Ventures (GFV) CEO Enablement Kit is a plug-and-play toolkit that turns any AI coding assistant — Claude Code, Cursor, Gemini (Antigravity), or GitHub Copilot — into a **personalized Chief of Staff** for Go-To-Market execution. 
+The GetFresh CEO Enablement Kit for AI is a plug-and-play toolkit that turns any AI coding assistant — Claude Code, Cursor, Gemini (Antigravity), or GitHub Copilot — into a **personalized Chief of Staff** for Go-To-Market execution. 
 
 Instead of opening your AI and starting from scratch every time — figuring out how to write an email, prep for a meeting, or analyze your pipeline — this kit pre-loads everything. Your voice, your deals, your preferences, your workflows. The AI already knows who you are and how you operate.
 
-**Think of it this way:** right now, your AI assistant is a blank intern on day one. After installing the GFV Enablement Kit, it's a Chief of Staff who's worked with you for six months.
+**Think of it this way:** right now, your AI assistant is a blank intern on day one. After installing the GetFresh CEO Enablement Kit for AI, it's a Chief of Staff who's worked with you for six months.
 
 ---
 
@@ -240,7 +241,7 @@ The kit operates under strict mathematical and structural guardrails to prevent 
 
 ### Agent-Agnostic Architecture
 
-GFV CEO Enablement Kit is not locked to any single AI tool. The `AGENT.md` core uses a universal `<RULE>` format that works across:
+GetFresh CEO Enablement Kit for AI is not locked to any single AI tool. The `AGENT.md` core uses a universal `<RULE>` format that works across:
 
 | Tool | How it reads the rules |
 |------|----------------------|

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GFV CEO Enablement Kit — Session Start Hook
+GetFresh CEO Enablement Kit for AI — Session Start Hook
 Loads company brain context at the beginning of every Claude Code session.
 
 Install: Copy to ~/.claude/hooks/session-start.py

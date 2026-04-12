@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GFV CEO Enablement Kit — Bootstrap Script
+# GetFresh CEO Enablement Kit for AI — Bootstrap Script
 # Initializes the brain directory, symlinks hooks into Claude Code, and sets up Agent-Agnostic Contexts (Cursor, Claude, Gemini)
 
 set -e
@@ -69,7 +69,7 @@ read -p "Press [Enter] to authorize installation and enable the Executive Kit...
 echo ""
 
 
-echo "🚀 Initializing GFV CEO Enablement Kit kit..."
+echo "🚀 Initializing GetFresh CEO Enablement Kit for AI kit..."
 
 # Target directories
 CEO_BRAIN_DIR="$HOME/ceo-brain"
@@ -224,7 +224,7 @@ fi
 
 # 5. Final Instructions
 echo ""
-echo "🎉 GFV CEO Enablement Kit Bootstrap Complete!"
+echo "🎉 GetFresh CEO Enablement Kit for AI Bootstrap Complete!"
 echo "----------------------------------------"
 echo "Next Steps:"
 echo "1. Open your terminal and type 'claude' (or open Cursor/Gemini)."

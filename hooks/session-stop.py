@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GFV CEO Enablement Kit — Session Stop Hook
+GetFresh CEO Enablement Kit for AI — Session Stop Hook
 Saves session learnings and context to the brain directory.
 
 Install: Copy to ~/.claude/hooks/session-stop.py
