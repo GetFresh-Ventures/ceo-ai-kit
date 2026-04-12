@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-04-12 2:25 PM PT — v1.12.0 — Dual-Brain Data Segregation
+
+### Why it matters
+The original `~/brain` directory natively combined both personal executive data (voice models, delegation matrices, meeting prep) and organizational capability data (pipeline revenue, ad campaigns) into a single node. In `v1.12.0`, the monolith has been refactored into the "Dual-Brain System." The CEO Enablement Kit now strictly isolates the active GTM state (`~/gtm-brain`) from the CEO's personal configuration identity (`~/ceo-brain`). This allows portfolio CEOs running multiple concurrent organizations to operate cleanly without capability cross-pollination. 
+
+### Added
+- **Dual-Brain Boot Sequence**: `bootstrap.sh` now independently maps and protects `~/ceo-brain` vs `~/gtm-brain` during the executive installation.
+- **Context Multiplexer**: The `session-start.py` Claude hook now scans and binds the state of both data models concurrently to compose the `context` without colliding entity mappings.
+- **Governance Refactoring**: `AGENT.md` Rule 0 and Rule 3 strictly mandate all skills to execute writes based on classification (Corporate signals write to GTM; Identity signals write to CEO).
+
+### Deprecated
+- `~/brain/` is entirely dismantled and deprecated out of all 49 skills, system prompts, hooks, and documentation templates.
+
 ## 2026-04-12 2:10 PM CT — v1.11.0 — White-Glove Intake & Entity Deduplication
 
 ### Why it matters
