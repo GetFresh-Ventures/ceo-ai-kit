@@ -121,6 +121,7 @@ Once installed, you have access to **48 pre-built skills** and **4 multi-step wo
 | Skill | What it does |
 |-------|-------------|
 | `/agent-protocol` | Inter-agent communication standard — prevents loops, enforces quality, standardizes output |
+| `/agent-orchestrator` | Multi-agent coordination engine — executes DAG pipelines and Cross-Persona debates |
 | `/context-engine` | Company context loading with staleness detection, privacy rules, and enrichment |
 | `/decision-logger` | Two-layer decision memory — raw transcripts vs approved-only, conflict detection |
 | `/change-management` | Organizational change, reorg planning, pivot communications |
