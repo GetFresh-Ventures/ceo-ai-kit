@@ -34,7 +34,7 @@ Build investor materials that are consistent, credible, and defensible — then 
 
 ## Part 1: Materials
 
-### The Golden Rule
+### The Portfolio Co A
 
 **All investor materials must agree with each other.**
 

@@ -91,7 +91,7 @@ For Investor/Board, Legal, or High-Value Prospect emails, **do not** just presen
 3. **Persona C (Quality Reviewer):** CoVe - Is the tone exact? Does it strictly adhere to the banned words list?
 If they disagree, synthesize an executive summary of the debate, and present the final perfected draft based on this strict critique.
 
-**Death Loop Short-Circuit:** Maximum 2 critique loops allowed. If the 3 personas cannot reach consensus after 2 rewrite attempts, you MUST break the loop. Output the best draft labeled `[BLOCKED BY JUDGMENT LOOP]` and explicitly flag it for Diraj's manual intervention to prevent token burning.
+**Death Loop Short-Circuit:** Maximum 2 critique loops allowed. If the 3 personas cannot reach consensus after 2 rewrite attempts, you MUST break the loop. Output the best draft labeled `[BLOCKED BY JUDGMENT LOOP]` and explicitly flag it for the CEO's manual intervention to prevent token burning.
 
 ### Step 6: Present for Approval
 
@@ -125,7 +125,7 @@ Here are a few times that work:
 
 If one works, I'll send the invite. If not, send a couple windows that do.
 
-— Diraj
+— the CEO
 ```
 
 ### Short Follow-Up
@@ -135,7 +135,7 @@ Hey [NAME] —
 Following up on the note below in case it got buried.
 Happy to move this forward whenever you're ready.
 
-— Diraj
+— the CEO
 ```
 
 ### Holding Reply
@@ -158,7 +158,7 @@ Before presenting:
 
 ## Related Skills
 
-- `voice-model` — The source of truth for how Diraj writes
+- `voice-model` — The source of truth for how the CEO writes
 - `outreach-sequence` — For multi-touch sequences (email-composer handles individual emails)
 - `post-meeting-brief` — Generates the follow-up email after meetings
 - `chief-of-staff` — Triggers email drafting from inbox sweeps

@@ -85,7 +85,7 @@ Pull from (in priority order) — **never from memory alone:**
 ## Open Loops Resolved This Synthesis
 - [x] Created follow-up task for Deal X (GFV-XXX)
 - [x] Drafted follow-up email for Acme meeting
-- [ ] Needs Diraj: Decision on Risk B by Tuesday
+- [ ] Needs the CEO: Decision on Risk B by Tuesday
 
 ## Next Week Priorities
 1. [Most important — tied to revenue]

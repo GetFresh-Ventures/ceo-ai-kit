@@ -45,7 +45,7 @@ Which of the following classes of tools do you use? (List all that apply)
 - **CRM:** HubSpot, Salesforce, Pipedrive?
 - **Ticketing/Support:** Linear, Jira, Zendesk?
 - **Comms/Calendar:** Slack, O365, Google Workspace?
-- **Operations:** ServiceTitan, QuickBooks, Stripe?"
+- **Operations:** Field Service Platform, QuickBooks, Stripe?"
 
 **[WAIT FOR USER INPUT]**
 

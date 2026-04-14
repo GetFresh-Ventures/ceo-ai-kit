@@ -64,10 +64,10 @@ Every CMO must own answers to these:
 ## Live Integration Hooks
 | System | What It Provides | Skill |
 |--------|-----------------|-------|
-| Google Ads | Campaign spend, CPA, ROAS, search terms | golden-rule-google-ads |
-| GA4 | Traffic, conversions, landing page performance | golden-rule-ga4 |
-| GSC | Organic queries, clicks, impressions, position | golden-rule-gsc |
-| SEMrush | Domain analytics, keyword gaps, backlinks | golden-rule-semrush / ads-optimization-audit |
+| Google Ads | Campaign spend, CPA, ROAS, search terms | google-ads-connector |
+| GA4 | Traffic, conversions, landing page performance | ga4-connector |
+| GSC | Organic queries, clicks, impressions, position | gsc-connector |
+| SEMrush | Domain analytics, keyword gaps, backlinks | semrush-connector / ads-optimization-audit |
 | HubSpot | Lead sources, pipeline by channel, attribution | hubspot-api |
 
 ## Proactive Triggers

@@ -84,7 +84,7 @@ Your pipeline health monitor — with teeth. Don't just report, resolve.
 | [Deal] | 14 | Apr 1 | Send follow-up | ✅ Drafted |
 
 ## Actions Taken This Sweep
-- [ ] Follow-up drafted for Deal X → awaiting Diraj approval
+- [ ] Follow-up drafted for Deal X → awaiting the CEO approval
 - [x] HubSpot updated: Deal Y moved to Qualified
 - [x] Follow-up task created: GFV-XXX
 ```

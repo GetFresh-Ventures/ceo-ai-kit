@@ -92,9 +92,9 @@ Every section follows: **Headline → Data → Narrative → Ask/Next**
 |--------|-------------|-------|
 | QuickBooks | Financials — P&L, cash, runway | quickbooks-api |
 | HubSpot | Pipeline — deals, velocity, forecast | hubspot-api |
-| Google Ads | Marketing — spend, CPA, ROAS | golden-rule-google-ads |
-| GA4 | Marketing — traffic, conversions | golden-rule-ga4 |
-| ServiceTitan | Revenue — job data, avg ticket | servicetitan-api |
+| Google Ads | Marketing — spend, CPA, ROAS | google-ads-connector |
+| GA4 | Marketing — traffic, conversions | ga4-connector |
+| Field Service Platform | Revenue — job data, avg ticket | field-service-connector |
 | Linear | Product/Eng — sprint velocity, delivery | linear-mcp-server |
 
 ## Proactive Triggers

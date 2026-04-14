@@ -56,7 +56,7 @@ Caveat: [one line — what could make this wrong]
 Key finding: Hiring 3 field techs in Q3 increases monthly burn by ~$21K but should generate $45K/mo incremental revenue within 60 days.
 Supporting data:
   - Current monthly burn: $180K → increases to ~$201K (fully loaded @ $7K/tech/mo)
-  - ServiceTitan data shows avg tech generates $15K/mo revenue after 30-day ramp
+  - Field Service Platform data shows avg tech generates $15K/mo revenue after 30-day ramp
   - Current pipeline supports the capacity (CRO confirmed 40+ open leads/month)
 Confidence: 🟡 medium
 Caveat: Assumes Utah market demand holds steady through summer; ramp could be longer for HVAC-only techs.
@@ -372,7 +372,7 @@ All data assertions MUST be verified against live systems before presenting:
 | Deal status, pipeline | HubSpot (via `hubspot-api` skill) |
 | Revenue, invoices, cash | QuickBooks (via `quickbooks-api` skill) |
 | Task status, project progress | Linear (via Linear MCP) |
-| Customer data, job history | ServiceTitan (via `servicetitan-api` skill) |
+| Customer data, job history | Field Service Platform (via `field-service-connector` skill) |
 | Entity relationships | Supabase PIL (via `supabase-access` skill) |
 | Meeting notes, action items | Fathom (via `fathom-api` skill) |
 

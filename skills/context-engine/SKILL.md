@@ -200,7 +200,7 @@ For GFV portfolio companies, the context engine also loads:
 - **PIL entity data** from Supabase (via `supabase-access` skill)
 - **Active Linear issues** for the company's project
 - **HubSpot deal status** if the company has an active deal
-- **ServiceTitan data** for home services portfolio companies (Golden Rule, Ashton Services)
+- **Field Service Platform data** for home services portfolio companies (Portfolio Co A, Portfolio Co C)
 - **QuickBooks financials** for companies using GFV's accounting stack
 
 This data supplements (never replaces) the `company-context.md` file. The file is the founder's own words; system data is verification.

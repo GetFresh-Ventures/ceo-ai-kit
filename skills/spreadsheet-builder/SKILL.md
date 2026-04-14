@@ -29,7 +29,7 @@ Build spreadsheets that are investor-defensible, not just functional.
 - Unit economics models, cohort analysis, or LTV calculations
 - Any task where the deliverable must be an `.xlsx` or `.csv` file
 
-## Golden Rule
+## Portfolio Co A
 
 **Use Excel formulas, never hardcoded calculations.** The spreadsheet must remain dynamic — if source data changes, everything recalculates.
 

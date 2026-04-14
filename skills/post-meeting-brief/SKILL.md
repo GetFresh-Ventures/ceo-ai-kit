@@ -52,7 +52,7 @@ Look specifically for:
 - **Explicit action items** — things someone said they'd do
 - **Implied follow-ups** — things that clearly need to happen even if nobody said "action item"
 - **Deadlines** — any dates or time commitments mentioned
-- **Promises the CEO made** — commitments Diraj owes
+- **Promises the CEO made** — commitments the CEO owes
 - **Introductions to send** — people to connect
 - **Documents/materials to share** — decks, proposals, files promised
 - **Scheduling next steps** — when to meet again
@@ -62,7 +62,7 @@ Look specifically for:
 ### Step 3: Classify and Route
 
 For each extracted item, classify through the priority map:
-- **P0 items** → Create immediately, alert Diraj
+- **P0 items** → Create immediately, alert the CEO
 - **P1 items** → Create task, include in summary
 - **P2 items** → Create task with future due date
 - **Auto-resolvable** → Handle directly (send intro, update tracker, schedule follow-up)
@@ -73,7 +73,7 @@ In the same turn:
 1. **Linear** → Create tasks with owner + deadline
 2. **HubSpot** → Update deal stage/amount/close date if changed
 3. **Calendar** → Book follow-up meeting if agreed
-4. **Email** → Draft follow-up email for Diraj's approval
+4. **Email** → Draft follow-up email for the CEO's approval
 5. **PIL** → Log key relationship insights
 
 ### Step 5: Output Brief
@@ -94,7 +94,7 @@ In the same turn:
 ### Ours (commit tracker)
 | Action | Owner | Deadline | System Updated |
 |--------|-------|----------|----------------|
-| [item] | Diraj | [date] | ✅ Linear GFV-XXX |
+| [item] | the CEO | [date] | ✅ Linear GFV-XXX |
 
 ### Theirs (we verify)
 | Action | Who | Expected By |
@@ -111,13 +111,13 @@ In the same turn:
 - [Buying signal or concern]
 
 ## Follow-Up Email Draft
-[Draft below — awaiting Diraj's "send it" approval]
+[Draft below — awaiting the CEO's "send it" approval]
 ```
 
 ## Auto-Resolve Bias
 
 Meeting notes often contain operational follow-ups that can be auto-resolved:
-- ✅ Add tasks for Diraj or the assistant
+- ✅ Add tasks for the CEO or the assistant
 - ✅ Create follow-up reminders
 - ✅ Update deal tracker after outcome is clear
 - ✅ Schedule follow-up when time was agreed

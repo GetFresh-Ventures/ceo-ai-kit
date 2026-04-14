@@ -198,11 +198,11 @@ RECOMMENDED DECISION
 - Lead investor wants pivot + team resists
 - Regulatory change + compliance costs spike
 
-**Home Services (Golden Rule, Ashton):**
+**Home Services (Portfolio Co A, Portfolio Co C):**
 - Top tech quits + peak season starts
 - Google Ads cost spikes + lead volume drops
 - Major equipment failure + customer complaints surge
-- ServiceTitan data loss + billing disruption
+- Field Service Platform data loss + billing disruption
 
 ---
 

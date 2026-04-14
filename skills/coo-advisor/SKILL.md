@@ -84,7 +84,7 @@ The CEO sets direction. The COO makes it happen.
 |--------|-----------------|-------|
 | Linear | Sprint health, blocked issues, cycle time | linear-mcp-server |
 | HubSpot | Deal velocity, team conversion rates | hubspot-api |
-| ServiceTitan | Job completion rates, technician utilization | servicetitan-api |
+| Field Service Platform | Job completion rates, technician utilization | field-service-connector |
 
 ## Proactive Triggers
 - **Same blocker appearing 3+ weeks** → process is broken, not just slow

@@ -12,7 +12,7 @@ Revenue frameworks for building predictable, scalable revenue engines.
 
 Pull live context from:
 - HubSpot → deal pipeline, stage conversion rates, deal velocity
-- ServiceTitan → job revenue, close rates, average ticket
+- Field Service Platform → job revenue, close rates, average ticket
 - QuickBooks → invoice data, AR aging, revenue by customer
 - Supabase PIL → historical deal outcomes, entity relationships
 
@@ -77,9 +77,9 @@ NRR = (Opening + Expansion - Contraction - Churn) / Opening
 | System | What It Provides | Skill |
 |--------|-----------------|-------|
 | HubSpot | Deal pipeline, stage conversions, deal velocity, win/loss | hubspot-api |
-| ServiceTitan | Job revenue, close rates, avg ticket, lead attribution | servicetitan-api |
+| Field Service Platform | Job revenue, close rates, avg ticket, lead attribution | field-service-connector |
 | QuickBooks | Invoice data, AR aging, revenue by customer | quickbooks-api |
-| Google Ads | Lead cost, GCLID attribution, channel CPA | golden-rule-google-ads |
+| Google Ads | Lead cost, GCLID attribution, channel CPA | google-ads-connector |
 
 ## Proactive Triggers
 - **NRR < 100%** → leaky bucket, retention must be fixed before pouring more in

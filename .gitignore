@@ -1,2 +1,26 @@
+# Agent-generated files (created by bootstrap.sh)
 .cursorrules
 CLAUDE.md
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/

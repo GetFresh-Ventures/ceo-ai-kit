@@ -82,7 +82,7 @@ Map topics to the buyer's journey:
 |-------|-----------|---------|
 | **Awareness** | "what is," "how to," "guide to" | "What is HVAC maintenance" |
 | **Consideration** | "best," "vs," "alternatives," "comparison" | "Best HVAC companies Salt Lake City" |
-| **Decision** | "pricing," "reviews," "near me," "cost" | "Golden Rule HVAC reviews" |
+| **Decision** | "pricing," "reviews," "near me," "cost" | "Portfolio Co A HVAC reviews" |
 | **Implementation** | "templates," "tutorial," "how to use" | "HVAC maintenance checklist" |
 
 ## Content Ideation Sources

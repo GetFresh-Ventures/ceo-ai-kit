@@ -121,7 +121,7 @@ After this meeting → trigger `post-meeting-brief` skill to:
 The brief MUST be scannable in 5 minutes or less. If it's longer than 1 page:
 - Cut web research that doesn't directly affect the conversation
 - Remove "nice to know" facts that don't change the approach
-- Focus on what changes how Diraj walks into the room
+- Focus on what changes how the CEO walks into the room
 
 ## Quality Gate
 

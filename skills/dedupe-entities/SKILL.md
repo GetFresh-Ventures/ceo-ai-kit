@@ -7,7 +7,7 @@ trigger_phrase: "run entity resolution"
 
 # `dedupe-entities`
 
-**Context:** The Proactive Intelligence Layer (PIL) suffers from Entity Fragmentation when CRM and backend datasets spell names slightly differently (e.g., "Golden Rule" vs "Golden Rule PHC"). This skill provides an interactive active-learning terminal utility to train a deduplication model and output a cleaned dataset.
+**Context:** The Proactive Intelligence Layer (PIL) suffers from Entity Fragmentation when CRM and backend datasets spell names slightly differently (e.g., "Portfolio Co A" vs "Portfolio Co A"). This skill provides an interactive active-learning terminal utility to train a deduplication model and output a cleaned dataset.
 
 ## Execution Rules
 

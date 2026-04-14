@@ -33,7 +33,7 @@ When executing the `/larry-loop`, strictly follow this 4-step execution chain wi
 - Consistency is the primary KPI. Ensure the volume of the generated variations can sustain a daily or sub-daily posting schedule.
 
 ## Phase 4: The Algorithmic Prune
-- When reviewing data after a cycle, ruthlessly kill formats and topics that didn't drive engagement or revenue (integrating with ServiceTitan/QuickBooks/HubSpot if possible for attribution).
+- When reviewing data after a cycle, ruthlessly kill formats and topics that didn't drive engagement or revenue (integrating with Field Service Platform/QuickBooks/HubSpot if possible for attribution).
 - Evolve the few winning hooks into the baseline for the next week's Phase 1 loop.
 - **Double down on winners.**
 
