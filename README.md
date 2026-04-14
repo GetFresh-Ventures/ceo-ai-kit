@@ -1,5 +1,5 @@
 # GetFresh CEO Enablement Kit for AI
-**Version**: v1.18.0  
+**Version**: v1.18.1  
 **A GTM Enablement Kit for the AI-Powered Executive**
 *Leveraging our Growth by Design (GxD) GTM model.*
 

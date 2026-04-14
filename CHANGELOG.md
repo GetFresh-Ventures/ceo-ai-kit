@@ -2,6 +2,21 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-14 9:15 AM PT — v1.18.1 — Interactive Tier Installer
+
+### Why it matters
+Following the v1.18.0 documentation release, this patch physically integrates the 3-Tier Expertise Calibration flow directly into the `bootstrap.sh` CLI installer. This ensures the CEO is prompted to choose their AI comfort level (Novice, Practitioner, Orchestrator) on day one, and their choice is seamlessly passed to the chat-based `/onboard` wizard via persistent memory.
+
+### Added
+- **Interactive Expertise Calibration Menu (`bootstrap.sh`)**: Replaced the generic EngineClaw binary prompt with a full 3-Tier selection menu that explains what each tier does.
+- **Cross-Boundary State Transfer (`active-tier.txt`)**: The shell installer now locks the executive's Tier choice into `~/ceo-brain/active-tier.txt`. This bridges the context gap so the LLM session natively knows how to handle the CEO upon startup.
+
+### Changed
+- **`bootstrap.sh`**: Auto-provisions the EngineClaw daemon exclusively for Tier 3 Orchestrators, preventing feature-bloat for Novice and Practitioner paths.
+
+### Files Modified
+- bootstrap.sh, README.md, CHANGELOG.md
+
 ## 2026-04-14 9:00 AM PT — v1.18.0 — Security Hardening & Executive Walkthrough
 
 ### Why it matters

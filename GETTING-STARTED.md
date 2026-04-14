@@ -264,5 +264,5 @@ Once you're comfortable with the basics, explore these power moves:
 
 ---
 
-*Version 1.18.0 — April 2026*
+*Version 1.18.1 — April 2026*
 *Proprietary Methodology © GetFresh Ventures. All Rights Reserved.*
