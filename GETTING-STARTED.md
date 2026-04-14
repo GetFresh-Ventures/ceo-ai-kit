@@ -95,37 +95,38 @@ Behind the scenes, the installer:
 This is where the magic happens. Open your AI assistant and paste this:
 
 ```text
-Initialize GFV Chief of Staff Sequence.
-
 1. Read the `AGENT.md` file in the root to internalize the GFV operating boundaries.
 2. Ensure you have access to the `/skills/` directory.
 3. IMMEDIATELY execute the `/onboard` skill to launch the interactive setup wizard.
-   Do not output anything else; simply launch the wizard starting with Phase 0.
 ```
 
-The AI will walk you through four phases:
+The AI will begin by asking you a single question: **What is your AI expertise level?**
 
-### Phase 0: Ecosystem Map
-*"What tools does your organization use?"*
+You will choose your enablement **Tier**:
 
-The AI asks which CRM you use (HubSpot, Salesforce, etc.), your email platform, project management tool, and calendar. This maps your tech stack so the AI knows where to look for data.
+- **Tier 1: AI Novice** - Keeps things simple. Sets up voice cloning and meeting prep. Skips all the complex CRM/ticketing integrations.
+- **Tier 2: AI Practitioner** - Plugs into your business. Wires up your HubSpot, Slack, Linear, and sets up your delegation tracking.
+- **Tier 3: AI Orchestrator** - Takes the wheel. Unlocks background autonomous workers (EngineClaw), multi-agent swarm dispatching, and zero-prompt automation.
 
-### Phase 1: Delegation Map
-*"Who's on your team and what do they own?"*
+Depending on your Tier, the AI will walk you through the corresponding phases:
 
-You'll describe your direct reports, their roles, and their ownership areas. This way, when the AI drafts an action item ("schedule the QBR"), it knows to assign it to the right person.
+### Phase 1 & 2: Ecosystem & Delegation Map (Tiers 2 & 3)
+The AI asks which CRMs and ticket tools you use (HubSpot, Salesforce, etc.) and maps your organizational chart so it knows who owns what when delegating action items.
 
-### Phase 2: Voice Calibration
-*"Share 3–5 emails you've recently written."*
+### Phase 3: Voice Calibration (All Tiers)
+Paste a link to your LinkedIn or an email you wrote. The AI analyzes your writing patterns and builds a `voice-model.md` that ensures all future communications sound authentically like you.
 
-Paste a few real emails. The AI analyzes your writing patterns — sentence length, tone, vocabulary, punctuation habits — and builds a `voice-model.md` that ensures all future AI-drafted communications sound authentically like you. No more "I hope this email finds you well."
-
-### Phase 3: Live Demonstration
-*"Let me show you what I can do right now."*
-
-The AI reads your calendar (if connected) and prepares a real meeting brief for your next meeting, demonstrating immediate ROI.
+### Phase 4: Autonomous Orchestration (Tier 3 Only)
+The AI hooks into the `openclaw-orchestrator` process, giving you explicit warnings and securing authorization to run background python worker nodes for true autonomy.
 
 > 💡 **Tip:** Be honest and specific during onboarding. The more context you give, the more leverage you get from every future interaction.
+
+---
+
+### Escalate Your Tier Anytime via Chat
+You do not need to choose Tier 3 on your first day. 
+
+If you start at Tier 1, **you can re-run the wizard at any time straight from the chat interface.** Simply type `/onboard` or `/setup` into your Claude Code, Cursor, or Gemini terminal, and the wizard will restart, allowing you to update your tier as your capability grows.
 
 ---
 
@@ -231,7 +232,7 @@ The real ROI comes from consistent weekly use. Here's the recommended cadence:
 ## Troubleshooting
 
 ### "The AI doesn't know who I am"
-Run the onboarding wizard again: say *"Run /onboard"*. Or check that `~/ceo-brain/voice-model.md` exists and has content.
+Run the onboarding wizard again straight from chat: type `/onboard` or `/setup`. Or check that `~/ceo-brain/voice-model.md` exists and has content.
 
 ### "The AI sounds generic"
 Your voice model needs more samples. Paste 3–5 more emails and say: *"Update my voice model with these samples."*
