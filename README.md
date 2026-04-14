@@ -72,9 +72,9 @@ The AI will walk you through a 5-minute setup wizard to learn your voice, your t
 The kit adapts to your comfort level with AI. You choose during installation:
 
 ### Beginner — "Keep it simple"
-*15 skills • Auto-memory • Proactive tips • Plain-English mode*
+*15 skills • Cross-session memory • Auto-approve • Proactive tips • Plain-English mode*
 
-Perfect if you're new to AI assistants. The AI handles emails, meeting prep, and documents — and explains everything in plain English. Memory saves automatically so each session picks up where you left off.
+Perfect if you're new to AI assistants. The AI handles emails, meeting prep, and documents — and explains everything in plain English. Memory saves automatically so each session picks up where you left off. Safe commands auto-approve so you never get stuck on Y/n prompts.
 
 **Try these first:**
 - "Draft an email to [name] about [topic]"
@@ -105,6 +105,9 @@ Everything in Intermediate, plus cross-session memory consolidation (Dream Mode)
 
 | Feature | Beginner | Intermediate | Advanced |
 |---------|----------|-------------|----------|
+| Cross-session memory (claude-mem) | ✅ | ✅ | ✅ |
+| Auto-approve safe commands (Dippy) | ✅ | ✅ | ✅ |
+| Token cost dashboard (ccflare) | ✅ | ✅ | ✅ |
 | Auto-save decisions & meetings | ✅ | ✅ | ✅ |
 | Draft review before sending | ✅ | ✅ | ✅ |
 | Proactive tips after tasks | ✅ | ✅ | ❌ |

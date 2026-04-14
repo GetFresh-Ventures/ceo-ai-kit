@@ -39,8 +39,11 @@ echo "  │       • You prefer simple, guided interactions              │"
 echo "  │                                                             │"
 echo "  │       What you get:                                         │"
 echo "  │       ✓ 15 core skills (email, meetings, docs, pipeline)    │"
-echo "  │       ✓ Auto-save memory (so the AI remembers you)          │"
-echo "  │       ✓ Proactive tips and suggestions                      │"
+echo "  │       ✓ Cross-session memory (AI remembers you)             │"
+echo "  │       ✓ Auto-approve safe commands (no Y/n interruptions)   │"
+echo "  │       ✓ Token cost dashboard (see what you're spending)     │"
+echo "  │       ✓ Auto-save memory (decisions persist automatically)  │"
+echo "  │       ✓ Proactive tips and inline suggestions               │"
 echo "  │       ✓ Plain-English explanations for everything           │"
 echo "  │                                                             │"
 echo "  ├─────────────────────────────────────────────────────────────┤"
@@ -205,15 +208,20 @@ if command -v claude &> /dev/null || [ -d "$CLAUDE_DIR" ]; then
     mkdir -p "$CLAUDE_HOOKS_DIR"
     mkdir -p "$CLAUDE_SKILLS_DIR"
     
-    # Advanced Tooling (Tier 2+)
-    if [[ "$USER_TIER" -ge 2 ]]; then
-        echo "  📦 Installing advanced tools..."
-        if command -v brew &> /dev/null; then
-            brew tap ldayton/dippy 2>/dev/null || true
-            brew install dippy 2>/dev/null || true
-            
-            if [ -f "$CLAUDE_DIR/settings.json" ]; then
-                python3 -c "
+    # Claude Code Enhancements (ALL tiers — these are foundational)
+    echo "  📦 Installing Claude Code enhancements..."
+    
+    # Dippy — auto-approves safe commands so beginners don't get stuck on Y/n prompts
+    if command -v brew &> /dev/null; then
+        brew tap ldayton/dippy 2>/dev/null || true
+        brew install dippy 2>/dev/null || true
+        
+        # Wire Dippy into Claude settings
+        SETTINGS_FILE="$CLAUDE_DIR/settings.json"
+        if [ ! -f "$SETTINGS_FILE" ]; then
+            echo '{}' > "$SETTINGS_FILE"
+        fi
+        python3 -c "
 import json, os
 path = os.path.expanduser('~/.claude/settings.json')
 try:
@@ -230,22 +238,24 @@ if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
     })
     with open(path, 'w') as f:
         json.dump(data, f, indent=2)
-    print('  → Dippy hook wired into ~/.claude/settings.json')
-"
-            fi
-        else
-            echo "  ⚠️ Homebrew not found. Skipping Dippy installation."
-        fi
+    print('  → Dippy installed (auto-approves safe commands)')
+" 2>/dev/null
+    else
+        echo "  ⚠️ Homebrew not found. Skipping Dippy (optional — install later with: brew install ldayton/dippy/dippy)"
+    fi
 
-        if command -v npm &> /dev/null; then
-            npm i -g ccflare 2>/dev/null || true
-            echo "  → ccflare installed globally."
-            echo "  🧠 Installing Claude-Mem (Persistent Vector Memory)..."
-            npx claude-mem install 2>/dev/null || true
-            echo "  → Claude-Mem installed system-wide."
-        else
-            echo "  ⚠️ NPM not found. Skipping ccflare and claude-mem."
-        fi
+    # ccflare — token cost visibility
+    # claude-mem — persistent cross-session memory
+    if command -v npm &> /dev/null; then
+        npm i -g ccflare 2>/dev/null || true
+        echo "  → ccflare installed (token cost dashboard)"
+        
+        echo "  🧠 Installing Claude-Mem (cross-session memory)..."
+        npx claude-mem install 2>/dev/null || true
+        echo "  → Claude-Mem installed (your AI remembers across sessions)"
+    else
+        echo "  ⚠️ NPM not found. Skipping ccflare and claude-mem."
+        echo "    To install later: npm i -g ccflare && npx claude-mem install"
     fi
 
     # Hooks (all tiers)

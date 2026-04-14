@@ -38,6 +38,9 @@ The installer adapts to three user personas. Each level adds skills AND behavior
 
 | Feature | Beginner | Intermediate | Advanced |
 |---------|----------|-------------|----------|
+| Cross-session memory (claude-mem) | ✅ | ✅ | ✅ |
+| Auto-approve safe commands (Dippy) | ✅ | ✅ | ✅ |
+| Token cost dashboard (ccflare) | ✅ | ✅ | ✅ |
 | Auto-save decisions & meetings | ✅ | ✅ | ✅ |
 | Draft review before sending | ✅ | ✅ | ✅ |
 | Proactive tips ("Want me to also...?") | ✅ | ✅ | ❌ |

@@ -202,8 +202,12 @@ Write connection stubs to `~/ceo-brain/integrations.json`.
 Based on their level, configure the default behavior:
 
 ### Beginner Defaults
+- **Cross-session memory:** ON — claude-mem persists context across sessions automatically
+- **Auto-approve safe commands:** ON — Dippy handles Y/n prompts so you're never interrupted
+- **Token cost dashboard:** ON — ccflare shows what you're spending in real time
 - **Auto-save memory:** ON — the AI saves meeting notes, decisions, and learnings automatically
 - **Proactive tips:** ON — after each task, suggest a related skill ("Want me to also...?")
+- **Inline insights:** ON — surface relevant context from memory during conversations
 - **Plain-English mode:** ON — explain technical concepts in simple terms
 - **Draft review gate:** ON — never send anything without showing the CEO first
 - **Session summary:** ON — end each session with a 3-bullet recap
@@ -212,8 +216,12 @@ Write these to `~/ceo-brain/preferences.json`:
 ```json
 {
   "level": "beginner",
+  "cross_session_memory": true,
+  "auto_approve_safe": true,
+  "cost_dashboard": true,
   "auto_memory": true,
   "proactive_tips": true,
+  "inline_insights": true,
   "plain_english": true,
   "draft_review": true,
   "session_summary": true,
@@ -314,8 +322,12 @@ After onboarding, the AI maintains continuity based on level:
 
 | Feature | Beginner | Intermediate | Advanced |
 |---------|----------|-------------|----------|
+| Cross-session memory (claude-mem) | ✅ | ✅ | ✅ |
+| Auto-approve safe commands (Dippy) | ✅ | ✅ | ✅ |
+| Token cost dashboard (ccflare) | ✅ | ✅ | ✅ |
 | Auto-save decisions | ✅ | ✅ | ✅ |
 | Remember meeting outcomes | ✅ | ✅ | ✅ |
+| Inline insights from memory | ✅ | ✅ | ✅ |
 | Proactive suggestions | ✅ (always) | ✅ (context-aware) | ❌ (on request) |
 | Weekly learning capture | ❌ | ✅ | ✅ |
 | Voice model refinement | ❌ | ✅ | ✅ |
@@ -323,6 +335,6 @@ After onboarding, the AI maintains continuity based on level:
 | Self-improving skills | ❌ | ❌ | ✅ |
 | Background automation | ❌ | ❌ | ✅ |
 
-**The goal:** Beginners get an AI that "just works" with zero effort. Intermediates get an AI that gets smarter over time. Advanced users get an AI that operates autonomously.
+**The goal:** Beginners get an AI that "just works" with zero effort — memory persists, safe commands auto-approve, costs are visible, and the AI proactively helps. Intermediates get an AI that gets smarter over time. Advanced users get an AI that operates autonomously.
 
 **[END SKILL]**
