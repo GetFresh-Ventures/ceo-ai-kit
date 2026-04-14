@@ -2,6 +2,50 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-13 8:40 PM PT — v1.16.0 — LarryBrain Marketplace Integration (66 Skills)
+
+### Why it matters
+Audited 101 skills from the LarryBrain AI Agent Skill Marketplace. Rejected 73 (security risk, consumer-grade, or raw DevOps infrastructure). Rewrote 11 net-new skills and enhanced 17 existing skills, following strict GFV architectural principles: Resolve-First, Source-of-Truth, Untrusted-DOM-Paranoia, and the Draft-Review-Before-Send gate for all outbound communication.
+
+### Added — 11 New Skills
+- **`contract-reader`** — 4-layer legal contract analysis: key terms → obligations → red flags → negotiation leverage. All processing is local LLM with no external API calls to preserve attorney-client privilege.
+- **`negotiation-advisor`** — Tactical negotiation frameworks: BATNA analysis, concession architecture, 3-phase flow (prep → table → close), and per-deal battle-card output.
+- **`aeo-optimizer`** — Answer Engine Optimization ensuring brand presence in AI-generated answers. 5-step framework with structured data schema and citation architecture.
+- **`social-scheduler`** — Multi-channel cross-posting across 28+ platforms with CEO approval gate. Platform-specific adaptation matrix for content transformation.
+- **`slack-connector`** — Slack workspace integration for monitoring, posting, searching, and routing critical messages. Auto-summarizes noisy channels for executive-level consumption.
+- **`sms-outreach`** — SMS/WhatsApp multi-channel outreach with strict TCPA compliance gates. Multi-carrier support with delivery tracking and opt-out handling.
+- **`ugc-video`** — Script-to-video UGC production pipeline with AI talking heads, B-roll sourcing, subtitle burn-in, and platform-specific format optimization.
+- **`domain-intel`** — Domain registration intelligence via RDAP: WHOIS, DNS, nameserver, and expiry tracking for competitive analysis and deal research.
+- **`voice-synth`** — AI voice synthesis for content narration, podcast intros, and audio newsletters. CEO voice cloning requires explicit opt-in with AI disclosure.
+- **`geopolitical-monitor`** — Global intelligence pipeline with country instability scoring (1-10), supply chain impact analysis, and pipeline cross-reference for international business risk.
+- **`scheduling-infra`** — Meeting scheduling infrastructure with bookable event templates, availability management, and pre/post meeting automation hooks.
+
+### Enhanced — 17 Existing Skills
+- **`social-engine` v1.1** — Added analytics dashboard (post performance tracking, engagement heatmaps), optimal posting time intelligence, thread drop-off analysis, and winner amplification loop.
+- **`copy-master` v1.1** — Added narrative submode (5-beat StoryMaster arc) and persuasion tactics layer (social proof, future pacing, loss aversion, authority transfer, specificity anchors, contrast framing).
+- **`chief-of-staff` v2.1** — Added 5-minute sprint execution cadence (Sprint OS method) and 4-layer memory architecture (L1 ephemeral → L4 source-of-truth hierarchy).
+- **`cron-scheduler` v1.1** — Added 6-layer silent failure diagnostic checklist (Cron Debugger method) and safe registration protocol with dry-run verification.
+- **`agent-orchestrator` v1.1** — Added Planner-Runner-Orchestrator pattern for iterative autonomous execution with accept/revise/abort verification loops.
+- **`content-strategy` v1.1** — Added A/B hook testing protocol (data/story/contrarian variants) with winner-becomes-template methodology.
+- **`decision-logger` v1.1** — Added team activity log with cross-session sync protocol (5 action types: DECISION, CHANGE, DISCOVERY, BLOCKER, HANDOFF).
+- **`larry-loop` v1.1** — Added quantitative winner scoring system (100-point scale), format trend detection, and cross-platform winner migration routes.
+- **`support-triage`** — Confirmed full coverage of Support Dashboard methodology.
+- **`notion-manager`** — Confirmed full coverage of Notion Manager + Notion API patterns.
+- **`news-digest`** — Confirmed full coverage of NewsDigest synthesis methodology.
+- **`email-composer`** — Confirmed IMAP read capability already integrated.
+- **`ui-ux-pro-max`** — Confirmed full coverage of UI/UX-Design-Claw patterns.
+- **`google-doc-creation`** — Confirmed Google Docs API integration coverage.
+- **`competitive-intel`** — Confirmed full competitive tracking coverage.
+- **`seo-growth`** — Confirmed SEO technical coverage including AI search optimization.
+- **`financial-analyst`** — Confirmed DCF, ratio analysis, and forecasting coverage.
+
+### Changed
+- **`SKILLS-REGISTRY.md`** — Complete rewrite. Now organized across 6 categories with 66 skills, composition patterns, and LarryBrain attribution.
+- **`README.md`** — Bumped version to v1.16.0. Updated skill count from 55 → 66. Added all 11 new skills to capability tables.
+
+### Rejected — 73 LarryBrain Skills
+72% of marketplace skills rejected for: consumer-grade scope (generic AI wrappers), raw DevOps infrastructure (Kubernetes, Terraform), insecure patterns (unvalidated URL scraping, credential passthrough), or redundancy with existing GFV skills. Full audit documented in `larrybrain_full_audit.md`.
+
 ## 2026-04-12 1:04 PM PT — v1.15.0 — VoxCPM Executive Voice Engine
 
 ### Added

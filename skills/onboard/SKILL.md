@@ -26,8 +26,8 @@ Let's begin."
 ### Phase 1: The Ecosystem Map
 *Action:* Ask about their CRM, task, and communication tools.
 *Output:*
-"**Phase 1/3: The Ecosystem Map**
-To construct your Proactive Intelligence Layer (PIL), I need to know your operational toolstack.
+"**Phase 1/4: The Ecosystem Map**
+To construct your Proactive Intelligence Layer (PIL), I need to know your operational toolstack. The more systems I can link data to, the more autonomous I become.
 Which of the following classes of tools do you use? (List all that apply)
 - **CRM:** HubSpot, Salesforce, Pipedrive?
 - **Ticketing/Support:** Linear, Jira, Zendesk?
@@ -38,8 +38,9 @@ Which of the following classes of tools do you use? (List all that apply)
 
 *Upon receiving the ecosystem list:*
 1. Note the platforms mentioned.
-2. Use `write_to_file` to create or update `~/ceo-brain/mcp_config_stubs.json` containing the skeleton MCP configurations for the platforms they chose (so they know where to add API keys later).
-3. Output: "Excellent. I've scaffolded your `mcp_config` files for those platforms. Now onto Phase 2."
+2. **If HubSpot is mentioned or implied**, explicitly guide them through the HubSpot enablement process. Explain that they need to generate a Private App Access Token with `crm.objects.*` and `crm.schemas.*` scopes. Instruct them to add this token to their `mcp_config.json` inside the `hubspot` block, and inform them that the `hubspot-admin-skills` slash-commands have been staged for them.
+3. Use `write_to_file` to create or update `~/ceo-brain/mcp_config_stubs.json` containing the skeleton MCP configurations for the platforms they chose (so they know where to add API keys later).
+4. Output: "Excellent. I've scaffolded your `mcp_config` files for those platforms. [If HubSpot was mentioned: Your HubSpot MCP architectural bridge is staged for your token]. Now onto Phase 2."
 *(Immediately proceed to Phase 2)*
 
 ---

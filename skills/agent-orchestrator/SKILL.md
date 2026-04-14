@@ -46,3 +46,29 @@ If you have to retrieve multiple APIs or read different files to build an analys
 3. Determine Ready tasks with `python3 hooks/task_manager.py ready [project-slug]`
 
 **Constraint:** The state is persisted locally. Use this for highly complex executive analysis where a single LLM stream-of-consciousness is prone to bias.
+
+## 3. Planner-Runner-Orchestrator Pattern (Enhanced v1.1 — Autonomous Loop Method)
+
+For iterative autonomous development and execution tasks:
+
+### The 3-Agent Pattern
+```
+PLANNER  → Decomposes goal into atomic tasks with acceptance criteria
+RUNNER   → Executes one task at a time, produces output artifacts
+ORCHESTRATOR → Verifies output against criteria, decides: accept / revise / abort
+```
+
+### Execution Rules
+1. **Planner** runs ONCE at the start. Produces a numbered task list with explicit done-criteria.
+2. **Runner** executes tasks sequentially. Each task produces a verifiable artifact.
+3. **Orchestrator** runs AFTER each Runner output. Checks against done-criteria.
+   - ✅ Accept: Move to next task.
+   - 🔄 Revise: Send back to Runner with specific feedback.
+   - ❌ Abort: Halt execution, escalate to CEO with reason.
+4. Maximum 3 revision cycles per task before auto-abort.
+
+### When to Use
+- Multi-step analysis where each step depends on the previous.
+- Code generation + testing loops.
+- Document drafting with iterative refinement.
+- Any task where "good enough on first try" is unlikely.

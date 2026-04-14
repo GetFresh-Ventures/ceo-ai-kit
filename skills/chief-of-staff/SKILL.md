@@ -205,11 +205,46 @@ Before any chief-of-staff sweep:
 - [ ] Follow-up tasks created for any future dependencies
 - [ ] Output is actionable, not informational
 
+## Sprint Execution Cadence (Enhanced v2.1 — Sprint OS Method)
+
+When the CEO has a focused execution window, activate **Sprint Mode**:
+
+### 5-Minute Sprint Protocol
+1. **Sprint Declaration** (30 seconds): Name the single deliverable. "I will [verb] [noun] by [time]."
+2. **Context Load** (60 seconds): Pull all relevant context from PIL, Linear, and CRM.
+3. **Execute** (3 minutes): Pure execution. No research, no exploration, no tangents.
+4. **Ship & Log** (30 seconds): Push the deliverable to its destination and log completion.
+
+### Sprint Cadence Rules
+- Maximum sprint duration: 5 minutes. If it takes longer, decompose into sub-sprints.
+- Between sprints: 30-second review. "Did I ship? What's next?"
+- End-of-session: Summarize all sprint outcomes in one digest.
+
+## Memory Architecture (Enhanced v2.1 — Kickstart Pattern)
+
+### Session Persistence Protocol
+At the end of every working session:
+1. **Extract Decisions**: What was decided? Log to `decision-logger`.
+2. **Extract Context**: What was learned? Write to PIL memory.
+3. **Extract Tasks**: What future work was created? Push to Linear.
+4. **Prune Stale**: Identify and archive any memory items contradicted by new information.
+
+### Memory Hierarchy
+```
+L1: Active Context (current session — ephemeral)
+L2: Working Memory (PIL facts — 30-day TTL, refreshed on access)
+L3: Long-Term Memory (PIL ontology — permanent, versioned)
+L4: Source of Truth (Live systems: Linear, HubSpot, Calendar)
+```
+
+Always resolve conflicts by priority: L4 > L3 > L2 > L1.
+
 ## Related Skills
 
 - `weekly-ceo-brief` — Weekly summary document
 - `meeting-prep` — Before-meeting preparation
 - `post-meeting-brief` — After-meeting action extraction
 - `pipeline-pulse` — Deal pipeline monitoring
-- `daily-task-prep` — Morning task preparation (coming soon)
 - `experiment-loop` — Systematic improvement methodology
+- `cron-scheduler` — Recurring execution automation
+- `decision-logger` — Decision capture and sync

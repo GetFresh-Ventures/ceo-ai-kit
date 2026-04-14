@@ -1,5 +1,5 @@
 # GetFresh CEO Enablement Kit for AI
-**Version**: v1.15.0  
+**Version**: v1.16.0  
 **A GTM Enablement Kit for the AI-Powered Executive**
 *Leveraging our Growth by Design (GxD) GTM model.*
 
@@ -84,7 +84,7 @@ The AI will walk you through an interactive wizard to configure your voice model
 
 ## What Can It Do?
 
-Once installed, you have access to **48 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
+Once installed, you have access to **66 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
 
 ### Skills — Day-to-Day Execution
 
@@ -98,6 +98,16 @@ Once installed, you have access to **48 pre-built skills** and **4 multi-step wo
 | `/weekly-ceo-brief` | Synthesizes your entire week — pipeline movement, key meetings, commitments, wins, risks, and next-week priorities |
 | `/outreach-sequence` | Designs multi-touch outreach sequences — strategic, personalized, voice-model-compliant |
 | `/voice-model` | Build and evolve your personal writing voice model over time |
+| `/larry-loop` | Systematically generates, distributes, and iterates on marketing content using algorithmic doubling-down |
+| `/copy-master` | Mathematical direct-response rewriting engine overriding generic AI slop |
+| `/support-triage` | Classifies and pushes inbound noise into active Linear/CRM backlogs automatically |
+| `/news-digest` | Synthesized intelligence on active pipeline accounts ignoring global noise |
+| `/contract-reader` | Red-flag analysis of any legal contract before signing. Plain-English summary with negotiation leverage |
+| `/negotiation-advisor` | Battle-tested negotiation frameworks: BATNA analysis, concession architecture, tactical playbook |
+| `/social-scheduler` | Cross-post and schedule content across 28+ social channels with CEO approval gate |
+| `/slack-connector` | Slack workspace integration — monitor, post, search, and route critical messages |
+| `/sms-outreach` | SMS/WhatsApp multi-channel outreach with TCPA compliance gates |
+| `/scheduling-infra` | Meeting scheduling infrastructure with pre/post automation hooks |
 
 ### Skills — C-Suite Advisory (New in v1.4.0)
 
@@ -127,9 +137,17 @@ Once installed, you have access to **48 pre-built skills** and **4 multi-step wo
 | `/change-management` | Organizational change, reorg planning, pivot communications |
 | `/launch-strategy` | Product/service launch playbooks with GTM alignment |
 | `/experiment-loop` | Scientific method for business: baseline → one change → measure → keep/discard → repeat |
+| `/notion-manager` | Safely read/write to Notion preserving architecture boundaries via structural checks |
+| `/cron-scheduler` | Sets background loops enforcing silent-failure protections and observability |
 | `/strategic-decision` | 5-perspective GO/NO-GO/DEFER framework for major decisions |
 | `/dedupe-entities` | Mathematically resolves duplicate records using machine-learning active linkage |
 | `/gfv-hooks` | Event-driven lifecycle hooks with safety gates |
+| `/automation-recommender` | Scans a codebase and recommends tailored automations (MCP servers, skills, hooks) |
+| `/aeo-optimizer` | Answer Engine Optimization — get AI assistants to recommend your brand |
+| `/ugc-video` | Script-to-video UGC production pipeline with AI talking heads and subtitles |
+| `/voice-synth` | AI voice synthesis for content narration and audio production |
+| `/domain-intel` | Domain WHOIS intelligence for competitive analysis and deal research |
+| `/geopolitical-monitor` | Global risk scoring and supply chain impact analysis for international business |
 
 ### Skills — Technical / Builder
 
@@ -138,6 +156,8 @@ Once installed, you have access to **48 pre-built skills** and **4 multi-step wo
 | `/context-prime` | Scans a repo and builds full context before starting work — great for Monday mornings or entering new projects |
 | `/create-prd` | Converts rough notes or meeting transcripts into a structured 6-part Product Requirements Document |
 | `/analyze-issue` | Takes a GitHub or Linear issue and generates a step-by-step implementation plan |
+| `/feature-architect` | Enforces a strict 7-phase architecture protocol with parallel exploratory subagents |
+| `/create-skill` | Formalizes skill creation using the Anthropic methodology (intent, research, tests) |
 | `/commit-fast` | Reviews staged files, generates semantic commit messages, and commits without manual copy-pasting |
 | `/review-pr` | Deep 3-pass review on any PR or deployment — Security, Logic, and GTM Strategy alignment |
 | `/autoresearch` | Meta-skill: autonomously benchmarks and improves any other skill using experimental loops |

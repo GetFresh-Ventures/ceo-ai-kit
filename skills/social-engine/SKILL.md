@@ -150,9 +150,39 @@ Before delivering:
 - [ ] A reader can get value without clicking anything external
 - [ ] If using `voice-model` skill, voice profile was applied
 
+## Analytics Dashboard (Enhanced v1.1 — Xcellent + Tweet Suite Methodology)
+
+### Post Performance Tracking
+After every published post, track and log:
+- **Impressions** — total reach
+- **Engagement Rate** — (likes + comments + shares + saves) / impressions
+- **Click-Through Rate** — link clicks / impressions
+- **Follower Delta** — net new followers within 48 hours of post
+
+### Optimal Posting Time Intelligence
+Analyze historical performance data to identify the CEO's best posting windows:
+- Track engagement by day-of-week and hour-of-day.
+- Build a personal heatmap: `[Day] x [Hour] → Avg Engagement Rate`
+- Recommend posting times based on the CEO's actual audience, not generic advice.
+- Update monthly as audience behavior shifts.
+
+### Thread Performance Analysis (X/Twitter-Specific)
+For multi-tweet threads:
+- Track drop-off rate per tweet in the thread (what % read tweet 3 vs tweet 1?).
+- Identify the "thread killer" — the tweet where most readers stop.
+- A/B test thread structures: hook-first vs. story-first vs. data-first.
+- Flag threads with >60% drop-off by tweet 3 for format revision.
+
+### Winner Amplification Loop
+- Feed top-performing posts (top 10% by engagement) into `larry-loop` for doubling-down.
+- Auto-suggest: "Your post about [X] got 3x your average engagement. Create a follow-up?"
+- Cross-post winning content to other platforms via `social-scheduler`.
+
 ## Related Skills
 
 - `voice-model` — CEO voice profile
 - `content-strategy` — Strategic content planning
 - `outreach-sequence` — Email outreach
 - `email-composer` — Email drafting
+- `larry-loop` — Content doubling-down engine
+- `social-scheduler` — Multi-platform cross-posting

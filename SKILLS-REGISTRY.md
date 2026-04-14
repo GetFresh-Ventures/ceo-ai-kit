@@ -1,6 +1,6 @@
 # GFV CEO Enablement Kit — Skills Registry
 
-> **49 unique skills** across 6 categories. Updated 2026-04-12.
+> **66 unique skills** across 6 categories. Updated 2026-04-13.
 
 ## How to Use This Registry
 
@@ -21,27 +21,31 @@
 | Triage my day | `chief-of-staff` | "what's urgent?" |
 | Test an idea | `experiment-loop` | "let's test this" |
 | Build a spreadsheet | `spreadsheet-builder` | "financial model" |
+| Review a contract | `contract-reader` | "review this agreement" |
+| Negotiate a deal | `negotiation-advisor` | "prep for negotiation" |
 
 ---
 
 ## Categories
 
-### 🎯 Execution Infrastructure (9 skills)
+### 🎯 Execution Infrastructure (11 skills)
 Core operating system — the agent's brain, coordination, and decision-making.
 
 | Skill | Description | Key Pattern |
 |-------|-------------|-------------|
-| [`chief-of-staff`](skills/chief-of-staff/) | 3-layer triage: Priority Map → Auto-Resolver → Heartbeat | Resolve, don't summarize |
+| [`chief-of-staff`](skills/chief-of-staff/) | 3-layer triage with sprint execution cadence and memory hierarchy | Resolve, don't summarize |
 | [`experiment-loop`](skills/experiment-loop/) | Scientific method for business: baseline → change → measure → keep/discard | One variable per cycle |
 | [`strategic-decision`](skills/strategic-decision/) | 5-perspective GO/NO-GO/DEFER framework | Multi-lens evaluation |
-| [`decision-logger`](skills/decision-logger/) | Two-layer memory: raw transcripts + approved decisions to PIL | Nothing lost |
+| [`decision-logger`](skills/decision-logger/) | Two-layer memory with team activity log syncing | Nothing lost |
 | [`verify-execution`](skills/verify-execution/) | Runtime observation instead of diff-reading | Trust but verify |
 | [`gfv-hooks`](skills/gfv-hooks/) | Event-driven lifecycle hooks with safety gates | Governance without friction |
 | [`agent-protocol`](skills/agent-protocol/) | Inter-agent communication for C-suite skills | Structured delegation |
 | [`context-engine`](skills/context-engine/) | Company context loading for advisory skills | Know before advising |
 | [`dedupe-entities`](skills/dedupe-entities/) | Mathematically resolves duplicate records using ML active linkage | Entity Resolution |
+| [`notion-manager`](skills/notion-manager/) | Safely connect and map Notion workspaces strictly governing read/write boundaries | Verification First Boundaries |
+| [`cron-scheduler`](skills/cron-scheduler/) | Configure recurring loops with 6-layer diagnostic and safe registration | Verify Silent Failures |
 
-### 👔 C-Suite Advisory (7 skills)
+### 👔 C-Suite Advisory (8 skills)
 Specialized strategic advisory from each leadership perspective.
 
 | Skill | Description | Key Pattern |
@@ -53,8 +57,9 @@ Specialized strategic advisory from each leadership perspective.
 | [`cro-advisor`](skills/cro-advisor/) | Revenue forecasting, sales model, pricing strategy | Revenue engine |
 | [`executive-mentor`](skills/executive-mentor/) | Adversarial thinking partner — stress-tests plans | Your brutal board prep |
 | [`founder-coach`](skills/founder-coach/) | Personal leadership, delegation, archetype identification | CEO as a human |
+| [`negotiation-advisor`](skills/negotiation-advisor/) | BATNA analysis, concession architecture, and tactical deal scripts | Close the deal |
 
-### 💰 Revenue Enablement (6 skills)
+### 💰 Revenue Enablement (8 skills)
 Everything that directly generates or accelerates revenue.
 
 | Skill | Description | Key Pattern |
@@ -65,6 +70,8 @@ Everything that directly generates or accelerates revenue.
 | [`fundraise`](skills/fundraise/) | Investor materials + outreach with SSoT consistency | All numbers agree |
 | [`outreach-sequence`](skills/outreach-sequence/) | Multi-touch prospecting sequences | Persistent, not annoying |
 | [`competitive-intel`](skills/competitive-intel/) | Systematic competitor tracking | Know the battlefield |
+| [`contract-reader`](skills/contract-reader/) | 4-layer legal contract analysis with red-flag detection and negotiation leverage | Know before you sign |
+| [`domain-intel`](skills/domain-intel/) | WHOIS, DNS, and domain expiry intelligence for competitive research | Research the terrain |
 
 ### 📄 Document Processing (5 skills)
 Creating, editing, and processing business documents.
@@ -77,7 +84,7 @@ Creating, editing, and processing business documents.
 | [`doc-coauthoring`](skills/doc-coauthoring/) | 3-stage writing: Context → Section Refinement → Reader Test | Catch blind spots |
 | [`google-doc-creation`](skills/google-doc-creation/) | Branded Google Docs via API | Executive-ready styling |
 
-### 📅 Daily Operations (8 skills)
+### 📅 Daily Operations (13 skills)
 The CEO's day-to-day operating system.
 
 | Skill | Description | Key Pattern |
@@ -90,17 +97,29 @@ The CEO's day-to-day operating system.
 | [`scenario-war-room`](skills/scenario-war-room/) | Multi-variable what-if modeling | Plan for chaos |
 | [`change-management`](skills/change-management/) | Rolling out org changes without chaos | ADKAR model |
 | [`launch-strategy`](skills/launch-strategy/) | Product/feature launch planning | Coordinate the blast |
+| [`support-triage`](skills/support-triage/) | Auto-classify and route inbound support queries into Linear/PandaDoc | The dash-brief output |
+| [`news-digest`](skills/news-digest/) | Deeply synthesized marketplace surveillance against current pipeline entities | Verified Extracted Signal |
+| [`slack-connector`](skills/slack-connector/) | Slack workspace integration — monitor, post, search, route messages | Team comms hub |
+| [`sms-outreach`](skills/sms-outreach/) | SMS/WhatsApp multi-channel outreach with TCPA compliance | Beyond email |
+| [`scheduling-infra`](skills/scheduling-infra/) | Meeting scheduling with pre/post automation and booking pages | Calendar intelligence |
 
-### 🚀 Growth Engine (5 skills)
+### 🚀 Growth Engine (12 skills)
 Marketing, content, and growth optimization.
 
 | Skill | Description | Key Pattern |
 |-------|-------------|-------------|
-| [`content-strategy`](skills/content-strategy/) | Pillars, calendars, buyer-stage keywords | System, not posts |
-| [`social-engine`](skills/social-engine/) | Platform-native LinkedIn/X/newsletter content | No AI slop |
+| [`content-strategy`](skills/content-strategy/) | Pillars, calendars, buyer-stage keywords with A/B hook testing | System, not posts |
+| [`social-engine`](skills/social-engine/) | Platform-native content with analytics dashboard and posting intelligence | No AI slop |
+| [`larry-loop`](skills/larry-loop/) | Algorithmic content loop with winner scoring and cross-platform migration | System over Creativity |
 | [`seo-growth`](skills/seo-growth/) | Technical SEO, schema, site architecture, AI search opt | Discovery engine |
 | [`conversion-optimizer`](skills/conversion-optimizer/) | Forms, signups, landing pages, onboarding CRO | Fix the leaks |
 | [`financial-analyst`](skills/financial-analyst/) | Ratio analysis, DCF, budget variance, rolling forecasts | Deep number work |
+| [`copy-master`](skills/copy-master/) | 7-pillar copywriting with narrative submode and persuasion tactics | The Rule of One |
+| [`aeo-optimizer`](skills/aeo-optimizer/) | Answer Engine Optimization — get AI assistants to recommend your brand | Own the AI answer |
+| [`social-scheduler`](skills/social-scheduler/) | Cross-post to 28+ channels with CEO approval gate | One command, all channels |
+| [`ugc-video`](skills/ugc-video/) | Script-to-video UGC production with AI talking heads | Video at scale |
+| [`voice-synth`](skills/voice-synth/) | AI voice synthesis for narration, podcasts, and audio content | Sound human anywhere |
+| [`geopolitical-monitor`](skills/geopolitical-monitor/) | Global intelligence with country instability scoring | International risk radar |
 
 ### 🛠️ Developer & DevOps (9 skills)
 Infrastructure skills for the technical operator.
@@ -126,12 +145,14 @@ Skills are most powerful when composed:
 | Workflow | Skill Chain |
 |----------|-------------|
 | **Full Meeting Lifecycle** | `meeting-prep` → [meeting happens] → `post-meeting-brief` → `email-composer` |
-| **Deal Progression** | `pipeline-pulse` → `deal-review` → `sales-enablement` → `outreach-sequence` |
+| **Deal Progression** | `pipeline-pulse` → `deal-review` → `contract-reader` → `negotiation-advisor` |
 | **Fundraise Cycle** | `fundraise` → `spreadsheet-builder` → `board-deck-builder` → `executive-mentor` |
-| **Content Engine** | `content-strategy` → `social-engine` → `seo-growth` → `experiment-loop` |
+| **Content Engine** | `content-strategy` → `social-engine` → `larry-loop` → `social-scheduler` |
+| **Video Pipeline** | `copy-master` → `ugc-video` → `voice-synth` → `social-scheduler` |
 | **Weekly Cadence** | `chief-of-staff` (daily) → `pipeline-pulse` (Fri) → `weekly-ceo-brief` (Fri) |
 | **Strategic Decision** | `strategic-decision` → `scenario-war-room` → `decision-logger` |
 | **Document Production** | `doc-coauthoring` → `doc-builder` / `pdf-toolkit` / `spreadsheet-builder` |
+| **Multi-Channel Outreach** | `email-composer` → `sms-outreach` → `slack-connector` → `social-scheduler` |
 
 ---
 
@@ -143,7 +164,8 @@ Skills are most powerful when composed:
 4. **Not handled until in the system** — Reading ≠ Processing
 5. **Safe auto-resolve, draft-first for judgment** — From `chief-of-staff`'s auto-resolver
 6. **Simplicity criterion** — Same result + simpler approach = keep simpler
-7. **Voice-native** — Everything sounds like Diraj, not like AI
+7. **Voice-native** — Everything sounds like the CEO, not like AI
+8. **Draft Review Before Send** — No outbound communication without CEO approval
 
 ---
 
@@ -158,3 +180,4 @@ Skills are most powerful when composed:
 | [autoagent](https://github.com/kevinrgu/autoagent) | experiment-loop (hill-climbing methodology) |
 | [clawchief](https://github.com/snarktank/clawchief) | chief-of-staff v2 (3-layer architecture), post-meeting-brief v2, pipeline-pulse v2 |
 | [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | strategic-decision, gfv-hooks, authoring standard patterns 13-15 |
+| [LarryBrain Marketplace](https://larrybrain.com/skills) | 11 skills rewritten (contract-reader, negotiation-advisor, aeo-optimizer, etc.) + 17 enhancements |

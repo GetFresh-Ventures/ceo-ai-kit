@@ -158,9 +158,37 @@ Before delivering:
 - [ ] Calendar is realistic for stated resources
 - [ ] Content gaps vs. competitors are addressed
 
+## A/B Hook Testing (Enhanced v1.1 — content-engine Method)
+
+### The Hook Testing Protocol
+Every high-stakes piece of content should test multiple hooks before committing:
+
+1. **Generate 3 Hook Variants** per content piece:
+   - **Data Hook**: Lead with a surprising statistic or number.
+   - **Story Hook**: Lead with a micro-narrative (2 sentences max).
+   - **Contrarian Hook**: Lead with a commonly-held belief, then challenge it.
+
+2. **Rapid Test Across Channels**:
+   - Post each hook variant on a different platform (or at different times on the same platform).
+   - Measure: Click-through rate, time-on-page, engagement rate.
+   - Minimum sample: 48 hours before declaring a winner.
+
+3. **Winner Becomes the Template**:
+   - The winning hook structure becomes the default for that content pillar.
+   - Feed into `larry-loop` for doubling-down.
+   - Archive losing hooks in `decision-logger` to avoid repeating failures.
+
+### Content Experiment Log
+Maintain a running log of hook tests:
+```
+| Date | Content | Data Hook CTR | Story Hook CTR | Contrarian Hook CTR | Winner |
+```
+
 ## Related Skills
 
 - `competitive-intel` — Deep competitive research
 - `outreach-sequence` — Email-based distribution
 - `voice-model` — Brand voice consistency
-- `social-engine` — Social media content (coming soon)
+- `social-engine` — Social media content
+- `larry-loop` — Content doubling-down engine
+- `aeo-optimizer` — AI search optimization

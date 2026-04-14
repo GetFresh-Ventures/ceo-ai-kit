@@ -159,3 +159,32 @@ When a decision is logged:
 - **DO_NOT_RESURFACE violation attempted** → block and explain
 - **No new decisions in 2+ weeks** → prompt decision audit
 - **Contradictory decision detected** → surface conflict before logging
+
+## Team Activity Log (Enhanced v1.1 — Shared Log Method)
+
+### Cross-Session Sync Protocol
+When multiple agents or human collaborators are working across sessions:
+
+1. **After Every Change or Decision**, append a timestamped entry:
+```markdown
+[YYYY-MM-DD HH:MM] [AGENT/PERSON] [ACTION_TYPE] — [Description]
+```
+
+2. **Action Types**:
+   - `DECISION` — A choice was made.
+   - `CHANGE` — Code, config, or process was modified.
+   - `DISCOVERY` — New information surfaced.
+   - `BLOCKER` — Something is stuck.
+   - `HANDOFF` — Work passed to another agent/person.
+
+3. **Sync Points**:
+   - On session start: Read the last 10 log entries to regain context.
+   - On session end: Write a summary entry capturing what was accomplished.
+   - On handoff: Write explicit handoff entry with next steps.
+
+### Log Location
+```
+memory/team_activity_log.md  # Append-only, never delete entries
+```
+
+This ensures that no matter which agent or person picks up work next, they can immediately see what happened and what's pending.
