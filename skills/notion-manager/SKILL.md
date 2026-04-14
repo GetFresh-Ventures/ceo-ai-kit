@@ -1,33 +1,170 @@
 ---
 name: notion-manager
-description: Safely connect to and manage Notion workspaces through verified MCP endpoints strictly governing read/write boundaries.
-license: MIT
-metadata:
-  author: GFV Proactive Intelligence
-  version: 1.0.0
-  category: Day-to-Day Execution
+description: "Query, create, and update pages and databases in Notion. Use when the user wants to manage their Notion workspace, sync data to Notion, or pull information from Notion databases."
 ---
 
-# /notion-manager
+# Notion Manager
 
-**Usage**: Utilize this skill when the CEO wants to query, update, or orchestrate across their Notion workspace wikis and databases.
+Interact with Notion workspaces through the API. Always verify database schemas before writing — blind writes corrupt data.
 
-## ⚠️ Security Protocol: The Database Boundary
+## When to Use
 
-Unlike typical Notion AI integrations that scrape entire workspaces uncontrollably, this skill operates under a "Verification First" boundary constraints.
+- "Check my Notion for [topic]"
+- "Add [item] to my Notion database"
+- "Update the [name] page in Notion"
+- "Sync [data] to Notion"
+- Any Notion workspace management
 
-1. **Explicit Targeting**: The orchestration agent must NEVER search globally across all Notion. The CEO must explicitly provide the Database ID, Page ID, or the exact name of the table to query.
-2. **Schema Verification**: Prior to performing any `WRITE` actions (adding rows, creating to-dos, mutating documentation), the agent MUST first pull the `Schema/Properties` of the database to ensure no column types mismatch resulting in database corruption.
-3. **Delete Prohibition**: AI agents executing this skill are strictly forbidden from archiving or deleting Notion pages. Only `CREATE`, `READ`, or `APPEND` actions are permitted.
+## Prerequisites
 
-## Phase 1: Query Execution
-When asked to summarize a tracker (e.g., "What are my priorities today?"):
-- Use the connected Notion MCP tool to query the specific database.
-- Parse the structured JSON into readable, C-Suite markdown.
-- Never summarize without listing the exact properties (e.g. Status: `Not Started`).
+### Authentication
+```python
+import os
+NOTION_TOKEN = os.environ.get("NOTION_API_KEY")
+HEADERS = {
+    "Authorization": f"Bearer {NOTION_TOKEN}",
+    "Notion-Version": "2022-06-28",
+    "Content-Type": "application/json"
+}
+```
 
-## Phase 2: Page Generation Strategy
-When generating Meeting Notes, PRDs, or Strategies in Notion:
-- First, extract the structural map of the destination.
-- Generate blocks recursively using the Notion Block architecture.
-- Always include an overarching "AI Summary Box" at the top of long documents.
+**Token source:** Integration token from https://www.notion.so/my-integrations. Must be shared with target pages/databases.
+
+### MCP Alternative
+If `notion-mcp` server is configured, use MCP tools instead of raw API calls:
+- `notion_search` — Find pages and databases
+- `notion_read_page` — Read page content
+- `notion_update_page` — Update page properties
+
+## Common Operations
+
+### 1. Search for a Database
+
+```python
+import requests
+
+response = requests.post(
+    "https://api.notion.com/v1/search",
+    headers=HEADERS,
+    json={
+        "query": "Tasks",
+        "filter": {"property": "object", "value": "database"}
+    }
+)
+databases = response.json()["results"]
+for db in databases:
+    print(f"{db['id']}: {db['title'][0]['plain_text']}")
+```
+
+### 2. Read Database Schema (MANDATORY before writing)
+
+```python
+def get_schema(database_id):
+    """Always read schema before creating/updating rows."""
+    response = requests.get(
+        f"https://api.notion.com/v1/databases/{database_id}",
+        headers=HEADERS
+    )
+    db = response.json()
+    schema = {}
+    for prop_name, prop_config in db["properties"].items():
+        schema[prop_name] = {
+            "type": prop_config["type"],
+            "id": prop_config["id"]
+        }
+    return schema
+
+# ALWAYS run this first
+schema = get_schema("YOUR_DATABASE_ID")
+print(schema)  # Verify property names and types before writing
+```
+
+### 3. Query Database Rows
+
+```python
+response = requests.post(
+    f"https://api.notion.com/v1/databases/{database_id}/query",
+    headers=HEADERS,
+    json={
+        "filter": {
+            "property": "Status",
+            "select": {"equals": "In Progress"}
+        },
+        "sorts": [
+            {"property": "Priority", "direction": "ascending"}
+        ],
+        "page_size": 20
+    }
+)
+rows = response.json()["results"]
+```
+
+### 4. Create a Page (Row)
+
+```python
+def create_row(database_id, properties):
+    """Create a new row in a Notion database."""
+    response = requests.post(
+        "https://api.notion.com/v1/pages",
+        headers=HEADERS,
+        json={
+            "parent": {"database_id": database_id},
+            "properties": properties
+        }
+    )
+    return response.json()
+
+# Example: Create a task
+create_row("DB_ID", {
+    "Name": {"title": [{"text": {"content": "Review Q2 financials"}}]},
+    "Status": {"select": {"name": "To Do"}},
+    "Priority": {"select": {"name": "High"}},
+    "Due Date": {"date": {"start": "2026-04-20"}}
+})
+```
+
+### 5. Update a Page
+
+```python
+def update_row(page_id, properties):
+    """Update properties on an existing Notion page."""
+    response = requests.patch(
+        f"https://api.notion.com/v1/pages/{page_id}",
+        headers=HEADERS,
+        json={"properties": properties}
+    )
+    return response.json()
+
+# Example: Mark task complete
+update_row("PAGE_ID", {
+    "Status": {"select": {"name": "Done"}}
+})
+```
+
+## Property Type Reference
+
+| Notion Type | JSON Structure |
+|------------|---------------|
+| `title` | `{"title": [{"text": {"content": "value"}}]}` |
+| `rich_text` | `{"rich_text": [{"text": {"content": "value"}}]}` |
+| `number` | `{"number": 42}` |
+| `select` | `{"select": {"name": "Option"}}` |
+| `multi_select` | `{"multi_select": [{"name": "Tag1"}, {"name": "Tag2"}]}` |
+| `date` | `{"date": {"start": "2026-04-14"}}` |
+| `checkbox` | `{"checkbox": true}` |
+| `url` | `{"url": "https://example.com"}` |
+| `email` | `{"email": "user@example.com"}` |
+
+## Safety Rules
+
+1. **Never search globally** — always target a specific database ID or page ID
+2. **Read schema before ANY write** — property name mismatches silently fail
+3. **Verify access** — the integration must be shared with the target page/database
+4. **Pagination** — results are capped at 100. Check `has_more` and use `start_cursor`
+5. **Rate limits** — 3 requests/second. Add `time.sleep(0.35)` between batch operations
+
+## Integration
+
+- Used by `/weekly-ceo-brief` to pull status from Notion databases
+- Used by `/chief-of-staff` for task management
+- Syncs with Linear via manual export (no native integration)

@@ -1,31 +1,119 @@
 ---
 name: support-triage
-description: Automatically monitor, classify, and route inbound support requests from social channels and inboxes directly to Linear/PandaDoc.
-license: MIT
-metadata:
-  author: GFV Proactive Intelligence
-  version: 1.0.0
-  category: Day-to-Day Operations
+description: "Classify, prioritize, and route inbound support requests from any channel. Use when monitoring social mentions, customer emails, or support tickets."
 ---
 
-# /support-triage
+# Support Triage
 
-**Usage**: Utilize this skill to handle automated monitoring of mentions, tickets, or specific prospect emails without requiring physical CEO monitoring.
+Classify incoming support items by severity and route them to the right system. Don't just flag things — resolve what you can, escalate what you can't.
 
-## Resolving Operational Blindspots
+## When to Use
 
-This skill maps social and inbound noise directly into the operating systems. 
+- Batch processing unread support emails
+- Social media mention monitoring
+- Customer complaint escalation
+- "Check for any fires" requests
 
-## Phase 1: Ingestion Routing
-- Utilize MCP servers (X, LinkedIn, Hubspot, or Email IMAP) to pull unread items marked with specific queries, mentions, or tags.
-- Scan the ingestion payload specifically looking for High-Risk queries (e.g., `down`, `broken`, `urgent`), Medium-Risk (e.g., `how do I`, `billing`), and Low-Risk.
+## Step 1: Ingest
 
-## Phase 2: Classification and Resolution
-- Do not merely output a list for the CEO. 
-- Map **High-Risk** issues directly into the active Linear board as an active `Issue` using the Linear MCP connection. Assign it to the relevant engineer or account manager.
-- For **Medium-Risk** / **Low-Risk** queries, draft an outbound response dynamically utilizing the CRM's contextual history on the User to generate a highly specific triage response.
+Pull unread items from available channels:
 
-## Phase 3: The Dash-Brief Output
-- Once extraction, mapping, and drafting are perfectly staged, provide the CEO with a single Markdown table highlighting:
-  `[Urgency Level] | [User/Account] | [Issue Summary] | [Action Executed (e.g. Linear Ticket Generated)]`
-- Ensure NO unvetted outbound messages are sent without explicit approval.
+| Channel | How to pull | What to extract |
+|---------|------------|-----------------|
+| Email (IMAP) | `google-workspace-access` skill | Subject, sender, body snippet, date |
+| HubSpot tickets | CRM MCP tools | Ticket ID, contact, subject, priority |
+| Social mentions | `search_web` with brand names | Platform, author, sentiment, content |
+| Linear issues | Linear MCP tools | Issue ID, title, assignee, state |
+
+## Step 2: Classify
+
+Every inbound item gets classified on two dimensions:
+
+### Severity Matrix
+
+| Level | Criteria | SLA |
+|-------|----------|-----|
+| 🔴 **P0 — Outage** | Service is down, data loss, security breach | Respond in 15 minutes |
+| 🟠 **P1 — Broken** | Feature not working, customer blocked, revenue impact | Respond in 1 hour |
+| 🟡 **P2 — Degraded** | Workaround exists, minor bug, feature request | Respond in 24 hours |
+| ⚪ **P3 — Noise** | General inquiry, spam, already resolved | Batch weekly or ignore |
+
+### Category
+
+| Category | Keywords / Signals | Route to |
+|----------|-------------------|----------|
+| **Billing** | invoice, charge, payment, refund | Finance / QuickBooks |
+| **Technical** | error, crash, bug, broken, 500 | Engineering / Linear |
+| **Onboarding** | setup, getting started, how to, access | Customer Success |
+| **Feature Request** | would be nice, can you add, wish | Product / Linear backlog |
+| **Complaint** | frustrated, disappointed, cancel, leaving | CEO escalation |
+| **Praise** | love, amazing, thank you, great | Marketing (testimonial) |
+
+## Step 3: Auto-Resolve (when possible)
+
+Before escalating, check if the item can be resolved immediately:
+
+| Pattern | Auto-resolution |
+|---------|----------------|
+| "How do I...?" | Search docs, draft response with answer |
+| Password reset request | Send reset link procedure |
+| Known bug (matches existing Linear issue) | Reply with workaround + link to tracking issue |
+| Duplicate of another ticket | Merge and reply "being tracked in [ID]" |
+
+**Never auto-send responses.** Draft them and present for CEO approval.
+
+## Step 4: Route
+
+For items that can't be auto-resolved:
+
+```markdown
+### Triage Report — [Date]
+
+**Items processed:** [N]
+**Auto-resolved:** [M]
+**Needs attention:** [K]
+
+#### 🔴 P0 — Immediate
+- **[Item: Subject]** from [sender]
+  - **Category:** [Technical/Billing/etc.]
+  - **Summary:** [1 sentence]
+  - **Action:** [Create Linear issue / Escalate to CEO / Draft response]
+
+#### 🟠 P1 — Today
+- ...
+
+#### 🟡 P2 — This Week
+- ...
+
+#### Auto-Resolved
+- [Item]: Responded with [summary of response] — awaiting CEO approval to send
+```
+
+## Step 5: Create Tracking Items
+
+For P0/P1 items, create tracking artifacts:
+
+```bash
+# Create Linear issue for technical items
+# → Use Linear MCP: save_issue with appropriate team, priority, labels
+
+# Log in CRM for customer-facing items
+# → Use HubSpot MCP: create note on contact record
+
+# Alert CEO for complaints
+# → Draft a 2-sentence alert with recommended action
+```
+
+## Red Flags
+
+- 3+ items from the same customer → escalate as churn risk
+- P0 item from a top-5 revenue customer → interrupt the CEO immediately
+- Complaint mentions "lawyer" or "legal" → flag for immediate CEO review
+- Social mention going viral (10+ replies) → PR response needed
+
+## Integration
+
+- Feeds from `/chief-of-staff` background sweep
+- Creates issues via Linear MCP tools
+- Logs interactions via HubSpot MCP tools
+- Drafts responses via `/email-composer`

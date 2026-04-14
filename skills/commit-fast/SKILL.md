@@ -1,34 +1,120 @@
 ---
 name: commit-fast
-description: Automates git commit process by reviewing staged files, generating structured semantic commits, and executing without manual copy-pasting.
+description: "Automate the git commit workflow — stage files, generate a semantic commit message from the diff, and execute. Use when the user says 'commit', 'save this', or after completing a task."
 ---
 
-# Commit Fast Skill
+# Commit Fast
 
-When the user runs `/commit-fast`, your job is to analyze the current Git diff, generate a clean, semantic commit message, and execute the commit. 
+Analyze the current git state, generate a properly structured commit message, and execute — no copy-paste required.
 
 ## Execution Sequence
 
-1. **Check Git Status:**
-   Run `git status` to see what is staged vs unstaged.
-   - If nothing is staged, offer to stage all modified tracked files or ask the user which to stage.
+### 1. Assess State
 
-2. **Generate Commit Message:**
-   Use the `git diff --cached` command to see what is about to be committed.
-   Generate a commit message conforming to Conventional Commits:
-   `<type>[optional scope]: <description>`
-   
-   Types:
-   - `feat:` A new feature
-   - `fix:` A bug fix
-   - `docs:` Documentation only changes
-   - `style:` Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-   - `refactor:` A code change that neither fixes a bug nor adds a feature
-   - `perf:` A code change that improves performance
-   - `test:` Adding missing tests or correcting existing tests
-   - `chore:` Changes to the build process or auxiliary tools and libraries such as documentation generation
+```bash
+# What's the situation?
+git status --short
 
-3. **Execute:**
-   Propose the command `git commit -m "your message here"`. Once approved (or if Dippy/auto-approve is configured), execute the commit.
+# What branch are we on?
+git branch --show-current
+```
 
-**WARNING:** Always generate a concise message (under 50 chars for the subject line). Do not add a body unless there are significant breaking changes.
+**Decision tree:**
+- Nothing modified → "Working tree clean. Nothing to commit."
+- Untracked files only → Ask: "Stage these new files? [list them]"
+- Modified + untracked → Stage tracked modifications; ask about untracked
+- Everything staged → Skip to step 3
+
+### 2. Stage Intelligently
+
+```bash
+# Stage all modified tracked files
+git add -u
+
+# If user wants everything including new files
+git add -A
+
+# For selective staging (when changes span unrelated work)
+git add path/to/specific/files
+```
+
+**Split rule:** If the diff touches 3+ unrelated subsystems, suggest splitting into separate commits. Example: "This diff changes the API handler, the CSS, and the CI config. Want me to split into 3 commits?"
+
+### 3. Generate Commit Message
+
+Read the staged diff:
+```bash
+git diff --cached --stat
+git diff --cached
+```
+
+**Conventional Commits format:**
+```
+<type>(<scope>): <description>
+
+[optional body — what and why, not how]
+
+[optional footer — breaking changes, issue refs]
+```
+
+**Type reference:**
+
+| Type | When to use |
+|------|------------|
+| `feat` | New feature or capability |
+| `fix` | Bug fix |
+| `docs` | Documentation only |
+| `style` | Formatting, whitespace (no logic change) |
+| `refactor` | Code restructuring (no behavior change) |
+| `perf` | Performance improvement |
+| `test` | Adding or fixing tests |
+| `chore` | Build, CI, deps, tooling |
+| `security` | Security fix or hardening |
+
+**Scope detection:** Infer from file paths. If all changes are in `skills/` → scope is `skills`. If mixed → use the primary subsystem or omit scope.
+
+**Good vs bad messages:**
+
+| ❌ Bad | ✅ Good |
+|--------|---------|
+| "update stuff" | `feat(api): add pagination to /deals endpoint` |
+| "fix bug" | `fix(auth): prevent token refresh race condition` |
+| "changes" | `refactor(hooks): extract validation into shared utility` |
+| "WIP" | `chore: stage progress on migration (incomplete)` |
+
+### 4. Execute
+
+```bash
+git commit -m "<generated message>"
+```
+
+Show the user:
+```
+✅ Committed: <type>(<scope>): <description>
+   <N> files changed, <+> insertions, <-> deletions
+   Branch: <branch-name>
+```
+
+### 5. Follow-up Options
+
+After committing, offer if relevant:
+- **Push?** `git push origin <branch>`
+- **Tag?** `git tag -a v<version> -m "<message>"`
+- **Another commit?** (if unstaged changes remain)
+- **PR?** `gh pr create --title "<message>" --body "<body>"`
+
+## Edge Cases
+
+| Scenario | Action |
+|----------|--------|
+| Merge conflict markers in staged files | Abort. "Resolve conflicts first." |
+| `.env` or secrets in staged files | Block. "Remove sensitive files from staging." |
+| Massive diff (500+ lines) | Suggest splitting. Show file groupings. |
+| Amend previous commit | `git commit --amend --no-edit` (if user asks) |
+| Fixup for earlier commit | `git commit --fixup=<sha>` then `git rebase -i --autosquash` |
+
+## Integration
+
+- Run after `/review-pr` approves changes
+- Chain with `project-release` for tagged releases
+- Use `verify-execution` to confirm tests pass before committing

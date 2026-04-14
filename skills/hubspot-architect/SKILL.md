@@ -1,32 +1,179 @@
 ---
 name: hubspot-architect
-description: Comprehensive HubSpot architecture logic for syncing, integrating, and creating data pipelines using the official Python SDK, OpenAPI spec layer, and the MCP connector.
-license: MIT
-metadata:
-  author: GFV Proactive Intelligence
-  version: 1.0.0
-  category: core-architecture
+description: "Build HubSpot CRM integrations, data pipelines, and sync workflows. Use when the user needs to set up HubSpot, create custom properties, build deal pipelines, or sync data between HubSpot and other systems."
 ---
 
-# /hubspot-architect
+# HubSpot Architect
 
-**Usage**: Utilize this skill anytime the user requests to build an integration, webhook, CRM sync, or custom Python script leveraging HubSpot.
+Build production-grade HubSpot integrations. Never guess at API structures — always verify against the SDK and API docs.
 
-## 1. Ground Truth First
-Before writing ANY integration code, you MUST consult the local reference libraries cloned inside standard GTM architecture:
-- **API Spec Layer**: Open and review schemas in `gfv_growth_by_design/references/hubspot/HubSpot-public-api-spec-collection`. Do not guess property names or API structures.
-- **Python SDK Layer**: Cross-verify calls using `gfv_growth_by_design/references/hubspot/hubspot-api-python`. Ensure you are using the v3 Python client conventions.
+## When to Use
 
-## 2. Syncing & Deduplication
-If tasked with syncing external databases (e.g., Supabase / PIL) to HubSpot, leverage the patterns from the official `crm-object-sync` reference implementation:
-1. Use an immutable unique identifier (like Email for Contacts, Domain for Companies) to avoid duplicates.
-2. Employ an upsert strategy: Check if the object exists. If yes, patch (merge) the data. If no, create it.
-3. Write back the generated `hs_object_id` instantly to the external DB to establish a bidirectional mapping.
+- "Set up HubSpot for [client]"
+- "Sync [system] data to HubSpot"
+- "Create a deal pipeline in HubSpot"
+- "Build a HubSpot integration"
+- Any CRM data architecture work
 
-## 3. Real-time Capabilities vs Scripting
-- **Immediate Lookups**: If the user asks "What's in my pipeline?", do NOT write a script. Use the built-in MCP server (`mcp-hubspot`). Query tools like `hubspot_search_data` or `hubspot_get_recent_conversations`.
-- **Structural Cleanup**: If the user asks to clean the database or run audits, suggest running the native `hubspot-admin-skills` slash commands (e.g., `/hubspot-audit` or `/hubspot-implementation-plan`).
-- **Custom Scripts**: ONLY write custom scripts if the task falls outside MCP coverage and standard admin coverage.
+## Prerequisites
 
-## 4. Execution Sandbox
-Any scripts built should be placed in `gfv-brain/scripts/` unless instructed otherwise. Ensure they pull `HUBSPOT_ACCESS_TOKEN` cleanly from the OS environment (`os.getenv`), never hardcode secrets.
+### SDK Setup (on-demand)
+```bash
+pip install hubspot-api-client
+```
+
+### Authentication
+```python
+from hubspot import HubSpot
+
+# Private App Token (recommended)
+client = HubSpot(access_token="YOUR_PAT")
+
+# Or from environment
+import os
+client = HubSpot(access_token=os.environ["HUBSPOT_PAT"])
+```
+
+**Where tokens live:** macOS Keychain or environment variable `HUBSPOT_PAT`. Never hardcode.
+
+## Common Patterns
+
+### 1. Contact CRUD
+
+```python
+from hubspot.crm.contacts import SimplePublicObjectInputForCreate
+
+# Create
+contact = client.crm.contacts.basic_api.create(
+    SimplePublicObjectInputForCreate(
+        properties={
+            "email": "ceo@example.com",
+            "firstname": "Jane",
+            "lastname": "Doe",
+            "company": "Acme Corp"
+        }
+    )
+)
+
+# Search
+from hubspot.crm.contacts import PublicObjectSearchRequest
+search = client.crm.contacts.search_api.do_search(
+    PublicObjectSearchRequest(
+        filter_groups=[{
+            "filters": [{
+                "propertyName": "email",
+                "operator": "EQ",
+                "value": "ceo@example.com"
+            }]
+        }],
+        properties=["email", "firstname", "lastname", "company"]
+    )
+)
+
+# Update
+from hubspot.crm.contacts import SimplePublicObjectInput
+client.crm.contacts.basic_api.update(
+    contact_id="12345",
+    simple_public_object_input=SimplePublicObjectInput(
+        properties={"lifecyclestage": "customer"}
+    )
+)
+```
+
+### 2. Deal Pipeline Setup
+
+```python
+# Create a pipeline
+pipeline = client.crm.pipelines.pipelines_api.create(
+    object_type="deals",
+    pipeline_input={
+        "label": "Sales Pipeline",
+        "displayOrder": 0,
+        "stages": [
+            {"label": "Discovery",      "displayOrder": 0, "metadata": {"probability": "0.1"}},
+            {"label": "Proposal",       "displayOrder": 1, "metadata": {"probability": "0.3"}},
+            {"label": "Negotiation",    "displayOrder": 2, "metadata": {"probability": "0.6"}},
+            {"label": "Closed Won",     "displayOrder": 3, "metadata": {"probability": "1.0"}},
+            {"label": "Closed Lost",    "displayOrder": 4, "metadata": {"probability": "0.0"}},
+        ]
+    }
+)
+```
+
+### 3. UPSERT Sync Pattern
+
+The right way to sync external data into HubSpot — don't create duplicates:
+
+```python
+def upsert_contact(client, email, properties):
+    """Search by email first, create or update accordingly."""
+    from hubspot.crm.contacts import PublicObjectSearchRequest
+
+    # Search
+    results = client.crm.contacts.search_api.do_search(
+        PublicObjectSearchRequest(
+            filter_groups=[{
+                "filters": [{
+                    "propertyName": "email",
+                    "operator": "EQ",
+                    "value": email
+                }]
+            }]
+        )
+    )
+
+    if results.total > 0:
+        # Update existing
+        contact_id = results.results[0].id
+        client.crm.contacts.basic_api.update(
+            contact_id=contact_id,
+            simple_public_object_input={"properties": properties}
+        )
+        return contact_id, "updated"
+    else:
+        # Create new
+        props = {**properties, "email": email}
+        result = client.crm.contacts.basic_api.create(
+            simple_public_object_input={"properties": props}
+        )
+        return result.id, "created"
+```
+
+### 4. Batch Operations
+
+```python
+# Batch create (up to 100 at a time)
+from hubspot.crm.contacts import BatchInputSimplePublicObjectInputForCreate
+
+batch = BatchInputSimplePublicObjectInputForCreate(
+    inputs=[
+        {"properties": {"email": "a@example.com", "firstname": "A"}},
+        {"properties": {"email": "b@example.com", "firstname": "B"}},
+    ]
+)
+client.crm.contacts.batch_api.create(batch)
+```
+
+## Architecture Rules
+
+1. **Always UPSERT, never blind INSERT** — duplicates corrupt the CRM
+2. **Rate limits:** 100 requests/10 seconds for private apps. Use batch endpoints.
+3. **Property validation:** Check that custom properties exist before writing to them
+4. **Association types:** Use the correct `associationTypeId` (3 = contact-to-company, 5 = deal-to-contact)
+5. **Pagination:** All list endpoints return max 100 results. Always check `paging.next` for more
+
+## Error Handling
+
+| Error | Cause | Fix |
+|-------|-------|-----|
+| 401 | Bad or expired token | Refresh PAT in HubSpot settings |
+| 409 | Duplicate detected | Use UPSERT pattern above |
+| 429 | Rate limited | Wait 10 seconds, retry |
+| 400 with "PROPERTY_DOESNT_EXIST" | Custom property missing | Create it first via Properties API |
+
+## Integration
+
+- Used by `/cro-advisor` for pipeline analysis
+- Used by `/pipeline-pulse` for deal tracking
+- Used by `/chief-of-staff` for CRM health monitoring
+- Credentials stored in macOS Keychain or env vars — never in code

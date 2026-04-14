@@ -1,40 +1,155 @@
 ---
 name: domain-intel
-description: Domain registration intelligence for competitive analysis. WHOIS, DNS, nameserver, and expiry tracking.
-license: MIT
-metadata:
-  author: GFV Proactive Intelligence
-  version: 1.0.0
-  category: Revenue Enablement
+description: "Perform domain registration intelligence — WHOIS lookups, DNS analysis, SSL certificate inspection, and competitive domain research. Use when researching a prospect, auditing a client's domain infrastructure, or performing competitive intelligence."
 ---
 
-# /domain-intel
+# Domain Intelligence
 
-**Usage**: Research domain ownership, registration history, DNS configuration, and expiry dates for competitive intelligence and deal research.
+Extract actionable infrastructure intelligence from domain names. Every data point should inform a business decision.
 
-## Capabilities
+## When to Use
 
-### 1. WHOIS Lookup
-- Registrar, registration date, expiry date, nameservers.
-- Registrant organization (when not privacy-protected).
-- Domain status codes (clientTransferProhibited, etc.).
+- Pre-meeting research: "What can you tell me about [company].com?"
+- Competitive analysis: "What domains do they own?"
+- Client audit: "Check our domain setup"
+- Due diligence: "Is this a legit company?"
 
-### 2. Competitive DNS Analysis
-- Identify hosting providers (AWS, Cloudflare, GoDaddy, etc.).
-- Detect CDN usage and email providers (MX records).
-- Map technology stack from DNS footprint.
+## Step 1: WHOIS Lookup
 
-### 3. Expiry Monitoring
-- Track competitor domain expiry dates.
-- Alert when domains in your niche become available.
-- Monitor newly registered domains in your industry category.
+```bash
+# macOS/Linux (built-in)
+whois example.com
+```
 
-### 4. Deal Research Application
-- Before any partnership or acquisition discussion, pull domain intel.
-- Cross-reference with CRM data for enrichment.
-- Feed findings into `meeting-prep` dossiers.
+```python
+# Python (more structured)
+# pip install python-whois
+import whois
 
-## Implementation
-- Uses RDAP protocol (modern WHOIS replacement). No API key required.
-- Fallback to traditional WHOIS via CLI tools.
-- Results cached for 24 hours to avoid rate limiting.
+w = whois.whois("example.com")
+print(f"Registrar:    {w.registrar}")
+print(f"Created:      {w.creation_date}")
+print(f"Expires:      {w.expiration_date}")
+print(f"Name Servers: {w.name_servers}")
+print(f"Status:       {w.status}")
+print(f"Org:          {w.org}")
+```
+
+**What to extract:**
+
+| Field | Intelligence value |
+|-------|-------------------|
+| `creation_date` | Company age indicator. Post-2023 = startup/new venture |
+| `expiration_date` | Short renewals (1yr) = uncertain commitment. 5-10yr = established |
+| `registrar` | GoDaddy/Namecheap = SMB. CSC/MarkMonitor = enterprise |
+| `name_servers` | Reveals hosting: Cloudflare, AWS Route53, etc. |
+| `org` | Registrant organization (if not privacy-protected) |
+| `status` | `clientTransferProhibited` = locked down (good security) |
+
+## Step 2: DNS Records
+
+```bash
+# A records (where the site hosts)
+dig +short A example.com
+
+# MX records (email provider)
+dig +short MX example.com
+
+# TXT records (SPF, DKIM, domain verification)
+dig +short TXT example.com
+
+# CNAME (CDN/proxy detection)
+dig +short CNAME www.example.com
+
+# All records
+dig ANY example.com +noall +answer
+```
+
+**What DNS reveals:**
+
+| Record | What it means |
+|--------|--------------|
+| A → Cloudflare IPs (104.x, 172.x) | Using Cloudflare CDN/proxy |
+| A → AWS IPs | Hosting on AWS |
+| MX → `aspmx.l.google.com` | Using Google Workspace |
+| MX → `*.mail.protection.outlook.com` | Using Microsoft 365 |
+| TXT with `v=spf1` | Email authentication configured |
+| TXT with `_dmarc` | Email security policy set |
+| CNAME → `*.shopify.com` | Shopify storefront |
+| CNAME → `*.hubspotpagebuilder.com` | HubSpot CMS |
+
+## Step 3: SSL/TLS Certificate
+
+```bash
+# Check certificate details
+echo | openssl s_client -connect example.com:443 -servername example.com 2>/dev/null | openssl x509 -noout -dates -subject -issuer
+```
+
+```python
+import ssl, socket
+
+ctx = ssl.create_default_context()
+with ctx.wrap_socket(socket.socket(), server_hostname="example.com") as s:
+    s.connect(("example.com", 443))
+    cert = s.getpeercert()
+    print(f"Subject: {cert['subject']}")
+    print(f"Issuer:  {cert['issuer']}")
+    print(f"Expires: {cert['notAfter']}")
+    # Check for wildcard, SAN entries
+    for san in cert.get('subjectAltName', []):
+        print(f"SAN: {san[1]}")
+```
+
+**Intelligence from certs:**
+- Let's Encrypt = automated, budget-conscious
+- DigiCert/Comodo = enterprise, paid SSL
+- SAN entries reveal other domains/subdomains on same cert
+
+## Step 4: Technology Detection
+
+```bash
+# HTTP headers reveal tech stack
+curl -sI https://example.com | grep -iE "server:|x-powered-by:|x-cache:|via:"
+```
+
+| Header | Reveals |
+|--------|---------|
+| `Server: nginx` | Web server |
+| `X-Powered-By: Express` | Node.js backend |
+| `X-Cache: HIT` | CDN caching active |
+| `Via: 1.1 varnish` | Varnish cache layer |
+
+## Output Format
+
+```markdown
+## Domain Intelligence: [domain.com]
+
+### Registration
+- **Registrar:** [name]
+- **Created:** [date] ([N] years old)
+- **Expires:** [date] ([N]-year registration)
+- **Privacy:** [Protected/Visible — org if visible]
+
+### Infrastructure
+- **Hosting:** [Provider] ([IP range])
+- **CDN:** [Cloudflare/None/etc.]
+- **Email:** [Google Workspace/M365/Other]
+- **CMS:** [WordPress/Shopify/Custom/etc.]
+- **SSL:** [Issuer, expiry]
+
+### Security Posture
+- SPF: [✅ Configured / ❌ Missing]
+- DKIM: [✅ Configured / ❌ Missing]
+- DMARC: [✅ Configured / ❌ Missing]
+- Transfer Lock: [✅ / ❌]
+
+### Assessment
+[2-3 sentences: Is this a real, established company? Is their infrastructure
+enterprise-grade or SMB? Any red flags?]
+```
+
+## Integration
+
+- Feeds into `/competitive-intel` for market analysis
+- Used by `/meeting-prep` for prospect research
+- Used in due diligence for `/fundraise` and `/deal-review`

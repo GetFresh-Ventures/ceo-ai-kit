@@ -1,21 +1,115 @@
 ---
 name: audio-briefing
-description: Synthesizes textual outputs into physical executive audio briefings using the cloned VoxCPM voice model.
+description: "Generate a concise, audio-ready executive briefing script from data across your systems. Use when the user wants a morning brief, situation update, or a summary they can listen to on the go."
 ---
 
-# GFV CEO Enablement Kit: Audio Briefing Engine (VoxCPM)
+# Audio Briefing
 
-You are the CEO's autonomous Chief of Staff, equipped with a native VoxCPM Audio Engine capable of physically cloning the executive's voice.
-Use this skill when the CEO asks you to "record a briefing", "read this to me", or "drop a voicemail".
+Produce a structured, spoken-word briefing script the CEO can consume hands-free. This skill generates the *script* — actual text-to-speech rendering is handled by external TTS services (ElevenLabs, OpenAI TTS, macOS `say`, etc.).
 
-### Prerequisites
-Before executing this skill, ensure the CEO's reference voice exists at `~/ceo-brain/reference_voice.wav`. If it does not exist, instruct them to drop a 15-second wav file there.
+## When to Use
 
-### Execution Protocol
-1. **Prepare the Transcript:** Analyze the context (e.g. an email draft, a Morning Sync, or a deal rescue strategy) and draft a highly conversational, spoken-word transcript. Remove markdown or emojis as the audio model reads literal strings.
-2. **Set the Target Parameter:** Decide heavily on the output path, usually `~/ceo-brain/briefings/latest_briefing.wav`.
-3. **Execute the Python Bridge:** Run the native python hook to synthesize the voice.
-   ```bash
-   python3 hooks/generate_audio.py --text "Your conversational transcript goes here." --output "~/ceo-brain/briefings/latest_briefing.wav"
-   ```
-4. **Handoff:** Tell the CEO the audio file is ready for playback.
+- "Give me my morning brief"
+- "What do I need to know today?"
+- "Summarize everything for my commute"
+- Start of day when `/chief-of-staff` detects pending items
+
+## Step 1: Gather Intelligence
+
+Pull from available sources (skip any that aren't connected):
+
+```
+1. Calendar  → Next 3 meetings (title, time, attendee count)
+2. Linear    → P0/P1 issues updated in last 24h
+3. Pipeline  → ~/gtm-brain/pipeline.md (deals with activity)
+4. Email     → Unread count + any flagged/urgent
+5. News      → /news-digest output if available
+```
+
+**Time budget:** Spend no more than 30 seconds per source. If a source is slow or unavailable, skip it and note the gap.
+
+## Step 2: Write the Script
+
+**Format rules for spoken delivery:**
+
+| Rule | Why |
+|------|-----|
+| Short sentences (under 15 words) | Easier to process aurally |
+| No bullet points or tables | They don't translate to speech |
+| Numbers spoken naturally | "about twelve hundred" not "1,200" |
+| Spell out acronyms on first use | "P-zero" not "P0", "cost per acquisition" not "CPA" |
+| Use transition phrases | "Moving on...", "Next up...", "One thing to flag..." |
+| Total length: 60-90 seconds | ~150-225 words at speaking pace |
+
+**Script structure:**
+
+```markdown
+## Executive Briefing — [Day, Month Date]
+
+Good morning. Here's what matters today.
+
+### Schedule
+You have [N] meetings today. First up is [meeting] at [time]
+with [key attendee]. [One sentence on what it's about or what to prepare.]
+
+### Pipeline
+[1-2 sentences on the most important pipeline movement.
+Focus on what changed, not the full state.]
+
+### Operations
+[1-2 sentences on urgent tickets, blockers, or team items.
+Only mention things that need action today.]
+
+### One Thing to Watch
+[The single most important non-urgent item the CEO should be
+aware of. A risk, an opportunity, or a trend.]
+
+That's your brief. Have a good one.
+```
+
+## Step 3: Render (Optional)
+
+If the user wants actual audio output:
+
+**macOS (built-in, no API key):**
+```bash
+say -v Samantha -r 170 -o ~/ceo-brain/briefing-$(date +%Y%m%d).aiff "$(cat briefing.txt)"
+```
+
+**ElevenLabs API (if configured):**
+```bash
+curl -X POST "https://api.elevenlabs.io/v1/text-to-speech/VOICE_ID" \
+  -H "xi-api-key: $ELEVENLABS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d "{\"text\": \"$(cat briefing.txt)\", \"model_id\": \"eleven_turbo_v2\"}" \
+  --output ~/ceo-brain/briefing-$(date +%Y%m%d).mp3
+```
+
+**OpenAI TTS:**
+```python
+from openai import OpenAI
+client = OpenAI()
+response = client.audio.speech.create(
+    model="tts-1",
+    voice="onyx",
+    input=open("briefing.txt").read()
+)
+response.stream_to_file("briefing.mp3")
+```
+
+If no TTS is configured, just output the script — it's still valuable as text.
+
+## Output
+
+Always produce:
+1. **The script** (in the format above)
+2. **Audio file path** (if TTS was used)
+3. **Sources used** (which systems contributed data)
+4. **Gaps** (which systems were unavailable)
+
+## Integration
+
+- Triggered by `/chief-of-staff` during morning sweep
+- Feeds from `/news-digest` for the market section
+- Feeds from `/pipeline-pulse` for deal updates
+- Script saved to `~/ceo-brain/briefings/` for history
