@@ -1,31 +1,25 @@
 # GetFresh CEO Enablement Kit for AI
-**Version**: v1.18.1  
-**A GTM Enablement Kit for the AI-Powered Executive**
-*Leveraging our Growth by Design (GxD) GTM model.*
-
-*An exclusive framework for our GetFresh Ventures (GFV) portfolio and the CEOs and leaders we work with.*
+**Version**: v1.21.0  
+**Turn any AI coding assistant into your personal Chief of Staff.**
 
 ---
 
 ## What is this?
 
-The GetFresh CEO Enablement Kit for AI is a plug-and-play toolkit that turns any AI coding assistant — Claude Code, Cursor, Gemini (Antigravity), or GitHub Copilot — into a **personalized Chief of Staff** for Go-To-Market execution. 
+A plug-and-play toolkit that turns Claude Code, Cursor, Gemini, or Copilot into a **personalized Chief of Staff** — pre-loaded with your voice, your deals, your preferences, and 72 executive workflows.
 
-Instead of opening your AI and starting from scratch every time — figuring out how to write an email, prep for a meeting, or analyze your pipeline — this kit pre-loads everything. Your voice, your deals, your preferences, your workflows. The AI already knows who you are and how you operate.
-
-**Think of it this way:** right now, your AI assistant is a blank intern on day one. After installing the GetFresh CEO Enablement Kit for AI, it's a Chief of Staff who's worked with you for six months.
+Right now, your AI assistant is a blank intern on day one. After installing this kit, it's a Chief of Staff who's worked with you for six months.
 
 ---
 
 ## Who is this for?
 
-This kit is designed specifically for **CEOs and senior executives** in the GFV portfolio who:
-- Already have (or want to start using) an AI coding assistant like Claude Code or Cursor
-- Spend significant time on pipeline management, email, meeting prep, and outreach
-- Want their AI to write in their voice — not generic B2B consultant-speak
-- Need repeatable, zero-effort workflows for recurring weekly tasks (pipeline reviews, CEO briefs, deal progression)
+**CEOs, founders, and senior executives** who:
+- Spend too much time on email, meeting prep, pipeline reviews, and outreach
+- Want AI that writes in their voice — not generic consultant-speak
+- Need repeatable workflows for weekly rhythms (pipeline reviews, CEO briefs, deal progression)
 
-**You do NOT need to be technical.** The setup takes 5 minutes and the kit handles all the wiring for you.
+**You do NOT need to be technical.** The setup takes 5 minutes.
 
 ---
 
@@ -36,57 +30,102 @@ This toolkit runs entirely in your local terminal to securely protect your data.
 - **Mac / Linux:** Fully supported natively via the default UNIX Terminal.
 - **Windows:** Fully supported natively via Windows PowerShell. You must run the `bootstrap.ps1` script instead of `bootstrap.sh`.
 
-### ⚠️ The "Always-On" Infrastructure Notice
-If you utilize the **EngineClaw Autonomous Layer** (the Night Shift workflow that drafts rescue emails at 2:00 AM), your machine **must be awake**. If you close your laptop at night, the background daemon will pause. To unlock the "Chief of Staff" autonomous experience, you either need an app keeping your laptop awake, or you can install this kit on an always-on cloud VM (like AWS EC2 or DigitalOcean).
-
 ---
 
 ## Quick Start (5 Minutes)
 
 ### Step 1: Clone the repo
 
-Open your terminal (Terminal on Mac, PowerShell on Windows) and run:
+Open your terminal (Terminal on Mac, PowerShell on Windows):
 ```bash
 git clone git@github.com:GetFresh-Ventures/gfv_growth_by_design.git ~/.gfv_growth_by_design
 ```
 
-This downloads the entire kit to a hidden folder on your machine. You only do this once.
-
 ### Step 2: Run the installer
 
-1. Navigate to the repository: `cd ~/.gfv_growth_by_design` (or `cd ~\.gfv_growth_by_design` on Windows)
-2. Run the bootstrap script for your OS:
-   - **Mac/Linux:** run `./bootstrap.sh`
-   - **Windows:** run `.\bootstrap.ps1`
-3. The script will dynamically:
-   - Sets up the Claude Code hooks (the startup prompt logic)
-   - Creates your personal `~/ceo-brain` (for personal tasks/voice) and `~/gtm-brain` (for active deals and campaigns)
-   - Symlinks all 72 skills into the Claude Code path
-   - Detects which AI tool you use (Claude Code, Cursor, or other) and wires things up accordingly
-   - If you're on Claude Code: installs native `/slash` commands for instant skill access, sets up Dippy (auto-approves safe commands so you never see "Y/n" prompts), and wires session hooks
-   - If you're on Cursor: creates `.cursorrules` so the AI reads your operating rules automatically
+```bash
+cd ~/.gfv_growth_by_design
+./bootstrap.sh          # Mac/Linux
+# .\bootstrap.ps1       # Windows
+```
+
+The installer will:
+1. Ask you to pick your experience level (Beginner, Intermediate, or Advanced)
+2. Ask 2-4 quick setup questions based on your level
+3. Create your personal memory directories (`~/ceo-brain/` and `~/gtm-brain/`)
+4. Install the right set of skills for your level
+5. Wire up hooks and agent configuration
 
 ### Step 3: Start your first session
 
-Open your AI assistant (Claude Code, Cursor, Gemini, or Copilot) in your working directory and paste this:
-
-```text
-Initialize GFV Chief of Staff Sequence.
-
-1. Read the `AGENT.md` file in the root to internalize the GFV operating boundaries.
-2. Ensure you have access to the `/skills/` directory.
-3. IMMEDIATELY execute the `/onboard` skill to launch the interactive setup wizard. Do not output anything else; simply launch the wizard starting with Phase 0.
+Open your AI tool and type:
+```
+/onboard
 ```
 
-The AI will walk you through an interactive wizard to configure your voice model, pipeline priorities, and custom preferences. After that, you're live.
+The AI will walk you through a 5-minute setup wizard to learn your voice, your team, and your priorities. After that, you're live.
 
 ---
 
-## What Can It Do?
+## Experience Levels
 
-Once installed, you have access to **72 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
+The kit adapts to your comfort level with AI. You choose during installation:
 
-> 📖 **New to this?** Read the **[Getting Started Guide](GETTING-STARTED.md)** — a step-by-step executive walkthrough that takes you from zero to productive in 30 minutes.
+### Beginner — "Keep it simple"
+*15 skills • Auto-memory • Proactive tips • Plain-English mode*
+
+Perfect if you're new to AI assistants. The AI handles emails, meeting prep, and documents — and explains everything in plain English. Memory saves automatically so each session picks up where you left off.
+
+**Try these first:**
+- "Draft an email to [name] about [topic]"
+- "Prep me for my meeting with [name]"
+- "Summarize this contract"
+
+### Intermediate — "Plug into my business" ★ Recommended
+*45 skills • CRM integration • Weekly reports • Feedback loops*
+
+Everything in Beginner, plus your AI connects to HubSpot/Salesforce, generates weekly pipeline reports, and refines your voice model over time. After key tasks, it asks "Was this helpful?" to continuously improve.
+
+**Try these first:**
+- "What does my pipeline look like?" → `/pipeline-pulse`
+- "Write my weekly CEO brief" → `/weekly-ceo-brief`
+- "Build an outreach sequence for [prospect]" → `/outreach-sequence`
+
+### Advanced — "Full autonomy"
+*All 72 skills • Dream Mode • Background workers • Self-improving skills*
+
+Everything in Intermediate, plus cross-session memory consolidation (Dream Mode), background automation, multi-agent orchestration, and skills that self-improve over time. Proactive tips turn off — you know what you want.
+
+**Try these first:**
+- "Run a morning sweep" → `/chief-of-staff`
+- "Model a scenario" → `/scenario-war-room`
+- "Run dream mode" → consolidates all memories
+
+### How features grow with your level
+
+| Feature | Beginner | Intermediate | Advanced |
+|---------|----------|-------------|----------|
+| Auto-save decisions & meetings | ✅ | ✅ | ✅ |
+| Draft review before sending | ✅ | ✅ | ✅ |
+| Proactive tips after tasks | ✅ | ✅ | ❌ |
+| Plain-English explanations | ✅ | ❌ | ❌ |
+| Session summary recap | ✅ | ✅ | ❌ |
+| Feedback loops ("Was this helpful?") | ❌ | ✅ | ✅ |
+| Weekly learning capture | ❌ | ✅ | ✅ |
+| Voice model refinement | ❌ | ✅ | ✅ |
+| Cross-session Dream Mode | ❌ | ❌ | ✅ |
+| Background scheduling | ❌ | ❌ | ✅ |
+| Self-improving skills | ❌ | ❌ | ✅ |
+
+You can upgrade your level anytime by re-running `./bootstrap.sh`.
+
+---
+
+## Full Skill Catalog
+
+Once installed, invoke any skill by saying its name or typing the `/slash` command.
+
+> 📖 For the complete machine-readable catalog, see **[AGENT-GUIDE.md](AGENT-GUIDE.md)**.
 
 ### Skills — Day-to-Day Execution
 

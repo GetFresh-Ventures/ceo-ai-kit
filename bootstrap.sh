@@ -6,71 +6,131 @@
 set -e
 
 clear
-echo "======================================================================="
-echo "  G R O W T H   B Y   D E S I G N   ——   C E O   I N S T A L L E R"
-echo "======================================================================="
+echo "╔═══════════════════════════════════════════════════════════════════╗"
+echo "║         CEO ENABLEMENT KIT  —  AI CHIEF OF STAFF                ║"
+echo "╚═══════════════════════════════════════════════════════════════════╝"
 echo ""
-echo "Welcome. This installer transforms your local AI coding assistant (Cursor,"
-echo "Claude Code, or Gemini) from a blank slate into a personalized, always-on"
-echo "Chief of Staff."
+echo "  This installs an AI Chief of Staff that knows your voice,"
+echo "  your deals, and your weekly rhythm — across Claude Code,"
+echo "  Cursor, Gemini, or Copilot."
 echo ""
-echo "WHAT THIS INSTALLS AND ENABLES:"
-echo " 1. The Dual-Brain System (~/ceo-brain/ and ~/gtm-brain/): Local, offline"
-echo "    directories protecting your personal voice profile and company pipeline"
-echo "    from public AI clouds."
-echo " 2. The 72-Skill Framework: Injects native agent capabilities to rapidly"
-echo "    draft emails, prep for meetings, synthesize CRM data, and audit pipelines."
-echo " 3. The Proactive Intelligence Layer (PIL) Daemon: An always-on background"
-echo "    process that silently syncs Linear, HubSpot, and WhatsApp into your"
-echo "    local offline semantic ontology."
-echo " 4. Agent Tooling: Homebrew packages (dippy), NPM registries (ccflare),"
-echo "    and local memory vectors to prevent massive context-window amnesia."
+echo "  What gets created:"
+echo "  ┌─────────────────────────────────────────────────────────┐"
+echo "  │  ~/ceo-brain/   Your voice model, meeting notes, prefs │"
+echo "  │  ~/gtm-brain/   Pipeline data, competitive intel       │"
+echo "  │  ~/.claude/      Skills, hooks, and session management  │"
+echo "  └─────────────────────────────────────────────────────────┘"
 echo ""
-echo "THE RESULT:"
-echo " Upon completion, you will rarely have to provide background context again."
-echo " Your AI inherently knows your organization, proactively extracts signals,"
-echo " governs your architecture mathematically, and speaks in your voice."
+echo "  Takes about 3 minutes. Your data stays local."
 echo ""
-echo "CRITICAL INFRASTRUCTURE REQUIREMENT:"
-echo " For the PIL to run autonomously and sweep CRM data while you sleep, your"
-echo " machine must remain powered on and connected to the internet (or you must"
-echo " host this kit on an always-on VM/server)."
+echo "═══════════════════════════════════════════════════════════════════"
 echo ""
-echo "======================================================================="
-echo "  E X P E R T I S E   C A L I B R A T I O N"
-echo "======================================================================="
+echo "  STEP 1 OF 2: Who are you?"
 echo ""
-echo "To configure your system perfectly, please select your AI expertise level:"
+echo "  ┌─────────────────────────────────────────────────────────────┐"
+echo "  │                                                             │"
+echo "  │  [1]  BEGINNER                                              │"
+echo "  │       \"I'm new to AI assistants.\"                           │"
+echo "  │                                                             │"
+echo "  │       Perfect for you if:                                   │"
+echo "  │       • You've never used Claude Code, Cursor, or Copilot   │"
+echo "  │       • You want help with emails, meetings, and documents  │"
+echo "  │       • You prefer simple, guided interactions              │"
+echo "  │                                                             │"
+echo "  │       What you get:                                         │"
+echo "  │       ✓ 15 core skills (email, meetings, docs, pipeline)    │"
+echo "  │       ✓ Auto-save memory (so the AI remembers you)          │"
+echo "  │       ✓ Proactive tips and suggestions                      │"
+echo "  │       ✓ Plain-English explanations for everything           │"
+echo "  │                                                             │"
+echo "  ├─────────────────────────────────────────────────────────────┤"
+echo "  │                                                             │"
+echo "  │  [2]  INTERMEDIATE                      ★ Recommended      │"
+echo "  │       \"I use AI regularly but want more structure.\"         │"
+echo "  │                                                             │"
+echo "  │       Perfect for you if:                                   │"
+echo "  │       • You already use AI for writing and research         │"
+echo "  │       • You want it plugged into your CRM and calendar      │"
+echo "  │       • You want weekly reports and pipeline management     │"
+echo "  │                                                             │"
+echo "  │       What you get (everything in Beginner, plus):          │"
+echo "  │       ✓ 45 skills (content, CRM, fundraising, advisory)     │"
+echo "  │       ✓ CRM integration (HubSpot, Salesforce, Pipedrive)   │"
+echo "  │       ✓ Weekly feedback loops and learning capture          │"
+echo "  │       ✓ Voice model training from your actual writing       │"
+echo "  │                                                             │"
+echo "  ├─────────────────────────────────────────────────────────────┤"
+echo "  │                                                             │"
+echo "  │  [3]  ADVANCED                                              │"
+echo "  │       \"I want maximum autonomy and control.\"               │"
+echo "  │                                                             │"
+echo "  │       Perfect for you if:                                   │"
+echo "  │       • You build with AI daily and want agent workflows    │"
+echo "  │       • You want background automation and multi-agent ops  │"
+echo "  │       • You want full C-suite advisory and war-room tools   │"
+echo "  │                                                             │"
+echo "  │       What you get (everything in Intermediate, plus):      │"
+echo "  │       ✓ All 72 skills (full C-suite, orchestration, infra)  │"
+echo "  │       ✓ Background workers and scheduled automation         │"
+echo "  │       ✓ Multi-agent orchestration and parallel dispatch     │"
+echo "  │       ✓ Cross-session memory consolidation ("Dream Mode")   │"
+echo "  │       ✓ Self-improving skills via autoresearch loops        │"
+echo "  │                                                             │"
+echo "  └─────────────────────────────────────────────────────────────┘"
 echo ""
-echo " [1] Tier 1: AI Novice"
-echo "     Keep it simple. Writing emails, meeting prep, document analysis."
-echo "     Safe, local-only, no complex integrations."
-echo ""
-echo " [2] Tier 2: AI Practitioner"
-echo "     Plug into the business. CRM configuration, metric extraction,"
-echo "     Organizational delegation mapping. (Recommended)"
-echo ""
-echo " [3] Tier 3: AI Orchestrator"
-echo "     Maximum autonomy. Installs EngineClaw background workers,"
-echo "     Multi-agent swarm dispatching, zero-prompt execution."
-echo ""
-echo "NOTE: You can re-run this script anytime to escalate your tier."
-echo "======================================================================="
-read -p "Select Tier [1, 2, or 3]: " USER_TIER
+read -p "  Select your level [1, 2, or 3]: " USER_TIER
 USER_TIER=${USER_TIER:-2}
 
-if [[ "$USER_TIER" == "3" ]]; then
-    INSTALL_ENGINECLAW="y"
-else
-    INSTALL_ENGINECLAW="n"
+# Validate
+if [[ ! "$USER_TIER" =~ ^[123]$ ]]; then
+    echo "  Invalid selection. Defaulting to Intermediate (2)."
+    USER_TIER=2
 fi
+
+TIER_NAMES=("" "Beginner" "Intermediate" "Advanced")
 echo ""
-echo "======================================================================="
-read -p "Press [Enter] to authorize installation and enable the Executive Kit..."
+echo "  ✓ ${TIER_NAMES[$USER_TIER]} selected."
 echo ""
 
+# Step 2: Questions based on tier
+echo "═══════════════════════════════════════════════════════════════════"
+echo ""
+echo "  STEP 2 OF 2: Quick setup questions"
+echo ""
 
-echo "🚀 Initializing GetFresh CEO Enablement Kit for AI kit..."
+# All tiers get these basics
+read -p "  What's your first name? " USER_NAME
+USER_NAME=${USER_NAME:-"CEO"}
+
+read -p "  What company do you run? " USER_COMPANY
+USER_COMPANY=${USER_COMPANY:-"My Company"}
+
+if [[ "$USER_TIER" -ge 2 ]]; then
+    # Intermediate + Advanced get CRM question
+    echo ""
+    echo "  Which CRM do you use? (type the name, or 'none')"
+    read -p "  [HubSpot / Salesforce / Pipedrive / none]: " USER_CRM
+    USER_CRM=${USER_CRM:-"none"}
+
+    echo ""
+    echo "  What AI tool are you using? (for skill wiring)"
+    read -p "  [claude / cursor / gemini / copilot]: " USER_AGENT
+    USER_AGENT=${USER_AGENT:-"claude"}
+fi
+
+if [[ "$USER_TIER" -ge 3 ]]; then
+    # Only advanced get automation question
+    echo ""
+    echo "  Do you want background automation (runs while you work)?"
+    read -p "  [y/n]: " INSTALL_ENGINECLAW
+    INSTALL_ENGINECLAW=${INSTALL_ENGINECLAW:-"n"}
+fi
+
+echo ""
+echo "═══════════════════════════════════════════════════════════════════"
+echo ""
+echo "  Installing for ${USER_NAME} at ${USER_COMPANY}..."
+echo ""
 
 # Target directories
 CEO_BRAIN_DIR="$HOME/ceo-brain"
@@ -81,19 +141,39 @@ CLAUDE_SKILLS_DIR="$CLAUDE_DIR/skills"
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # 1. Create brain structure
-echo "📁 Creating ~/ceo-brain and ~/gtm-brain structures..."
+echo "  📁 Creating ~/ceo-brain and ~/gtm-brain..."
 mkdir -p "$CEO_BRAIN_DIR/meetings"
 mkdir -p "$CEO_BRAIN_DIR/mementos"
 mkdir -p "$CEO_BRAIN_DIR/weekly"
 mkdir -p "$GTM_BRAIN_DIR/campaigns"
 mkdir -p "$GTM_BRAIN_DIR/pipeline"
 
-# Record Active Tier
+# Record Active Tier and profile
 echo "$USER_TIER" > "$CEO_BRAIN_DIR/active-tier.txt"
-echo "  → Locked expertise Tier $USER_TIER into memory"
+
+# Create profile for the onboard skill to read
+cat > "$CEO_BRAIN_DIR/profile.json" << EOF
+{
+  "name": "$USER_NAME",
+  "company": "$USER_COMPANY",
+  "tier": $USER_TIER,
+  "tier_name": "${TIER_NAMES[$USER_TIER]}",
+  "crm": "${USER_CRM:-none}",
+  "agent": "${USER_AGENT:-claude}",
+  "installed_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "features": {
+    "auto_memory": true,
+    "proactive_tips": $([ "$USER_TIER" -le 2 ] && echo "true" || echo "false"),
+    "feedback_loops": $([ "$USER_TIER" -ge 2 ] && echo "true" || echo "false"),
+    "background_workers": $([ "$USER_TIER" -ge 3 ] && echo "true" || echo "false"),
+    "dream_mode": $([ "$USER_TIER" -ge 3 ] && echo "true" || echo "false")
+  }
+}
+EOF
+echo "  → Profile saved to ~/ceo-brain/profile.json"
 
 # 2. Copy templates if files don't exist
-echo "📄 Setting up templates..."
+echo "  📄 Setting up templates..."
 if [ ! -f "$CEO_BRAIN_DIR/voice-model.md" ]; then
     cp "$REPO_DIR/templates/voice-model.md" "$CEO_BRAIN_DIR/"
     echo "  → Created voice-model.md in ceo-brain"
@@ -111,31 +191,29 @@ if [ ! -f "$GTM_BRAIN_DIR/learnings.md" ]; then
 fi
 
 # 3. Agent-Agnostic Context Routing
-echo "🤖 Applying multi-agent configuration mapping..."
+echo "  🤖 Applying multi-agent configuration mapping..."
 if [ -f "$REPO_DIR/AGENT.md" ]; then
-    # Cursor
     ln -sf "$REPO_DIR/AGENT.md" "$REPO_DIR/.cursorrules"
     echo "  → Linked AGENT.md to .cursorrules"
-    # Claude Code
     ln -sf "$REPO_DIR/AGENT.md" "$REPO_DIR/CLAUDE.md"
     echo "  → Linked AGENT.md to CLAUDE.md"
 fi
 
 # 4. Environment-Specific Hook & Skill Bindings
-echo "🪝 Setting up Claude Code specific hooks and native skills..."
+echo "  🪝 Setting up hooks and native skills..."
 if command -v claude &> /dev/null || [ -d "$CLAUDE_DIR" ]; then
     mkdir -p "$CLAUDE_HOOKS_DIR"
     mkdir -p "$CLAUDE_SKILLS_DIR"
     
-    # Advanced Tooling (Dippy & ccflare)
-    echo "📦 Installing Advanced Claude Tools (Dippy & ccflare)..."
-    if command -v brew &> /dev/null; then
-        brew tap ldayton/dippy || true
-        brew install dippy || true
-        
-        # Wire up Dippy in settings.json safely
-        if [ -f "$CLAUDE_DIR/settings.json" ]; then
-            python3 -c "
+    # Advanced Tooling (Tier 2+)
+    if [[ "$USER_TIER" -ge 2 ]]; then
+        echo "  📦 Installing advanced tools..."
+        if command -v brew &> /dev/null; then
+            brew tap ldayton/dippy 2>/dev/null || true
+            brew install dippy 2>/dev/null || true
+            
+            if [ -f "$CLAUDE_DIR/settings.json" ]; then
+                python3 -c "
 import json, os
 path = os.path.expanduser('~/.claude/settings.json')
 try:
@@ -145,7 +223,6 @@ except Exception:
     data = {}
 if 'hooks' not in data: data['hooks'] = {}
 if 'PreToolUse' not in data['hooks']: data['hooks']['PreToolUse'] = []
-# Avoid duplicates
 if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
     data['hooks']['PreToolUse'].append({
         'matcher': 'Bash',
@@ -155,97 +232,132 @@ if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
         json.dump(data, f, indent=2)
     print('  → Dippy hook wired into ~/.claude/settings.json')
 "
+            fi
+        else
+            echo "  ⚠️ Homebrew not found. Skipping Dippy installation."
         fi
-    else
-        echo "  ⚠️ Homebrew not found. Skipping Dippy installation."
+
+        if command -v npm &> /dev/null; then
+            npm i -g ccflare 2>/dev/null || true
+            echo "  → ccflare installed globally."
+            echo "  🧠 Installing Claude-Mem (Persistent Vector Memory)..."
+            npx claude-mem install 2>/dev/null || true
+            echo "  → Claude-Mem installed system-wide."
+        else
+            echo "  ⚠️ NPM not found. Skipping ccflare and claude-mem."
+        fi
     fi
 
-    if command -v npm &> /dev/null; then
-        npm i -g ccflare || true
-        echo "  → ccflare installed globally."
-        echo "  🧠 Installing Claude-Mem (Persistent Vector Memory)..."
-        npx claude-mem install || true
-        echo "  → Claude-Mem installed system-wide."
-    else
-        echo "  ⚠️ NPM not found. Skipping ccflare and claude-mem installation."
-    fi
-
-    # Pre-send review hook
+    # Hooks (all tiers)
     ln -sf "$REPO_DIR/hooks/pre-send-review.py" "$CLAUDE_HOOKS_DIR/pre-send-review.py"
     chmod +x "$REPO_DIR/hooks/pre-send-review.py"
-
-    # Session start hook
     ln -sf "$REPO_DIR/hooks/session-start.py" "$CLAUDE_HOOKS_DIR/session-start.py"
     chmod +x "$REPO_DIR/hooks/session-start.py"
-
-    # Session stop hook
     ln -sf "$REPO_DIR/hooks/session-stop.py" "$CLAUDE_HOOKS_DIR/session-stop.py"
     chmod +x "$REPO_DIR/hooks/session-stop.py"
-    
-    echo "  → Hooks successfully symlinked to ~/.claude/hooks"
+    echo "  → Hooks symlinked to ~/.claude/hooks"
 
-    # Map native skills
+    # Skills — filter by tier
+    BEGINNER_SKILLS="email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger context-prime support-triage"
+    
+    INTERMEDIATE_SKILLS="content-strategy seo-growth social-engine copy-master conversion-optimizer outreach-sequence sales-enablement fundraise ceo-advisor cfo-advisor cmo-advisor coo-advisor cro-advisor competitive-intel board-deck-builder founder-coach executive-mentor financial-analyst scenario-war-room hubspot-architect notion-manager slack-connector audio-briefing news-digest negotiation-advisor doc-coauthoring spreadsheet-builder google-doc-creation change-management launch-strategy"
+    
+    ADVANCED_SKILLS="social-scheduler ugc-video voice-synth larry-loop aeo-optimizer sms-outreach domain-intel geopolitical-monitor agent-orchestrator agent-protocol context-engine experiment-loop verify-execution create-prd create-skill commit-fast review-pr analyze-issue feature-architect autoresearch cron-scheduler scheduling-infra dedupe-entities gfv-hooks project-release strategic-decision automation-recommender"
+    
     for skill_dir in "$REPO_DIR/skills/"*; do
         if [ -d "$skill_dir" ]; then
             skill_name=$(basename "$skill_dir")
-            ln -sfn "$skill_dir" "$CLAUDE_SKILLS_DIR/$skill_name"
-            echo "  → Registered native slash command: /$skill_name"
+            should_install=false
+            
+            if [[ "$USER_TIER" -ge 1 ]] && echo "$BEGINNER_SKILLS" | grep -qw "$skill_name"; then
+                should_install=true
+            fi
+            if [[ "$USER_TIER" -ge 2 ]] && echo "$INTERMEDIATE_SKILLS" | grep -qw "$skill_name"; then
+                should_install=true
+            fi
+            if [[ "$USER_TIER" -ge 3 ]] && echo "$ADVANCED_SKILLS" | grep -qw "$skill_name"; then
+                should_install=true
+            fi
+            
+            if $should_install; then
+                ln -sfn "$skill_dir" "$CLAUDE_SKILLS_DIR/$skill_name"
+            fi
         fi
     done
+    
+    INSTALLED_COUNT=$(ls -d "$CLAUDE_SKILLS_DIR"/*/ 2>/dev/null | wc -l | tr -d ' ')
+    echo "  → Registered $INSTALLED_COUNT skills as /slash commands"
 else
-    echo "  ℹ️  Claude Code directory not found locally; skipping native ~/.claude hooks mapping (Cursor or alternative IDE will read scripts manually according to AGENT.md)"
+    echo "  ℹ️  Claude Code directory not found; skipping hooks (Cursor or alternative IDE will read AGENT.md directly)"
 fi
 
-# 5. Optional EngineClaw Integration
-if [[ "$INSTALL_ENGINECLAW" =~ ^[Yy]$ ]]; then
+# 5. Optional EngineClaw Integration (Advanced only)
+if [[ "${INSTALL_ENGINECLAW:-n}" =~ ^[Yy]$ ]]; then
     echo ""
-    echo "🤖 Installing EngineClaw Autonomous Runtime..."
+    echo "  🤖 Installing EngineClaw Autonomous Runtime..."
     if ! command -v pnpm &> /dev/null; then
         echo "  ℹ️  Installing pnpm..."
-        npm install -g pnpm || echo "  ⚠️ Failed to install pnpm! Please install it manually."
+        npm install -g pnpm 2>/dev/null || echo "  ⚠️ Failed to install pnpm"
     fi
     
     ENGINECLAW_DIR="$HOME/engineclaw-runtime"
     if [ ! -d "$ENGINECLAW_DIR" ]; then
-        git clone https://github.com/openbmb/edgeclaw.git "$ENGINECLAW_DIR"
+        git clone https://github.com/openbmb/edgeclaw.git "$ENGINECLAW_DIR" 2>/dev/null
     else
-        echo "  ℹ️  EngineClaw already exists at $ENGINECLAW_DIR, pulling latest..."
-        (cd "$ENGINECLAW_DIR" && git pull)
+        echo "  ℹ️  EngineClaw already exists, pulling latest..."
+        (cd "$ENGINECLAW_DIR" && git pull 2>/dev/null)
     fi
     
     if command -v pnpm &> /dev/null; then
-        echo "  📦 Building EngineClaw (this may take a minute)..."
-        (cd "$ENGINECLAW_DIR" && pnpm install && pnpm build) || echo "  ⚠️ Warning: EngineClaw build failed. You may need to run 'pnpm install && pnpm build' inside $ENGINECLAW_DIR manually."
-    else
-        echo "  ⚠️ pnpm is still missing. Skipping EngineClaw build step."
+        echo "  📦 Building EngineClaw..."
+        (cd "$ENGINECLAW_DIR" && pnpm install && pnpm build) 2>/dev/null || echo "  ⚠️ EngineClaw build failed — run manually"
     fi
     
-    # Map EngineClaw data into dual-brain to ensure single source of truth
     ENGINECLAW_STATE="$HOME/.engineclaw"
     mkdir -p "$ENGINECLAW_STATE/workspace"
     ln -sfn "$CEO_BRAIN_DIR" "$ENGINECLAW_STATE/workspace/ceo-brain"
     ln -sfn "$GTM_BRAIN_DIR" "$ENGINECLAW_STATE/workspace/gtm-brain"
-    
-    # 🔗 Ensure EngineClaw inherits the Meta-Agentic constraints
     ln -sfn "$REPO_DIR/AGENT.md" "$ENGINECLAW_STATE/workspace/AGENT.md"
-    ln -sfn "$REPO_DIR/SKILL-AUTHORING-STANDARD.md" "$ENGINECLAW_STATE/workspace/SKILL-AUTHORING-STANDARD.md"
     
-    echo "  → EngineClaw runtime installed."
-    echo "  → EngineClaw workspace linked to Dual-Brain architecture (~/ceo-brain and ~/gtm-brain)."
-    echo "  → To start the EngineClaw daemon later, run: cd $ENGINECLAW_DIR && node openclaw.mjs gateway run"
+    echo "  → EngineClaw runtime installed and linked."
 fi
 
-# 5. Final Instructions
+# 6. Final summary
 echo ""
-echo "🎉 GetFresh CEO Enablement Kit for AI Bootstrap Complete!"
-echo "----------------------------------------"
-echo "Next Steps:"
-echo "1. Open your terminal and type 'claude' (or open Cursor/Gemini)."
-echo "2. Type '/onboard' to finalize your ecosystem mapping."
-echo "   (Your selection of Tier $USER_TIER is already saved)."
-if [[ "$INSTALL_ENGINECLAW" =~ ^[Yy]$ ]]; then
-echo "3. Try running your EngineClaw autonomous background worker:"
-echo "   cd ~/engineclaw-runtime && node openclaw.mjs gateway run"
+echo "╔═══════════════════════════════════════════════════════════════════╗"
+echo "║  ✅  INSTALLATION COMPLETE                                      ║"
+echo "╚═══════════════════════════════════════════════════════════════════╝"
+echo ""
+echo "  Welcome, ${USER_NAME}! Your AI Chief of Staff is ready."
+echo ""
+echo "  Level: ${TIER_NAMES[$USER_TIER]}"
+echo "  Skills: ${INSTALLED_COUNT:-72} installed"
+echo "  Memory: ~/ceo-brain/ and ~/gtm-brain/ created"
+echo ""
+echo "  ┌──────────────────────────────────────────────────────────────┐"
+echo "  │  WHAT TO DO NEXT                                            │"
+echo "  │                                                              │"
+echo "  │  1. Open your AI tool (Claude Code, Cursor, or Gemini)      │"
+echo "  │  2. Type: /onboard                                          │"
+echo "  │     (This starts a 5-minute setup wizard that teaches the   │"
+echo "  │      AI your voice, your team, and your priorities)         │"
+echo "  │                                                              │"
+echo "  │  After onboarding, try these:                               │"
+echo "  │"
+if [[ "$USER_TIER" -eq 1 ]]; then
+echo "  │    • \"Draft an email to [name] about [topic]\"               │"
+echo "  │    • \"Prep me for my meeting with [name]\"                   │"
+echo "  │    • \"Summarize this contract\" (paste/attach it)            │"
+elif [[ "$USER_TIER" -eq 2 ]]; then
+echo "  │    • \"What does my pipeline look like?\"                     │"
+echo "  │    • \"Write my weekly CEO brief\"                            │"
+echo "  │    • \"Build an outreach sequence for [prospect]\"            │"
+else
+echo "  │    • \"Run a morning sweep across all systems\"               │"
+echo "  │    • \"Spin up a war room for [scenario]\"                    │"
+echo "  │    • \"Run dream mode to consolidate my memories\"            │"
 fi
-echo "   (No configuration files or prompts to copy/paste required.)"
+echo "  │                                                              │"
+echo "  │  You can re-run this installer anytime to change levels.    │"
+echo "  └──────────────────────────────────────────────────────────────┘"
 echo ""

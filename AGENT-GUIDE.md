@@ -24,17 +24,35 @@ The installer creates two local directories and symlinks skills into your agent'
 - `~/ceo-brain/` — Personal: voice model, preferences, meeting notes
 - `~/gtm-brain/` — Company: pipeline data, competitive intel, learnings
 
-## Expertise Tiers
+## Experience Levels
 
-The installer asks which tier to activate. Each tier adds skills on top of the previous:
+The installer adapts to three user personas. Each level adds skills AND behaviors:
 
-| Tier | For | Skills Activated | What It Does |
-|------|-----|-----------------|--------------|
-| **Tier 1** | AI beginners | 15 core skills | Email, meetings, pipeline, docs, briefs |
-| **Tier 2** | Intermediate | 45 skills (Tier 1 + growth) | Content, CRM architecture, fundraising, competitive intel |
-| **Tier 3** | Power users | All 72 skills | Agent orchestration, hooks, scheduling, full C-suite advisory |
+| Level | Who it's for | Skills | Key behaviors |
+|-------|-------------|--------|--------------|
+| **Beginner** | New to AI assistants | 15 core skills | Auto-save memory, proactive tips, plain-English explanations, session summaries |
+| **Intermediate** | Regular AI users | 45 skills | Everything in Beginner + feedback loops, weekly learning capture, voice model refinement |
+| **Advanced** | Power users | All 72 skills | Everything in Intermediate + Dream Mode, agent spawning, self-improving skills, background automation |
 
-You can re-run `bootstrap.sh` anytime to change tiers.
+### What each level enables by default
+
+| Feature | Beginner | Intermediate | Advanced |
+|---------|----------|-------------|----------|
+| Auto-save decisions & meetings | ✅ | ✅ | ✅ |
+| Draft review before sending | ✅ | ✅ | ✅ |
+| Proactive tips ("Want me to also...?") | ✅ | ✅ | ❌ |
+| Plain-English explanations | ✅ | ❌ | ❌ |
+| Session summary (3-bullet recap) | ✅ | ✅ | ❌ |
+| Feedback loops ("Was this helpful?") | ❌ | ✅ | ✅ |
+| Weekly learning capture | ❌ | ✅ | ✅ |
+| Voice model refinement prompts | ❌ | ✅ | ✅ |
+| Cross-session Dream Mode | ❌ | ❌ | ✅ |
+| Background worker scheduling | ❌ | ❌ | ✅ |
+| Self-improving skills (autoresearch) | ❌ | ❌ | ✅ |
+
+**Agent behavior:** Read `~/ceo-brain/preferences.json` at session start. If `proactive_tips` is true, suggest related skills after completing tasks. If `feedback_loops` is true, ask for feedback after key outputs. If `auto_memory` is true, save decisions and outcomes without being asked.
+
+Re-run `bootstrap.sh` anytime to change levels.
 
 ## Architecture
 
