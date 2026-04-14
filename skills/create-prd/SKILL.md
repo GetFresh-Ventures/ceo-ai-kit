@@ -1,5 +1,5 @@
 ---
-name: Create PRD
+name: create-prd
 description: Converts a rough idea, meeting transcript, or shorthand notes into a highly structured 6-part Product Requirements Document (PRD).
 ---
 

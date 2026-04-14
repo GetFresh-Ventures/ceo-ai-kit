@@ -1,6 +1,6 @@
 # GFV CEO Enablement Kit — Skills Registry
 
-> **74 unique skills** across 8 categories. Updated 2026-04-14.
+> **72 unique skills** across 8 categories. Updated 2026-04-14.
 
 ## How to Use This Registry
 
@@ -28,7 +28,7 @@
 
 ## Categories
 
-### 🎯 Execution Infrastructure (11 skills)
+### 🎯 Execution Infrastructure (13 skills)
 Core operating system — the agent's brain, coordination, and decision-making.
 
 | Skill | Description | Key Pattern |
@@ -44,6 +44,8 @@ Core operating system — the agent's brain, coordination, and decision-making.
 | [`dedupe-entities`](skills/dedupe-entities/) | Mathematically resolves duplicate records using ML active linkage | Entity Resolution |
 | [`notion-manager`](skills/notion-manager/) | Safely connect and map Notion workspaces strictly governing read/write boundaries | Verification First Boundaries |
 | [`cron-scheduler`](skills/cron-scheduler/) | Configure recurring loops with 6-layer diagnostic and safe registration | Verify Silent Failures |
+| [`agent-orchestrator`](skills/agent-orchestrator/) | Coordinate multi-agent pipeline tasks using DAG and Debate orchestration modes | Structured dispatch |
+| [`automation-recommender`](skills/automation-recommender/) | Analyze a codebase and recommend automations (hooks, subagents, skills, plugins, MCP servers) | Optimize your setup |
 
 ### 👔 C-Suite Advisory (8 skills)
 Specialized strategic advisory from each leadership perspective.
@@ -121,7 +123,7 @@ Marketing, content, and growth optimization.
 | [`voice-synth`](skills/voice-synth/) | AI voice synthesis for narration, podcasts, and audio content | Sound human anywhere |
 | [`geopolitical-monitor`](skills/geopolitical-monitor/) | Global intelligence with country instability scoring | International risk radar |
 
-### 🛠️ Developer & DevOps (9 skills)
+### 🛠️ Developer & DevOps (12 skills)
 Infrastructure skills for the technical operator.
 
 | Skill | Description | Key Pattern |
@@ -135,27 +137,17 @@ Infrastructure skills for the technical operator.
 | [`project-release`](skills/project-release/) | Governed release: version bump, changelog, tag | No manual steps |
 | [`autoresearch`](skills/autoresearch/) | Autonomous skill optimization via repeated scoring | Self-improving skills |
 | [`board-deck-builder`](skills/board-deck-builder/) | Board/investor update decks from live data | Data-driven slides |
+| [`create-skill`](skills/create-skill/) | Create, modify, and optimize skills with triggering accuracy | Skills that build skills |
+| [`feature-architect`](skills/feature-architect/) | Guided feature development with codebase understanding and architecture focus | Architect first |
+| [`hubspot-architect`](skills/hubspot-architect/) | HubSpot architecture for syncing, integrating, and data pipelines | CRM engineering |
 
 
-### 🤖 Agent Intelligence (5 skills)
-Swarm orchestration, memory management, and self-learning patterns derived from ruflo.
-
-| Skill | Description | Key Pattern |
-|-------|-------------|-------------|
-| [`openclaw-orchestrator`](skills/openclaw-orchestrator/) | Queen-led multi-agent coordinator with strategic/tactical/adaptive modes | One brain, many hands |
-| [`pil-memory-bus`](skills/pil-memory-bus/) | 4-tier memory hierarchy with namespace isolation, TTL types, and vector search | Global → Project → Session → Task |
-| [`consensus-reconciler`](skills/consensus-reconciler/) | Byzantine fault tolerance for multi-source data truth resolution | 2/3 supermajority |
-| [`agent-spawner`](skills/agent-spawner/) | Dynamic agent creation with hierarchical anti-drift topology | Hierarchical only |
-| [`sparc-planning`](skills/sparc-planning/) | 5-phase structured planning: Spec → Pseudo → Arch → Refine → Complete | Plan before code |
-
-### 🔒 Safety & Automation (3 skills)
-Quality gates, lifecycle hooks, and security scanning.
+### 🤖 Agent Intelligence (1 skill)
+Audio synthesis and executive briefing generation.
 
 | Skill | Description | Key Pattern |
 |-------|-------------|-------------|
-| [`hook-automation`](skills/hook-automation/) | Pre/post task lifecycle hooks for quality gates and trajectory recording | Validate → Execute → Record |
-| [`security-pii-scanner`](skills/security-pii-scanner/) | Automated PII detection and redaction with AIMDS injection defense | Never expose secrets |
-| [`skill-builder`](skills/skill-builder/) | Meta-skill: auto-generates new GFV-compliant skills from requirements | Skills that build skills |
+| [`audio-briefing`](skills/audio-briefing/) | Synthesize textual outputs into physical executive audio briefings using cloned voice models | Hear, don't read |
 
 ---
 
@@ -174,10 +166,8 @@ Skills are most powerful when composed:
 | **Strategic Decision** | `strategic-decision` → `scenario-war-room` → `decision-logger` |
 | **Document Production** | `doc-coauthoring` → `doc-builder` / `pdf-toolkit` / `spreadsheet-builder` |
 | **Multi-Channel Outreach** | `email-composer` → `sms-outreach` → `slack-connector` → `social-scheduler` |
-| **Swarm Intelligence** | `openclaw-orchestrator` → `agent-spawner` → `consensus-reconciler` → `pil-memory-bus` |
-| **Data Reconciliation** | `consensus-reconciler` → `hook-automation` → `pil-memory-bus` |
-| **New Skill Creation** | `skill-builder` → `hook-automation` → `verify-execution` |
-| **Secure Client Report** | `gfv-report-builder` → `security-pii-scanner` → `hook-automation` → `email-composer` |
+| **New Skill Creation** | `create-skill` → `verify-execution` |
+| **Feature Build** | `feature-architect` → `agent-orchestrator` → `verify-execution` |
 
 ---
 
@@ -208,4 +198,4 @@ Skills are most powerful when composed:
 | [clawchief](https://github.com/snarktank/clawchief) | chief-of-staff v2 (3-layer architecture), post-meeting-brief v2, pipeline-pulse v2 |
 | [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | strategic-decision, gfv-hooks, authoring standard patterns 13-15 |
 | [LarryBrain Marketplace](https://larrybrain.com/skills) | 11 skills rewritten (contract-reader, negotiation-advisor, aeo-optimizer, etc.) + 17 enhancements |
-| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 8 skills (openclaw-orchestrator, pil-memory-bus, consensus-reconciler, agent-spawner, sparc-planning, hook-automation, security-pii-scanner, skill-builder) |
+| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Architectural patterns (hierarchical topology, memory tiers, consensus concepts) — skills were planned but not shipped |

@@ -17,7 +17,7 @@ Write-Host ""
 Write-Host "WHAT THIS INSTALLS AND ENABLES:"
 Write-Host " 1. The Dual-Brain System (~\ceo-brain\ and ~\gtm-brain\): Local, offline"
 Write-Host "    directories protecting your personal voice profile and company pipeline."
-Write-Host " 2. The 49-Skill Framework: Injects native agent capabilities to rapidly"
+Write-Host " 2. The 72-Skill Framework: Injects native agent capabilities to rapidly"
 Write-Host "    draft emails, prep for meetings, synthesize CRM data."
 Write-Host " 3. The Proactive Intelligence Layer (PIL) Daemon: An always-on background"
 Write-Host "    process that silently syncs Linear, HubSpot, and WhatsApp."
@@ -28,15 +28,33 @@ Write-Host " For the PIL to run autonomously and sweep CRM data while you sleep,
 Write-Host " machine must remain powered on and connected to the internet."
 Write-Host ""
 Write-Host "=======================================================================" -ForegroundColor Cyan
-Write-Host "  E N G I N E C L A W   A U T O N O M O U S   R U N T I M E  (O P T I O N A L)" -ForegroundColor Cyan
+Write-Host "  E X P E R T I S E   C A L I B R A T I O N" -ForegroundColor Cyan
 Write-Host "=======================================================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "You can choose to install EngineClaw, a high-autonomy agentic runtime."
-Write-Host "This replaces standard interactive sessions with an unattended, persistent worker."
+Write-Host "To configure your system perfectly, please select your AI expertise level:"
 Write-Host ""
+Write-Host " [1] Tier 1: AI Novice"
+Write-Host "     Keep it simple. Writing emails, meeting prep, document analysis."
+Write-Host "     Safe, local-only, no complex integrations."
+Write-Host ""
+Write-Host " [2] Tier 2: AI Practitioner"
+Write-Host "     Plug into the business. CRM configuration, metric extraction,"
+Write-Host "     Organizational delegation mapping. (Recommended)"
+Write-Host ""
+Write-Host " [3] Tier 3: AI Orchestrator"
+Write-Host "     Maximum autonomy. Installs EngineClaw background workers,"
+Write-Host "     Multi-agent swarm dispatching, zero-prompt execution."
+Write-Host ""
+Write-Host "NOTE: You can re-run this script anytime to escalate your tier."
+Write-Host "=======================================================================" -ForegroundColor Cyan
+$userTier = Read-Host "Select Tier [1, 2, or 3]"
+if ([string]::IsNullOrWhiteSpace($userTier)) { $userTier = "2" }
 
-$installEngineClaw = Read-Host "Install EngineClaw Autonomous Agent Runtime? [y/N]"
-if ([string]::IsNullOrWhiteSpace($installEngineClaw)) { $installEngineClaw = "n" }
+if ($userTier -eq "3") {
+    $installEngineClaw = "y"
+} else {
+    $installEngineClaw = "n"
+}
 
 Write-Host ""
 Write-Host "=======================================================================" -ForegroundColor Cyan
@@ -59,6 +77,10 @@ New-Item -ItemType Directory -Force -Path (Join-Path $CEO_BRAIN_DIR "mementos") 
 New-Item -ItemType Directory -Force -Path (Join-Path $CEO_BRAIN_DIR "weekly") | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $GTM_BRAIN_DIR "campaigns") | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $GTM_BRAIN_DIR "pipeline") | Out-Null
+
+# Record Active Tier
+Set-Content -Path (Join-Path $CEO_BRAIN_DIR "active-tier.txt") -Value $userTier
+Write-Host "  → Locked expertise Tier $userTier into memory"
 
 # 2. Copy templates
 Write-Host "📄 Setting up templates..." -ForegroundColor Green
@@ -187,8 +209,8 @@ Write-Host "🎉 GetFresh CEO Enablement Kit for AI Bootstrap Complete!" -Foregr
 Write-Host "----------------------------------------"
 Write-Host "Next Steps:"
 Write-Host "1. Open your terminal and type 'claude' (or open Cursor/Gemini)."
-Write-Host "2. Say 'Hello'. The AI will automatically detect your fresh"
-Write-Host "   system state and guide you through the executive setup."
+Write-Host "2. Type '/onboard' to finalize your ecosystem mapping."
+Write-Host "   (Your selection of Tier $userTier is already saved)."
 if ($installEngineClaw -match "^[Yy]$") {
 Write-Host "3. Try running your EngineClaw autonomous background worker:"
 Write-Host "   cd ~\engineclaw-runtime ; node openclaw.mjs gateway run"

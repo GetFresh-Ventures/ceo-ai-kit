@@ -1,5 +1,5 @@
 ---
-name: Commit Fast
+name: commit-fast
 description: Automates git commit process by reviewing staged files, generating structured semantic commits, and executing without manual copy-pasting.
 ---
 

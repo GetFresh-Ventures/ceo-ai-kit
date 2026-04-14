@@ -31,7 +31,7 @@ import sys
 from datetime import datetime, timezone
 
 DEFAULT_PIPELINE = ["code-agent", "test-agent", "docs-agent", "monitor-bot"]
-TASKS_DIR = os.environ.get("TEAM_TASKS_DIR", "/home/ubuntu/clawd/data/team-tasks")
+TASKS_DIR = os.environ.get("TEAM_TASKS_DIR", os.path.join(os.path.expanduser("~"), "gtm-brain", "team-tasks"))
 
 
 def now_iso():

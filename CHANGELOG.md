@@ -20,7 +20,7 @@ Following the v1.18.0 documentation release, this patch physically integrates th
 ## 2026-04-14 9:00 AM PT — v1.18.0 — Security Hardening & Executive Walkthrough
 
 ### Why it matters
-This release closes two critical gaps: (1) a full credential hygiene sweep removing all hardcoded API secrets from infrastructure scripts and replacing them with OS-native credential store lookups, and (2) the first comprehensive executive onboarding document — `GETTING-STARTED.md` — a 30-minute step-by-step walkthrough designed for non-technical CEOs and senior leaders who are installing the kit for the first time. Additionally, 4 core skills were upgraded with advanced operational patterns extracted from ruflo Phase 2 analysis.
+This release closes two critical gaps: (1) a full credential hygiene sweep removing all hardcoded API secrets from infrastructure scripts and replacing them with OS-native credential store lookups, and (2) the first comprehensive executive onboarding document — `GETTING-STARTED.md` — a 30-minute step-by-step walkthrough designed for non-technical CEOs and senior leaders who are installing the kit for the first time.
 
 ### Added
 - **`GETTING-STARTED.md`** — Executive Enablement Walkthrough: 30-minute guide covering installation, onboarding wizard phases, first task recommendations, full skill category map, safety guarantees, weekly cadence recommendations, and troubleshooting. Written for non-technical executives.
@@ -34,23 +34,22 @@ This release closes two critical gaps: (1) a full credential hygiene sweep remov
   - `scripts/pull_transcripts.py` → subprocess Keychain lookup
 - **Zero hardcoded secrets remaining** across the entire codebase (verified via `grep -rn 'lin_api_'`)
 
-### Enhanced — 4 Existing Skills
-- **`openclaw-orchestrator`** — Added Auto-Complexity Detection with 11 numbered Routing Codes for automatic single-agent vs. multi-agent dispatch decisions
-- **`security-pii-scanner`** — Added Protected File Patterns (7 file types requiring CEO approval), Hardcoded Credential Scanner, and Outbound Communication Lockout protocol
-- **`gfv-dream-mode`** — Added Three-Phase Memory Protocol (STATUS → PROGRESS → COMPLETE) with checkpoint resumption and background worker scheduling via launchd
-- **`hook-automation`** — Added Protected File Patterns with pre-edit hooks and Atomic Rollback Protocol for multi-system operations (Git, GitHub, Linear, HubSpot, PIL)
+### Enhanced — 4 Skills (in `.agents/skills`, not this repo)
+The following upgrades were applied to the shared `.agents/skills` directory used by the operational GFV workspace. They are referenced here for release tracking but do not ship as part of the CEO Enablement Kit repo:
+- **`openclaw-orchestrator`** — Added Auto-Complexity Detection with 11 Routing Codes
+- **`security-pii-scanner`** — Added Protected File Patterns and Hardcoded Credential Scanner
+- **`gfv-dream-mode`** — Added Three-Phase Memory Protocol with checkpoint resumption
+- **`hook-automation`** — Added Protected File Patterns with pre-edit hooks
 
 ### Changed
-- **`README.md`** — Bumped version to v1.18.0. Fixed stale skill counts (66→74, 49→74). Added GETTING-STARTED.md reference. Updated repo structure section.
-- **`bootstrap.sh`** — Updated skill count references from 49 to 74.
+- **`README.md`** — Bumped version to v1.18.0. Updated repo structure section.
+- **`bootstrap.sh`** — Updated skill count references.
 
 ### Files Modified
 - GETTING-STARTED.md (new), CHANGELOG.md, README.md
 - gfv-brain/scripts/linear_cache.sh, gfv-brain/hooks/check-linear-task.sh
 - gfv-brain/scripts/check-linear-task.sh, gfv-brain/hooks/linear-manager.py
 - gfv-brain/scripts/pull_transcripts.py
-- .agents/skills/openclaw-orchestrator/SKILL.md, .agents/skills/security-pii-scanner/SKILL.md
-- .agents/skills/gfv-dream-mode/SKILL.md, .agents/skills/hook-automation/SKILL.md
 
 ## 2026-04-14 8:20 AM PT — v1.17.0 — Ruflo Swarm Intelligence Integration (74 Skills)
 

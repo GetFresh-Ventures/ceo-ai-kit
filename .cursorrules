@@ -1,1 +1,0 @@
-/Users/dirajgoel/Documents/Code/gfv_growth_by_design/AGENT.md

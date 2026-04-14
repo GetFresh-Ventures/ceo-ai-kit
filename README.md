@@ -61,7 +61,7 @@ This downloads the entire kit to a hidden folder on your machine. You only do th
 3. The script will dynamically:
    - Sets up the Claude Code hooks (the startup prompt logic)
    - Creates your personal `~/ceo-brain` (for personal tasks/voice) and `~/gtm-brain` (for active deals and campaigns)
-   - Symlinks all 74 skills into the Claude Code path
+   - Symlinks all 72 skills into the Claude Code path
    - Detects which AI tool you use (Claude Code, Cursor, or other) and wires things up accordingly
    - If you're on Claude Code: installs native `/slash` commands for instant skill access, sets up Dippy (auto-approves safe commands so you never see "Y/n" prompts), and wires session hooks
    - If you're on Cursor: creates `.cursorrules` so the AI reads your operating rules automatically
@@ -84,7 +84,7 @@ The AI will walk you through an interactive wizard to configure your voice model
 
 ## What Can It Do?
 
-Once installed, you have access to **74 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
+Once installed, you have access to **72 pre-built skills** and **4 multi-step workflows** that cover everything from day-to-day execution to strategic C-suite advisory. You invoke them by saying their name (e.g., "run email-composer") or, on Claude Code, by typing the `/slash` command directly.
 
 > 📖 **New to this?** Read the **[Getting Started Guide](GETTING-STARTED.md)** — a step-by-step executive walkthrough that takes you from zero to productive in 30 minutes.
 
@@ -443,11 +443,11 @@ gfv_growth_by_design/
 ├── GETTING-STARTED.md               ← Executive enablement walkthrough (start here)
 ├── README.md                        ← This file
 ├── SKILL-AUTHORING-STANDARD.md      ← The 31 absolute rules for structural integrity
-├── SKILLS-REGISTRY.md               ← Complete skill registry (74 skills, 8 categories)
+├── SKILLS-REGISTRY.md               ← Complete skill registry (72 skills, 8 categories)
 ├── bootstrap.sh                     ← One-command setup script (Mac/Linux)
 ├── bootstrap.ps1                    ← One-command setup script (Windows)
 ├── claude_settings.template.json    ← Claude Code settings template
-├── skills/                          ← 74 pre-built skills (slash commands)
+├── skills/                          ← 72 pre-built skills (slash commands)
 │   ├── agent-protocol/              ← Inter-agent communication standard
 │   ├── chief-of-staff/              ← C-suite orchestration layer
 │   ├── ceo-advisor/                 ← Strategic advisory

@@ -1,5 +1,5 @@
 ---
-name: Context Prime
+name: context-prime
 description: Systematically scan the repository, read README and core architecture files, and build baseline context before starting work. Excellent for Monday mornings or entering new repositories.
 ---
 

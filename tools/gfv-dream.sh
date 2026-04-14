@@ -7,8 +7,20 @@
 
 set -e
 
-MEMORY_DIR="$HOME/.claude/projects/-Users-dirajgoel-Documents-Code/"
-PYTHON_CLI="$HOME/Documents/Code/gfv-brain/scripts/claude_memory.py"
+# Discover the Claude project log directory dynamically
+# Claude Code stores logs in ~/.claude/projects/-<escaped-cwd>/
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ESCAPED_CWD=$(echo "$REPO_DIR" | sed 's|/|-|g')
+MEMORY_DIR="$HOME/.claude/projects/$ESCAPED_CWD/"
+# Look for gfv-brain adjacent to this repo, or fall back to ~/gfv-brain
+if [ -f "$REPO_DIR/../gfv-brain/scripts/claude_memory.py" ]; then
+    PYTHON_CLI="$REPO_DIR/../gfv-brain/scripts/claude_memory.py"
+elif [ -f "$HOME/gfv-brain/scripts/claude_memory.py" ]; then
+    PYTHON_CLI="$HOME/gfv-brain/scripts/claude_memory.py"
+else
+    echo "⚠️  claude_memory.py not found. Skipping memory consolidation."
+    exit 0
+fi
 
 echo "☁️ Starting GFV Dream Mode (Memory Consolidation)..."
 

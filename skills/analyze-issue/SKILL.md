@@ -1,5 +1,5 @@
 ---
-name: Analyze Issue
+name: analyze-issue
 description: Analyze a GitHub or Linear issue and generate a step-by-step implementation plan without writing code yet.
 ---
 

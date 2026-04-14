@@ -5,7 +5,10 @@
 # Allows the CEO to audit exactly what the agent ran on their local machine.
 #
 
-PROJECT_LOGS_DIR="$HOME/.claude/projects/-Users-dirajgoel-Documents-Code"
+# Discover the Claude project log directory dynamically
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ESCAPED_CWD=$(echo "$REPO_DIR" | sed 's|/|-|g')
+PROJECT_LOGS_DIR="$HOME/.claude/projects/$ESCAPED_CWD"
 
 if [ ! -d "$PROJECT_LOGS_DIR" ]; then
     echo "No log directory found at $PROJECT_LOGS_DIR"
