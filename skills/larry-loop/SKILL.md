@@ -71,3 +71,10 @@ When a post wins on one platform, automatically adapt for others:
 2. X thread winner → Convert to newsletter via `email-composer`.
 3. Video winner → Extract hook for static posts via `social-scheduler`.
 4. Blog winner → Slice into carousel slides via `ugc-video`.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `voice-model` — Build your personal writing voice model"

@@ -157,3 +157,10 @@ If you catch yourself thinking any of these, STOP:
 - If analysis reveals a code quality issue → chain with `/review-pr`
 - If fix requires planning → chain with `/create-prd`
 - If issue is in production → document in `~/gtm-brain/learnings.md`
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `verify-execution` — Verify changes with runtime observation"
+- "Try `review-pr` — Structured code review for pull requests"
+- "Try `feature-architect` — Guide features from spec to deployed code"

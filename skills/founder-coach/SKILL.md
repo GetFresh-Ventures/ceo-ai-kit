@@ -149,3 +149,10 @@ Pull the last 4 weeks. Categorize every block:
 | Advice feels impersonal | Share specific context about your situation — the more detail, the better |
 | Can't implement the coaching | Pick ONE behavior change per week. Track it daily |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `executive-mentor` — Adversarial thinking partner for founders"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"
+- "Try `decision-logger` — Log and recall your key decisions"

@@ -120,3 +120,10 @@ Ask these first:
 | Financial model too complex | Start with a 3-statement model. Add complexity only when needed |
 | Cash flow projections off | Verify AR/AP timing assumptions — most errors are in collection delays |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `financial-analyst` — Financial ratios, DCF, and budget analysis"
+- "Try `spreadsheet-builder` — Build and analyze Excel spreadsheets"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"

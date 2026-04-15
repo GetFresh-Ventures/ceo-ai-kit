@@ -160,3 +160,10 @@ Before logging any experiment result:
 - `strategic-decision` — For GO/NO-GO decisions informed by experiment data
 - `decision-logger` — For recording strategic decisions with PIL integration
 - `verify-execution` — For confirming experiments were implemented correctly
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `decision-logger` — Log and recall your key decisions"
+- "Try `conversion-optimizer` — Optimize conversion rates across funnels"
+- "Try `scenario-war-room` — What-if modeling for strategic decisions"

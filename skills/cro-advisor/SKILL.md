@@ -123,3 +123,10 @@ NRR = (Opening + Expansion - Contraction - Churn) / Opening
 | Revenue forecast inaccurate | Weight by pipeline stage probability, not rep confidence |
 | Sales and marketing misaligned | Define MQL→SQL hand-off criteria. Review weekly with both teams |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `pipeline-pulse` — Active pipeline management and deal tracking"
+- "Try `deal-review` — Pipeline review — flag stale deals, find gaps"
+- "Try `conversion-optimizer` — Optimize conversion rates across funnels"

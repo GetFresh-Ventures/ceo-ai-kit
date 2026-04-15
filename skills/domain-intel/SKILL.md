@@ -162,3 +162,10 @@ enterprise-grade or SMB? Any red flags?]
 - Feeds into `/competitive-intel` for market analysis
 - Used by `/meeting-prep` for prospect research
 - Used in due diligence for `/fundraise` and `/deal-review`
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `competitive-intel` — Track competitors and market positioning"
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `hubspot-architect` — Build HubSpot CRM integrations and pipelines"

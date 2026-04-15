@@ -215,3 +215,10 @@ Monthly cadence during an active raise:
 | Investors not responding | Check your intro strategy — warm intros convert 10x over cold outreach |
 | Pitch deck too long | Target 12-15 slides max. Lead with traction, not vision |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `board-deck-builder` — Build board and investor update decks"
+- "Try `financial-analyst` — Financial ratios, DCF, and budget analysis"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"

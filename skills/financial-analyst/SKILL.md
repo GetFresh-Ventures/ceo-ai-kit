@@ -93,3 +93,10 @@ Driver-based revenue forecasting with scenario modeling.
 | Valuation seems off | Check your discount rate and terminal growth assumptions first |
 | Too many ratios, unclear story | Focus on the 3-5 ratios your audience cares about most |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `cfo-advisor` — Financial modeling, forecasting, and controls"
+- "Try `spreadsheet-builder` — Build and analyze Excel spreadsheets"
+- "Try `scenario-war-room` — What-if modeling for strategic decisions"

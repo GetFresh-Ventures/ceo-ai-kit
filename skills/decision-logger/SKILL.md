@@ -201,3 +201,9 @@ This ensures that no matter which agent or person picks up work next, they can i
 💡 Suggest these next steps:
 - "Want me to draft a communication about this decision?" → `/email-composer`
 - "Want me to update the pipeline?" → `/pipeline-pulse`
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks

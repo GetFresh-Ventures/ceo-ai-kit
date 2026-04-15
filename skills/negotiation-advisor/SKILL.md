@@ -69,3 +69,10 @@ The advisor produces a 1-page **Negotiation Battle Card** with:
 | Other party won't budge | Find their hidden interests — they may value something you can easily give |
 | Prep feels insufficient | Research their recent wins, losses, and public statements before the call |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `deal-review` — Pipeline review — flag stale deals, find gaps"
+- "Try `contract-reader` — Summarize contracts in plain English"
+- "Try `executive-mentor` — Adversarial thinking partner for founders"

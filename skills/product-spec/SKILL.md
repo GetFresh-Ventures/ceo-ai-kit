@@ -151,3 +151,10 @@ After the CEO approves, offer:
 - Chain with `/context-prime` to understand the existing codebase first
 - Chain with `/meeting-prep` if the PRD is for a stakeholder review
 - Chain with `/analyze-issue` if the PRD stems from a bug or incident
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `feature-architect` — Guide features from spec to deployed code"
+- "Try `launch-strategy` — Plan product launches and release strategies"
+- "Try `doc-builder` — Create Word docs — proposals, memos, reports"

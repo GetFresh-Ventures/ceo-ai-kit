@@ -223,3 +223,10 @@ tail -5 /tmp/daily-sync-health.jsonl | python3 -m json.tool
 - Used by `/chief-of-staff` to set up morning sweeps
 - Used by `/cron-scheduler` for task scheduling
 - Health logs feed into `/verify-execution` for monitoring
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `cron-scheduler` — Set up recurring background tasks"
+- "Try `automation-recommender` — Find automation opportunities in your workflows"
+- "Try `agent-orchestrator` — Coordinate multi-agent task pipelines"

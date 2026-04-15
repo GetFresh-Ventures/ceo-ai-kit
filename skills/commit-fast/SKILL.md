@@ -127,3 +127,10 @@ After committing, offer if relevant:
 - Run after `/review-pr` approves changes
 - Chain with `project-release` for tagged releases
 - Use `verify-execution` to confirm tests pass before committing
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `review-pr` — Structured code review for pull requests"
+- "Try `feature-architect` — Guide features from spec to deployed code"
+- "Try `verify-execution` — Verify changes with runtime observation"

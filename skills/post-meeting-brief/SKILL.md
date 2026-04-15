@@ -154,3 +154,9 @@ Before marking a meeting note as processed:
 - "Want me to draft follow-up emails for each action item?" → `/email-composer`
 - "Want me to update the pipeline with what we discussed?" → `/pipeline-pulse`
 - "Want me to log the key decisions?" → `/decision-logger`
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks

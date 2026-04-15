@@ -152,3 +152,10 @@ merged.to_csv("final_clean.csv", index=False)
 - Used by `/hubspot-architect` after CRM data imports
 - Used by `/pipeline-pulse` to clean pipeline before analysis
 - Pairs with `tools/gfv-dedupe.py` for the interactive flow
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `hubspot-architect` — Build HubSpot CRM integrations and pipelines"
+- "Try `spreadsheet-builder` — Build and analyze Excel spreadsheets"
+- "Try `context-engine` — Load company context for advisory skills"

@@ -128,3 +128,10 @@ The CEO sets direction. The COO makes it happen.
 | Process documentation ignored | Make it visual (flowcharts), keep it short, embed in daily tools |
 | Scaling creates chaos | Document the 5 most-repeated tasks first. Automate those |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `change-management` — Roll out organizational changes smoothly"
+- "Try `automation-recommender` — Find automation opportunities in your workflows"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"

@@ -335,3 +335,10 @@ decisions/{initiative-slug}/
 3. **Verdicts are permanent unless conditions change.** NO-GO decisions are not relitigated without new data.
 4. **Plans are phase-gated.** Never approve Phase 2 until Phase 1 gate passes.
 5. **Kill criteria are defined upfront.** Every initiative has explicit conditions for stopping.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `decision-logger` — Log and recall your key decisions"
+- "Try `scenario-war-room` — What-if modeling for strategic decisions"
+- "Try `executive-mentor` — Adversarial thinking partner for founders"

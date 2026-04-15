@@ -203,3 +203,10 @@ For multi-tweet threads:
 | Low engagement on posts | Check timing, use platform analytics to find your audience's active hours |
 | Content feels generic | Load your voice model first — it'll match your authentic tone |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `social-scheduler` — Schedule and cross-post to social channels"
+- "Try `ugc-video` — Script-to-video production pipeline"
+- "Try `copy-master` — Write world-class marketing copy"

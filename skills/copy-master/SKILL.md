@@ -80,3 +80,10 @@ When generating, the agent must present the CEO with:
 | Copy sounds too 'AI' | Paste 3-5 examples of your best copy first to calibrate the voice |
 | Headlines don't convert | Test benefit-driven headlines vs curiosity-driven — track which wins |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `email-composer` — Draft emails in your authentic voice"
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `sales-enablement` — Create sales collateral reps actually use"

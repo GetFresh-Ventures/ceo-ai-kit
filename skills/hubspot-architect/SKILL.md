@@ -194,3 +194,10 @@ client.crm.contacts.batch_api.create(batch)
 | Workflows not triggering | Check enrollment criteria — 'and' vs 'or' logic is the #1 mistake |
 | Data quality issues | Set required fields on deal stage transitions to enforce data entry |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `pipeline-pulse` — Active pipeline management and deal tracking"
+- "Try `deal-review` — Pipeline review — flag stale deals, find gaps"
+- "Try `outreach-sequence` — Design multi-touch outreach campaigns"

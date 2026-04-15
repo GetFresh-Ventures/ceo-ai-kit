@@ -221,6 +221,36 @@ cd ~/.gfv_growth_by_design
 
 The installer is idempotent — it only adds what's missing, never overwrites your data. Your voice model, pipeline, and learnings are always preserved.
 
+### Signs You're Ready for the Next Level
+
+| From → To | You're ready when... |
+|-----------|---------------------|
+| Beginner → Intermediate | You're comfortable with email, meetings, and docs — now you want CRM integration, pipeline dashboards, and content strategy |
+| Intermediate → Advanced | You want background agents running while you work, multi-agent orchestration, and autonomous improvement loops |
+
+### What Each Level Unlocks
+
+**Intermediate** (adds 28 skills to the 18 you already have):
+- 📊 **CRM & Revenue**: `pipeline-pulse`, `deal-review`, `sales-enablement`, `hubspot-architect`
+- 📝 **Content & Marketing**: `content-strategy`, `seo-growth`, `social-engine`, `copy-master`
+- 💰 **Finance & Fundraising**: `fundraise`, `financial-analyst`, `board-deck-builder`
+- 🧠 **C-Suite Advisory**: `ceo-advisor`, `cfo-advisor`, `cmo-advisor`, `coo-advisor`, `cro-advisor`
+- 🤝 **Negotiations & Launches**: `negotiation-advisor`, `launch-strategy`, `change-management`
+
+**Advanced** (adds 26 more skills):
+- 🤖 **Automation**: `agent-orchestrator`, `cron-scheduler`, `scheduling-infra`
+- 🔬 **Self-Improvement**: `autoresearch`, `experiment-loop`, `create-skill`
+- 🌍 **Intelligence**: `geopolitical-monitor`, `competitive-intel`, `domain-intel`
+- 🎥 **Media**: `ugc-video`, `social-scheduler`, `sms-outreach`
+
+### Preview Without Committing
+
+Want to see what's available before upgrading? Just ask:
+> *"What skills are in the Intermediate tier?"*
+> *"Show me what I'd get if I upgraded to Advanced."*
+
+The AI can describe any skill — you just can't run it until you upgrade.
+
 ---
 
 ## Troubleshooting

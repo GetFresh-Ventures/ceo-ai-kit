@@ -157,3 +157,10 @@ Before delivering:
 | Voice doesn't match mine | Load your voice model first — run `/voice-model` before co-authoring |
 | Structure feels wrong | Start with the outline stage — get agreement on structure before writing |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `doc-builder` — Create Word docs — proposals, memos, reports"
+- "Try `google-doc-creation` — Create professional Google Docs in Drive"
+- "Try `voice-model` — Build your personal writing voice model"

@@ -114,3 +114,10 @@ Every CMO must own answers to these:
 | Marketing budget allocation unclear | Start with CAC by channel — double down on lowest-CAC channels first |
 | Brand messaging inconsistent | Create a messaging matrix: audience × value prop × proof point |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `competitive-intel` — Track competitors and market positioning"

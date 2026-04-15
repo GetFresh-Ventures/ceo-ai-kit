@@ -61,3 +61,10 @@ Restructure your web content to be AI-extractable:
 ## Security Constraints
 - Never fabricate reviews, fake citations, or create astroturfed content.
 - All third-party signal building must be authentic and transparent.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `competitive-intel` — Track competitors and market positioning"

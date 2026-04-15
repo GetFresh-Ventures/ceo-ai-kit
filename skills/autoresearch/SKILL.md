@@ -336,3 +336,10 @@ A good autoresearch run:
 7. **Ran autonomously** — didn't stop to ask permission between experiments
 
 If the skill "passes" all evals but the actual output quality hasn't improved — the evals are bad, not the skill. Go back to step 2 and write better evals.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `create-skill` — Create a new skill from scratch"
+- "Try `experiment-loop` — Apply the scientific method to initiatives"
+- "Try `larry-loop` — Autonomous content validation system"

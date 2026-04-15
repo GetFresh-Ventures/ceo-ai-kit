@@ -198,3 +198,10 @@ Before delivering CRO recommendations:
 | Can't identify the leak | Start with funnel analytics — where's the biggest drop-off? |
 | A/B tests inconclusive | You likely need more traffic volume. Run tests for at least 2 weeks |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `sales-enablement` — Create sales collateral reps actually use"
+- "Try `hubspot-architect` — Build HubSpot CRM integrations and pipelines"

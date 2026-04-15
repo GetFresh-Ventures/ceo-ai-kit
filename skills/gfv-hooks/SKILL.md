@@ -555,3 +555,10 @@ def send_slack_alert(message, channel="#ops-alerts"):
 3. **Safety gates are non-blocking** — They trigger `ask` mode, not `deny`
 4. **No secrets in config** — All credentials come from environment or keychain
 5. **Fail-open design** — Hooks always exit 0; never block the agent on error
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `create-skill` — Create a new skill from scratch"
+- "Try `scheduling-infra` — Set up cron jobs and background automation"
+- "Try `project-release` — Governed release workflow with version bumps"

@@ -190,3 +190,10 @@ Before delivering SEO recommendations:
 | Rankings dropped suddenly | Check Google Search Console for manual actions or crawl errors first |
 | No organic traffic growth | Verify pages are indexed — use `site:yourdomain.com` in Google |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `ai-search-optimizer` — Optimize your content for AI search engines"
+- "Try `competitive-intel` — Track competitors and market positioning"

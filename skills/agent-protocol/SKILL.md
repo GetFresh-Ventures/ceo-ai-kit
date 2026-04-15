@@ -386,3 +386,10 @@ All data assertions MUST be verified against live systems before presenting:
 | Meeting notes, action items | Fathom (via Fathom API) |
 
 **Three-System Sync Rule:** Every status assertion touches Linear + HubSpot + PIL — all three or none.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `agent-orchestrator` — Coordinate multi-agent task pipelines"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"
+- "Try `context-engine` — Load company context for advisory skills"

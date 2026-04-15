@@ -209,3 +209,10 @@ Maintain a running log of hook tests:
 | No content ideas | Start with competitor analysis — see what's ranking for them but not you |
 | Calendar feels overwhelming | Focus on 2-3 cornerstone pieces per month, repurpose across channels |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `social-engine` — Create platform-native social media content"
+- "Try `copy-master` — Write world-class marketing copy"

@@ -103,3 +103,10 @@ Treat pricing changes as a launch opportunity — not just an email.
 | Launch feels underwhelming | Build anticipation — teasers, early access, countdown sequences |
 | Post-launch silence | Plan a 30-day post-launch content cadence before you launch |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `social-engine` — Create platform-native social media content"
+- "Try `outreach-sequence` — Design multi-touch outreach campaigns"

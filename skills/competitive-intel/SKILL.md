@@ -240,3 +240,10 @@ Competitors: varies by vertical
 | Can't find competitor data | Start with their job postings, press releases, and G2/Capterra reviews |
 | Analysis becomes stale | Set up Google Alerts for competitor names + key product terms |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `news-digest` — Extract intelligence from news and feeds"
+- "Try `seo-growth` — Audit and optimize SEO — technical and content"
+- "Try `sales-enablement` — Create sales collateral reps actually use"

@@ -117,3 +117,10 @@ Before marking any change as verified:
 - `experiment-loop` — For A/B testing changes systematically
 - `chief-of-staff` — For surfacing verification failures in heartbeat
 - `commit-fast` — Only commit after verification passes
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `analyze-issue` — Debug any bug or unexpected behavior"
+- "Try `commit-fast` — Auto-stage and commit with semantic messages"
+- "Try `feature-architect` — Guide features from spec to deployed code"

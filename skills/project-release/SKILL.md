@@ -238,3 +238,10 @@ v2.0.0: Multi-agent orchestration rebuild
 ### Time Conversion
 - PDT → CDT: add 2 hours (e.g., 3:00 PM PDT = 5:00 PM CDT)
 - UTC → CDT: subtract 5 hours (e.g., 22:00 UTC = 5:00 PM CDT)
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `commit-fast` — Auto-stage and commit with semantic messages"
+- "Try `gfv-hooks` — Configure lifecycle hooks for your AI agent"
+- "Try `doc-builder` — Create Word docs — proposals, memos, reports"

@@ -70,3 +70,10 @@ Before adding any new cron job, complete this checklist:
 3. **Dispatcher Registration** — If a dispatcher exists, register there FIRST, then crontab.
 4. **Dry Run** — Add the cron entry with output redirected to a test log. Wait for one cycle. Verify the log.
 5. **Monitoring Hook** — Ensure the `chief-of-staff` heartbeat can detect if this job fails silently.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `scheduling-infra` — Set up cron jobs and background automation"
+- "Try `automation-recommender` — Find automation opportunities in your workflows"
+- "Try `gfv-hooks` — Configure lifecycle hooks for your AI agent"

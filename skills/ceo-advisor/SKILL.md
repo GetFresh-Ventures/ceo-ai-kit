@@ -149,3 +149,10 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 | Advice feels too generic | Load your company context first with `context-prime` |
 | Conflicting priorities | Use the Eisenhower matrix — urgent vs important, then cut ruthlessly |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `chief-of-staff` — Your always-on executive AI assistant"
+- "Try `pipeline-pulse` — Active pipeline management and deal tracking"
+- "Try `scenario-war-room` — What-if modeling for strategic decisions"

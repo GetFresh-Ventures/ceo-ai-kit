@@ -350,4 +350,11 @@ After onboarding, the AI maintains continuity based on level:
 - "Ready to prep for your next meeting? Try `meeting-prep`."
 - "Want me to review your pipeline? Try `pipeline-pulse`."
 
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks
+
 **[END SKILL]**

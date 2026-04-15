@@ -133,3 +133,9 @@ Before delivering:
 - "Want me to prep for Monday's meetings?" → `/meeting-prep`
 - "Want me to check the pipeline for anything I missed?" → `/pipeline-pulse`
 - "Want me to draft a team update email?" → `/email-composer`
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks

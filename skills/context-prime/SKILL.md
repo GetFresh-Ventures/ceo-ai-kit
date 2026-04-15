@@ -168,3 +168,10 @@ After completing the scan, produce this summary:
 - Always run before `/create-prd` or `/analyze-issue` on unfamiliar code
 - Feeds into `/chief-of-staff` situational awareness
 - Re-run after major refactors to update mental model
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `meeting-prep` — Build pre-meeting intelligence dossiers"
+- "Try `deal-review` — Pipeline review — flag stale deals, find gaps"
+- "Try `chief-of-staff` — Your always-on executive AI assistant"

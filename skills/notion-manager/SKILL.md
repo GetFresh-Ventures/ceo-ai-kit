@@ -185,3 +185,10 @@ update_row("PAGE_ID", {
 | Database views are slow | Limit the number of relations and rollups — they compound query time |
 | Team not using Notion | Create a dashboard as their 'home' page — one click to everything |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `doc-builder` — Create Word docs — proposals, memos, reports"
+- "Try `spreadsheet-builder` — Build and analyze Excel spreadsheets"
+- "Try `chief-of-staff` — Your always-on executive AI assistant"

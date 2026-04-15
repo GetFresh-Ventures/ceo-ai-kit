@@ -166,3 +166,10 @@ After 10+ sequences, review the experiment ledger: What subject lines work? What
 | Low open rates | Test subject lines — personalized > generic. Include their company name |
 | No replies after 5 touches | Re-evaluate your ICP — you may be targeting the wrong personas |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `email-composer` — Draft emails in your authentic voice"
+- "Try `sms-outreach` — Compliant SMS/WhatsApp outreach campaigns"
+- "Try `sales-enablement` — Create sales collateral reps actually use"

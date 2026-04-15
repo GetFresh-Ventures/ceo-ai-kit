@@ -131,3 +131,10 @@ The change sticks. **This is where most changes die.**
 | Team resists the change | Address WIIFM (What's In It For Me) for each stakeholder group |
 | Change stalls after announcement | Assign change champions in each team. They drive adoption peer-to-peer |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `coo-advisor` — Operations, process, and team scaling"
+- "Try `chief-of-staff` — Your always-on executive AI assistant"
+- "Try `decision-logger` — Log and recall your key decisions"

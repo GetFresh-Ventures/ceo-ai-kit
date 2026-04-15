@@ -112,3 +112,10 @@ Every news item gets a relevance score:
 | Too much noise | Narrow your keywords — be specific to your niche, not just industry |
 | Missing important stories | Add competitor names and key executive names to your watch list |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `competitive-intel` — Track competitors and market positioning"
+- "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `chief-of-staff` — Your always-on executive AI assistant"

@@ -254,3 +254,10 @@ RECOMMENDED DECISION
 | Too many variables to model | Fix 80% of variables, vary only the 2-3 that matter most |
 | Scenarios feel unrealistic | Ground them in historical data — 'what happened last time X occurred?' |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `decision-logger` — Log and recall your key decisions"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"
+- "Try `financial-analyst` — Financial ratios, DCF, and budget analysis"

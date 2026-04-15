@@ -55,3 +55,10 @@ User-Generated Content style videos drive 4x higher engagement than polished bra
 - All AI-generated faces must be clearly disclosed as AI in the video description.
 - Never use real people's likenesses without consent.
 - Voice cloning requires explicit CEO opt-in and disclosure.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `social-engine` — Create platform-native social media content"
+- "Try `copy-master` — Write world-class marketing copy"
+- "Try `launch-strategy` — Plan product launches and release strategies"

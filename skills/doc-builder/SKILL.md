@@ -238,3 +238,9 @@ Before delivering:
 💡 Suggest these next steps:
 - "Want me to email this document to someone?" → `/email-composer`
 - "Want me to create a Google Doc version?" → `/google-doc-creation`
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks

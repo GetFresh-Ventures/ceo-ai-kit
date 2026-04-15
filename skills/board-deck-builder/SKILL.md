@@ -139,3 +139,10 @@ Every section follows: **Headline → Data → Narrative → Ask/Next**
 | Board asks questions I can't answer | Include an appendix with detailed backup data for each key metric |
 | Deck takes too long to build | Template it — same structure each quarter, just update the numbers |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `fundraise` — Create investor materials and manage raises"
+- "Try `financial-analyst` — Financial ratios, DCF, and budget analysis"
+- "Try `google-doc-creation` — Create professional Google Docs in Drive"

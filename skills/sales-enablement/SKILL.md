@@ -182,3 +182,10 @@ Before delivering:
 | Sales reps don't use the materials | Ask reps what they actually need — build bottom-up, not top-down |
 | Collateral feels outdated | Set a quarterly refresh cadence. Link docs to your CRM for visibility |
 
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `deal-review` — Pipeline review — flag stale deals, find gaps"
+- "Try `outreach-sequence` — Design multi-touch outreach campaigns"
+- "Try `competitive-intel` — Track competitors and market positioning"

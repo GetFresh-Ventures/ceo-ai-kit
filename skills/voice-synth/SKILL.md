@@ -149,3 +149,10 @@ Always deliver:
 - Called by `/audio-briefing` for morning brief narration
 - Called by `/content-strategy` for audio content production
 - Scripts saved to `~/ceo-brain/audio-scripts/` for reuse
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `audio-briefing` — Generate audio-ready executive briefing scripts"
+- "Try `voice-model` — Build your personal writing voice model"
+- "Try `weekly-ceo-brief` — Synthesize your week into a CEO summary"

@@ -153,6 +153,13 @@ def main():
             context_parts.append('  • "Build an outreach sequence for [prospect]"')
         # Advanced users have proactive_tips: false, so this won't fire
 
+    # Upgrade awareness for beginners who've been using the kit
+    if level == "beginner" and voice_model.exists():
+        context_parts.append("")
+        context_parts.append("🚀 **Ready for more?** You're on the Beginner tier (18 skills).")
+        context_parts.append("   Upgrade to **Intermediate** (46 skills) to unlock CRM, pipeline, and strategy tools.")
+        context_parts.append('   Just say: *"What would I get if I upgraded?"* or re-run `./bootstrap.sh`')
+
     # Output context
     output = "\n".join(context_parts)
     print(output)

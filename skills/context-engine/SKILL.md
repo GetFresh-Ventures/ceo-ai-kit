@@ -223,3 +223,10 @@ This data supplements (never replaces) the `company-context.md` file. The file i
 - **Revenue in context contradicts HubSpot/QuickBooks** → flag discrepancy
 - **New deal, new hire, or pivot detected in Linear/HubSpot** → suggest context update
 - **Runway < 6 months detected** → escalate to CFO Advisor, flag urgency
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `context-prime` — Load project context before starting work"
+- "Try `agent-protocol` — C-suite advisory inter-agent communication"
+- "Try `chief-of-staff` — Your always-on executive AI assistant"

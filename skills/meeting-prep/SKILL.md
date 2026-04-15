@@ -153,3 +153,9 @@ Before delivering:
 💡 Suggest these next steps:
 - "After the meeting, paste your notes and I'll extract action items" → `/post-meeting-brief`
 - "Want me to draft a follow-up email?" → `/email-composer`
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks

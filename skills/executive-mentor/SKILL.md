@@ -117,3 +117,9 @@ Questions nobody wants to answer:
 - "Want me to log this decision and its rationale with `decision-logger`?"
 - "Should I prep the board deck around these findings with `board-deck-builder`?"
 - "Want me to draft a follow-up email communicating this decision with `email-composer`?"
+
+## Ready for More?
+🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
+- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
+- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
+- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks

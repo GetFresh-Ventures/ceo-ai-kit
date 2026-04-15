@@ -55,3 +55,10 @@ Weekly 1-page global risk brief:
 ## Constraints
 - Source verification: minimum 2 independent sources before elevating any alert.
 - Never speculate on geopolitical outcomes. Report facts, flag implications.
+
+
+## After This Skill
+💡 Suggest these next:
+- "Try `news-digest` — Extract intelligence from news and feeds"
+- "Try `scenario-war-room` — What-if modeling for strategic decisions"
+- "Try `ceo-advisor` — Strategic leadership and portfolio guidance"
