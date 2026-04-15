@@ -17,6 +17,13 @@ metadata:
 
 Write outbound emails that sound like *you* wrote them — not a chatbot. **Never auto-send. Never.**
 
+
+## Quick Start
+Just say any of these:
+- "Draft an email to [Name] about [topic]"
+- "Write a follow-up email to the investor I met yesterday"
+- "Reply to this email in my voice" (paste the thread)
+
 ## When to Activate
 
 - Drafting prospect outreach

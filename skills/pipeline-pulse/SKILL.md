@@ -19,6 +19,13 @@ metadata:
 
 Your pipeline health monitor — with teeth. Don't just report, resolve.
 
+
+## Quick Start
+Just say any of these:
+- "What's happening in my pipeline?"
+- "Give me a pipeline health check"
+- "Show me deals at risk and what to do about them"
+
 ## When to Activate
 
 - End of week pipeline review (Friday)

@@ -19,6 +19,13 @@ metadata:
 
 Build spreadsheets that are investor-defensible, not just functional.
 
+
+## Quick Start
+Just say any of these:
+- "Build a financial model for [scenario]"
+- "Create a comparison spreadsheet for these vendors"
+- "Turn this data into a spreadsheet with charts" (paste data)
+
 ## When to Activate
 
 - Creating financial models, P&L projections, or budget forecasts

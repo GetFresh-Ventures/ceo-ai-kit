@@ -18,6 +18,13 @@ metadata:
 
 Turn meeting notes into system-level action within 15 minutes. A meeting note is NOT "handled" just because it was read — it's handled when all outputs are pushed into live systems.
 
+
+## Quick Start
+Just say any of these:
+- "Here are my meeting notes — extract the action items" (paste notes)
+- "Summarize what we decided in today's leadership meeting"
+- "Turn these rough notes into a follow-up email and task list"
+
 ## When to Activate
 
 - Immediately after any client, prospect, or partner meeting

@@ -18,6 +18,13 @@ metadata:
 
 Process PDF files for CEO workflows — contracts, proposals, term sheets, and document management.
 
+
+## Quick Start
+Just say any of these:
+- "Read this PDF and summarize it" (attach or paste path)
+- "Merge these three PDFs into one"
+- "Fill out this PDF form with the following info..."
+
 ## When to Activate
 
 - Reading or extracting text/tables from PDFs (contracts, reports, term sheets)

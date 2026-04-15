@@ -12,6 +12,13 @@ metadata:
 
 **Usage**: Paste or upload any contract, agreement, NDA, MSA, SOW, or terms of service. The agent extracts, summarizes, and red-flags dangerous clauses before you sign.
 
+
+## Quick Start
+Just say any of these:
+- "Summarize this contract in plain English" (paste the contract)
+- "What are the red flags in this agreement?"
+- "Compare these two contracts — what's different?"
+
 ## Why This Exists
 
 CEOs sign documents constantly — vendor agreements, partnership deals, NDAs, SaaS terms. Most are 15-40 pages of legal boilerplate designed to obscure risk. This skill turns any legal document into a 1-page executive brief with danger zones highlighted.

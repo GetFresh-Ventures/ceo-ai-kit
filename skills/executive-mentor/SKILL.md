@@ -8,6 +8,13 @@ attribution: Adapted from alirezarezvani/claude-skills (MIT License), tuned for 
 
 Not another advisor. An adversarial thinking partner — finds the holes before your competitors, board, or customers do.
 
+
+## Quick Start
+Just say any of these:
+- "Challenge my thinking on [decision]"
+- "Play devil's advocate on our go-to-market strategy"
+- "I'm stuck between [Option A] and [Option B] — push me"
+
 ## The Difference
 - **CEO/COO/CTO Advisor** → strategy, execution, tech — building the plan
 - **Executive Mentor** → "Your plan has three fatal assumptions. Let's find them now."

@@ -18,6 +18,13 @@ metadata:
 
 Create professional Word documents that CEOs can send to clients, investors, and partners.
 
+
+## Quick Start
+Just say any of these:
+- "Create a proposal document for [Client]"
+- "Build a one-pager summarizing our Q2 results"
+- "Turn these bullet points into a professional memo"
+
 ## When to Activate
 
 - Creating proposals, SOWs, or engagement letters

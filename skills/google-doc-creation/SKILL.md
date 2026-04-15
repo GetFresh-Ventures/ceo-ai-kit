@@ -5,6 +5,13 @@ description: Create professional, executive-ready Google Docs with branded styli
 
 # Google Doc Creation — Professional Documents
 
+
+## Quick Start
+Just say any of these:
+- "Create a Google Doc: [title]"
+- "Write a strategy document for [initiative] and put it in Drive"
+- "Turn these notes into a professional Google Doc"
+
 ## When to Use This Skill
 
 Use this skill **any time** a Google Doc needs to be created, including:

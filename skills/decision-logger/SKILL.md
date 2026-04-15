@@ -15,6 +15,13 @@ Two-layer memory system. Layer 1 stores everything. Layer 2 stores only what the
 
 ---
 
+
+## Quick Start
+Just say any of these:
+- "Log this decision: We're going with [Vendor] for [reason]"
+- "What decisions have I made this month?"
+- "Show me the context behind the [topic] decision"
+
 ## Commands
 
 | Command | Effect |

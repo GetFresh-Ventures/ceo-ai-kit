@@ -7,6 +7,13 @@ description: Build and evolve your personal writing voice model. Captures word c
 
 Teach Claude to write like *you* — not like a LinkedIn marketer.
 
+
+## Quick Start
+Just say any of these:
+- "Build my voice model from these emails" (paste 3-5 emails you wrote)
+- "Here's how I write — learn my style" (paste any writing samples)
+- "Refine my voice model — I never use buzzwords like 'synergy'"
+
 ## When to Use
 - Initial setup (fill in the template once)
 - Monthly evolution (add new email samples)

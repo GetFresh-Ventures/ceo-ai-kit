@@ -7,6 +7,13 @@ description: "Generate a concise, audio-ready executive briefing script from dat
 
 Produce a structured, spoken-word briefing script the CEO can consume hands-free. This skill generates the *script* — actual text-to-speech rendering is handled by external TTS services (ElevenLabs, OpenAI TTS, macOS `say`, etc.).
 
+
+## Quick Start
+Just say any of these:
+- "Create an audio briefing for my commute"
+- "Turn my weekly brief into a 5-minute audio script"
+- "Prepare a voice briefing covering pipeline and meetings"
+
 ## When to Use
 
 - "Give me my morning brief"

@@ -18,6 +18,13 @@ metadata:
 
 Build a pre-meeting brief that gives you genuine leverage — not a Wikipedia summary. Quick enough to scan in 5 minutes, deep enough to walk in informed.
 
+
+## Quick Start
+Just say any of these:
+- "Prep me for my meeting with [Name] tomorrow"
+- "I have a board meeting Friday — build me a dossier"
+- "What should I know before my call with [Company]?"
+
 ## When to Activate
 
 - Before any meeting with a prospect, client, partner, or investor

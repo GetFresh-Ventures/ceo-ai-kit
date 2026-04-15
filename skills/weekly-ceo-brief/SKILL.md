@@ -17,6 +17,13 @@ metadata:
 
 Your week distilled into what actually matters — with open items resolved, not just listed.
 
+
+## Quick Start
+Just say any of these:
+- "Write my weekly CEO brief"
+- "Summarize this week — what moved, what's stuck, what's next?"
+- "Build my Monday morning briefing"
+
 ## When to Activate
 
 - Friday afternoon / Sunday evening

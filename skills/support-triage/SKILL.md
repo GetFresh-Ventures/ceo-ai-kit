@@ -7,6 +7,13 @@ description: "Classify, prioritize, and route inbound support requests from any 
 
 Classify incoming support items by severity and route them to the right system. Don't just flag things — resolve what you can, escalate what you can't.
 
+
+## Quick Start
+Just say any of these:
+- "Triage these support emails" (paste or describe them)
+- "Classify and prioritize these customer requests"
+- "What support issues need my personal attention?"
+
 ## When to Use
 
 - Batch processing unread support emails
