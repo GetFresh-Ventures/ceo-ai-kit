@@ -369,11 +369,11 @@ All data assertions MUST be verified against live systems before presenting:
 
 | Data Type | Verify Against |
 |-----------|---------------|
-| Deal status, pipeline | HubSpot (via `hubspot-api` skill) |
-| Revenue, invoices, cash | QuickBooks (via `quickbooks-api` skill) |
+| Deal status, pipeline | HubSpot (via HubSpot API) |
+| Revenue, invoices, cash | QuickBooks (via QuickBooks API) |
 | Task status, project progress | Linear (via Linear MCP) |
-| Customer data, job history | Field Service Platform (via `field-service-connector` skill) |
-| Entity relationships | Supabase PIL (via `supabase-access` skill) |
-| Meeting notes, action items | Fathom (via `fathom-api` skill) |
+| Customer data, job history | Field Service Platform (via Field Service API) |
+| Entity relationships | Supabase PIL (via Supabase API) |
+| Meeting notes, action items | Fathom (via Fathom API) |
 
 **Three-System Sync Rule:** Every status assertion touches Linear + HubSpot + PIL — all three or none.

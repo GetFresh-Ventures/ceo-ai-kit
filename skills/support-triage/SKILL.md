@@ -20,7 +20,7 @@ Pull unread items from available channels:
 
 | Channel | How to pull | What to extract |
 |---------|------------|-----------------|
-| Email (IMAP) | `google-workspace-access` skill | Subject, sender, body snippet, date |
+| Email (IMAP) | Google Workspace API | Subject, sender, body snippet, date |
 | HubSpot tickets | CRM MCP tools | Ticket ID, contact, subject, priority |
 | Social mentions | `search_web` with brand names | Platform, author, sentiment, content |
 | Linear issues | Linear MCP tools | Issue ID, title, assignee, state |

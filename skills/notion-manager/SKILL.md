@@ -31,7 +31,7 @@ HEADERS = {
 **Token source:** Integration token from https://www.notion.so/my-integrations. Must be shared with target pages/databases.
 
 ### MCP Alternative
-If `notion-mcp` server is configured, use MCP tools instead of raw API calls:
+If Notion MCP server is configured, use MCP tools instead of raw API calls:
 - `notion_search` — Find pages and databases
 - `notion_read_page` — Read page content
 - `notion_update_page` — Update page properties

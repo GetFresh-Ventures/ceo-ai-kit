@@ -262,7 +262,7 @@ apply_professional_styling(doc_file["id"], docs_svc)
 
 1. **No chunk splitting** — All batchUpdate requests must be sent in a single call. Splitting corrupts tables due to reverse-order cell inserts with forward index tracking.
 2. **No `updateNamedStyle`** — Despite docs showing it, `updateNamedStyle` is NOT a valid batchUpdate request type in the Docs API v1. All heading styling (color, size, spacing) is applied per-element via `updateTextStyle` + `updateParagraphStyle` in the post-insertion styling pass.
-3. **Images** — Not supported. Use the `gfv-report-builder` skill for image-based reports.
+3. **Images** — Not supported. Use an image-generation tool or dedicated report skill for image-based reports.
 4. **Links** — Inline markdown links are not yet parsed. Add links manually after creation.
 5. **Nested lists** — Only single-level bullets/numbers supported.
 6. **Page breaks** — Google Docs auto-paginates. Tables may split across pages. Use `keepWithNext` on headings to prevent orphans.

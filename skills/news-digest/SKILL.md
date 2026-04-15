@@ -35,7 +35,7 @@ Use available tools in priority order:
 | Source | Tool | What to extract |
 |--------|------|----------------|
 | Web search | `search_web` | Breaking news, funding rounds, acquisitions |
-| Firecrawl | `firecrawl-web-search` skill | Deep scrape of industry publications |
+| Firecrawl | Firecrawl web scraping | Deep scrape of industry publications |
 | HubSpot | CRM MCP tools | Prospect company news (for meeting prep) |
 | Google News | `search_web` with `site:news.google.com` | General market signals |
 

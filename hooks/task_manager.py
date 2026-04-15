@@ -230,7 +230,8 @@ def cmd_init(args):
     print(json.dumps(data, indent=2, ensure_ascii=False))
 
 
-def _debate_current_round(data: dict) -> tuple[int, dict] | tuple[None, None]:
+def _debate_current_round(data):
+    # type: (dict) -> tuple
     idx = data.get("currentRound", 0) - 1
     if idx < 0 or idx >= len(data.get("rounds", [])):
         return None, None

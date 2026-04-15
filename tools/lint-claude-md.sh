@@ -16,7 +16,7 @@ echo "🔍 Linting $FILE_TO_CHECK..."
 ERRORS=0
 
 # 1. Check for Hardcoded Secrets
-if grep -q -E "(sk-[a-zA-Z0-9]{20,}|xox[baprs]-[0-9]+-[a-zA-Z0-9]+|AIza[0-9A-Za-z-_]{35})" "$FILE_TO_CHECK"; then
+if grep -q -E "(sk-[a-zA-Z0-9]{20,}|xox[baprs]-[0-9]+-[a-zA-Z0-9]+|AIza[0-9A-Za-z_-]{35})" "$FILE_TO_CHECK"; then
     echo "❌ CRITICAL: Possible leaked API key found (OpenAI, Slack, or Google format) in $FILE_TO_CHECK!"
     ERRORS=$((ERRORS+1))
 else
