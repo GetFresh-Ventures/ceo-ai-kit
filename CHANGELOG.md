@@ -2,6 +2,37 @@
 
 All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
 
+## 2026-04-15 10:22 AM PT — v1.26.0 — Complete CEO UX Overhaul
+
+### Why it matters
+First release focused entirely on CEO ease-of-use. Resolves all 5 UX findings from Phase 11 audit.
+
+### Added
+- **short_description**: 72/72 skills now have <60 char descriptions for slash-menu display
+- **Quick Start**: 72/72 skills now have "Just say any of these:" with 2-3 natural-language prompts
+- **Troubleshooting**: 28 intermediate skills now have Problem/Fix tables
+- **--quick flag**: `./bootstrap.sh --quick` for zero-interaction setup (Tier 2 defaults)
+
+### Renamed (CEO clarity)
+- `aeo-optimizer` → `ai-search-optimizer`
+- `create-prd` → `product-spec`
+
+### Stats
+75 files changed, 751 insertions(+), 30 deletions(-)
+
+---
+
+## 2026-04-15 10:15 AM PT — v1.25.0 — CEO UX: Quick Start Prompts
+
+### Added
+- **Quick Start** sections added to all 18 beginner-tier skills
+- Each skill now tells CEOs exactly what to type: "Just say any of these:"
+
+### Stats
+18 files changed, 125 insertions(+)
+
+---
+
 ## 2026-04-15 10:06 AM PT — v1.24.0 — Runtime Verification Pass
 
 ### Why it matters
