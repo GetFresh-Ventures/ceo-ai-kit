@@ -39,12 +39,12 @@ Write-Host "To configure your system perfectly, please select your AI expertise 
 Write-Host ""
 if (-not $Quick) {
 Write-Host " [1] Beginner — I'm new to AI coding assistants" -ForegroundColor Green
-Write-Host "     14 core skills: email, meetings, documents, contracts, pipeline."
+Write-Host "     18 core skills: email, meetings, documents, contracts, pipeline."
 Write-Host "     Proactive tips enabled. Auto-save learnings. Guided experience."
 Write-Host "     Memory always on (so your AI remembers you between sessions)."
 Write-Host ""
 Write-Host " [2] Intermediate — I use AI tools regularly" -ForegroundColor Yellow
-Write-Host "     40+ skills: + SEO, content strategy, sales enablement, C-suite advisory."
+Write-Host "     46 skills: + SEO, content strategy, sales enablement, C-suite advisory."
 Write-Host "     Feedback checkpoints. Cross-skill chains. CRM integrations."
 Write-Host ""
 Write-Host " [3] Advanced — I build with AI daily" -ForegroundColor Red

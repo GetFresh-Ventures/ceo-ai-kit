@@ -72,7 +72,7 @@ The AI will walk you through a 5-minute setup wizard to learn your voice, your t
 The kit adapts to your comfort level with AI. You choose during installation:
 
 ### Beginner — "Keep it simple"
-*15 skills • Cross-session memory • Auto-approve • Proactive tips • Plain-English mode*
+*18 skills • Cross-session memory • Auto-approve • Proactive tips • Plain-English mode*
 
 Perfect if you're new to AI assistants. The AI handles emails, meeting prep, and documents — and explains everything in plain English. Memory saves automatically so each session picks up where you left off. Safe commands auto-approve so you never get stuck on Y/n prompts.
 
@@ -82,7 +82,7 @@ Perfect if you're new to AI assistants. The AI handles emails, meeting prep, and
 - "Summarize this contract"
 
 ### Intermediate — "Plug into my business" ★ Recommended
-*45 skills • CRM integration • Weekly reports • Feedback loops*
+*46 skills • CRM integration • Weekly reports • Feedback loops*
 
 Everything in Beginner, plus your AI connects to HubSpot/Salesforce, generates weekly pipeline reports, and refines your voice model over time. After key tasks, it asks "Was this helpful?" to continuously improve.
 
