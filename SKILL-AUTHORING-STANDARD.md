@@ -273,6 +273,7 @@ Beyond `name` and `description`, skills support these fields:
 | Field | Type | Use When |
 |-------|------|----------|
 | `argument-hint` | string | Skill accepts input (e.g., `[company-name]`, `[issue-id]`) |
+| `requires_human_approval` | boolean | Triggers `task_manager.py` circuit breaker to prevent autonomous execution of high-risk tasks |
 | `disable-model-invocation` | boolean | Prevent auto-invocation — require explicit `/slash-command` |
 | `user-invocable` | boolean | Set `false` for background knowledge skills (preloaded into agents only) |
 | `allowed-tools` | string | Tools allowed without permission prompts |
@@ -397,12 +398,14 @@ Before a skill is considered done:
 - [ ] Red Flags section
 - [ ] Examples for clarity
 
-### Integration
+### Integration & Governance
 - [ ] Related Skills section with WHEN/NOT disambiguation
 - [ ] Live integration hooks listed (if applicable)
 - [ ] Proactive Triggers (4-6 per skill)
 - [ ] Output Artifacts table (4-6 per skill)
 - [ ] Confidence tagging on findings (🟢/🟡/🔴)
+- [ ] `requires_human_approval: true` set if skill modifies live state/sends emails
+- [ ] `<verification_gate>` defined for programmatic self-verification before completion
 
 ---
 
