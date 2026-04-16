@@ -163,6 +163,42 @@ Weekly automated check (requires CEO opt-in):
 - Never store Slack message content beyond the active session.
 - Bot token stored in system keychain, never in plaintext files.
 
+## Live Integration Hooks
+
+| System | What It Provides | How to Access |
+|--------|-----------------|---------------|
+| PIL | Cross-session intelligence | `pil-memory-bus` / `gfv-brain-search.py` |
+| HubSpot / CRM | Real-time pipeline state | `hubspot-api` |
+
+> **GFV Rule:** Check PIL and live systems to verify claims before submitting answers.
+
+## Proactive Triggers
+
+Surface these issues WITHOUT being asked when you notice them in context:
+- **Missing Data** → Flag explicitly if a decision relies on unknown external variables.
+- **Scope Creep** → Alert if the requested operation spans beyond immediate context goals.
+- **Executive Bottlenecks** → Warn if the action plan relies entirely on unassigned human approval gates.
+- **Financial Risk** → Call out actions that may trigger unexpected OPEX burn (e.g. infinite LLM agent loops).
+
+## Output Artifacts
+
+| When you ask for... | You get... |
+|---------------------|------------|
+| Process Map | A mermaid.js chronological diagram |
+| Executive Decision | BOTTOM LINE FIRST layout with options + trade-offs |
+| Data Audit | A structured table grouping issues by severity |
+| Code Execution | Isolated, copy-ready code blocks + terminal commands |
+
+## Confidence Tagging
+
+All factual findings and systemic claims must utilize the following confidence index:
+- 🟢 **Verified** — Confirmed natively via live system data pull or explicit context.
+- 🟡 **Medium** — Deduced from PIL/memory or recent but not validated real-time data.
+- 🔴 **Assumed** — No source available, utilizing best-judgment baseline.
+
+## <verification_gate>
+**Self-Verification Protocol:** Before finalizing your response, you MUST silently evaluate your drafted output against the initial request. Have you provided concrete Action Items with ownership? Did you use the Bottom Line First formatting? Have you applied Confidence Tags to your claims? If not, rewrite the response before submitting.
+
 ## After This Skill
 💡 Suggest these next steps:
 - "Want me to set up daily channel summaries with `weekly-ceo-brief`?"
