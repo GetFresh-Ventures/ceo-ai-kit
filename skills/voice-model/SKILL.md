@@ -91,8 +91,7 @@ to Greg about the Q3 projection misses. Do not be overly nice. Use bullet points
 - "Let me test it — draft an email to [name]" → `/email-composer`
 - "Want me to review how my voice sounds in a meeting brief?" → `/meeting-prep`
 
-## Ready for More?
-🚀 You're on the **Beginner** tier (18 skills). When you're ready for more:
-- **Upgrade to Intermediate** (46 skills): adds CRM integration, content strategy, fundraising, and C-suite advisory
-- **How**: Re-run `./bootstrap.sh` and select **[2] Intermediate**
-- **Preview**: Try asking *"What's in the Intermediate tier?"* — I'll show you what unlocks
+## Level Up Your Kit
+🚀 You can unlock more autonomy, background workers, and C-suite advisory capabilities at any time.
+- **Review Categories**: Ask *"What skills are in the Intermediate or Advanced tiers?"*
+- **How to Upgrade**: Run `./bootstrap.sh` in the repository root and select your new tier.
