@@ -2,6 +2,33 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-16 4:52 PM PT — v1.32.0 — Agnostic Architecture Decoupling & Educator Persona
+
+### Why it matters
+This release fundamentally severs the final dependencies tying the CEO Enablement Kit to proprietary Proactive Intelligence Layer (PIL) structures and specific IDE configurations (like `.claude`), ensuring zero-friction out-of-the-box operation on any CEO's machine. Additionally, it implements a revolutionary UI/UX profiling system that actively teaches non-technical executives how to command an IDE interface via the "Sherpa Protocol," bridging the gap between advanced GTM operations and entry-level coding fluency.
+
+### Added
+- **`AGENT.md`** — Injected the "Educator Persona / Sherpa UX" ruleset, dynamically narrating mechanical AI operations (like executing background scripts) in plain English to educate beginners.
+- **`ceo-brain/profile.json`** — Deployed dual-axis configuration capability by defining `ide_expertise` as a discrete, independent metric from the operational autonomy tier.
+
+### Changed
+- **`bootstrap.sh`** — Introduced a secondary CLI prompt querying IDE Expertise (`Beginner/Intermediate/Advanced`) to cleanly route the UX educational logic entirely independent of their GTM operational tier.
+- **`skills/`** — Over 70 skills were scrubbed and refactored via Python AST replacements. Replaced all legacy hardcoded references to `gfv-brain` with the IDE-agnostic `~/ceo-brain` runtime fallback, establishing absolute localization.
+- **`skills/onboard/SKILL.md`** — Rewired the initial Interface Orientation logic to trigger conditionally via the new `ide_expertise` integer, streamlining the onboarding for fully-technical founders.
+- **`tools/` & `hooks/`** — Bypassed `.claude` configuration pollution. All telemetry and background data stores were forcibly repathed to synchronous `$GFV_CEO_BRAIN/.core/` targets, solidifying cross-IDE compatibility (Cursor/Windsurf).
+
+### Fixed
+- **`skills/`** — Swapped broken `linear-mcp-server` protocol dependencies inside the `project-release`, `coo-advisor`, `ceo-advisor`, and `board-deck-builder` skills in favor of flawless Python REST implementations.
+- **`bootstrap.ps1` & Documentation** — Stripped lingering explicit absolute pathing mapping back to native `$HOME` instances.
+
+### Files Modified
+- CHANGELOG.md, README.md, bootstrap.ps1, AGENT.md
+- bootstrap.sh
+- tools/gfv-telemetry.py, tools/gfv-dream.py, tools/ccflare.py, tools/gfv-brain-search.py, tools/gfv-audit.py
+- hooks/session-start.py, hooks/session-stop.py, hooks/pre-send-review.py
+- 72 target elements in the `skills/` directory (e.g., project-release, onboard)
+
+
 ## 2026-04-16 3:06 PM PT — v1.31.1 — GxD Rebranding Finalization
 
 ### Why it matters

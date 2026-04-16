@@ -1,8 +1,13 @@
 # GetFresh GTM Enablement Kit
-**Version**: v1.31.1  
+**Version**: v1.32.0  
 **Powered by the Growth by Design (GxD) Model.**
 
 ---
+### What's New in v1.32.0
+- **Agnostic Independence**: Severed all residual backend database pathings tied to individual IDEs (like `.claude`), ensuring zero-friction local operation for Cursor, Windsurf, or Copilot.
+- **Sherpa UX (Educator Persona)**: The kit now actively assesses an executive's technical fluency upon installation, using plain English to narrate invisible mechanical operations if they are learning how to pilot the IDE workspace for the first time.
+- **Swapped Unstable Protocols**: Decommissioned failing `mcp` communication bindings running the primary execution layers, replacing them with direct, lossless Python API workflows.
+
 ### What's New in v1.31.1
 - **GxD Rebranding Finalization**: Completed the total structural unification of the repository to match the Growth by Design **GTM Enablement Kit** philosophy.
 - **Physical Clone Paths Repathed**: Upgraded the internal dotfile logic and documentation so standard installations correctly mount to `~/Documents/GTM-Enablement-Kit`.
