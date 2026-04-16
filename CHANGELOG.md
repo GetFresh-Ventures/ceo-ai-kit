@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the GetFresh CEO Enablement Kit for AI will be documented in this file.
+All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
 ## 2026-04-15 10:14 PM PT — v1.31.0 — Zero-Configuration Onboarding & Auto-Installers
 
@@ -11,7 +11,7 @@ The previous onboarding funnels assumed an engineering baseline—requiring SSH 
 - **AI Agent Auto-Installers:** Injected native `curl`/`unzip` hooks and `nvm`/`node.js` dependency resolution chains into `bootstrap.sh`. The kit now seamlessly downloads MacOS Cursor Universal binaries or globally installs `@anthropic-ai/claude-code` completely under the hood, depending on the executive's preference.
 
 ### Changed
-- **Visual Clone Pathing:** Relocated the foundational clone target from the hidden `~/.gfv_growth_by_design` directory to a highly visible `~/Documents/CEO-Enablement-Kit` path.
+- **Visual Clone Pathing:** Relocated the foundational clone target from the hidden `~/.gfv_growth_by_design` directory to a highly visible `~/Documents/GTM-Enablement-Kit` path.
 - **HTTPS Git Routing:** Eliminated the SSH `git@github.com` clone requisite that previously returned `Permission Denied` exceptions for business users, pivoting to unrestricted HTTPS routing.
 - **Documentation Restructure:** Overhauled `GETTING-STARTED.md` and `README.md` to omit CLI engineering instructions and instead utilize explicit, UI-driven navigation (e.g. `File > Open Folder`) to natively activate dotfile workspaces inside Cursor.
 
@@ -37,7 +37,7 @@ This release fundamentally evolves the AI assistant into a proactive, parallel-e
 ## 2026-04-15 11:35 AM PT — v1.29.0 — DevOps Hardening & CI/CD Governance
 
 ### Why it matters
-This release transforms the GetFresh CEO Enablement Kit from a localized script toolkit into a scalable, enterprise-grade deployment. By isolating dependencies into self-managed Virtual Environments and standardizing cross-platform OS locking, operational crashes have been virtually eliminated. Additionally, this release implements programmatic governance via GitHub Actions CI and Over-The-Air (OTA) architecture.
+This release transforms the GetFresh GTM Enablement Kit from a localized script toolkit into a scalable, enterprise-grade deployment. By isolating dependencies into self-managed Virtual Environments and standardizing cross-platform OS locking, operational crashes have been virtually eliminated. Additionally, this release implements programmatic governance via GitHub Actions CI and Over-The-Air (OTA) architecture.
 
 ### Added
 - **Dependency Isolation (venv)**: `bootstrap.sh` and `bootstrap.ps1` now programmatically generate a localized `venv` environment and resolve dependencies against `requirements.txt`, preventing OS PATH/versioning conflicts.
@@ -56,7 +56,7 @@ This release transforms the GetFresh CEO Enablement Kit from a localized script 
 ## 2026-04-15 11:15 AM PT — v1.28.0 — Enterprise Hardening (Circuit Breakers & Concurrency)
 
 ### Why it matters
-The CEO Enablement Kit is now fully enterprise-hardened. This release introduces Human-in-the-Loop circuit breakers to prevent autonomous agents from running high-risk tasks without approval, explicitly implements OS-level file locking to prevent data corruption during multi-agent DAG parallel executions, and automatically provisions IDE-native context rules across Mac and Windows. 
+The GTM Enablement Kit is now fully enterprise-hardened. This release introduces Human-in-the-Loop circuit breakers to prevent autonomous agents from running high-risk tasks without approval, explicitly implements OS-level file locking to prevent data corruption during multi-agent DAG parallel executions, and automatically provisions IDE-native context rules across Mac and Windows. 
 
 ### Added
 - **Human-in-the-Loop Circuit Breakers**: `task_manager.py` dynamically intercepts tasks requiring executive approval. Modified `deal-review` and `hubspot-architect` to test this standard via `requires_human_approval: true` frontmatter tags.
@@ -326,7 +326,7 @@ This release closes two critical gaps: (1) a full credential hygiene sweep remov
 - **Zero hardcoded secrets remaining** across the entire codebase (verified via `grep -rn 'lin_api_'`)
 
 ### Enhanced — 4 Skills (in `.agents/skills`, not this repo)
-The following upgrades were applied to the shared `.agents/skills` directory used by the operational GFV workspace. They are referenced here for release tracking but do not ship as part of the CEO Enablement Kit repo:
+The following upgrades were applied to the shared `.agents/skills` directory used by the operational GFV workspace. They are referenced here for release tracking but do not ship as part of the GTM Enablement Kit repo:
 - **`openclaw-orchestrator`** — Added Auto-Complexity Detection with 11 Routing Codes
 - **`security-pii-scanner`** — Added Protected File Patterns and Hardcoded Credential Scanner
 - **`gfv-dream-mode`** — Added Three-Phase Memory Protocol with checkpoint resumption
@@ -437,7 +437,7 @@ Audited 101 skills from the LarryBrain AI Agent Skill Marketplace. Rejected 73 (
 - **Morning Sync Alert:** Augmented the `session-start.py` hook to dynamically scan `~/gtm-brain/pending_approvals/` and output a "GETFRESH EXECUTIVE MORNING SYNC" alert with drafted deal rescue emails.
 
 ### Changed
-- **Final Rebranding:** Deeply updated all project identifiers (README, scripts, hooks, documentation) to formally adopt "GetFresh CEO Enablement Kit for AI", aligning with the "Growth by Design" (GxD) GTM model.
+- **Final Rebranding:** Deeply updated all project identifiers (README, scripts, hooks, documentation) to formally adopt "GetFresh GTM Enablement Kit for AI", aligning with the "Growth by Design" (GxD) GTM model.
 - **OS Documentation:** Clarified OS compatibility in README explicitly denoting Windows execution via PowerShell.
 - **Always-On Requirement Clarification:** Added strong visual warnings inside README addressing the requirement of sleep-preventing utilities or VMs for EngineClaw cron reliability.
 
@@ -461,7 +461,7 @@ To provide CEOs with true "set and forget" autonomy, this release integrates the
 ## 2026-04-12 2:25 PM PT — v1.12.0 — Dual-Brain Data Segregation
 
 ### Why it matters
-The original `~/brain` directory natively combined both personal executive data (voice models, delegation matrices, meeting prep) and organizational capability data (pipeline revenue, ad campaigns) into a single node. In `v1.12.0`, the monolith has been refactored into the "Dual-Brain System." The CEO Enablement Kit now strictly isolates the active GTM state (`~/gtm-brain`) from the CEO's personal configuration identity (`~/ceo-brain`). This allows portfolio CEOs running multiple concurrent organizations to operate cleanly without capability cross-pollination. 
+The original `~/brain` directory natively combined both personal executive data (voice models, delegation matrices, meeting prep) and organizational capability data (pipeline revenue, ad campaigns) into a single node. In `v1.12.0`, the monolith has been refactored into the "Dual-Brain System." The GTM Enablement Kit now strictly isolates the active GTM state (`~/gtm-brain`) from the CEO's personal configuration identity (`~/ceo-brain`). This allows portfolio CEOs running multiple concurrent organizations to operate cleanly without capability cross-pollination. 
 
 ### Added
 - **Dual-Brain Boot Sequence**: `bootstrap.sh` now independently maps and protects `~/ceo-brain` vs `~/gtm-brain` during the executive installation.
@@ -474,7 +474,7 @@ The original `~/brain` directory natively combined both personal executive data 
 ## 2026-04-12 2:10 PM CT — v1.11.0 — White-Glove Intake & Entity Deduplication
 
 ### Why it matters
-This release elevates the CEO Enablement Kit from a developer scaffold to an enterprise-grade "White-Glove" executive experience. It eliminates the manual text configuration prompts and implements a zero-touch agentic boot process that immediately runs a 4-phase ecosystem, delegation, and voice calibration wizard. Additionally, it integrates ML-based record linkage (Dedupe) to eliminate fragmented CRM entity data across the GFV ontology, and solidifies 3 new prompt-engineering constraints to prevent agent overfitting and boilerplate scripting.
+This release elevates the GTM Enablement Kit from a developer scaffold to an enterprise-grade "White-Glove" executive experience. It eliminates the manual text configuration prompts and implements a zero-touch agentic boot process that immediately runs a 4-phase ecosystem, delegation, and voice calibration wizard. Additionally, it integrates ML-based record linkage (Dedupe) to eliminate fragmented CRM entity data across the GFV ontology, and solidifies 3 new prompt-engineering constraints to prevent agent overfitting and boilerplate scripting.
 
 ### Added
 - **`skills/onboard/SKILL.md`** — Completely rewrote the interactive wizard to extract the CEO's tech stack (Ecosystem Map), reporting structure (Delegation Map), and authenticate voice via URLs, culminating in a demonstration of immediate calendar MCP power.

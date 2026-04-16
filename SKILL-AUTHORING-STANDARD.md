@@ -3,7 +3,7 @@ name: GFV Skill Authoring Standard
 description: The DNA of every skill in this kit. All new skills and upgrades must follow this standard.
 version: 1.0.0
 updated: 2026-04-11
-attribution: Adapted from alirezarezvani/claude-skills (MIT) and tuned for GFV CEO enablement.
+attribution: Adapted from alirezarezvani/claude-skills (MIT) and tuned for GFV GTM enablement.
 ---
 
 # GFV Skill Authoring Standard

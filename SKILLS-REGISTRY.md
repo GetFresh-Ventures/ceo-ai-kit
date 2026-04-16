@@ -1,4 +1,4 @@
-# GFV CEO Enablement Kit — Skills Registry
+# GFV GTM Enablement Kit — Skills Registry
 
 > **72 unique skills** across 8 categories. Updated 2026-04-14.
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GetFresh CEO Enablement Kit for AI — Bootstrap Script
+# GetFresh GTM Enablement Kit — Bootstrap Script
 # Initializes the brain directory, symlinks hooks into Claude Code, and sets up Agent-Agnostic Contexts (Cursor, Claude, Gemini)
 
 set -e
@@ -13,7 +13,7 @@ fi
 
 clear
 echo "╔═══════════════════════════════════════════════════════════════════╗"
-echo "║         CEO ENABLEMENT KIT  —  AI CHIEF OF STAFF                ║"
+echo "║         GTM ENABLEMENT KIT  —  AI CHIEF OF STAFF                ║"
 echo "╚═══════════════════════════════════════════════════════════════════╝"
 echo ""
 echo "  This installs an AI Chief of Staff that knows your voice,"
@@ -292,7 +292,7 @@ if [ -f "$REPO_DIR/AGENT.md" ]; then
 fi
 
 cat > "$REPO_DIR/.cursorrules" << 'EOF'
-# GetFresh CEO Enablement Kit
+# GetFresh GTM Enablement Kit
 You are an Executive AI Assistant operating within the GFV Kit.
 
 CRITICAL:
@@ -304,7 +304,7 @@ EOF
 echo "  → Generated native .cursorrules integration"
 
 cat > "$REPO_DIR/.windsurfrules" << 'EOF'
-# GetFresh CEO Enablement Kit
+# GetFresh GTM Enablement Kit
 You are an Executive AI Assistant operating within the GFV Kit.
 
 CRITICAL:
@@ -462,7 +462,7 @@ echo "  │  WHAT TO DO NEXT                                             │"
 echo "  │                                                              │"
 echo "  │  1. Open Cursor.                                             │"
 echo "  │  2. Click 'File' > 'Open Folder' (from the top menu).        │"
-echo "  │  3. Select 'CEO-Enablement-Kit' in your Documents.           │"
+echo "  │  3. Select 'GTM-Enablement-Kit' in your Documents.           │"
 echo "  │  4. Press Cmd+I (Mac) or Ctrl+I (Windows) to open Chat.      │"
 echo "  │  5. Type: /onboard                                           │"
 echo "  │                                                              │"

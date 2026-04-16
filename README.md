@@ -1,30 +1,40 @@
-# GetFresh CEO Enablement Kit for AI
+# GetFresh GTM Enablement Kit
 **Version**: v1.31.0  
-**Turn any AI coding assistant into your personal Chief of Staff.**
+**Powered by the Growth by Design (GxD) Model.**
 
 ---
 ### What's New in v1.31.0
 - **Zero-Click Onboarding**: The installation script now natively downloads and configures Cursor or Claude Code so executives don't deal with manual package installations.
-- **Visible Architecture**: Transitioned the install directory from hidden MacOS `.gfv` dotfiles to a highly visible `~/Documents/CEO-Enablement-Kit` path to ensure seamless folder-opening for non-technical users.
+- **Visible Architecture**: Transitioned the install directory from hidden MacOS `.gfv` dotfiles to a highly visible `~/Documents/GTM-Enablement-Kit` path to ensure seamless folder-opening for non-technical users.
 - **HTTPS Git Routing**: Removed `git@github` SSH dependencies to eliminate `Permission Denied` exceptions across enterprise networks.
 ---
 
 ## What is this?
 
-A plug-and-play toolkit that turns Claude Code, Cursor, Gemini, or Copilot into a **personalized Chief of Staff** — pre-loaded with your voice, your deals, your preferences, and 72 executive workflows.
+A plug-and-play **Edge-Native Go-to-Market Operating System** that turns Claude Code, Cursor, Gemini, or Copilot into a personalized, autonomous Chief of Staff. 
 
-Right now, your AI assistant is a blank intern on day one. After installing this kit, it's a Chief of Staff who's worked with you for six months.
+This kit enables the proprietary **Growth by Design (GxD)** architecture directly within your local environment. 
+
+### The Growth by Design Architecture
+
+**The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology to accelerate growth and solve underlying operational problems.
+
+**The Solution**: An Edge-Native intelligence layer that installs directly onto your laptop. It removes the friction between strategic planning and agentic execution, allowing you to orchestrate complex GTM strategies autonomously.
+
+**The Enablement**: Zero-configuration UI orchestration. You can command multi-agent swarms to execute deep data reconciliation, content generation, and pipeline audits via Cursor or Claude without writing a single line of code.
+
+**The Proprietary Model**: Built on the Proactive Intelligence Layer (PIL). Leveraging Local SQLite FTS5 Memory Caching, edge-compute Swarm Dispatchers, and strict 1Password Secrets Marshalling to execute cross-platform integrations (Linear, HubSpot, CAAI, Slack) while guaranteeing zero data leakage.
 
 ---
 
 ## Who is this for?
 
-**CEOs, founders, and senior executives** who:
-- Spend too much time on email, meeting prep, pipeline reviews, and outreach
-- Want AI that writes in their voice — not generic consultant-speak
-- Need repeatable workflows for weekly rhythms (pipeline reviews, CEO briefs, deal progression)
+**CEOs, founders, and senior GTM executives** who:
+- Need to orchestrate scalable Go-to-Market strategies and run multi-agent swarms.
+- Require tight alignment between Sales, Marketing, and RevOps.
+- Want an AI Chief of Staff loaded with proprietary intelligence models, deal contexts, and weekly revenue rhythms.
 
-**You do NOT need to be technical.** The setup takes 5 minutes.
+**You do NOT need to be technical.** The setup takes 60 seconds and builds visual interfaces automatically.
 
 ---
 
@@ -43,7 +53,7 @@ This toolkit runs entirely in your local terminal to securely protect your data.
 
 Open your terminal (Terminal on Mac, PowerShell on Windows) and paste this line and hit Enter:
 ```bash
-git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Documents/CEO-Enablement-Kit
+git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Documents/GTM-Enablement-Kit
 ```
 
 *(This securely downloads the toolkit to your Documents folder).*
@@ -51,7 +61,7 @@ git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Docume
 ### Step 2: Run the installer
 
 ```bash
-cd ~/Documents/CEO-Enablement-Kit
+cd ~/Documents/GTM-Enablement-Kit
 ./bootstrap.sh          # Mac/Linux
 # .\bootstrap.ps1       # Windows
 ```
@@ -65,7 +75,7 @@ This toolkit supports **Cursor**, **Claude Code**, or **Gemini**. The script you
 If you chose Cursor (recommended for non-technical users):
 1. Open the Cursor app.
 2. Click **File > Open Folder** from the top menu.
-3. Select the `CEO-Enablement-Kit` folder located inside your `Documents` folder.
+3. Select the `GTM-Enablement-Kit` folder located inside your `Documents` folder.
 4. Press `Cmd+I` (Mac) or `Ctrl+I` (Windows) to open the Cursor Composer chat.
 
 Type this to start your first session:
@@ -342,7 +352,7 @@ The kit operates under strict mathematical and structural guardrails to prevent 
 
 ### Agent-Agnostic Architecture
 
-GetFresh CEO Enablement Kit for AI is not locked to any single AI tool. The `AGENT.md` core uses a universal `<RULE>` format that works across:
+**GetFresh GTM Enablement Kit** is not locked to any single AI tool. The `AGENT.md` core uses a universal `<RULE>` format that works across:
 
 | Tool | How it reads the rules |
 |------|----------------------|

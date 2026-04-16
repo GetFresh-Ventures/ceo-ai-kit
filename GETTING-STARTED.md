@@ -1,7 +1,7 @@
 # Getting Started — Your First 30 Minutes
 
 **The Executive Enablement Walkthrough**
-*For CEOs, founders, and senior leaders using the GetFresh CEO Enablement Kit for AI.*
+*For CEOs, founders, and senior leaders using the GetFresh GTM Enablement Kit (Growth by Design).*
 
 ---
 
@@ -44,7 +44,7 @@ Open your terminal:
 Paste this command and press Enter:
 
 ```bash
-git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Documents/CEO-Enablement-Kit
+git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Documents/GTM-Enablement-Kit
 ```
 
 > **What just happened?** You downloaded the entire kit to a highly visible folder in your Documents. Your data stays local — nothing is uploaded to the cloud.
@@ -57,13 +57,13 @@ Navigate to the kit and run the bootstrap script:
 
 **Mac / Linux:**
 ```bash
-cd ~/Documents/CEO-Enablement-Kit
+cd ~/Documents/GTM-Enablement-Kit
 ./bootstrap.sh
 ```
 
 **Windows:**
 ```powershell
-cd ~\\Documents\\CEO-Enablement-Kit
+cd ~\\Documents\\GTM-Enablement-Kit
 .\\bootstrap.ps1
 ```
 
@@ -96,7 +96,7 @@ This part sounds intimidating, but it's just opening a folder and typing a messa
 
 1. Open **Cursor** (the application you downloaded earlier).
 2. From the top menu bar, click **File > Open Folder**.
-3. Navigate to your `Documents` folder and select the `CEO-Enablement-Kit` folder.
+3. Navigate to your `Documents` folder and select the `GTM-Enablement-Kit` folder.
 4. Once the folder opens, press **Cmd+I** (Mac) or **Ctrl+I** (Windows) to open the Cursor Composer Chat panel.
 
 In the chat box, type:

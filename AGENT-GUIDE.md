@@ -1,4 +1,4 @@
-# AGENT-GUIDE.md — CEO Enablement Kit
+# AGENT-GUIDE.md — GTM Enablement Kit
 
 > **For AI agents.** If you are a coding agent (Claude Code, Cursor, Codex, Gemini) and this repo has been connected to your workspace, read this file first.
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GetFresh CEO Enablement Kit for AI — Session Start Hook
+GetFresh GTM Enablement Kit for AI — Session Start Hook
 Loads company brain context at the beginning of every Claude Code session.
 Reads preferences.json to customize behavior by user level.
 
