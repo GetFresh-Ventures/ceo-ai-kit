@@ -154,8 +154,8 @@ memory/consultations/
 When a decision is logged:
 - **If it involves a task:** Create or update a Linear issue
 - **If it involves a deal:** Update HubSpot deal notes
-- **If it involves a person/entity:** Update PIL entity facts in Supabase
-- **Three-System Sync Rule applies:** Linear + HubSpot + PIL — all three or none.
+- **If it involves a person/entity:** Update Memory entity facts in Supabase
+- **Three-System Sync Rule applies:** Linear + HubSpot + Memory — all three or none.
 
 ---
 

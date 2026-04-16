@@ -194,7 +194,7 @@ All factual findings and systemic claims must utilize the following confidence i
 ## Related Skills
 
 - `strategic-decision` — For GO/NO-GO decisions informed by experiment data
-- `decision-logger` — For recording strategic decisions with PIL integration
+- `decision-logger` — For recording strategic decisions with Memory integration
 - `verify-execution` — For confirming experiments were implemented correctly
 
 

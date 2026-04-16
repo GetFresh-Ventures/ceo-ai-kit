@@ -22,7 +22,7 @@ Just say any of these:
 Pull live financial data from:
 - QuickBooks → income statement, balance sheet, cash flow
 - HubSpot → deal values for revenue projections
-- Supabase PIL → historical financial data
+- Supabase Memory → historical financial data
 
 ## How This Skill Works
 

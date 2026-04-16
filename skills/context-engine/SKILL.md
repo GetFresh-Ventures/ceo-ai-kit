@@ -2,7 +2,7 @@
 name: context-engine
 description: "Loads and manages company context for all C-suite advisory skills. Reads company-context.md, detects stale context, enriches context during conversations, and enforces privacy/anonymization rules. Every advisory skill loads this first."
 short_description: "Load company context for advisory skills"
-attribution: Adapted from alirezarezvani/claude-skills (MIT License), wired to GFV PIL and live systems.
+attribution: Adapted from alirezarezvani/claude-skills (MIT License), wired to GFV Memory and live systems.
 metadata:
   version: 1.0.0
   category: c-level
@@ -125,7 +125,7 @@ Last updated: YYYY-MM-DD
 ## System Links
 - **HubSpot:** [Deal IDs or company IDs, if applicable]
 - **Linear:** [Project IDs, if applicable]
-- **PIL Entity:** [Supabase entity ID, if applicable]
+- **Memory Entity:** [Supabase entity ID, if applicable]
 ```
 
 ---
@@ -206,7 +206,7 @@ Missing required fields: note gaps, work around in session, ask in-session only 
 ## GFV Portfolio Integration
 
 For GFV portfolio companies, the context engine also loads:
-- **PIL entity data** from Supabase (via Supabase API)
+- **Memory entity data** from Supabase (via Supabase API)
 - **Active Linear issues** for the company's project
 - **HubSpot deal status** if the company has an active deal
 - **Field Service Platform data** for home services portfolio companies (Portfolio Co A, Portfolio Co C)

@@ -1,6 +1,6 @@
 ---
 name: meeting-prep
-description: "Build pre-meeting intelligence dossiers from CRM, email, calendar, PIL, and web research. Know who you're meeting, what matters to them, and what your angle is — before you walk in. Use when the CEO has an upcoming meeting, asks 'prep me for,' 'who am I meeting,' or 'get me ready for.'"
+description: "Build pre-meeting intelligence dossiers from CRM, email, calendar, memory, and web research. Know who you're meeting, what matters to them, and what your angle is — before you walk in. Use when the CEO has an upcoming meeting, asks 'prep me for,' 'who am I meeting,' or 'get me ready for.'"
 short_description: "Build pre-meeting intelligence dossiers"
 metadata:
   version: 2.0.0
@@ -52,7 +52,7 @@ Pull from every available source:
 |--------|---------------|----------|
 | **HubSpot** | Deal stage, amount, last interaction, open tasks, notes | P0 |
 | **Email** | Last 3-5 emails, outstanding commitments (ours + theirs) | P0 |
-| **PIL** | Entity relationships, prior meetings, known preferences | P0 |
+| **Local Memory** | Entity relationships, prior meetings, known preferences | P0 |
 | **Calendar** | Previous meetings with this person | P1 |
 | **Fathom** | Transcripts from prior meetings | P1 |
 | **LinkedIn** | Recent posts, job changes, company news | P1 |

@@ -22,7 +22,7 @@ Just say any of these:
 Pull context from:
 - Linear → project status, sprint health, blocked issues
 - HubSpot → team performance, deal cycle times
-- Supabase PIL → historical operational decisions
+- Supabase Memory → historical operational decisions
 
 ## How This Skill Works
 

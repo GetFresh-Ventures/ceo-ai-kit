@@ -50,7 +50,7 @@ Pull from (in priority order) — **never from memory alone:**
 3. **Calendar** — meetings attended this week
 4. **Email** — commitments made, follow-ups pending
 5. **Previous brief** — week-over-week comparison (is pipeline growing?)
-6. **PIL** — relationship context, entity history
+6. **Memory** — relationship context, entity history
 
 ## Output Format
 

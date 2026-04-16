@@ -91,7 +91,7 @@ Core GFV programs (customize as priorities change):
 - **Client Revenue** — Highest priority, revenue-generating work
 - **GTM Pipeline** — Deals, proposals, prospect follow-up
 - **Portfolio Company Ops** — portfolio companies
-- **Infrastructure** — PIL, tooling, automation
+- **Infrastructure** — memory, tooling, automation
 - **Personal / Family** — Real priorities, not background admin
 
 ## Auto-Resolver
@@ -177,7 +177,7 @@ When a new meeting note appears:
 - When task state changes → update Linear in the same turn
 - When work creates a future dependency → add a follow-up task before ending
 - Scan for overdue and due-today tasks before deciding what needs attention
-- Keep long-term preferences in PIL memory, live state in Linear
+- Keep long-term preferences in Memory memory, live state in Linear
 
 ## Inbox Clearing Rules
 
@@ -219,7 +219,7 @@ When the CEO has a focused execution window, activate **Sprint Mode**:
 
 ### 5-Minute Sprint Protocol
 1. **Sprint Declaration** (30 seconds): Name the single deliverable. "I will [verb] [noun] by [time]."
-2. **Context Load** (60 seconds): Pull all relevant context from PIL, Linear, and CRM.
+2. **Context Load** (60 seconds): Pull all relevant context from local memory, Linear, and CRM.
 3. **Execute** (3 minutes): Pure execution. No research, no exploration, no tangents.
 4. **Ship & Log** (30 seconds): Push the deliverable to its destination and log completion.
 
@@ -233,15 +233,15 @@ When the CEO has a focused execution window, activate **Sprint Mode**:
 ### Session Persistence Protocol
 At the end of every working session:
 1. **Extract Decisions**: What was decided? Log to `decision-logger`.
-2. **Extract Context**: What was learned? Write to PIL memory.
+2. **Extract Context**: What was learned? Write to Memory memory.
 3. **Extract Tasks**: What future work was created? Push to Linear.
 4. **Prune Stale**: Identify and archive any memory items contradicted by new information.
 
 ### Memory Hierarchy
 ```
 L1: Active Context (current session — ephemeral)
-L2: Working Memory (PIL facts — 30-day TTL, refreshed on access)
-L3: Long-Term Memory (PIL ontology — permanent, versioned)
+L2: Working Memory (Memory facts — 30-day TTL, refreshed on access)
+L3: Long-Term Memory (Memory ontology — permanent, versioned)
 L4: Source of Truth (Live systems: Linear, HubSpot, Calendar)
 ```
 

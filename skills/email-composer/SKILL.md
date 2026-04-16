@@ -52,7 +52,7 @@ Read voice-model.md before drafting. This contains:
 | **Email history** | When you last emailed this person, what was said, any open threads |
 | **Calendar** | Recent or upcoming meetings with this contact |
 | **Meeting notes** | Any unprocessed action items from recent meetings |
-| **PIL** | Relationship context, entity history, past commitments |
+| **Local Memory** | Relationship context, entity history, past commitments |
 
 ### Step 3: Draft with Rules
 

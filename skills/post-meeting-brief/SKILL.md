@@ -82,7 +82,7 @@ In the same turn:
 2. **HubSpot** → Update deal stage/amount/close date if changed
 3. **Calendar** → Book follow-up meeting if agreed
 4. **Email** → Draft follow-up email for the CEO's approval
-5. **PIL** → Log key relationship insights
+5. **Memory** → Log key relationship insights
 
 ### Step 5: Output Brief
 
@@ -114,7 +114,7 @@ In the same turn:
 - **Close date**: [Confirmed / Moved / At risk]
 - **Next meeting**: [Scheduled on calendar? When?]
 
-## Key Insights (for PIL)
+## Key Insights (for Memory)
 - [Learning about their business/needs]
 - [Buying signal or concern]
 

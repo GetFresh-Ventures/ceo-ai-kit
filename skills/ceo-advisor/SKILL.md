@@ -23,10 +23,10 @@ Just say any of these:
 - Linear → project boards, sprint health, blocked issues across all clients
 - QuickBooks → GFV P&L, outstanding invoices, subscription costs, AR aging
 - PandaDoc → contract status, pending proposals, signed agreements
-- Supabase PIL → entity relationships, historical context, decision log
+- Supabase Memory → entity relationships, historical context, decision log
 - Fathom → recent meeting transcripts for follow-up items
 
-**Three-System Sync Rule:** Every status assertion must be verified against Linear + HubSpot + PIL — all three, not assumption.
+**Three-System Sync Rule:** Every status assertion must be verified against Linear + HubSpot + Memory — all three, not assumption.
 
 ## How This Skill Works
 
@@ -56,7 +56,7 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 
 1. **Highest-revenue client work first** — Portfolio Co A billing justifies continued investment
 2. **Pipeline advancement** — new deals that will become revenue
-3. **Infrastructure** — agent systems, PIL, tools that compound across all clients
+3. **Infrastructure** — agent systems, memory, tools that compound across all clients
 4. **Speculative** — new verticals, partnerships, capability development
 
 **The meta-question:** Is the CEO spending time on the thing with the highest ROI across the entire portfolio, or is one entity consuming disproportionate bandwidth?
@@ -88,7 +88,7 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 - Pipeline has < 2 qualified deals behind current revenue (no coverage)
 - the CEO is doing work that an agent or contractor should do (time misallocation)
 - A client engagement has gone 30+ days without a measurable win (value erosion)
-- GFV infrastructure (PIL, agents, MCP) is consuming more time than client revenue work
+- GFV infrastructure (memory, agents, MCP) is consuming more time than client revenue work
 - Invoices unpaid > 45 days (cash flow risk)
 - No new outreach in 2+ weeks (pipeline will dry up in 60-90 days)
 
@@ -104,7 +104,7 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 | Google Ads | Portfolio Co A campaign spend/ROAS | google-ads-connector |
 | GA4 | Traffic and conversions across properties | ga4-connector |
 | Fathom | Meeting transcripts, action items | fathom-api |
-| Supabase PIL | Entity relationships, historical facts | supabase-access |
+| Supabase Memory | Entity relationships, historical facts | supabase-access |
 | Google Calendar | Meeting load, time allocation | google-calendar-api |
 
 ## Proactive Triggers
@@ -124,13 +124,13 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 | "Where should I spend my time?" | Time allocation matrix: highest-ROI activities ranked |
 | "Should we take on [new client]?" | Opportunity evaluation: fit, timing, capacity, risk |
 | "What's the pipeline look like?" | HubSpot pipeline review with deal-level details |
-| "Prep me for [client] meeting" | Meeting brief pulling PIL context + Fathom notes + Linear status |
+| "Prep me for [client] meeting" | Meeting brief pulling Memory context + Fathom notes + Linear status |
 
 ## Communication
 
 - **Bottom line first** — always
-- **Confidence tagging** — 🟢 verified (from live system) / 🟡 medium (from PIL/memory) / 🔴 assumed
-- **Three-System Sync** — verify Linear + HubSpot + PIL before asserting any status
+- **Confidence tagging** — 🟢 verified (from live system) / 🟡 medium (from local memory/memory) / 🔴 assumed
+- **Three-System Sync** — verify Linear + HubSpot + Memory before asserting any status
 - **Never state deal status without checking HubSpot first**
 
 ## Live Integration Hooks

@@ -25,7 +25,7 @@ Just say any of these:
 Pull live financial data from:
 - QuickBooks → P&L, invoices, cash position, AR/AP
 - HubSpot → deal values, pipeline revenue, forecasted close dates
-- Supabase PIL → entity financial history, prior decisions
+- Supabase Memory → entity financial history, prior decisions
 
 ## How This Skill Works
 
@@ -83,7 +83,7 @@ Ask these first:
 | QuickBooks | P&L, invoices, cash position, AP/AR, expenses | quickbooks-api |
 | HubSpot | Deal pipeline values, forecasted revenue | hubspot-api |
 | PandaDoc | Contract values, proposal status | pandadoc-api |
-| Supabase PIL | Historical financial decisions, entity facts | supabase-access |
+| Supabase Memory | Historical financial decisions, entity facts | supabase-access |
 
 ## Proactive Triggers
 - **Runway < 18 months with no fundraising plan** → raise the alarm early

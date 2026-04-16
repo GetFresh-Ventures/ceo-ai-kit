@@ -322,7 +322,7 @@ decisions/{initiative-slug}/
 |--------|--------|
 | **Decision Logger** | All verdicts logged with full rationale |
 | **Linear** | Phase 1 tasks created as issues on GO |
-| **PIL/Supabase** | Initiative entity created with relationships |
+| **Memory/Supabase** | Initiative entity created with relationships |
 | **Chief of Staff** | Routes "should we" questions here automatically |
 | **Board Deck Builder** | Research reports feed into board materials |
 

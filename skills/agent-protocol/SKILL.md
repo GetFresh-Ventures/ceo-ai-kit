@@ -382,10 +382,10 @@ All data assertions MUST be verified against live systems before presenting:
 | Revenue, invoices, cash | QuickBooks (via QuickBooks API) |
 | Task status, project progress | Linear (via Linear MCP) |
 | Customer data, job history | Field Service Platform (via Field Service API) |
-| Entity relationships | Supabase PIL (via Supabase API) |
+| Entity relationships | Supabase Memory (via Supabase API) |
 | Meeting notes, action items | Fathom (via Fathom API) |
 
-**Three-System Sync Rule:** Every status assertion touches Linear + HubSpot + PIL — all three or none.
+**Three-System Sync Rule:** Every status assertion touches Linear + HubSpot + Memory — all three or none.
 
 ## Live Integration Hooks
 

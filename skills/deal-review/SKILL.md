@@ -125,7 +125,7 @@ When a deal is 🟡 or 🔴, diagnose WHY using this taxonomy:
 1. **HubSpot** — Update stale close dates, stages, next steps
 2. **Linear** — Create follow-up tasks with due dates
 3. **Email** — Draft follow-up emails for CEO approval (never auto-send)
-4. **PIL** — Log pattern insights for future deal reviews
+4. **Memory** — Log pattern insights for future deal reviews
 
 ## Red Flags to Always Call Out
 - Close date in the past (deal is technically overdue)
