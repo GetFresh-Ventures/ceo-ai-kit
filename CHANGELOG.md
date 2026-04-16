@@ -2,6 +2,24 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-16 3:06 PM PT — v1.31.1 — GxD Rebranding Finalization
+
+### Why it matters
+This patch completes the full structural alignment of the kit around the **Growth by Design (GxD)** architectural doctrine. We executed a total eradication of the localized "CEO Enablement Kit" nomenclature across all executable paths, terminal UI prompts, and physical dotfiles—solidifying this repository as the definitive **GetFresh GTM Enablement Kit**.
+
+### Fixed
+- **Clone Architecture & Onboarding Paths:** Repathed the primary structural installation directories inside `bootstrap.sh`, `bootstrap.ps1`, and the core documentation from `CEO-Enablement-Kit` to `GTM-Enablement-Kit` to ensure zero fragmentation between the brand philosophy and the physical system pathways.
+- **Python Hook Syntax Errors:** Resolved a critical execution fault missing an `except` block inside the `session-stop.py` lifecycle hook, preventing catastrophic CLI crashes when memory saving fails during IDE termination. 
+
+### Files Modified
+- `README.md`, `GETTING-STARTED.md`, `CHANGELOG.md`, `LICENSE`
+- `bootstrap.sh`, `bootstrap.ps1`
+- `AGENT.md`, `AGENT-GUIDE.md`
+- `hooks/pre-send-review.py`, `hooks/session-start.py`, `hooks/session-stop.py`
+- `tools/gfv-ralph.sh`
+- `SKILLS-REGISTRY.md`, `SKILL-AUTHORING-STANDARD.md`
+- `skills/onboard/SKILL.md`, `skills/project-release/SKILL.md`
+
 ## 2026-04-15 10:14 PM PT — v1.31.0 — Zero-Configuration Onboarding & Auto-Installers
 
 ### Why it matters

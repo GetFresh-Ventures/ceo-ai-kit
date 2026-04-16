@@ -1,8 +1,13 @@
 # GetFresh GTM Enablement Kit
-**Version**: v1.31.0  
+**Version**: v1.31.1  
 **Powered by the Growth by Design (GxD) Model.**
 
 ---
+### What's New in v1.31.1
+- **GxD Rebranding Finalization**: Completed the total structural unification of the repository to match the Growth by Design **GTM Enablement Kit** philosophy.
+- **Physical Clone Paths Repathed**: Upgraded the internal dotfile logic and documentation so standard installations correctly mount to `~/Documents/GTM-Enablement-Kit`.
+- **Pre-execution Resilience**: Squashed an execution-halting Python syntax edge-case inside the `session-stop` hook.
+
 ### What's New in v1.31.0
 - **Zero-Click Onboarding**: The installation script now natively downloads and configures Cursor or Claude Code so executives don't deal with manual package installations.
 - **Visible Architecture**: Transitioned the install directory from hidden MacOS `.gfv` dotfiles to a highly visible `~/Documents/GTM-Enablement-Kit` path to ensure seamless folder-opening for non-technical users.
