@@ -2,6 +2,28 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-16 11:16 PM PT — v1.32.2 — Unbiased Orchestration & Tool Bug Fixes
+
+### Why it matters
+This release permanently decouples the kit from legacy proprietary ecosystem dependencies, ensuring true cross-platform neutrality. It patches a catastrophic hallucination logic break mapped across 70+ skills causing memory searches to fail, removes forced Anthropic telemetry binaries from macOS boot sequences, and integrates the new scalable E-E-A-T Content Pod orchestration factory for multi-agent execution.
+
+### Added
+- **`skills/eeat-content-pod/`** — Registered new 4-agent orchestration pod into the registry and execution environments.
+
+### Changed
+- **`SKILLS-REGISTRY.md` / `bootstrap` scripts** — Scoped the new E-E-A-T capability to the Advanced Tier install targets.
+
+### Fixed
+- **`skills/` Manifests** — Programmatic sweep of 70+ files patched the system-wide legacy reference from the non-existent `ceo-brain-search.py` string to the correct `gfv-brain-search.py` physical asset path.
+- **`bootstrap.sh`** — Severed forced macOS background installations for `ccflare` and `claude-mem` to adhere strictly to IDE agnosticism flags.
+- **`tools/gfv-dream.py`** — Hardened the runtime against relying on personal unreleased Python pipelines, processing native transcript parsing securely via standard I/O pipes.
+
+### Files Modified
+- CHANGELOG.md, README.md, SKILLS-REGISTRY.md
+- bootstrap.sh, bootstrap.ps1
+- tools/gfv-dream.py
+- 72 manifest files across the `skills/` directory
+
 ## 2026-04-16 10:35 PM PT — v1.32.1 — UX Hardening & Agnostic Compliance
 
 ### Why it matters

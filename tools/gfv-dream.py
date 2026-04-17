@@ -14,15 +14,8 @@ def get_claude_logs_dir():
 def main():
     repo_dir = Path(__file__).parent.parent.absolute()
     
-    # Check for claude_memory.py
-    claude_memory_path = None
-    if (repo_dir.parent / "gfv-brain" / "scripts" / "claude_memory.py").exists():
-        claude_memory_path = repo_dir.parent / "gfv-brain" / "scripts" / "claude_memory.py"
-    elif (Path.home() / "gfv-brain" / "scripts" / "claude_memory.py").exists():
-        claude_memory_path = Path.home() / "gfv-brain" / "scripts" / "claude_memory.py"
-    else:
-        print("⚠️  claude_memory.py not found. Skipping memory consolidation.")
-        sys.exit(0)
+    # Check for legacy pipeline (bypassed for agnostic kit)
+    # The script now processes logs independently.
 
     print("☁️ Starting GFV Dream Mode (Memory Consolidation)...")
 

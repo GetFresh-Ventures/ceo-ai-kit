@@ -2,7 +2,7 @@
 
 **Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
 
-[![Version](https://img.shields.io/badge/version-1.32.1-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases)
+[![Version](https://img.shields.io/badge/version-1.32.2-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases)
 
 ---
 
@@ -12,7 +12,7 @@ A plug-and-play **Edge-Native Go-to-Market Operating System** that turns Claude 
 
 This kit enables the proprietary **Growth by Design (GxD)** architecture directly within your local environment. 
 
-**Runtime:** Local / Edge-Compute · 72+ Domain Skills · SQLite FTS5 Memory Caching
+**Runtime:** Local / Edge-Compute · 73+ Domain Skills · SQLite FTS5 Memory Caching
 
 **The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 

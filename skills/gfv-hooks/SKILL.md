@@ -561,7 +561,7 @@ def send_slack_alert(message, channel="#ops-alerts"):
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
 | Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `ceo-brain-search.py` |
+| Local Memory | Client-specific facts | `gfv-brain-search.py` |
 
 > **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
 

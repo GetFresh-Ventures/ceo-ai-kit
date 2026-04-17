@@ -182,7 +182,7 @@ Before delivering SEO recommendations:
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
 | Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `ceo-brain-search.py` |
+| Local Memory | Client-specific facts | `gfv-brain-search.py` |
 
 > **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
 
@@ -231,5 +231,6 @@ All factual findings and systemic claims must utilize the following confidence i
 ## After This Skill
 💡 Suggest these next:
 - "Try `content-strategy` — Plan and execute your content calendar"
+- "Try `eeat-content-pod` — Build E-E-A-T verified content for decaying pages"
 - "Try `ai-search-optimizer` — Optimize your content for AI search engines"
 - "Try `competitive-intel` — Track competitors and market positioning"

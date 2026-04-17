@@ -198,7 +198,7 @@ Maintain a running log of hook tests:
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
 | Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `ceo-brain-search.py` |
+| Local Memory | Client-specific facts | `gfv-brain-search.py` |
 
 > **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
 
@@ -249,6 +249,7 @@ All factual findings and systemic claims must utilize the following confidence i
 
 ## After This Skill
 💡 Suggest these next:
+- "Try `eeat-content-pod` — Execute the prioritized content with E-E-A-T generation"
 - "Try `seo-growth` — Audit and optimize SEO — technical and content"
 - "Try `social-engine` — Create platform-native social media content"
 - "Try `copy-master` — Write world-class marketing copy"

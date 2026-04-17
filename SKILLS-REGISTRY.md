@@ -1,6 +1,6 @@
 # GFV GTM Enablement Kit — Skills Registry
 
-> **72 unique skills** across 8 categories. Updated 2026-04-14.
+> **73 unique skills** across 8 categories. Updated 2026-04-16.
 
 ## How to Use This Registry
 
@@ -105,7 +105,7 @@ The CEO's day-to-day operating system.
 | [`sms-outreach`](skills/sms-outreach/) | SMS/WhatsApp multi-channel outreach with TCPA compliance | Beyond email |
 | [`scheduling-infra`](skills/scheduling-infra/) | Meeting scheduling with pre/post automation and booking pages | Calendar intelligence |
 
-### 🚀 Growth Engine (12 skills)
+### 🚀 Growth Engine (13 skills)
 Marketing, content, and growth optimization.
 
 | Skill | Description | Key Pattern |
@@ -113,6 +113,7 @@ Marketing, content, and growth optimization.
 | [`content-strategy`](skills/content-strategy/) | Pillars, calendars, buyer-stage keywords with A/B hook testing | System, not posts |
 | [`social-engine`](skills/social-engine/) | Platform-native content with analytics dashboard and posting intelligence | No AI slop |
 | [`larry-loop`](skills/larry-loop/) | Algorithmic content loop with winner scoring and cross-platform migration | System over Creativity |
+| [`eeat-content-pod`](skills/eeat-content-pod/) | 4-agent orchestration pod (Recon, Context, Writer, Publisher) for verified content | Deployable content factory |
 | [`seo-growth`](skills/seo-growth/) | Technical SEO, schema, site architecture, AI search opt | Discovery engine |
 | [`conversion-optimizer`](skills/conversion-optimizer/) | Forms, signups, landing pages, onboarding CRO | Fix the leaks |
 | [`financial-analyst`](skills/financial-analyst/) | Ratio analysis, DCF, budget variance, rolling forecasts | Deep number work |
