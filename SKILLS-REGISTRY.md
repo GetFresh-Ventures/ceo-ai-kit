@@ -1,6 +1,6 @@
 # GFV GTM Enablement Kit — Skills Registry
 
-> **73 unique skills** across 8 categories. Updated 2026-04-16.
+> **74 unique skills** across 8 categories. Updated 2026-04-17.
 
 ## How to Use This Registry
 
@@ -139,6 +139,7 @@ Infrastructure skills for the technical operator.
 | [`autoresearch`](skills/autoresearch/) | Autonomous skill optimization via repeated scoring | Self-improving skills |
 | [`board-deck-builder`](skills/board-deck-builder/) | Board/investor update decks from live data | Data-driven slides |
 | [`create-skill`](skills/create-skill/) | Create, modify, and optimize skills with triggering accuracy | Skills that build skills |
+| [`import-skill`](skills/import-skill/) | Import external repos/skills into the kit — rewrite, register, and patch all touchpoints | Zero-stone intake |
 | [`feature-architect`](skills/feature-architect/) | Guided feature development with codebase understanding and architecture focus | Architect first |
 | [`hubspot-architect`](skills/hubspot-architect/) | HubSpot architecture for syncing, integrating, and data pipelines | CRM engineering |
 
@@ -168,6 +169,7 @@ Skills are most powerful when composed:
 | **Document Production** | `doc-coauthoring` → `doc-builder` / `pdf-toolkit` / `spreadsheet-builder` |
 | **Multi-Channel Outreach** | `email-composer` → `sms-outreach` → `slack-connector` → `social-scheduler` |
 | **New Skill Creation** | `create-skill` → `verify-execution` |
+| **External Import** | `import-skill` → `verify-execution` → `project-release` |
 | **Feature Build** | `feature-architect` → `agent-orchestrator` → `verify-execution` |
 
 ---
