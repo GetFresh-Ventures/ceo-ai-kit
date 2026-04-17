@@ -113,12 +113,9 @@ Below the CEO-friendly sections, include:
 - Agent-agnostic architecture details (how AGENT.md maps to different IDEs)
 - Advanced tooling (Dream protocol, Ralph loop, autoresearch, cost routing)
 - How to extend the kit (adding new skills, workflows)
-- Release history showing every version's "What's New"
 
 ### README Structural Requirements
 - `**Version**: vX.Y.Z` badge at the top, updated to the new version
-- "Release History" section with a `What's New in vX.Y.Z` block for the current release
-- Previous release "What's New" blocks must remain below the current one
 - Full repository tree showing the directory structure
 - Tables for skill/workflow/tool inventories — not just bullet lists
 
@@ -211,7 +208,7 @@ echo "=== LAST COMMIT ===" && git log -1 --format="%H %s (%ai)" && echo "=== TAG
 
 **ALL gates must pass:**
 - [ ] CHANGELOG.md has new version entry with CT timestamp and "Why it matters"
-- [ ] README.md references new version in badge and What's New
+- [ ] README.md references new version in badge
 - [ ] Git commit message follows format `vX.Y.Z: Title`
 - [ ] Git tag matches version
 - [ ] Pushed to origin/main with tags
