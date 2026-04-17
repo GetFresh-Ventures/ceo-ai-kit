@@ -214,7 +214,7 @@ Competitors: local HVAC/plumbing companies, national franchises (Service Experts
 - Track Google Ads positioning (Ad Library)
 - Monitor Google Business Profile reviews
 - Watch for new LSA entrants in your active markets
-- Field Service Platform market reports for regional benchmarking
+- Industry market reports for regional benchmarking
 
 ### SaaS / AI-Native (Portfolio Co B, pipeline companies)
 Competitors: varies by vertical

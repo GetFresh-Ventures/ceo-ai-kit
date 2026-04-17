@@ -103,7 +103,7 @@ Every section follows: **Headline → Data → Narrative → Ask/Next**
 | HubSpot | Pipeline — deals, velocity, forecast | hubspot-api |
 | Google Ads | Marketing — spend, CPA, ROAS | google-ads-connector |
 | GA4 | Marketing — traffic, conversions | ga4-connector |
-| Field Service Platform | Revenue — job data, avg ticket | field-service-connector |
+| Business Systems | Revenue — job data, avg ticket | API connectors |
 | Linear | Product/Eng — sprint velocity, delivery | linear-api-access.py |
 
 ## Proactive Triggers

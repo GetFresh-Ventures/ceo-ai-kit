@@ -45,7 +45,7 @@ Evaluate a new client, partnership, or portfolio add — does it fit the GFV the
 
 | Entity | Type | Stage | Key Systems |
 |--------|------|-------|-------------|
-| **Portfolio Co A** | Home services (HVAC, Plumbing) | Active — scaling multi-market | Field Service Platform, Google Ads, GA4, GSC, WordPress |
+| **Portfolio Co A** | Home services (HVAC, Plumbing) | Active — scaling multi-market | Google Ads, GA4, GSC, WordPress |
 | **Portfolio Co B** | SaaS / Professional services | Active — SEO remediation, WordPress optimization | GSC, GA4, SEMrush, Cloudflare, WordPress |
 | **Portfolio Co C** | Home services prospect | Engagement phase | HubSpot, Fathom |
 | **GFV Consulting Pipeline** | GTM consulting deals | Ongoing — HubSpot pipeline | HubSpot, PandaDoc, QuickBooks |
@@ -75,7 +75,7 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 |----------|--------|--------------|--------|
 | **Revenue** | Monthly consulting revenue | QuickBooks invoices sent/paid | quickbooks-api |
 | **Pipeline** | Active deals in HubSpot | Deal count, weighted value, stage distribution | hubspot-api |
-| **Client Health** | Portfolio Co A ROAS | Google Ads spend vs Field Service Platform revenue | google-ads-connector + field-service-connector |
+| **Client Health** | Portfolio Co A ROAS | Google Ads spend vs revenue | google-ads-connector + quickbooks-api |
 | **Client Health** | Portfolio Co B organic traffic trend | GSC impressions + GA4 sessions | gsc-connector + ga4-connector |
 | **Operations** | Linear issues blocked > 3 days | Blocked tickets across all projects | linear-api-access.py |
 | **Cash** | GFV AR aging > 30 days | Outstanding invoices | quickbooks-api |
@@ -100,7 +100,7 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 | Linear | Project boards across all clients | linear-api-access.py |
 | QuickBooks | P&L, invoices, expenses, AR/AP | quickbooks-api |
 | PandaDoc | Proposals, contracts, e-signatures | pandadoc-api |
-| Field Service Platform | Portfolio Co A job revenue, lead attribution | field-service-connector |
+
 | Google Ads | Portfolio Co A campaign spend/ROAS | google-ads-connector |
 | GA4 | Traffic and conversions across properties | ga4-connector |
 | Fathom | Meeting transcripts, action items | fathom-api |

@@ -93,7 +93,7 @@ The CEO sets direction. The COO makes it happen.
 |--------|-----------------|-------|
 | Linear | Sprint health, blocked issues, cycle time | linear-api-access.py |
 | HubSpot | Deal velocity, team conversion rates | hubspot-api |
-| Field Service Platform | Job completion rates, technician utilization | field-service-connector |
+| Business Systems | Job completion rates, team utilization | API connectors |
 
 ## Proactive Triggers
 - **Same blocker appearing 3+ weeks** → process is broken, not just slow

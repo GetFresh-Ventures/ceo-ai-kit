@@ -211,7 +211,7 @@ RECOMMENDED DECISION
 - Top tech quits + peak season starts
 - Google Ads cost spikes + lead volume drops
 - Major equipment failure + customer complaints surge
-- Field Service Platform data loss + billing disruption
+- Critical business system data loss + billing disruption
 
 ---
 

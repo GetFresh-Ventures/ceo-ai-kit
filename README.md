@@ -2,7 +2,7 @@
 
 **Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
 
-[![Version](https://img.shields.io/badge/version-1.32.2-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases)
+[![Version](https://img.shields.io/badge/version-1.32.2-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
 
 ---
 
@@ -58,7 +58,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
        │         └─────────────┘
  ┌─────┴──────────────────────────────────┐
  │  Data Integrations & Web Protocols     │
- │  Linear · HubSpot · Slack · FSM        │
+ │  Linear · HubSpot · Slack              │
  │  Google Ads · SEMrush · Analytics       │
  └────────────────────────────────────────┘
 ```
@@ -102,9 +102,9 @@ All work is tiered based on your operational autonomy constraint inside `profile
 |----------|------|
 | **Linear** | Project ops, sprint tracking, and blocked issue routing |
 | **HubSpot** | CRM data, deal extraction, and sequence alignment |
-| **Field Service Platform** | Dispatch mapping, tech routing, revenue tracking |
 | **Slack** | Team communications, crisis monitoring, and auto-dispatch |
 | **Google Ads** | PPC campaign structure, ROAS checking, landing pages |
+| **Google Analytics** | Traffic analysis, conversion tracking, audience insights |
 | **QuickBooks** | Invoicing, expense tracking, financial reporting |
 
 ---
@@ -314,4 +314,5 @@ Then open `~/Documents/GTM-Enablement-Kit` inside **Cursor** and type `/onboard`
 ## License & Repo
 
 - **Repository:** [github.com/GetFresh-Ventures/gfv_growth_by_design](https://github.com/GetFresh-Ventures/gfv_growth_by_design)
-- **Primary use:** Go-To-Market Enablement Operating System for GetFresh Ventures.
+- **Website:** [getfreshventures.com](https://getfreshventures.com)
+- **Primary use:** Go-To-Market Enablement Operating System by GetFresh Ventures, powered by the Growth by Design (GxD) model for scaling companies.
