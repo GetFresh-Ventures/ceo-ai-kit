@@ -229,9 +229,9 @@ Write connection stubs to `~/ceo-brain/integrations.json`.
 Based on their level, configure the default behavior:
 
 ### Beginner Defaults
-- **Cross-session memory:** ON — claude-mem persists context across sessions automatically
+- **Cross-session memory:** ON — local SQLite FTS5 persists context across sessions automatically
 - **Auto-approve safe commands:** ON — Dippy handles Y/n prompts so you're never interrupted
-- **Token cost dashboard:** ON — ccflare shows what you're spending in real time
+- **Token cost dashboard:** ON — gfv-telemetry shows what you're spending in real time
 - **Auto-save memory:** ON — the AI saves meeting notes, decisions, and learnings automatically
 - **Proactive tips:** ON — after each task, suggest a related skill ("Want me to also...?")
 - **Inline insights:** ON — surface relevant context from memory during conversations
@@ -349,9 +349,9 @@ After onboarding, the AI maintains continuity based on level:
 
 | Feature | Beginner | Intermediate | Advanced |
 |---------|----------|-------------|----------|
-| Cross-session memory (claude-mem) | ✅ | ✅ | ✅ |
+| Cross-session memory (SQLite FTS5) | ✅ | ✅ | ✅ |
 | Auto-approve safe commands (Dippy) | ✅ | ✅ | ✅ |
-| Token cost dashboard (ccflare) | ✅ | ✅ | ✅ |
+| Token cost dashboard (gfv-telemetry) | ✅ | ✅ | ✅ |
 | Auto-save decisions | ✅ | ✅ | ✅ |
 | Remember meeting outcomes | ✅ | ✅ | ✅ |
 | Inline insights from memory | ✅ | ✅ | ✅ |

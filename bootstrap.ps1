@@ -267,24 +267,8 @@ if ((Get-Command "claude" -ErrorAction SilentlyContinue) -or (Test-Path $CLAUDE_
     }
     Write-Host "  → Installed $installedCount skills for $tierName tier"
 
-    # Install claude-mem and ccflare for all tiers (memory is fundamental)
-    if (Get-Command "npm" -ErrorAction SilentlyContinue) {
-        Write-Host "🧠 Installing memory and agent tools..." -ForegroundColor Green
-        try {
-            npm i -g ccflare 2>$null
-            Write-Host "  → ccflare installed"
-        } catch {
-            Write-Host "  ⚠️ ccflare install failed — run 'npm i -g ccflare' manually" -ForegroundColor Yellow
-        }
-        try {
-            npx claude-mem install 2>$null
-            Write-Host "  → claude-mem installed (persistent memory across sessions)"
-        } catch {
-            Write-Host "  ⚠️ claude-mem install failed — run 'npx claude-mem install' manually" -ForegroundColor Yellow
-        }
-    } else {
-        Write-Host "  ⚠️ NPM not found. Install Node.js for memory and advanced tools." -ForegroundColor Yellow
-    }
+    # Removed deprecated global ccflare and claude-mem installations to comply with unbiased architecture.
+    # Memory persistence is handled natively via gfv-brain-search.py and local SQLite FTS5 caching.
 } else {
     Write-Host "  ℹ️  Claude Code not found; skills and hooks registered for manual use." -ForegroundColor Gray
 }

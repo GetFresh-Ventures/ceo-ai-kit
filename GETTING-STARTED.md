@@ -75,7 +75,7 @@ cd ~\\Documents\\GTM-Enablement-Kit
 |-------|----------|-------------|
 | **Beginner** | New to AI assistants | 18 core skills, cross-session memory, auto-approve, proactive tips, plain-English mode |
 | **Intermediate** ★ | Regular AI users | 46 skills + CRM integration, feedback loops, weekly learning capture |
-| **Advanced** | Power users | All 72 skills + Dream Mode, background automation, self-improving skills |
+| **Advanced** | Power users | All 73 skills + Dream Mode, background automation, self-improving skills |
 
 > **Not sure?** Pick **Intermediate**. You can change your level anytime by re-running the installer.
 
@@ -84,9 +84,9 @@ cd ~\\Documents\\GTM-Enablement-Kit
 ### What the installer sets up:
 - `~/ceo-brain/` — Your personal AI memory (voice model, meeting notes, preferences)
 - `~/gtm-brain/` — Your company intelligence (pipeline data, competitive intel, learnings)
-- Cross-session memory (claude-mem) — so the AI remembers you between sessions
+- Cross-session memory (SQLite FTS5) — so the AI remembers you between sessions
 - Auto-approve safe commands (Dippy) — so you never get stuck on Y/n prompts
-- Token cost dashboard (ccflare) — see what you're spending in real time
+- Token cost dashboard (gfv-telemetry) — see what you're spending in real time
 
 ---
 
@@ -147,7 +147,7 @@ The AI checks pipeline state, pending approvals, meeting schedule, and surfaces 
 
 ## Understanding Your Skill Library
 
-You have access to **72 pre-built skills** organized into 8 categories. You don't need to memorize them — just describe what you need and the AI will route to the right skill automatically.
+You have access to **73 pre-built skills** organized into 8 categories. You don't need to memorize them — just describe what you need and the AI will route to the right skill automatically.
 
 ### Most-Used Skills for Executives
 
@@ -274,16 +274,8 @@ You need an SSH key connected to your GitHub account AND access to the GetFresh-
 ### "The installer failed on Windows"
 Make sure you're running PowerShell as Administrator. Use `.\bootstrap.ps1` (not `./bootstrap.sh`).
 
-### "claude-mem failed to install"
-claude-mem requires Node.js and Bun. Install them first:
-```bash
-# Install Node.js (if not already installed)
-brew install node    # Mac
-# Install Bun
-curl -fsSL https://bun.sh/install | bash
-# Retry
-npx claude-mem install
-```
+### "Memory doesn't persist between sessions"
+Ensure the `~/ceo-brain/` and `~/gtm-brain/` directories exist and `gfv-brain-search.py` is accessible. Re-run `./bootstrap.sh` to verify the installation.
 
 ### "How do I update to the latest version?"
 ```bash
@@ -305,5 +297,5 @@ Once you're comfortable with the basics:
 
 ---
 
-*Version 1.29.0 — April 2026*
+*Version 1.32.2 — April 2026*
 *Proprietary Methodology © GetFresh Ventures. All Rights Reserved.*

@@ -81,7 +81,7 @@ Scan for the following dangerous patterns and flag with severity:
 - NEVER send contract content to external APIs. All analysis is local LLM processing.
 - NEVER store contract text in memory/logs beyond the active session.
 - Treat all contract content as attorney-client privileged material.
-- If claude-mem or auto-memory is active, wrap all contract content in `<private>` tags to prevent persistence.
+- If auto-memory is active, wrap all contract content in `<private>` tags to prevent persistence.
 
 ## Live Integration Hooks
 
