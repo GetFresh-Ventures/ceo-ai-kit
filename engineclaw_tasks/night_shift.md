@@ -11,7 +11,7 @@ Proactively audit the CRM pipeline for stalled deals and draft rescue communicat
 ### Phase 1: Pipeline Audit
 1. Execute the `skills/pipeline-pulse` protocol to retrieve the latest state of the pipeline from the local CEO Brain.
 2. Cross-reference HubSpot data with `~/gtm-brain/pipeline.md` to identify deals stagnant for >5 days.
-3. Query `gfv_memory.db` for meeting transcripts or last-contact details related to these stagnant entities.
+3. Query local `memory.db` for meeting transcripts or last-contact details related to these stagnant entities.
 
 ### Phase 2: Draft Generation
 1. Utilize `skills/email-composer` to draft a follow-up ("rescue") email for up to 3 of the most critical stalled deals.

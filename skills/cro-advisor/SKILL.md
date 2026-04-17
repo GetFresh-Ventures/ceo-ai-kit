@@ -23,7 +23,7 @@ Pull live context from:
 - HubSpot → deal pipeline, stage conversion rates, deal velocity
 - Field Service Platform → job revenue, close rates, average ticket
 - QuickBooks → invoice data, AR aging, revenue by customer
-- Supabase Memory → historical deal outcomes, entity relationships
+- Local Memory → historical deal outcomes, entity relationships
 
 ## How This Skill Works
 

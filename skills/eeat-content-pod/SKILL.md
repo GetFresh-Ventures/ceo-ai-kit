@@ -75,7 +75,7 @@ Before presenting the final draft to the CEO, the orchestrator must Verify:
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
 | Recon | Live SERP structure | `firecrawl-web-search` |
-| Intel | Local Client Context | `pil-server` or `search_web (site:domain)` |
+| Intel | Local Client Context | `gfv-brain-search.py` or `search_web (site:domain)` |
 | Publisher | CMS Delivery | `wordpress-page-creation` |
 
 > **GFV Rule:** The Writer (Agent 3) must NOT hallucinate prices. If Agent 2 cannot find pricing data, Agent 3 must output a red `<Missing Data>` tag demanding the CEO inject the pricing manually.

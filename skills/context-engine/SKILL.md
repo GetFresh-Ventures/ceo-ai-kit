@@ -19,7 +19,7 @@ The memory layer for C-suite advisors. Every advisor skill loads this first. Con
 
 ## Quick Start
 Just say any of these:
-- "Load all company context from Supabase"
+- "Load all company context from Local Memory"
 - "What does the system know about [entity]?"
 - "Refresh my context engine data"
 
@@ -125,7 +125,7 @@ Last updated: YYYY-MM-DD
 ## System Links
 - **HubSpot:** [Deal IDs or company IDs, if applicable]
 - **Linear:** [Project IDs, if applicable]
-- **Memory Entity:** [Supabase entity ID, if applicable]
+- **Memory Entity:** [Local memory entity ID, if applicable]
 ```
 
 ---
@@ -206,7 +206,7 @@ Missing required fields: note gaps, work around in session, ask in-session only 
 ## GFV Portfolio Integration
 
 For GFV portfolio companies, the context engine also loads:
-- **Memory entity data** from Supabase (via Supabase API)
+- **Memory entity data** from Local Memory (via gfv-brain-search.py)
 - **Active Linear issues** for the company's project
 - **HubSpot deal status** if the company has an active deal
 - **Field Service Platform data** for home services portfolio companies (Portfolio Co A, Portfolio Co C)

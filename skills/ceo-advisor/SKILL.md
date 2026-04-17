@@ -23,7 +23,7 @@ Just say any of these:
 - Linear → project boards, sprint health, blocked issues across all clients
 - QuickBooks → GFV P&L, outstanding invoices, subscription costs, AR aging
 - PandaDoc → contract status, pending proposals, signed agreements
-- Supabase Memory → entity relationships, historical context, decision log
+- Local Memory → entity relationships, historical context, decision log
 - Fathom → recent meeting transcripts for follow-up items
 
 **Three-System Sync Rule:** Every status assertion must be verified against Linear + HubSpot + Memory — all three, not assumption.
@@ -104,7 +104,7 @@ Unlike a traditional startup CEO, GFV's operating partner allocates across **mul
 | Google Ads | Portfolio Co A campaign spend/ROAS | google-ads-connector |
 | GA4 | Traffic and conversions across properties | ga4-connector |
 | Fathom | Meeting transcripts, action items | fathom-api |
-| Supabase Memory | Entity relationships, historical facts | supabase-access |
+| Local Memory | Entity relationships, historical facts | gfv-brain-search.py |
 | Google Calendar | Meeting load, time allocation | google-calendar-api |
 
 ## Proactive Triggers

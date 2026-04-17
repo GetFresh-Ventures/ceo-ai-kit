@@ -113,7 +113,7 @@ LOW ─┼──────────────────┼────�
 **🔌 MCP Servers** (medium effort, deep integration)
 - Match against user's stack:
   - React/Next.js → Context7 for docs
-  - Supabase → Supabase MCP
+  - Local Memory → gfv-brain-search.py
   - Stripe → Stripe MCP
   - PostgreSQL → PostgreSQL MCP
   - Browser testing → Playwright MCP

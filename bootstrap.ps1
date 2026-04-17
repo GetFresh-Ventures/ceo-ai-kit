@@ -29,7 +29,7 @@ Write-Host " 2. Tier-Appropriate Skills: From 14 beginner essentials to 72 advan
 Write-Host "    capabilities — matched to your comfort level with AI."
 Write-Host " 3. Session Hooks: Auto-loading context at session start, auto-saving"
 Write-Host "    learnings at session end."
-Write-Host " 4. Agent Tooling: Memory persistence and proactive intelligence."
+Write-Host " 4. Agent Tooling: Memory persistence and local CEO Brain."
 Write-Host ""
 Write-Host "=======================================================================" -ForegroundColor Cyan
 Write-Host "  E X P E R T I S E   C A L I B R A T I O N" -ForegroundColor Cyan

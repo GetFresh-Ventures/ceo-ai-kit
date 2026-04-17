@@ -40,7 +40,7 @@ When triaging incoming signals, strictly score the complexity to determine the e
 
 ## Headless Polling Protocol (Cron Operations)
 
-The Chief of Staff skill does not wait for the CEO to prompt it. It is authorized to run headlessly via cron or background sweep (e.g., `pil_morning_digest.py`):
+The Chief of Staff skill does not wait for the CEO to prompt it. It is authorized to run headlessly via cron or background sweep (e.g., `morning_digest.py`):
 1. **Wake-up Trigger:** Execute every 4 hours automatically.
 2. **Sweep:** Pull live state changes from Linear (tasks), Fathom (meetings), and HubSpot (deals).
 3. **Triage:** Run the 1-5 Decision Complexity Score on all new signals.
