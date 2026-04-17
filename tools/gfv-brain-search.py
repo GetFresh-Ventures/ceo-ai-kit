@@ -2,7 +2,7 @@
 """
 GFV Native Local Brain (FTS Search)
 
-Replaces external PIL/Vector dependencies with a blazingly fast, 
+Replaces external vector database dependencies with a blazingly fast, 
 100% local SQLite FTS5 search engine across the `ceo-brain`.
 Allows the Kit to query historical learnings without remote latency.
 """
@@ -104,7 +104,7 @@ def search_brain(query: str, limit: int = 5):
 def main():
     parser = argparse.ArgumentParser(description="GFV Native Local Brain (FTS)")
     parser.add_argument("action", choices=["ingest", "search"], help="Action to perform")
-    parser.add_argument("--query", help="The FTS search query (e.g. 'aprio AND strategy')")
+    parser.add_argument("--query", help="The FTS search query (e.g. 'pipeline AND strategy')")
     parser.add_argument("--limit", type=int, default=5, help="Max results to return")
     
     args = parser.parse_args()
