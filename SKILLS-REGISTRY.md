@@ -1,6 +1,6 @@
 # GFV GTM Enablement Kit — Skills Registry
 
-> **75 unique skills** across 8 categories. Updated 2026-04-17.
+> **76 unique skills** across 8 categories. Updated 2026-04-17.
 
 ## How to Use This Registry
 
@@ -105,7 +105,7 @@ The CEO's day-to-day operating system.
 | [`sms-outreach`](skills/sms-outreach/) | SMS/WhatsApp multi-channel outreach with TCPA compliance | Beyond email |
 | [`scheduling-infra`](skills/scheduling-infra/) | Meeting scheduling with pre/post automation and booking pages | Calendar intelligence |
 
-### 🚀 Growth Engine (13 skills)
+### 🚀 Growth Engine (14 skills)
 Marketing, content, and growth optimization.
 
 | Skill | Description | Key Pattern |
@@ -115,6 +115,7 @@ Marketing, content, and growth optimization.
 | [`larry-loop`](skills/larry-loop/) | Algorithmic content loop with winner scoring and cross-platform migration | System over Creativity |
 | [`eeat-content-pod`](skills/eeat-content-pod/) | 4-agent orchestration pod (Recon, Context, Writer, Publisher) for verified content | Deployable content factory |
 | [`seo-growth`](skills/seo-growth/) | Technical SEO, schema, site architecture, AI search opt | Discovery engine |
+| [`seo-audit`](skills/seo-audit/) | Deterministic single-page SEO audits with Python scripts + HTML reports | Script + LLM two-layer |
 | [`conversion-optimizer`](skills/conversion-optimizer/) | Forms, signups, landing pages, onboarding CRO | Fix the leaks |
 | [`financial-analyst`](skills/financial-analyst/) | Ratio analysis, DCF, budget variance, rolling forecasts | Deep number work |
 | [`copy-master`](skills/copy-master/) | 7-pillar copywriting with narrative submode and persuasion tactics | The Rule of One |
@@ -205,3 +206,4 @@ Skills are most powerful when composed:
 | [LarryBrain Marketplace](https://larrybrain.com/skills) | 11 skills rewritten (contract-reader, negotiation-advisor, ai-search-optimizer, etc.) + 17 enhancements |
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Architectural patterns (hierarchical topology, memory tiers, consensus concepts) — skills were planned but not shipped |
 | [SawyerHood/dev-browser](https://github.com/SawyerHood/dev-browser) | dev-browser (rewritten from 20-line stub to full GFV skill) |
+| [JeffLi1993/seo-audit-skill](https://github.com/JeffLi1993/seo-audit-skill) | seo-audit (consolidated basic + full tiers into single dual-mode skill) |

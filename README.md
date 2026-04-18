@@ -12,7 +12,7 @@ A plug-and-play **Edge-Native Go-to-Market Operating System** that turns Claude 
 
 This kit enables the proprietary **Growth by Design (GxD)** architecture directly within your local environment. 
 
-**Runtime:** Local / Edge-Compute · 75+ Domain Skills · SQLite FTS5 Memory Caching
+**Runtime:** Local / Edge-Compute · 76+ Domain Skills · SQLite FTS5 Memory Caching
 
 **The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 
@@ -242,6 +242,7 @@ Marketing, content, and growth optimization.
 | [`larry-loop`](skills/larry-loop/) | Algorithmic content loop with winner scoring and cross-platform migration | System over Creativity |
 | [`eeat-content-pod`](skills/eeat-content-pod/) | 4-agent orchestration pod (Recon, Context, Writer, Publisher) for verified content | Deployable content factory |
 | [`seo-growth`](skills/seo-growth/) | Technical SEO, schema, site architecture, AI search opt | Discovery engine |
+| [`seo-audit`](skills/seo-audit/) | Deterministic single-page SEO audits with Python scripts + HTML reports | Script + LLM two-layer |
 | [`conversion-optimizer`](skills/conversion-optimizer/) | Forms, signups, landing pages, onboarding CRO | Fix the leaks |
 | [`financial-analyst`](skills/financial-analyst/) | Ratio analysis, DCF, budget variance, rolling forecasts | Deep number work |
 | [`copy-master`](skills/copy-master/) | 7-pillar copywriting with narrative submode and persuasion tactics | The Rule of One |

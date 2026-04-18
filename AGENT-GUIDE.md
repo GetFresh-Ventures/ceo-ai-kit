@@ -4,7 +4,7 @@
 
 ## What This Is
 
-A modular skill system that transforms a coding agent into a CEO's Chief of Staff. 75 executable skills covering revenue operations, strategic advisory, content production, engineering workflows, and daily executive operations. Skills are structured markdown files (`SKILL.md`) that provide step-by-step instructions for complex workflows.
+A modular skill system that transforms a coding agent into a CEO's Chief of Staff. 76 executable skills covering revenue operations, strategic advisory, content production, engineering workflows, and daily executive operations. Skills are structured markdown files (`SKILL.md`) that provide step-by-step instructions for complex workflows.
 
 ## Quick Install
 
@@ -32,7 +32,7 @@ The installer adapts to three user personas. Each level adds skills AND behavior
 |-------|-------------|--------|--------------|
 | **Beginner** | New to AI assistants | 15 core skills | Auto-save memory, proactive tips, plain-English explanations, session summaries |
 | **Intermediate** | Regular AI users | 45 skills | Everything in Beginner + feedback loops, weekly learning capture, voice model refinement |
-| **Advanced** | Power users | All 75 skills | Everything in Intermediate + Dream Mode, agent spawning, self-improving skills, background automation |
+| **Advanced** | Power users | All 76 skills | Everything in Intermediate + Dream Mode, agent spawning, self-improving skills, background automation |
 
 ### What each level enables by default
 
@@ -64,7 +64,7 @@ gfv_growth_by_design/
 ├── AGENT.md                 # Operating rules — read after this file
 ├── AGENT-GUIDE.md           # This file — skill catalog and usage
 ├── bootstrap.sh/.ps1        # Installer
-├── skills/                  # 75 skill directories
+├── skills/                  # 76 skill directories
 │   └── <skill-name>/
 │       └── SKILL.md         # Skill instructions (YAML frontmatter + markdown)
 ├── tools/                   # 10 CLI tools
@@ -128,6 +128,7 @@ Skills trigger on natural language. Examples:
 |-------|-------------|
 | `content-strategy` | Plan topic pillars, content calendar, and distribution strategy |
 | `seo-growth` | Technical SEO audit, on-page optimization, schema markup, site structure |
+| `seo-audit` | Deterministic single-page SEO audits with Python scripts + HTML reports |
 | `social-engine` | Create platform-native content for LinkedIn, X, Instagram, newsletters |
 | `social-scheduler` | Cross-post and schedule content across 28+ social channels |
 | `copy-master` | High-conversion copywriting — headlines, CTAs, landing page copy |
