@@ -1,6 +1,6 @@
 # GFV GTM Enablement Kit — Skills Registry
 
-> **76 unique skills** across 8 categories. Updated 2026-04-17.
+> **80 unique skills** across 8 categories. Updated 2026-04-17.
 
 ## How to Use This Registry
 
@@ -105,7 +105,7 @@ The CEO's day-to-day operating system.
 | [`sms-outreach`](skills/sms-outreach/) | SMS/WhatsApp multi-channel outreach with TCPA compliance | Beyond email |
 | [`scheduling-infra`](skills/scheduling-infra/) | Meeting scheduling with pre/post automation and booking pages | Calendar intelligence |
 
-### 🚀 Growth Engine (14 skills)
+### 🚀 Growth Engine (18 skills)
 Marketing, content, and growth optimization.
 
 | Skill | Description | Key Pattern |
@@ -124,6 +124,10 @@ Marketing, content, and growth optimization.
 | [`ugc-video`](skills/ugc-video/) | Script-to-video UGC production with AI talking heads | Video at scale |
 | [`voice-synth`](skills/voice-synth/) | AI voice synthesis for narration, podcasts, and audio content | Sound human anywhere |
 | [`geopolitical-monitor`](skills/geopolitical-monitor/) | Global intelligence with country instability scoring | International risk radar |
+| [`paid-ads-strategy`](skills/paid-ads-strategy/) | Google, Meta, LinkedIn, Reddit, TikTok, YouTube ad campaigns with PMax, bidding, and ROAS | Platform decision matrix |
+| [`partnership-marketing`](skills/partnership-marketing/) | Influencer, affiliate, creator, referral, and PR programs with commission models | Partnership-driven growth |
+| [`programmatic-seo`](skills/programmatic-seo/) | Template-based SEO page generation at scale with AI-enhanced differentiation | Pages × data = traffic |
+| [`entity-optimizer`](skills/entity-optimizer/) | Knowledge Graph, Wikidata, AI entity resolution, and Knowledge Panel optimization | Brand identity layer |
 
 ### 🛠️ Developer & DevOps (12 skills)
 Infrastructure skills for the technical operator.
@@ -207,3 +211,5 @@ Skills are most powerful when composed:
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Architectural patterns (hierarchical topology, memory tiers, consensus concepts) — skills were planned but not shipped |
 | [SawyerHood/dev-browser](https://github.com/SawyerHood/dev-browser) | dev-browser (rewritten from 20-line stub to full GFV skill) |
 | [JeffLi1993/seo-audit-skill](https://github.com/JeffLi1993/seo-audit-skill) | seo-audit (consolidated basic + full tiers into single dual-mode skill) |
+| [kostja94/marketing-skills](https://github.com/kostja94/marketing-skills) | paid-ads-strategy, partnership-marketing, programmatic-seo (consolidated from 172 source skills) |
+| [aaron-he-zhu/seo-geo-claude-skills](https://github.com/aaron-he-zhu/seo-geo-claude-skills) | entity-optimizer (Knowledge Graph + AI entity resolution from 20-skill SEO/GEO library) |

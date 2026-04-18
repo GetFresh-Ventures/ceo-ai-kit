@@ -12,7 +12,7 @@ A plug-and-play **Edge-Native Go-to-Market Operating System** that turns Claude 
 
 This kit enables the proprietary **Growth by Design (GxD)** architecture directly within your local environment. 
 
-**Runtime:** Local / Edge-Compute · 76+ Domain Skills · SQLite FTS5 Memory Caching
+**Runtime:** Local / Edge-Compute · 80+ Domain Skills · SQLite FTS5 Memory Caching
 
 **The Brand (GxD)**: Growth by Design is the architecture of predictable revenue, uniting Marketing, Sales, and RevOps data into a single, unified ontology.
 
@@ -232,7 +232,7 @@ The CEO's day-to-day operating system.
 | [`sms-outreach`](skills/sms-outreach/) | SMS/WhatsApp multi-channel outreach with TCPA compliance | Beyond email |
 | [`scheduling-infra`](skills/scheduling-infra/) | Meeting scheduling with pre/post automation and booking pages | Calendar intelligence |
 
-### 🚀 Growth Engine (13 skills)
+### 🚀 Growth Engine (17 skills)
 Marketing, content, and growth optimization.
 
 | Skill | Description | Key Pattern |
@@ -251,6 +251,10 @@ Marketing, content, and growth optimization.
 | [`ugc-video`](skills/ugc-video/) | Script-to-video UGC production with AI talking heads | Video at scale |
 | [`voice-synth`](skills/voice-synth/) | AI voice synthesis for narration, podcasts, and audio content | Sound human anywhere |
 | [`geopolitical-monitor`](skills/geopolitical-monitor/) | Global intelligence with country instability scoring | International risk radar |
+| [`paid-ads-strategy`](skills/paid-ads-strategy/) | Google, Meta, LinkedIn, Reddit, TikTok, YouTube campaigns with PMax, bidding, ROAS | Platform decision matrix |
+| [`partnership-marketing`](skills/partnership-marketing/) | Influencer, affiliate, creator, referral, and PR programs with commission models | Partnership-driven growth |
+| [`programmatic-seo`](skills/programmatic-seo/) | Template-based SEO page generation at scale with AI-enhanced copy differentiation | Pages × data = traffic |
+| [`entity-optimizer`](skills/entity-optimizer/) | Knowledge Graph, Wikidata, AI entity resolution, Knowledge Panel optimization | Brand identity layer |
 
 ### 🛠️ Developer & DevOps (14 skills)
 Infrastructure skills for the technical operator.
