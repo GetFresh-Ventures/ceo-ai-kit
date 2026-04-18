@@ -168,6 +168,41 @@ When traffic drops, check in order:
 5. **Competitor surge?** — New competitor ranking for your keywords
 6. **Seasonality?** — Compare to same period last year
 
+## GSC Intelligence Analysis
+
+### Cannibalization Detection
+When two or more of your pages compete for the same query and split traffic:
+1. Pull GSC data for last 90 days — look for queries with 2+ URLs getting clicks
+2. For each cannibalized query, identify the **stronger page** (higher CTR + more backlinks)
+3. **Action**: Merge/redirect the weaker page, or differentiate intent (informational vs. transactional)
+4. Add canonical tag on weaker page pointing to stronger page
+
+### Striking Distance Keywords
+Keywords ranking in positions 8-15 with 1,000+ impressions — easiest traffic wins:
+1. Filter GSC: `position >= 8 AND position <= 15 AND impressions >= 1000`
+2. Sort by impressions descending — these have the most traffic potential
+3. For each: optimize title tag, add FAQ schema, improve internal linking
+4. Expected result: moving from page 2 to page 1 ~4-10x click increase
+
+### Z-Score Anomaly Detection
+Detect sudden traffic drops/spikes statistically:
+1. Pull daily clicks for 90 days, compute mean and standard deviation
+2. Any day > 2 standard deviations from mean = anomaly
+3. Cross-reference anomaly dates with: algorithm updates, site deployments, server issues
+4. Flag pages responsible for >50% of the drop
+
+### Opportunity Score Matrix
+Rank keywords by `Impressions ÷ Position` to find highest-leverage optimizations:
+- **High impressions + poor position** = massive opportunity (content needs work)
+- **Low impressions + good position** = niche maintained (low priority)
+- **High impressions + good position** = protect and maintain
+
+### Brand vs. Non-Brand Segmentation
+Split all GSC data into brand and non-brand:
+- Brand: queries containing your company/product name
+- Non-brand: everything else
+- **Health check**: If >60% of organic traffic is brand-only, you're not capturing demand → focus on informational/transactional content
+
 ## Quality Gate
 
 Before delivering SEO recommendations:

@@ -167,6 +167,48 @@ Before delivering:
 - [ ] Calendar is realistic for stated resources
 - [ ] Content gaps vs. competitors are addressed
 
+## Content Refresh Strategy
+
+Not all content is new. Content decays — traffic drops, stats go stale, competitors overtake. Active lifecycle management is half the game.
+
+### Content Decay Detection
+Run quarterly. Flag any page meeting these triggers:
+
+| Trigger | Threshold | Decision |
+|---------|-----------|----------|
+| Traffic decline | -20% over 90 days vs. prior 90 | Needs refresh |
+| Position decline | Dropped 5+ spots from peak | Prioritize update |
+| Outdated data | Statistics/data >12 months old | Replace with current year |
+| Competitor overtook | Lost top-3 to newer content | Differentiate with original data |
+| Dead links | 2+ broken outbound links | Fix immediately |
+| AI citation lost | Was cited by ChatGPT/Perplexity, now isn't | Re-optimize for citation |
+
+### Content Triage Matrix
+
+| Quadrant | Traffic | Quality | Action |
+|----------|---------|---------|--------|
+| **Keep** | ↑ Rising | ✅ Good | Monitor, internal link to it |
+| **Refresh** | ↓ Declining | ✅ Salvageable | Update stats, add sections, improve E-E-A-T |
+| **Consolidate** | ↓ Low | ⚠️ Overlapping | Merge with stronger page, 301 redirect |
+| **Kill** | ↓ Zero | ❌ Thin/irrelevant | 301 to relevant page or remove entirely |
+
+### Refresh Template
+When refreshing an existing page:
+1. **DO NOT change the URL slug** — preserve link equity
+2. Update title tag with current year or qualifier
+3. Replace outdated statistics with current data (cite sources)
+4. Add 1-2 new sections competitors have that you don't
+5. Add/update FAQ schema with 3+ current questions
+6. Refresh internal links (add links to new content, remove dead links)
+7. Update `dateModified` in schema markup
+8. Add author attribution if missing (E-E-A-T signal)
+
+### Freshness Signals for Google
+- `dateModified` in JSON-LD schema
+- "Last updated: [date]" visible on page
+- Updated `<meta>` description with current context
+- New internal links from recently published content
+
 ## A/B Hook Testing (Enhanced v1.1 — content-engine Method)
 
 ### The Hook Testing Protocol

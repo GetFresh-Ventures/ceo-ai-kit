@@ -70,6 +70,65 @@ Before presenting the final draft to the CEO, the orchestrator must Verify:
 - [ ] **Authoritativeness:** Does the JSON-LD Schema match the entity data?
 - [ ] **Trust:** Are the prices/figures explicitly tied to actual ranges (no generic estimated fluff)?
 
+## E-E-A-T Scoring Framework (Dec 2025 Core Update)
+
+Google's Dec 2025 core update **extended E-E-A-T to virtually all competitive queries**.
+Even entertainment/lifestyle now requires demonstrated expertise. Generic content no longer ranks.
+
+**Impact by industry** (source: Bhanunamikaze/Agentic-SEO-Skill):
+
+| Industry | Avg Traffic Decline |
+|----------|-------------------|
+| Affiliate sites | 71% |
+| Health/YMYL | 67% |
+| E-commerce | 52% |
+
+### Experience (Weight: 20%)
+First-hand knowledge and personal involvement with the topic:
+- [ ] Author has demonstrable first-hand experience with the topic
+- [ ] Content includes original photos, screenshots, or data
+- [ ] Case studies with specific details (not generic examples)
+- [ ] Before/after results or outcome data
+- **Strong**: Multiple first-hand experience signals, original content
+- **Weak**: Generic information, no personal touch
+- **None**: Clearly AI-generated or scraped
+
+### Expertise (Weight: 25%)
+Subject matter knowledge and qualifications:
+- [ ] Author credentials visible in byline + linked bio page
+- [ ] Content demonstrates deep subject knowledge
+- [ ] Technical accuracy verified against authoritative sources
+- [ ] References to relevant certifications, experience, or research
+
+### Authoritativeness (Weight: 25%)
+Recognition from peers and industry:
+- [ ] Backlinks from authoritative sources
+- [ ] Cited by other experts in the space
+- [ ] Brand mentioned in industry publications
+- [ ] Third-party reviews or endorsements
+
+### Trustworthiness (Weight: 30%)
+Accuracy, transparency, and security:
+- [ ] Factual accuracy verified (no fabrications)
+- [ ] Citations and sources provided for claims
+- [ ] Clear business contact information
+- [ ] Secure website (HTTPS, privacy policy)
+- [ ] Transparent about author identity and affiliations
+
+### YMYL Topics (Highest E-E-A-T Standards)
+- Health and safety
+- Financial advice and transactions
+- Legal information
+- News and current events
+- **Elections and civic trust** (added Sept 2025)
+- **Democratic processes** (added Sept 2025)
+
+### Publish-Readiness Gate (CORE-EEAT)
+Before any content goes live, score against these veto checks:
+- [ ] **T04**: No unsourced claims in YMYL content → VETO if violated
+- [ ] **C01**: No plagiarized or duplicate content → VETO if violated
+- [ ] **R10**: No deceptive or misleading claims → VETO if violated
+
 ## Live Integration Hooks
 
 | System | What It Provides | How to Access |

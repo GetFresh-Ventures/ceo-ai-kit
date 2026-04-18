@@ -168,6 +168,60 @@ Run all Basic steps (1-14), then:
 
 ---
 
+## Content Quality Scoring (Full Audit)
+
+Score each page against this 100-point checklist (source: gbessoni/seobuild-onpage). Pages below 80% get flagged:
+
+### Title Tag (10 pts)
+- [ ] Contains target keyword (or close variant)
+- [ ] Under 60 characters
+- [ ] Unique and compelling (not just "[Keyword] | [Brand]")
+- [ ] Includes differentiating element (year, number, qualifier)
+- [ ] Not duplicating another page's title on the same site
+
+### Meta Description (10 pts)
+- [ ] Under 155 characters
+- [ ] Contains target keyword naturally
+- [ ] Includes call-to-action or value proposition
+- [ ] Not a copy of the first paragraph
+- [ ] Would make someone click vs. competitors in SERP
+
+### Heading Structure (15 pts)
+- [ ] Exactly one H1
+- [ ] H1 closely matches or mirrors title tag
+- [ ] Logical H2 → H3 hierarchy (no skipped levels)
+- [ ] H2 count within competitive range
+- [ ] Headings are descriptive (not "Section 1" or "More Info")
+
+### Content Depth (25 pts)
+- [ ] Word count within competitive range (not arbitrarily long/short)
+- [ ] Answers at least 3 People Also Ask questions
+- [ ] Includes specific data, statistics, or concrete examples
+- [ ] Covers topics that appear in 2+ competitor pages
+- [ ] No thin sections (every H2 has 150+ words of substance)
+
+### Search Intent Match (15 pts)
+- [ ] Page type matches detected intent (informational/commercial/transactional)
+- [ ] Content format matches SERP expectations (list vs. guide vs. comparison)
+- [ ] Addresses primary user need within first 200 words
+- [ ] If commercial: includes pricing or comparison elements
+- [ ] If informational: includes step-by-step or explanatory depth
+
+### Technical SEO (15 pts)
+- [ ] JSON-LD schema markup included and matches page type
+- [ ] Schema uses correct types (see Schema Type Reference above)
+- [ ] Image alt text present and descriptive
+- [ ] At least 2 internal links with contextual anchor text
+- [ ] No orphaned sections (every section connects to page topic)
+
+### Readability (10 pts)
+- [ ] No keyword stuffing (target keyword appears naturally)
+- [ ] Paragraphs are scannable (no walls of text)
+- [ ] Uses formatting aids (bold key terms, tables for comparisons)
+- [ ] Transitions between sections are logical
+
+---
+
 ## LLM Review Protocol
 
 When `llm_review_required: true`, the LLM must make an explicit judgment. Never leave it unresolved.

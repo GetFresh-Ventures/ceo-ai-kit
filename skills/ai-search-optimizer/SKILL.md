@@ -58,6 +58,117 @@ Restructure your web content to be AI-extractable:
 - Monthly: Audit new competitor citations. Identify gaps in your coverage.
 - Output a scorecard: `[Query] | [ChatGPT: ✅/❌] | [Perplexity: ✅/❌] | [Gemini: ✅/❌]`
 
+---
+
+## AEO Readiness Score (100 Points)
+
+Score your site's readiness for AI agent consumption (source: addyosmani/agentic-seo):
+
+### Discovery (25 pts)
+| Check | Points | What it looks for |
+|-------|--------|-------------------|
+| `robots.txt` | 10 | AI crawlers NOT blocked, explicit allow rules for GPTBot, ClaudeBot, PerplexityBot |
+| `llms.txt` | 10 | Structured index at `/llms.txt` with page descriptions and token counts |
+| `AGENTS.md` | 5 | Project context file for AI coding agents (AGENTS.md or CLAUDE.md) |
+
+### Content Structure (25 pts)
+| Check | Points | What it looks for |
+|-------|--------|-------------------|
+| Content structure | 15 | Heading hierarchy, semantic HTML, code examples, tables |
+| Markdown availability | 10 | Raw markdown source available, low HTML noise, no JS-only content |
+
+### Token Economics (25 pts)
+| Check | Points | What it looks for |
+|-------|--------|-------------------|
+| Token budget | 15 | Per-page token counts under 8K, no oversized pages |
+| Meta tags | 10 | AI-friendly meta tags, descriptions, token count metadata |
+
+### Capability Signaling (15 pts)
+| Check | Points | What it looks for |
+|-------|--------|-------------------|
+| skill.md | 10 | Capability descriptions, inputs, constraints |
+| Agent permissions | 5 | Agent access rules and rate limits |
+
+### UX Bridge (10 pts)
+| Check | Points | What it looks for |
+|-------|--------|-------------------|
+| Copy-for-AI | 10 | Copy-to-clipboard buttons for code/text, raw view links |
+
+**Grading:** A (90-100) · B (75-89) · C (60-74) · D (40-59) · F (0-39)
+
+---
+
+## Featured Snippet Optimization (AEO)
+
+AEO targets **zero-click rich results** distinct from GEO AI Overviews:
+
+| Target | Signal | Optimization |
+|--------|--------|-------------|
+| **Featured Snippet** | Best direct answer to exact query | 40-55 word answer immediately after matching H-tag |
+| **People Also Ask** | Question-intent pages | Question-phrased H2/H3, concise 30-50 word answer |
+| **Knowledge Panel** | Entity KG match | `sameAs`, Organization/Person schema → use `entity-optimizer` |
+| **Sitelinks Searchbox** | Site authority + WebSite schema | `WebSite` + `SearchAction` schema |
+| **AI Overview** | Passage-level citability | `llms.txt`, structured data, citation-ready prose |
+
+### Paragraph Snippet Rules
+- [ ] Direct answer in **first 40-55 words** after relevant H2/H3
+- [ ] Answer starts with keyword: "X is...", "X refers to...", "To do X..."
+- [ ] No jargon in first sentence — plain language
+- [ ] Supporting context paragraph follows (2-4 sentences)
+
+### List Snippet Rules
+- [ ] Use `<ol>` or `<ul>` immediately after question H2/H3
+- [ ] 5-9 list items (more triggers truncation)
+- [ ] Each item ≤ 12 words
+
+### Table Snippet Rules
+- [ ] `<table>` with `<th>` header row
+- [ ] ≤4 columns (wider tables are truncated)
+- [ ] First column is the primary entity
+
+---
+
+## robots.txt AI Crawler Rules
+
+```
+# Explicitly ALLOW AI crawlers (many sites block by default)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+```
+
+---
+
+## GEO Drift Tracking
+
+Track whether AI engines actually cite your content over time:
+
+1. **Baseline** — Run 5 test queries across ChatGPT, Perplexity, Claude, Gemini, Google AI Overview
+2. **Record** — For each: Cited? Position (1-of-N)? Quote used?
+3. **Re-check at T+14, T+45, T+90** — Track citation stability
+4. **Compute drift** — Mean Absolute Error between predicted and actual citation rate
+5. **Flag outliers** — If predicted GEO score ≥70 but actual citation ≤40 → investigate
+
+---
+
+## Content Decay Signals (When to Refresh)
+
+| Signal | Threshold | Action |
+|--------|-----------|--------|
+| Traffic decline | -20% over 90 days | Refresh with current stats, new sections |
+| Position dropping | Fell 5+ spots from peak | Update evidence, add FAQ, internal links |
+| Outdated stats | Data >12 months old | Replace with current year data |
+| Competitor overtook | Lost top-3 to new content | Differentiate with original data/experience |
+| AI citation lost | Was cited, now isn't | Re-optimize for citation-ready prose |
+
 ## Security Constraints
 - Never fabricate reviews, fake citations, or create astroturfed content.
 - All third-party signal building must be authentic and transparent.
