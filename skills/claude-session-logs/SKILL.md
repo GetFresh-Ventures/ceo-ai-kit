@@ -18,7 +18,7 @@ description: >
 **Data Locations**:
 ```bash
 # Claude Code session logs (JSONL)
-~/.claude/projects/-Users-dirajgoel-Documents-Code/
+~/.claude/projects/-Users-$USER-Documents-Code/
 
 # Indexed transcripts (SQLite FTS)
 ~/Documents/Code/gfv-brain/data/transcripts.db
@@ -47,10 +47,10 @@ Always check PIL memory first — it contains distilled knowledge from past sess
 
 ```bash
 # Find recent session files
-ls -lt ~/.claude/projects/-Users-dirajgoel-Documents-Code/*.jsonl | head -5
+ls -lt ~/.claude/projects/-Users-$USER-Documents-Code/*.jsonl | head -5
 
 # Read a specific session
-cat ~/.claude/projects/-Users-dirajgoel-Documents-Code/session_id.jsonl | python3 -m json.tool
+cat ~/.claude/projects/-Users-$USER-Documents-Code/session_id.jsonl | python3 -m json.tool
 ```
 
 ### JSONL Format
@@ -129,10 +129,10 @@ python3 ~/Documents/Code/gfv-brain/scripts/claude_memory.py write \
 python3 ~/Documents/Code/gfv-brain/scripts/claude_memory.py context --limit=10
 
 # Search across all sessions for a keyword
-grep -rl "ServiceTitan" ~/.claude/projects/-Users-dirajgoel-Documents-Code/*.jsonl
+grep -rl "ServiceTitan" ~/.claude/projects/-Users-$USER-Documents-Code/*.jsonl
 
 # Find sessions by date
-ls -lt ~/.claude/projects/-Users-dirajgoel-Documents-Code/*.jsonl | head -20
+ls -lt ~/.claude/projects/-Users-$USER-Documents-Code/*.jsonl | head -20
 ```
 
 ## Anti-Patterns

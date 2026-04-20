@@ -35,7 +35,7 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 // turbo-all
 
 ## Prerequisites
-- Repo: `/Users/dirajgoel/Documents/Code/MACBOTCOS`
+- Repo: `$HOME/Documents/Code/MACBOTCOS`
 - Linear API Key: `op read "op://Machine One/Golden Rule Live Linear API Key/credential"`
 - Linear Team ID: `MAC`
 - Linear Project ID: `9304b035-a505-4580-adf1-34dc11cf2737` (MACBOTCOS)
@@ -52,8 +52,8 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 
 Check the latest tags and unreleased commits:
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && git describe --tags --abbrev=0 2>/dev/null || echo "No tags"
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && git log $(git describe --tags --abbrev=0)..HEAD --oneline
+cd $HOME/Documents/Code/MACBOTCOS && git describe --tags --abbrev=0 2>/dev/null || echo "No tags"
+cd $HOME/Documents/Code/MACBOTCOS && git log $(git describe --tags --abbrev=0)..HEAD --oneline
 ```
 
 Decide the new version number based on what changed since the last tag.
@@ -66,7 +66,7 @@ Decide the new version number based on what changed since the last tag.
 MACBOTCOS has an absolute zero-tolerance policy for failing python governance checks. Run the core pre-release audits:
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && echo "=== UNCOMMITTED ===" && git status --short && echo "=== DOCS STATE GATE ===" && ./venv/bin/[STUB AVOIDED] Execute docs_agent.py via available MCP/agent tools rather than a missing local script --validate-registry --strict-changed-docs --include-worktree --write-state-manifest --json && echo "=== RELEASE VALIDATOR ===" && ./venv/bin/[STUB AVOIDED] Execute release_validator.py via available MCP/agent tools rather than a missing local script --strict && echo "=== ROUTING CONVERGENCE ===" && ./venv/bin/[STUB AVOIDED] Execute validate_routing_convergence.py via available MCP/agent tools rather than a missing local script --json
+cd $HOME/Documents/Code/MACBOTCOS && echo "=== UNCOMMITTED ===" && git status --short && echo "=== DOCS STATE GATE ===" && ./venv/bin/[STUB AVOIDED] Execute docs_agent.py via available MCP/agent tools rather than a missing local script --validate-registry --strict-changed-docs --include-worktree --write-state-manifest --json && echo "=== RELEASE VALIDATOR ===" && ./venv/bin/[STUB AVOIDED] Execute release_validator.py via available MCP/agent tools rather than a missing local script --strict && echo "=== ROUTING CONVERGENCE ===" && ./venv/bin/[STUB AVOIDED] Execute validate_routing_convergence.py via available MCP/agent tools rather than a missing local script --json
 ```
 
 **GATE: You must have zero output/errors on the above scripts. If anything fails, you MUST stop the release and fix the underlying issue.**
@@ -75,7 +75,7 @@ cd /Users/dirajgoel/Documents/Code/MACBOTCOS && echo "=== UNCOMMITTED ===" && gi
 
 ## STEP 3: Update CHANGELOG.md (GATE: must include version entry)
 
-Add a new entry at the TOP of `/Users/dirajgoel/Documents/Code/MACBOTCOS/CHANGELOG.md` (after the Keep a Changelog header).
+Add a new entry at the TOP of `$HOME/Documents/Code/MACBOTCOS/CHANGELOG.md` (after the Keep a Changelog header).
 Use the format as dictated by `docs/CHANGELOG_FORMAT.md`:
 
 ```markdown
@@ -94,7 +94,7 @@ A 1-3 sentence summary of the strategic impact of this release and why the chang
 
 **GATE: Run the release integrity script to ensure your changelog entry passes strict formatting.**
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && ./venv/bin/[STUB AVOIDED] Execute audit_release_integrity.py via available MCP/agent tools rather than a missing local script --strict-lineage
+cd $HOME/Documents/Code/MACBOTCOS && ./venv/bin/[STUB AVOIDED] Execute audit_release_integrity.py via available MCP/agent tools rather than a missing local script --strict-lineage
 ```
 If this audit fails, fix the changelog until it passes.
 
@@ -104,7 +104,7 @@ If this audit fails, fix the changelog until it passes.
 
 1. Overwrite the `VERSION` file with the version string:
    ```bash
-   echo "X.Y.Z" > /Users/dirajgoel/Documents/Code/MACBOTCOS/VERSION
+   echo "X.Y.Z" > $HOME/Documents/Code/MACBOTCOS/VERSION
    ```
 2. Update the README.md `[![Version](...)]` badge to reflect the new version string. Do not modify other untouched sections.
 
@@ -114,22 +114,22 @@ If this audit fails, fix the changelog until it passes.
 
 Create the single release commit:
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && git add -A && git commit -m "chore: release vX.Y.Z — Release Title"
+cd $HOME/Documents/Code/MACBOTCOS && git add -A && git commit -m "chore: release vX.Y.Z — Release Title"
 ```
 
 Tag and Push (including tags):
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && git tag -a "vX.Y.Z" -m "Release vX.Y.Z: Release Title" && git push origin main --tags
+cd $HOME/Documents/Code/MACBOTCOS && git tag -a "vX.Y.Z" -m "Release vX.Y.Z: Release Title" && git push origin main --tags
 ```
 
 Create the formal GitHub release (this is what populates the repository sidebar):
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && gh release create vX.Y.Z --title "vX.Y.Z — Release Title" --notes "See CHANGELOG.md for comprehensive release notes" --latest
+cd $HOME/Documents/Code/MACBOTCOS && gh release create vX.Y.Z --title "vX.Y.Z — Release Title" --notes "See CHANGELOG.md for comprehensive release notes" --latest
 ```
 
 **GATE: Verification.**
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && gh release list && git describe --tags --exact-match HEAD
+cd $HOME/Documents/Code/MACBOTCOS && gh release list && git describe --tags --exact-match HEAD
 ```
 
 ---
@@ -139,7 +139,7 @@ cd /Users/dirajgoel/Documents/Code/MACBOTCOS && gh release list && git describe 
 If there are any missed background tasks (like temporal workers, script syncs, or database records in `release_trains`), triggering the built-in deploy hooks is recommended:
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/MACBOTCOS && ./scripts/release_and_push.sh --push-only
+cd $HOME/Documents/Code/MACBOTCOS && ./scripts/release_and_push.sh --push-only
 ```
 *(This triggers backend sync routines safely without double-bumping the version).*
 

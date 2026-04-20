@@ -36,7 +36,7 @@ All Aprio landing pages must be formatted with consistent HTML structures before
 
 ### 2. Deployment via WordPress REST API
 Aprio restricts standard REST API Application Passwords for `POST` (create/update) requests. You must use cookie-based authentication with a REST Nonce.
-- **Script Location:** Navigate to `/Users/dirajgoel/Documents/Code/aprio-dashboard/scripts/`.
+- **Script Location:** Navigate to `$HOME/Documents/Code/aprio-dashboard/scripts/`.
 - **Deploy Script:** Use the `deploy_v2_fixed.py` (or equivalent) Python script.
 - **Credentials:** The script pulls from the keychain/1Password for `diraj` Aprio login, fetches auth cookies, retrieves a nonce, and then programmatically pushes `.html` and `.jsonld` schema payloads to the `/wp-json/wp/v2/pages` endpoint.
 

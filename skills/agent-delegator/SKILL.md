@@ -23,7 +23,7 @@ import sys
 import os
 
 # Import the Hermes Subagent delegate ported into GFV-Brain
-sys.path.append("/Users/dirajgoel/Documents/Code/gfv-brain/scripts")
+sys.path.append("$HOME/Documents/Code/gfv-brain/scripts")
 from subagent_delegate import delegate_task, list_subagents
 
 # Farm off an expensive operation asynchronously

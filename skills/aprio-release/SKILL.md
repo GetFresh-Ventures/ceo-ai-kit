@@ -8,7 +8,7 @@ description: Push a versioned release for the Aprio GTM Dashboard — updates Gi
 // turbo-all
 
 ## Prerequisites
-- Repo: `/Users/dirajgoel/Documents/Code/aprio-dashboard`
+- Repo: `$HOME/Documents/Code/aprio-dashboard`
 - Branch: `master` (NOT `main`)
 - Linear Project ID: `600a9682-c809-4b33-807c-d435eada6ec9` (Aprio GTM Dashboard)
 - Linear API Key: Use the `linear-api-access` skill (Python direct GraphQL, NOT MCP)
@@ -26,7 +26,7 @@ description: Push a versioned release for the Aprio GTM Dashboard — updates Gi
 
 Check the last version:
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && git describe --tags --abbrev=0 && git log $(git describe --tags --abbrev=0)..HEAD --oneline
+cd $HOME/Documents/Code/aprio-dashboard && git describe --tags --abbrev=0 && git log $(git describe --tags --abbrev=0)..HEAD --oneline
 ```
 
 Decide the new version number based on what changed since the last tag. State it explicitly before continuing.
@@ -38,7 +38,7 @@ Decide the new version number based on what changed since the last tag. State it
 ## STEP 2: Pre-Flight Checks (GATE: all must pass)
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && echo "=== GIT STATUS ===" && git status --short && echo "=== UNCOMMITTED ===" && git diff --stat
+cd $HOME/Documents/Code/aprio-dashboard && echo "=== GIT STATUS ===" && git status --short && echo "=== UNCOMMITTED ===" && git diff --stat
 ```
 
 **GATE: The following must ALL be true before proceeding:**
@@ -94,17 +94,17 @@ Update the following in README.md:
 
 Stage, commit, and tag:
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && git add -A && git status
+cd $HOME/Documents/Code/aprio-dashboard && git add -A && git status
 ```
 
 Then commit and tag (replace VERSION and TITLE):
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && git commit -m "vX.Y.Z: Release Title" && git tag vX.Y.Z
+cd $HOME/Documents/Code/aprio-dashboard && git commit -m "vX.Y.Z: Release Title" && git tag vX.Y.Z
 ```
 
 **GATE: Commit and tag must exist before proceeding. Verify:**
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && git log -1 --oneline && git describe --tags --exact-match HEAD
+cd $HOME/Documents/Code/aprio-dashboard && git log -1 --oneline && git describe --tags --exact-match HEAD
 ```
 
 ---
@@ -113,18 +113,18 @@ cd /Users/dirajgoel/Documents/Code/aprio-dashboard && git log -1 --oneline && gi
 
 Push the code and tags to origin:
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && git push origin master --tags
+cd $HOME/Documents/Code/aprio-dashboard && git push origin master --tags
 ```
 
 Then create a formal GitHub Release. Extract the EXACT release notes from CHANGELOG.md (do NOT use a placeholder "See CHANGELOG.md" string — copy the actual content):
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z — Release Title" --notes "ACTUAL CHANGELOG MARKDOWN CONTENT HERE"
+cd $HOME/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z — Release Title" --notes "ACTUAL CHANGELOG MARKDOWN CONTENT HERE"
 ```
 
 **GATE: Push and GitHub Release must succeed. Verify:**
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh release list --limit 3
+cd $HOME/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh release list --limit 3
 ```
 
 ---
@@ -132,12 +132,12 @@ cd /Users/dirajgoel/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh relea
 ## STEP 6.5: Update GitHub About Section
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh repo view --json description,homepageUrl,repositoryTopics --jq '{description: .description, homepage: .homepageUrl, topics: [.repositoryTopics[].name]}'
+cd $HOME/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh repo view --json description,homepageUrl,repositoryTopics --jq '{description: .description, homepage: .homepageUrl, topics: [.repositoryTopics[].name]}'
 ```
 
 Then update as needed:
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh repo edit \
+cd $HOME/Documents/Code/aprio-dashboard && /opt/homebrew/bin/gh repo edit \
   --description "Executive GTM dashboard & SEO engine for Aprio Board Portal — 40+ pages deployed, FAQ schema, competitive intelligence, GA4 pipeline" \
   --homepage "https://aprioboardportal.com" \
   --add-topic "aprio" --add-topic "seo" --add-topic "react" --add-topic "vite" --add-topic "vercel" --add-topic "wordpress" --add-topic "ga4" --add-topic "board-portal"
@@ -206,7 +206,7 @@ Health values: `onTrack`, `atRisk`, `offTrack`
 
 Final verification checklist:
 ```bash
-cd /Users/dirajgoel/Documents/Code/aprio-dashboard && echo "=== LAST COMMIT ===" && git log -1 --format="%H %s (%ai)" && echo "=== TAG ===" && git describe --tags --exact-match HEAD && echo "=== REMOTE SYNC ===" && git status -sb
+cd $HOME/Documents/Code/aprio-dashboard && echo "=== LAST COMMIT ===" && git log -1 --format="%H %s (%ai)" && echo "=== TAG ===" && git describe --tags --exact-match HEAD && echo "=== REMOTE SYNC ===" && git status -sb
 ```
 
 **ALL gates must pass:**

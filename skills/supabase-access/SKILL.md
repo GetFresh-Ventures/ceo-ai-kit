@@ -8,7 +8,7 @@ description: Access Supabase for ontology queries, entity embeddings, vector sea
 ## Status: ✅ Working (Read + Write)
 
 > [!IMPORTANT]
-> **Definitive Schema Reference:** See [`PIL-SCHEMA.md`](file:///Users/dirajgoel/Documents/Code/gfv-brain/PIL-SCHEMA.md) for the authoritative table schemas, enum values, predicate taxonomy, source breakdown, and data flow architecture. The schema sections below in this skill may be outdated — PIL-SCHEMA.md is the canonical source validated against live data on 2026-04-15.
+> **Definitive Schema Reference:** See [`PIL-SCHEMA.md`](file://$HOME/Documents/Code/gfv-brain/PIL-SCHEMA.md) for the authoritative table schemas, enum values, predicate taxonomy, source breakdown, and data flow architecture. The schema sections below in this skill may be outdated — PIL-SCHEMA.md is the canonical source validated against live data on 2026-04-15.
 
 > [!CAUTION]
 > ## HARD RULES — READ BEFORE ANY QUERY

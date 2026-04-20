@@ -39,16 +39,16 @@ Every time you are tasked with creating a new web app, frontend component, or la
 
 ### Step 1: Generate & Persist the Design System
 ```bash
-python3 /Users/dirajgoel/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "<product_or_industry>" --design-system --persist -p "<ProjectName>"
+python3 $HOME/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "<product_or_industry>" --design-system --persist -p "<ProjectName>"
 ```
-*Example: `python3 /Users/dirajgoel/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "fintech dashboard" --design-system --persist -p "Aprio"`*
+*Example: `python3 $HOME/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "fintech dashboard" --design-system --persist -p "Aprio"`*
 
 This command mathematically ranks and calculates colors, typography, styles, and anti-patterns based on 161 industry rules and saves them to `design-system/MASTER.md` in the current working directory.
 
 ### Step 2: Generate Page Specific Overrides (Optional)
 If building a specific page (e.g., checkout), create an override file:
 ```bash
-python3 /Users/dirajgoel/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "<page_context>" --design-system --persist -p "<ProjectName>" --page "<PageName>"
+python3 $HOME/Documents/Code/.agents/skills/ui-ux-pro-max/scripts/search.py "<page_context>" --design-system --persist -p "<ProjectName>" --page "<PageName>"
 ```
 
 ### Step 3: Cross-Reference

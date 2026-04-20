@@ -8,7 +8,7 @@ description: Push a versioned release for the GetFresh Ventures website — upda
 // turbo-all
 
 ## Prerequisites
-- Repo: `/Users/dirajgoel/Documents/Code/getfresh-ventures-website`
+- Repo: `$HOME/Documents/Code/getfresh-ventures-website`
 - Branch: `main`
 - Remote: `https://github.com/dpgvan/getfresh-ventures-website.git`
 - Linear Project ID: `0d033c84-1217-4c52-bfa8-7200de84ee37` (GFV Website Migration & SEO Hardening)
@@ -30,7 +30,7 @@ description: Push a versioned release for the GetFresh Ventures website — upda
 
 Check the last version:
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git describe --tags --abbrev=0 2>/dev/null || echo "No tags yet — this is the first release" && echo "---" && git log --oneline -10
+cd $HOME/Documents/Code/getfresh-ventures-website && git describe --tags --abbrev=0 2>/dev/null || echo "No tags yet — this is the first release" && echo "---" && git log --oneline -10
 ```
 
 Decide the new version number based on what changed since the last tag. State it explicitly before continuing.
@@ -42,7 +42,7 @@ Decide the new version number based on what changed since the last tag. State it
 ## STEP 2: Pre-Flight Checks (GATE: all must pass)
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && echo "=== GIT STATUS ===" && git status --short | head -30 && echo "=== BRANCH ===" && git branch --show-current && echo "=== BUILD TEST ===" && npm run build 2>&1 | tail -10
+cd $HOME/Documents/Code/getfresh-ventures-website && echo "=== GIT STATUS ===" && git status --short | head -30 && echo "=== BRANCH ===" && git branch --show-current && echo "=== BUILD TEST ===" && npm run build 2>&1 | tail -10
 ```
 
 **GATE: The following must ALL be true before proceeding:**
@@ -101,17 +101,17 @@ Update the following in README.md:
 
 Stage, commit, and tag:
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git add -A && git status
+cd $HOME/Documents/Code/getfresh-ventures-website && git add -A && git status
 ```
 
 Then commit and tag (replace VERSION and TITLE):
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git commit -m "vX.Y.Z: Release Title" && git tag vX.Y.Z
+cd $HOME/Documents/Code/getfresh-ventures-website && git commit -m "vX.Y.Z: Release Title" && git tag vX.Y.Z
 ```
 
 **GATE: Commit and tag must exist before proceeding. Verify:**
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git log -1 --oneline && git describe --tags --exact-match HEAD
+cd $HOME/Documents/Code/getfresh-ventures-website && git log -1 --oneline && git describe --tags --exact-match HEAD
 ```
 
 ---
@@ -120,7 +120,7 @@ cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git log -1 --one
 
 Push the code and tags to origin:
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git push origin main --tags
+cd $HOME/Documents/Code/getfresh-ventures-website && git push origin main --tags
 ```
 
 > **NOTE:** Vercel will auto-deploy on push to `main`. Monitor the deployment at https://vercel.com.
@@ -128,12 +128,12 @@ cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && git push origin 
 Then create a formal GitHub Release. Extract the EXACT release notes from CHANGELOG.md (do NOT use a placeholder "See CHANGELOG.md" string — copy the actual content):
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z — Release Title" --notes "ACTUAL CHANGELOG MARKDOWN CONTENT HERE"
+cd $HOME/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh release create vX.Y.Z --title "vX.Y.Z — Release Title" --notes "ACTUAL CHANGELOG MARKDOWN CONTENT HERE"
 ```
 
 **GATE: Push and GitHub Release must succeed. Verify:**
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh release list --limit 3
+cd $HOME/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh release list --limit 3
 ```
 
 ---
@@ -141,12 +141,12 @@ cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && /opt/homebrew/bi
 ## STEP 6.5: Update GitHub About Section
 
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh repo view --json description,homepageUrl,repositoryTopics --jq '{description: .description, homepage: .homepageUrl, topics: [.repositoryTopics[].name]}'
+cd $HOME/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh repo view --json description,homepageUrl,repositoryTopics --jq '{description: .description, homepage: .homepageUrl, topics: [.repositoryTopics[].name]}'
 ```
 
 Then update as needed:
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh repo edit \
+cd $HOME/Documents/Code/getfresh-ventures-website && /opt/homebrew/bin/gh repo edit \
   --description "GetFresh Ventures — AI GTM engineering for growth-stage CEOs. Next.js, Supabase, Vercel. Growth by Design methodology." \
   --homepage "https://www.getfreshventures.com" \
   --add-topic "nextjs" --add-topic "react" --add-topic "vercel" --add-topic "supabase" --add-topic "gtm" --add-topic "ai" --add-topic "tailwindcss" --add-topic "seo"
@@ -231,7 +231,7 @@ print("Linear update:", "OK" if res.get("data", {}).get("projectUpdateCreate", {
 
 Final verification checklist:
 ```bash
-cd /Users/dirajgoel/Documents/Code/getfresh-ventures-website && echo "=== LAST COMMIT ===" && git log -1 --format="%H %s (%ai)" && echo "=== TAG ===" && git describe --tags --exact-match HEAD && echo "=== REMOTE SYNC ===" && git status -sb
+cd $HOME/Documents/Code/getfresh-ventures-website && echo "=== LAST COMMIT ===" && git log -1 --format="%H %s (%ai)" && echo "=== TAG ===" && git describe --tags --exact-match HEAD && echo "=== REMOTE SYNC ===" && git status -sb
 ```
 
 **ALL gates must pass:**
