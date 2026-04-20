@@ -43,7 +43,7 @@ cat > ~/Library/LaunchAgents/com.gfv.daily-sync.plist << 'EOF'
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/python3</string>
-        <string>/Users/USERNAME/scripts/daily_sync.py</string>
+        <string>~/.claude/hooks/task_manager.py</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -113,7 +113,7 @@ Description=Daily data sync
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/python3 /home/user/scripts/daily_sync.py
+ExecStart=/usr/bin/python3 ~/.claude/hooks/task_manager.py
 StandardOutput=journal
 StandardError=journal
 EOF
@@ -154,10 +154,10 @@ crontab -e
 # * * * * * command
 
 # Examples:
-0 8 * * *     /usr/bin/python3 ~/scripts/daily_sync.py >> /tmp/sync.log 2>&1
-0 9 * * 1     /usr/bin/python3 ~/scripts/weekly_report.py >> /tmp/report.log 2>&1
-*/5 * * * *   /usr/bin/python3 ~/scripts/health_check.py >> /tmp/health.log 2>&1
-0 0 1 * *     /usr/bin/python3 ~/scripts/monthly_backup.py >> /tmp/backup.log 2>&1
+0 8 * * *     /usr/bin/python3 ~/.claude/hooks/task_manager.py >> /tmp/gfv-sync.log 2>&1
+0 9 * * 1     /usr/bin/python3 ~/.claude/tools/gfv-audit.py https://example.com >> /tmp/gfv-report.log 2>&1
+*/5 * * * *   /usr/bin/python3 ~/.claude/tools/ccflare.py status >> /tmp/gfv-health.log 2>&1
+0 0 1 * *     /usr/bin/python3 ~/.claude/tools/gfv-memento.py flush >> /tmp/gfv-backup.log 2>&1
 ```
 
 ## Health Monitoring (MANDATORY)

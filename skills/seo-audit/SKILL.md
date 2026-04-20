@@ -110,27 +110,15 @@ All scripts are in `scripts/`. They output structured JSON to stdout. Exit code 
 ### Core Scripts (Both Modes)
 
 ```bash
-# Step 1: Site-level checks (robots.txt + sitemap.xml)
-python scripts/check-site.py https://example.com
-
-# Step 2: Fetch raw page HTML for downstream analysis
-python scripts/fetch-page.py https://example.com --output /tmp/page.html
-
-# Step 3: Page-level checks (H1, title, meta description, canonical, slug)
-python scripts/check-page.py https://example.com --keyword "primary keyword"
-
-# Step 4: JSON-LD schema validation
-python scripts/check-schema.py --file /tmp/page.html
-
-# Step 5: PageSpeed Insights (mobile + desktop)
-python scripts/check-pagespeed.py https://example.com
+# Step 1: Run comprehensive programmatic SEO checks using GFV Audit Toolkit
+python3 ~/.claude/tools/gfv-audit.py https://example.com --keyword "primary keyword"
 ```
 
 ### Full-Only Scripts
 
 ```bash
-# Step 6: Social tags (OG + Twitter Card validation)
-python scripts/check-social.py --file /tmp/page.html
+# Step 2: Social tags (OG + Twitter Card validation) are included in the full audit flag
+python3 ~/.claude/tools/gfv-audit.py https://example.com --full
 ```
 
 ---
@@ -142,15 +130,15 @@ python scripts/check-social.py --file /tmp/page.html
 1. **Acknowledge scope** — confirm basic audit; note any missing data
 2. **Infer primary keyword** — fetch page with `fetch-page.py`, read H1/title/first paragraph, infer keyword
    > "Inferred primary keyword: **open source SEO tools**"
-3. **Run `check-site.py`** — parse robots.txt, sitemap, 404 handling, URL canonicalization
+3. **Run `gfv-audit.py`** — parse robots.txt, sitemap, 404 handling, URL canonicalization
 4. **404 check** — fetch `<origin>/this-page-definitely-does-not-exist-seo-audit-check`
    - Returns 404 → Pass · Returns 200 (soft 404) → Fail · Returns 301 to homepage → Warn
 5. **URL Canonicalization** — HTTP→HTTPS redirect, www consistency, trailing slash, canonical match
 6. **E-E-A-T trust page check** — About Us, Contact, Privacy Policy, Terms of Service (existence + footer reachability)
-7. **Run `check-pagespeed.py`** — mobile + desktop scores
-8. **Run `check-page.py --keyword "<keyword>"`** — H1, title, meta, canonical, slug
+7. **Review Performance Metrics** — mobile + desktop scores
+8. **Review Page Structure** — H1, title, meta, canonical, slug
 9. **i18n/hreflang check** — only if hreflang tags detected
-10. **Run `check-schema.py`** — JSON-LD validation
+10. **Review JSON-LD Schema Validation** — schema structure
 11. **LLM semantic review** — resolve all `llm_review_required: true` flags
 12. **Summarize findings** — Evidence / Impact / Fix format
 13. **Priority actions** — top 3 highest-impact fixes
@@ -160,7 +148,7 @@ python scripts/check-social.py --file /tmp/page.html
 
 Run all Basic steps (1-14), then:
 
-15. **Run `check-social.py`** — OG Tags + Twitter Card validation
+15. **Run `gfv-audit.py --full`** — OG Tags + Twitter Card validation
 16. **LLM advanced checks** — E-E-A-T content quality, duplicate content signals, anchor text quality
 17. **OG/Twitter quality review** — og:title vs page title, og:image existence, twitter:card type
 18. **Priority actions** — top 5 highest-impact fixes with effort/impact tags
@@ -321,8 +309,8 @@ For Full audit priority actions, add effort/impact tags:
 | System | What It Provides | How to Access |
 |--------|-----------------|---------------|
 | Local Memory | Prior audit data, domain context | `gfv-brain-search.py` |
-| PageSpeed API | Core Web Vitals, Lighthouse scores | `scripts/check-pagespeed.py` |
-| Python Scripts | Deterministic SEO checks | `scripts/check-*.py` |
+| PageSpeed API | Core Web Vitals, Lighthouse scores | `~/.claude/tools/gfv-audit.py` |
+| Python Scripts | Deterministic SEO checks | `~/.claude/tools/gfv-audit.py` |
 | HTML Templates | Report output formatting | `assets/report-template-*.html` |
 
 > **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
@@ -401,7 +389,7 @@ All factual findings and systemic claims must utilize the following confidence i
 - Full audit reference: [references/REFERENCE-FULL.md](references/REFERENCE-FULL.md)
 - Basic report template: [assets/report-template-basic.html](assets/report-template-basic.html)
 - Full report template: [assets/report-template-full.html](assets/report-template-full.html)
-- Scripts: `scripts/check-site.py`, `scripts/check-page.py`, `scripts/check-schema.py`, `scripts/check-pagespeed.py`, `scripts/check-social.py`, `scripts/fetch-page.py`
+- Scripts: `~/.claude/tools/gfv-audit.py`
 
 ## Attribution
 

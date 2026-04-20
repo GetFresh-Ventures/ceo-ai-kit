@@ -2,7 +2,7 @@
 
 **Edge-Native Go-to-Market Operating System that turns any coding assistant into a personalized Chief of Staff.**
 
-[![Version](https://img.shields.io/badge/version-1.36.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
+[![Version](https://img.shields.io/badge/version-1.37.0-blue.svg)](VERSION) · [Changelog](CHANGELOG.md) · [Release Notes](https://github.com/GetFresh-Ventures/gfv_growth_by_design/releases) · [getfreshventures.com](https://getfreshventures.com)
 
 ---
 
@@ -20,9 +20,9 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 
 ---
 
-## What's New in v1.36.0 (ElizaOS Architecture)
-- **Executive Character Schema**: Engineered `executive-profile.json` to centrally enforce structural brand voice across all generated artifacts.
-- **Implicit Context Engine**: Installed `linear_provider.py` which intercepts the bootload sequence (`session-start.py`) to async inject live Linear pipeline awareness before prompt execution.
+## What's New in v1.37.0 (CEO Enablement Kit Path Decoupling)
+- **Universal Local Integration**: Configured `bootstrap.sh` to globally symlink all `~/.claude/tools/` into place for cross-repo edge computing stability without `venv` entanglement.
+- **Zero Hallucinated Stubs**: Surgically scoured 19 mocked legacy `python3 /home/user/scripts/*` integrations spread across `google-doc-creation`, `seo-audit`, `gfv-hooks`, and `scheduling-infra` out of existence, bridging their actions to native API tools and core local modules.
 - **iMessage Portation**: Replicated ElizaOS `plugin-bluebubbles` integration natively into `chief-of-staff` to command loop iOS communication streams.
 
 ---

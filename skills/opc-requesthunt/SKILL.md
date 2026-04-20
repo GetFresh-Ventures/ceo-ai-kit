@@ -1,0 +1,217 @@
+---
+name: requesthunt
+description: Generate user demand research reports from real user feedback. Scrape and analyze feature requests, complaints, and questions from Reddit, X, GitHub, YouTube, and LinkedIn. Use when user wants to do demand research, find feature requests, analyze user demand, or run RequestHunt queries.
+---
+
+
+> [!IMPORTANT]
+> **GFV-Adapted Skill** — This skill runs within the GetFresh Ventures infrastructure. Follow these conventions.
+
+### GFV Infrastructure Integration
+
+**Credentials** — Never use `.env` files. All secrets live in macOS Keychain:
+```bash
+security find-generic-password -s "<service>" -a "<account>" -w
+```
+Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
+
+**Data Sources** — Before querying external APIs, check PIL first:
+- `search_pil` / `smart_search` / `vector_search` MCP tools (491K+ embeddings, 81K entities)
+- Supabase tables: `entity_embeddings`, `ont_entities`, `ont_facts`
+- Local SQLite: WhatsApp (59K msgs), Slack (2.5K msgs), `gfv_memory.db`
+
+**Output** — Save results to `~/Documents/Code/gfv-brain/` or PIL via Supabase. Never send external messages (email, Slack, WhatsApp) without Diraj's explicit "send it" approval.
+
+**Active Clients**:
+- **Golden Rule PHC** — HVAC/plumbing/roofing: goldenrulephc.com, rivercityac.com, cornerstoneroofingexteriors.com
+- **Aprio Board Portal** — SaaS governance: aprioboardportal.com
+- **GetFresh Ventures** — Venture studio: getfreshventures.com
+
+---
+
+
+# RequestHunt Skill
+
+Generate user demand research reports by collecting and analyzing real user feedback from Reddit, X (Twitter), GitHub, YouTube, and LinkedIn.
+
+## Prerequisites
+
+Install the CLI and authenticate:
+```bash
+curl -fsSL https://requesthunt.com/cli | sh
+requesthunt auth login
+```
+
+The CLI displays a verification code and opens `https://requesthunt.com/device` — the human must enter the code to approve. Verify with:
+```bash
+requesthunt config show
+```
+Expected output contains: `resolved_api_key:` with a masked key value (not `null`).
+
+For headless/CI environments, use a manual API key instead:
+```bash
+requesthunt config set-key rh_live_your_key
+```
+
+Get your key from: https://requesthunt.com/dashboard
+
+## Output Modes
+
+Default output is TOON (Token-Oriented Object Notation) — structured and token-efficient.
+Use `--json` for raw JSON or `--human` for table/key-value display.
+
+## Platform Selection Guide
+
+Each platform captures different types of user feedback. Choose platforms based on the product category to maximize signal quality.
+
+### Platform Strengths
+
+| Platform | Best For | Signal Type | Typical Yield |
+|----------|----------|-------------|---------------|
+| **YouTube** | Consumer products, hardware, lifestyle apps | Specific feature asks from review/tutorial comments | High (10-29 per topic) |
+| **Reddit** | Developer tools, creator economy, niche communities | Deep technical discussions, long-tail needs | High for dev topics (up to 176) |
+| **LinkedIn** | B2B software, healthcare, enterprise tools | Professional/industry opinions, market context | Low volume but high engagement |
+| **X** | Trending topics, quick sentiment signals | Fragmented feedback, emotional reactions | Low-medium (1-6 per topic) |
+| **GitHub** | Open-source tools, developer infrastructure | Concrete bugs and feature requests from issues | High for OSS, zero for non-tech |
+
+### Recommended Platforms by Category
+
+| Category | Primary | Secondary | Notes |
+|----------|---------|-----------|-------|
+| **Automotive / Hardware** | YouTube | Reddit | Video review comments are the richest source (dashcams: 29, EVs: 19) |
+| **Gaming / Entertainment** | YouTube | Reddit | Game streams and reviews generate natural feedback |
+| **Travel / Transportation** | YouTube | LinkedIn | Travel vlogs + LinkedIn for business travel needs |
+| **Social / Communication** | YouTube | Reddit | App review videos + community discussions |
+| **Food / Dining** | YouTube | Reddit | Recipe and delivery app review comments |
+| **Real Estate / Home** | YouTube | X | Interior design and renovation videos dominate |
+| **Education / Learning** | YouTube | — | Tutorial video comments are the only reliable source |
+| **Health / Medical** | LinkedIn | X | Rare LinkedIn-dominant category (professional healthcare) |
+| **Creator Economy** | Reddit | GitHub | Reddit communities overwhelmingly active (Newsletter: 176 requests) |
+| **Developer Tools** | Reddit | GitHub | Technical communities + open-source issue trackers |
+| **AI / SaaS Products** | Reddit | LinkedIn | Reddit for user complaints, LinkedIn for industry analysis |
+
+### Quick Selection Rules
+
+- **Consumer / hardware / lifestyle** → YouTube first, Reddit second
+- **Developer / creator tools** → Reddit first, GitHub second
+- **B2B / enterprise / medical** → LinkedIn first, X second
+- **Has open-source projects** → add GitHub
+- **Everything** → add X as a supplementary source
+
+## Research Workflow
+
+### Step 1: Define Scope
+
+Before collecting data, clarify with the user:
+1. **Research Goal**: What domain/area to investigate?
+2. **Specific Products**: Any products/competitors to focus on?
+3. **Platform Selection**: Use the guide above to pick 2-3 best platforms for the category
+4. **Time Range**: How recent should the feedback be?
+5. **Report Purpose**: Product planning / competitive analysis / market research?
+
+### Step 2: Collect Data
+
+Choose platforms strategically based on the category:
+
+```bash
+# Consumer hardware — YouTube-first strategy
+requesthunt scrape start "smart home devices" --platforms youtube,reddit --depth 2
+
+# Developer tools — Reddit-first strategy
+requesthunt scrape start "code editors" --platforms reddit,github --depth 2
+
+# B2B / enterprise — LinkedIn-first strategy
+requesthunt scrape start "electronic health records" --platforms linkedin,x --depth 2
+
+# Broad research — all platforms
+requesthunt scrape start "AI coding assistants" --platforms reddit,x,github,youtube,linkedin --depth 2
+
+# Search with expansion for more data
+requesthunt search "dark mode" --expand --limit 50
+
+# List requests filtered by topic
+requesthunt list --topic "ai-tools" --limit 100
+```
+
+### Step 3: Generate Report
+
+Analyze collected data and generate a structured Markdown report:
+
+```markdown
+# [Topic] User Demand Research Report
+
+## Overview
+- Scope: ...
+- Data Sources: Reddit (N), X (N), GitHub (N), YouTube (N), LinkedIn (N)
+- Platform Strategy: [why these platforms were chosen for this category]
+- Time Range: ...
+
+## Key Findings
+
+### 1. Top Feature Requests
+| Rank | Request | Platform | Votes | Representative Quote |
+|------|---------|----------|-------|---------------------|
+
+### 2. Pain Points Analysis
+- **Pain Point A**: ...
+- Sources: [which platforms surfaced this]
+
+### 3. Platform Signal Comparison
+| Insight | Reddit | YouTube | LinkedIn | X | GitHub |
+|---------|--------|---------|----------|---|--------|
+| Volume | ... | ... | ... | ... | ... |
+| Signal type | Technical | UX/Feature | Strategic | Sentiment | Bug/FR |
+
+### 4. Competitive Comparison (if specified)
+| Feature | Product A | Product B | User Expectations |
+
+### 5. Opportunities
+- ...
+
+## Methodology
+Based on N real user feedbacks collected via RequestHunt from [platforms]...
+```
+
+## Commands
+
+### Search
+```bash
+requesthunt search "authentication" --limit 20
+requesthunt search "oauth" --expand                          # With realtime expansion
+requesthunt search "API rate limit" --expand --platforms reddit,x,youtube
+```
+
+### List
+```bash
+requesthunt list --limit 20                                  # Recent requests
+requesthunt list --topic "ai-tools" --limit 10               # By topic
+requesthunt list --platforms reddit,github,youtube            # By platform
+requesthunt list --category "Developer Tools"                # By category
+requesthunt list --sort top --limit 20                       # Top voted
+```
+
+### Scrape
+```bash
+requesthunt scrape start "developer-tools" --depth 1         # Default: all platforms
+requesthunt scrape start "ai-assistant" --platforms reddit,x,github,youtube,linkedin --depth 2
+requesthunt scrape status "job_123"                          # Check job status
+```
+
+### Reference
+```bash
+requesthunt topics                                           # List all topics by category
+requesthunt usage                                            # View account stats
+requesthunt config show                                      # Check auth status
+```
+
+## API Info
+- **Base URL**: https://requesthunt.com
+- **Auth**: Device code login (`requesthunt auth login`) or manual API key
+- **Rate Limits**:
+  - Free tier: 100 credits/month, 10 req/min
+  - Pro tier: 2,000 credits/month, 60 req/min
+- **Costs**:
+  - API call: 1 credit
+  - Scrape: depth x number of platforms credits
+- **Docs**: https://requesthunt.com/docs
+- **Agent Setup**: https://requesthunt.com/setup.md

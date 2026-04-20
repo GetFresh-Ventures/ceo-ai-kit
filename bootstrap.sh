@@ -319,7 +319,7 @@ CRITICAL:
 1. Access the shared executive brain at ~/ceo-brain/profile.json and ~/ceo-brain/voice-model.md for context before generating external communications.
 2. For specialized tasks, reference the skills/ directory.
 3. Never bypass explicit 'requires_human_approval' flags.
-4. Always execute python scripts using the local virtual environment bounding the kit: `./venv/bin/python`
+4. Always execute python kit scripts using native python via the established global library directory: `python3 ~/.claude/tools/<script>.py`. No virtual environment activation is required as the tools are fully stdlib compatible.
 5. On the first interaction of a new session, run `./hooks/session-start.py` to capture metrics and orient yourself.
 EOF
 echo "  → Generated native .cursorrules integration"
@@ -332,7 +332,7 @@ CRITICAL:
 1. Access the shared executive brain at ~/ceo-brain/profile.json and ~/ceo-brain/voice-model.md for context before generating external communications.
 2. For specialized tasks, reference the skills/ directory.
 3. Never bypass explicit 'requires_human_approval' flags.
-4. Always execute python scripts using the local virtual environment bounding the kit: `./venv/bin/python`
+4. Always execute python kit scripts using native python via the established global library directory: `python3 ~/.claude/tools/<script>.py`. No virtual environment activation is required as the tools are fully stdlib compatible.
 5. On the first interaction of a new session, run `./hooks/session-start.py` to capture metrics and orient yourself.
 EOF
 echo "  → Generated native .windsurfrules integration"
@@ -342,6 +342,7 @@ echo "  🪝 Setting up hooks and native skills..."
 if command -v claude &> /dev/null || [ -d "$CLAUDE_DIR" ]; then
     mkdir -p "$CLAUDE_HOOKS_DIR"
     mkdir -p "$CLAUDE_SKILLS_DIR"
+    mkdir -p "$CLAUDE_DIR/tools"
     
     # Claude Code Enhancements (ALL tiers — these are foundational)
     echo "  📦 Installing Claude Code enhancements..."
@@ -389,6 +390,15 @@ if not any(h.get('matcher') == 'Bash' for h in data['hooks']['PreToolUse']):
     ln -sf "$REPO_DIR/hooks/session-stop.py" "$CLAUDE_HOOKS_DIR/session-stop.py"
     chmod +x "$REPO_DIR/hooks/session-stop.py"
     echo "  → Hooks symlinked to ~/.claude/hooks"
+
+    # Tools
+    for tool_file in "$REPO_DIR/tools/"*.py "$REPO_DIR/tools/"*.sh; do
+        if [ -f "$tool_file" ]; then
+            ln -sf "$tool_file" "$CLAUDE_DIR/tools/$(basename "$tool_file")"
+            chmod +x "$tool_file" 2>/dev/null || true
+        fi
+    done
+    echo "  → Tools symlinked to ~/.claude/tools"
 
     # Skills — filter by tier
     BEGINNER_SKILLS="email-composer meeting-prep post-meeting-brief deal-review pipeline-pulse weekly-ceo-brief voice-model doc-builder pdf-toolkit contract-reader onboard chief-of-staff decision-logger audio-briefing support-triage executive-mentor spreadsheet-builder google-doc-creation"
@@ -461,6 +471,17 @@ if [[ "${INSTALL_ENGINECLAW:-n}" =~ ^[Yy]$ ]]; then
     ln -sfn "$REPO_DIR/AGENT.md" "$ENGINECLAW_STATE/workspace/AGENT.md"
     
     echo "  → EngineClaw runtime installed and linked."
+
+    echo ""
+    echo "  🤖 Bridging native Hermes Agent Framework..."
+    HERMES_INSTALL="${HOME}/Documents/Code/gfv-brain/scripts/install_gateway.sh"
+    if [ -f "$HERMES_INSTALL" ]; then
+        echo "  ℹ️  Found Hermes installer. Executing..."
+        bash "$HERMES_INSTALL" 2>/dev/null || echo "  ⚠️ Hermes installation encountered an error."
+        echo "  → Hermes framework bridged to CEO Kit."
+    else
+        echo "  ⚠️ Hermes installer not found. Skipping."
+    fi
 fi
 
 # 6. Final summary

@@ -1,17 +1,9 @@
 ---
 name: google-doc-creation
 description: Create professional, executive-ready Google Docs with branded styling. Use this whenever the user asks to create a Google Doc, report, strategy document, or any document in Google Drive. ALL agents must use this skill — never create raw/unstyled docs.
-short_description: "Create professional Google Docs in Drive"
 ---
 
 # Google Doc Creation — Professional Documents
-
-
-## Quick Start
-Just say any of these:
-- "Create a Google Doc: [title]"
-- "Write a strategy document for [initiative] and put it in Drive"
-- "Turn these notes into a professional Google Doc"
 
 ## When to Use This Skill
 
@@ -25,14 +17,14 @@ Use this skill **any time** a Google Doc needs to be created, including:
 
 ## The Script
 
-**Location:** `~/ceo-brain/scripts/create_google_doc.py`
+**Location:** `~/Documents/Code/gfv-brain/scripts/create_google_doc.py`
 
 ### Quick Usage
 
 ```python
 # From Python
 import sys
-sys.path.insert(0, os.path.expanduser("~/ceo-brain/scripts"))
+sys.path.insert(0, os.path.expanduser("~/Documents/Code/gfv-brain/scripts"))
 from create_google_doc import create_formatted_doc
 
 url = create_formatted_doc(
@@ -43,8 +35,8 @@ url = create_formatted_doc(
 ```
 
 ```bash
-# From the terminal
-python3 ~/ceo-brain/scripts/create_google_doc.py \
+# From CLI
+python3 ~/Documents/Code/gfv-brain/scripts/create_google_doc.py \
     --input content.md \
     --title "My Document" \
     --folder FOLDER_ID
@@ -52,8 +44,8 @@ python3 ~/ceo-brain/scripts/create_google_doc.py \
 
 ### Auth
 
-- **Preferred:** Service Account at `~/.config/gfv/gfv_service_account.json` with domain-wide delegation (impersonates `{{CEO_EMAIL}}`)
-- **Fallback:** `gws` command-line tool for content insertion, service account for styling pass
+- **Preferred:** Service Account at `~/.config/gfv/gfv_service_account.json` with domain-wide delegation (impersonates `diraj@getfreshventures.com`)
+- **Fallback:** `gws` CLI for content insertion, SA for styling pass
 
 ### What It Does Automatically
 
@@ -76,40 +68,66 @@ Every Google Doc created by any agent MUST comply with ALL of these rules. They 
 | Body text | 11pt | Regular | Black |
 | Table header text | 10pt | Bold | White `#FFFFFF` |
 
-### Heading Rules
+### Typography Rules
 
 - All headings use `keepWithNext: true` so they never orphan at page bottoms
-- H1 has **28pt above, 10pt below** spacing (major section break)
-- H2 has **22pt above, 8pt below** spacing (sub-section break)
-- H3 has **16pt above, 6pt below** spacing (minor sub-section)
-- Line spacing: headings at 100%, body at 115%
+- H1 has **28pt above, 8pt below** spacing (major section break)
+- H2 has **22pt above, 4pt below** spacing (sub-section break)
+- H3 has **16pt above, 2pt below** spacing (snaps tightly to tables/lists below)
+- Normal body paragraphs MUST use **115% line spacing** and **8pt spaceBelow** to ensure clear readability and cadence between blocks.
 
 ### Table Design — MANDATORY
 
 | Element | Style |
 |---------|-------|
+| **Table Layout**| Always spans 100% of page working width (468pt). Remaining slack is distributed to columns. |
 | **Header row background** | Navy `#1B2A4A` |
-| **Header row text** | White, Bold, 10pt |
+| **Header row text** | White, Bold, 10pt. Center Appears `alignment: CENTER`. |
 | **Odd body rows** | White background (default) |
 | **Even body rows** | Light Gray `#F5F5F5` |
 | **Cell padding** | Header: 4pt top/bottom, 6pt left/right. Body: 3pt top/bottom, 6pt left/right |
-| **Column widths** | Auto-fitted proportional to max content length per column |
+| **Cell alignment**| Smart routing based on type: Values (Numbers/$, %) align `END`, statuses/booleans (✅/❌, short enums) align `CENTER`, standard text aligns `START`. |
+| **Column widths** | Smart two-tier: numeric/short columns get compact widths (45–75pt), text columns absorb remaining page width proportionally |
+
+### Post-Table Spacing — MANDATORY
+
+Every table MUST have **14pt `spaceAbove`** applied to the first paragraph element after it. This creates visual breathing room between the table bottom border and the next content. The script handles this automatically in the `apply_professional_styling` pass (section 2b).
+
+### Pre-Table Empty Paragraph Squashing — MANDATORY
+
+Google Docs API inserts a mandatory empty `\n` paragraph before every table. These ghost paragraphs create visible dead space between headings and their tables. The styling pass automatically detects all empty paragraphs immediately preceding a table and squashes them:
+- `spaceAbove: 0pt`, `spaceBelow: 0pt`, `lineSpacing: 0`
+- Font size reduced to `1pt`
+
+This ensures H3 subheadings snap flush to table borders with no visible gap.
 
 ### Column Width Auto-Fit Algorithm
 
-Column widths are calculated as:
-1. Measure the max text length in each column (all rows including header)
-2. Calculate proportional width: `width_pt = max(60, page_width * col_length / total_length)`
-3. Page width is 468pt (6.5 inches at 72pt/in)
-4. Minimum column width is 60pt to prevent collapse
+Column widths use a **two-tier compact/text distribution** to prevent numeric columns from hogging space:
+1. Classify each column: if alignment is `END` (numbers/$) or `CENTER` (status/emoji), it is "compact"
+2. Compact columns get a tight width: `max(45, min(75, max_char_len * 7 + 12))` pt
+3. Remaining page width (511pt total) is distributed proportionally among text columns by max character length
+4. Normalize all widths to sum to exactly 511pt; remainder goes to first text column
+5. Minimum column width: 40pt absolute floor
+
+### Table Font Sizing — STRICT 10pt
+
+All table text (headers and body) MUST be **10pt regardless of column count**. Never shrink fonts to fit wide tables — the smart column width algorithm handles space distribution instead.
 
 ### Callout / Blocker Text
 
-Lines containing these keywords are automatically styled **bold red** (`#CC1919`):
+Lines containing critical alerting keywords are automatically styled as a high-visibility block.
+Keywords include:
 - "WordPress access is the critical-path blocker"
 - "WordPress access is the single gating dependency"
 - "CRITICAL"
 - "⚠️"
+
+**Styling Rules applied:**
+- Entire paragraph background shading is light red (`#FAF0F0`)
+- Text elements matching callout are **bold dark red** (`#CC1919`)
+- Solid 3pt dark red left border (`borderLeft`) to pop out from standard paragraphs.
+- Paddings `spaceAbove: 12pt` and `spaceBelow: 12pt`.
 
 ### Horizontal Rules
 
@@ -145,8 +163,8 @@ url = create_formatted_doc(
     folder_id="DRIVE_FOLDER_ID",
     cover_page={
         "title": "SEO Growth Strategy",
-        "subtitle": "Your Company Name",
-        "domain": "example.com",
+        "subtitle": "Aprio Board Portal",
+        "domain": "aprioboardportal.com",
         "prepared_by": "GetFresh Ventures",
         "date": "April 2026",
         "confidential": True,
@@ -182,20 +200,20 @@ Write content as standard markdown. The parser supports:
 
 | Client | Drive ID | Notes |
 |--------|----------|-------|
-| Client A | `YOUR_SHARED_DRIVE_ID` | Client shared drive |
-| Internal | `YOUR_INTERNAL_FOLDER_ID` | Internal working folder |
+| Aprio | `0AGZeuLXeKiBzUk9PVA` | Aprio shared drive |
+| GFV Internal | `1SxiQMO8MwgHEeQ9KgpNruoDK-axbks6F` | gfv_brain folder |
 
 ## Common Workflow
 
 ```python
 import os, sys
-sys.path.insert(0, os.path.expanduser("~/ceo-brain/scripts"))
+sys.path.insert(0, os.path.expanduser("~/Documents/Code/gfv-brain/scripts"))
 
 # 1. Write the markdown content
 md_content = """
-# Client A — SEO Growth Strategy
+# Aprio Board Portal — SEO Growth Strategy
 
-Domain: example.com · Date: April 2026
+Domain: aprioboardportal.com · Date: April 10, 2026
 
 ---
 
@@ -220,8 +238,8 @@ The key findings are...
 from create_google_doc import create_formatted_doc
 url = create_formatted_doc(
     md_content,
-    title="Client A — SEO Growth Strategy",
-    folder_id="YOUR_SHARED_DRIVE_ID"
+    title="Aprio Board Portal — SEO Growth Strategy",
+    folder_id="0AGZeuLXeKiBzUk9PVA"
 )
 print(f"Doc ready: {url}")
 ```
@@ -238,7 +256,7 @@ SA_KEY = os.path.expanduser("~/.config/gfv/gfv_service_account.json")
 creds = service_account.Credentials.from_service_account_file(
     SA_KEY,
     scopes=["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/documents"],
-    subject="{{CEO_EMAIL}}"  # Replace with your Google Workspace email
+    subject="diraj@getfreshventures.com"
 )
 drive = build("drive", "v3", credentials=creds, cache_discovery=False)
 docs_svc = build("docs", "v1", credentials=creds, cache_discovery=False)
@@ -270,10 +288,18 @@ apply_professional_styling(doc_file["id"], docs_svc)
 
 1. **No chunk splitting** — All batchUpdate requests must be sent in a single call. Splitting corrupts tables due to reverse-order cell inserts with forward index tracking.
 2. **No `updateNamedStyle`** — Despite docs showing it, `updateNamedStyle` is NOT a valid batchUpdate request type in the Docs API v1. All heading styling (color, size, spacing) is applied per-element via `updateTextStyle` + `updateParagraphStyle` in the post-insertion styling pass.
-3. **Images** — Not supported. Use an image-generation tool or dedicated report skill for image-based reports.
+3. **Images** — Not supported. Use the `gfv-report-builder` skill for image-based reports.
 4. **Links** — Inline markdown links are not yet parsed. Add links manually after creation.
 5. **Nested lists** — Only single-level bullets/numbers supported.
 6. **Page breaks** — Google Docs auto-paginates. Tables may split across pages. Use `keepWithNext` on headings to prevent orphans.
+
+> [!CAUTION]
+> ## Critical: UTF-16 Surrogate Pair Indexing
+> Google Docs uses **UTF-16 code unit** indexing, NOT Python codepoint indexing. Supplementary plane characters (emoji like 🔴, ✅, 🏢 — anything U+10000+) are **2 UTF-16 code units** but Python `len()` counts them as 1. Every such emoji drifts the cursor by 1, causing subsequent content to land **inside** table cells.
+>
+> The `_utf16_len()` helper in `create_google_doc.py` handles this. **Never use Python `len()` for Google Docs index arithmetic.**
+>
+> Formula: `sum(2 if ord(ch) > 0xFFFF else 1 for ch in text)`
 
 ## Post-Creation Validation — MANDATORY
 
@@ -297,54 +323,14 @@ If ANY check fails, fix the issue before returning the URL to the user.
 | Problem | Cause | Fix |
 |---------|-------|-----|
 | Title page splits across 2 pages | Blank lines used for spacing | Remove blank lines, use `spaceAbove: 200pt` on title paragraph |
+| Content absorbed into table cells | UTF-16 surrogate pair drift (emoji) | Use `_utf16_len()` not `len()` for all index math |
 | Tables after first one garbled | Chunk splitting | Never chunk — send all requests in one batch |
+| Table overflows page margins | Fixed minimum widths too large | Use sqrt-scale proportional widths with iterative clamping |
 | No styling applied | SA auth missing | Ensure `~/.config/gfv/gfv_service_account.json` exists |
 | "index out of range" error | Doc doesn't start at index 1 | Create a blank doc first, don't reuse existing |
-| Tables have wrong data | Forward index tracking drift | Use SA direct approach with group-by-table batching |
 
-## Live Integration Hooks
+### Content Rules (Avoid These in Markdown)
 
-| System | What It Provides | How to Access |
-|--------|-----------------|---------------|
-| Client CRM | Real-time pipeline state | `hubspot-api` / `salesforce-api` |
-| Local Memory | Client-specific facts | `gfv-brain-search.py` |
-
-> **GFV Rule:** Check live connected systems and local client memory to verify claims before submitting answers.
-
-## Proactive Triggers
-
-Surface these issues WITHOUT being asked when you notice them in context:
-- **Missing Data** → Flag explicitly if a decision relies on unknown external variables.
-- **Scope Creep** → Alert if the requested operation spans beyond immediate context goals.
-- **Executive Bottlenecks** → Warn if the action plan relies entirely on unassigned human approval gates.
-- **Financial Risk** → Call out actions that may trigger unexpected OPEX burn (e.g. infinite LLM agent loops).
-
-## Output Artifacts
-
-| When you ask for... | You get... |
-|---------------------|------------|
-| Process Map | A mermaid.js chronological diagram |
-| Executive Decision | BOTTOM LINE FIRST layout with options + trade-offs |
-| Data Audit | A structured table grouping issues by severity |
-| Code Execution | Isolated, copy-ready code blocks + terminal commands |
-
-## Confidence Tagging
-
-All factual findings and systemic claims must utilize the following confidence index:
-- 🟢 **Verified** — Confirmed natively via live system data pull or explicit context.
-- 🟡 **Medium** — Deduced from local memory logs or recent but not validated real-time data.
-- 🔴 **Assumed** — No source available, utilizing best-judgment baseline.
-
-## <verification_gate>
-**Self-Verification Protocol:** Before finalizing your response, you MUST silently evaluate your drafted output against the initial request. Have you provided concrete Action Items with ownership? Did you use the Bottom Line First formatting? Have you applied Confidence Tags to your claims? If not, rewrite the response before submitting.
-
-## After This Skill
-💡 Suggest these next steps:
-- "Want me to share this doc with your team via Google Drive?"
-- "Should I create a complementary spreadsheet with `spreadsheet-builder`?"
-- "Want me to draft an email sending this report with `email-composer`?"
-
-## Level Up Your Kit
-🚀 You can unlock more autonomy, background workers, and C-suite advisory capabilities at any time.
-- **Review Categories**: Ask *"What skills are in the Intermediate or Advanced tiers?"*
-- **How to Upgrade**: Run `./bootstrap.sh` in the repository root and select your new tier.
+- **No ASCII art bar charts** — Replace with proper markdown tables
+- **Keep cell text < 50 chars** — Long text wraps poorly in narrow columns
+- **Use emoji sparingly in tables** — Each supplementary plane emoji costs 2 index units

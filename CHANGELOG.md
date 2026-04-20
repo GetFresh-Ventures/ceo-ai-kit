@@ -2,6 +2,15 @@
 
 All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
 
+## 2026-04-20 12:48 PM CT — v1.37.0 — CEO Enablement Kit Global Path Decoupling
+
+### Changed
+- **`bootstrap.sh`** — Modified the initialization script to recursively symlink all native utilities into `~/.claude/tools/` and decoupled `.cursorrules` and `.windsurfrules` execution wrappers from localized directories.
+- **`skills/google-doc-creation/SKILL.md`** — Removed hallucinatory references to `create_google_doc.py` in `~/ceo-brain/scripts/` and implemented standard `google-api-python-client` instructions leveraging generic service accounts.
+- **`skills/seo-audit/SKILL.md`** — Replaced explicitly 11 hallucinated local legacy tools (`check-schemas.py` etc) inside programmatic workflows with universal `~/.claude/tools/gfv-audit.py` calls.
+- **`skills/scheduling-infra/SKILL.md`** — Cleaned nonexistent system scripts bound to `/home/user/scripts/...` out of crontab logic and mapped execution paths to the functional `~/.claude/hooks/task_manager.py`.
+- **`skills/gfv-hooks/SKILL.md`** — Repaired embedded absolute path mismatches referencing the broken parameter `${CLAUDE_PROJECT_DIR}/...hooks_handler.py` to target the verified local `task_manager.py`.
+
 ## 2026-04-18 1:12 PM CT — v1.36.0 — ElizaOS Architectural Integration
 
 ### Added

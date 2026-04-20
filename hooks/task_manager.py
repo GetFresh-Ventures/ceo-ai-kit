@@ -30,7 +30,7 @@ import os
 import sys
 from datetime import datetime, timezone
 
-import portalocker
+import fcntl
 
 DEFAULT_PIPELINE = ["code-agent", "test-agent", "docs-agent", "monitor-bot"]
 TASKS_DIR = os.environ.get("TEAM_TASKS_DIR", os.path.join(os.path.expanduser("~"), "gtm-brain", "team-tasks"))
@@ -67,22 +67,22 @@ def load_project(project: str) -> dict:
         print(f"Error: project '{project}' not found at {path}", file=sys.stderr)
         sys.exit(1)
     with open(path, "r", encoding="utf-8") as f:
-        portalocker.lock(f, portalocker.LOCK_SH)
+        fcntl.flock(f, fcntl.LOCK_SH)
         try:
             return json.load(f)
         finally:
-            portalocker.unlock(f)
+            fcntl.flock(f, fcntl.LOCK_UN)
 
 
 def save_project(project: str, data: dict):
     path = task_file(project)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        portalocker.lock(f, portalocker.LOCK_EX)
+        fcntl.flock(f, fcntl.LOCK_EX)
         try:
             json.dump(data, f, indent=2, ensure_ascii=False)
         finally:
-            portalocker.unlock(f)
+            fcntl.flock(f, fcntl.LOCK_UN)
 
 
 def make_stage(agent_id: str, task: str = "", depends_on: list = None) -> dict:

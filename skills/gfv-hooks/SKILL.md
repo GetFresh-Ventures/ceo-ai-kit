@@ -407,7 +407,7 @@ Register hooks in `.claude/settings.json`:
       "matcher": ".*",
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000
       }]
     }],
@@ -415,7 +415,7 @@ Register hooks in `.claude/settings.json`:
       "matcher": ".*",
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000,
         "async": true
       }]
@@ -423,7 +423,7 @@ Register hooks in `.claude/settings.json`:
     "SessionStart": [{
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000,
         "async": true,
         "once": true
@@ -432,7 +432,7 @@ Register hooks in `.claude/settings.json`:
     "SessionEnd": [{
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000,
         "async": true,
         "once": true
@@ -441,7 +441,7 @@ Register hooks in `.claude/settings.json`:
     "Stop": [{
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000,
         "async": true
       }]
@@ -449,7 +449,7 @@ Register hooks in `.claude/settings.json`:
     "PreCompact": [{
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000,
         "async": true,
         "once": true
@@ -459,7 +459,7 @@ Register hooks in `.claude/settings.json`:
       "matcher": ".envrc|.env|.env.local",
       "hooks": [{
         "type": "command",
-        "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks_handler.py",
+        "command": "python3 ~/.claude/hooks/task_manager.py",
         "timeout": 5000,
         "async": true
       }]

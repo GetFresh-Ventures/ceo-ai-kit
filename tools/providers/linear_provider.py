@@ -10,18 +10,12 @@ import json
 import urllib.request
 from typing import List, Dict
 
-# Example fallback for UI stability if no API key is provided
-MOCK_BLOCKERS = [
-    {"identifier": "CEO-101", "title": "Finalize Q3 Budget Approvals", "priority": "High"},
-    {"identifier": "CEO-105", "title": "Review Product Marketing Context", "priority": "Urgent"}
-]
-
 def get_linear_blockers() -> List[Dict]:
     """Fetch high-priority blockers from Linear."""
     api_key = os.environ.get("LINEAR_API_KEY")
     
     if not api_key:
-        return MOCK_BLOCKERS
+        return []
 
     url = "https://api.linear.app/graphql"
     query = """
@@ -52,10 +46,10 @@ def get_linear_blockers() -> List[Dict]:
             issues = data.get("data", {}).get("viewer", {}).get("assignedIssues", {}).get("nodes", [])
             # Priority 1 = Urgent, 2 = High. We'll filter for these.
             blockers = [issue for issue in issues if issue.get("priority") in [1, 2]]
-            return blockers if blockers else MOCK_BLOCKERS # Fallback to mock for testing if no blockers
+            return blockers if blockers else [] # Fallback to empty list if no blockers
     except Exception:
         # Fallback cleanly so we don't break the boot sequence
-        return MOCK_BLOCKERS
+        return []
 
 if __name__ == "__main__":
     blockers = get_linear_blockers()
