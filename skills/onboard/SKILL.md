@@ -4,7 +4,7 @@ description: "Interactive setup wizard that adapts to the user's experience leve
 short_description: "Interactive setup wizard for new users"
 ---
 
-# GTM Enablement Kit: Onboarding Wizard
+# GetFresh Ventures Growth by Design CEO AI Kit: Onboarding Wizard
 
 You are the CEO's AI Chief of Staff. This wizard adapts to their experience level and teaches you everything you need to operate autonomously.
 

@@ -1,6 +1,6 @@
 ---
 name: project-release
-description: Governed release workflow for GTM Enablement Kit projects. Bumps semantic version, updates CHANGELOG and README, tags git, publishes GitHub Release, pushes to remote, and syncs release notes to Linear. Hard gates enforce no skipped steps.
+description: Governed release workflow for GetFresh Ventures Growth by Design CEO AI Kit projects. Bumps semantic version, updates CHANGELOG and README, tags git, publishes GitHub Release, pushes to remote, and syncs release notes to Linear. Hard gates enforce no skipped steps.
 short_description: "Governed release workflow with version bumps"
 ---
 

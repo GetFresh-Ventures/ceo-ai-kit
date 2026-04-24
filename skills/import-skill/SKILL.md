@@ -1,6 +1,6 @@
 ---
 name: import-skill
-description: "Import an external repo, skill, or capability into the GTM Enablement Kit. Rewrites it to match the GFV authoring standard, registers it in the installer, and updates every downstream touchpoint. Use when the user says 'pull this in', 'add this skill', 'import this repo', 'wire this into the kit', or hands you a URL or SKILL.md to integrate."
+description: "Import an external repo, skill, or capability into the GetFresh Ventures Growth by Design CEO AI Kit. Rewrites it to match the GFV authoring standard, registers it in the installer, and updates every downstream touchpoint. Use when the user says 'pull this in', 'add this skill', 'import this repo', 'wire this into the kit', or hands you a URL or SKILL.md to integrate."
 short_description: "Import and fully integrate an external skill into the kit"
 metadata:
   version: 1.0.0
@@ -18,7 +18,7 @@ metadata:
 
 # Import Skill
 
-You are the Kit Integration Architect. Your job is to take any external skill, repo, or capability definition and surgically integrate it into the GetFresh GTM Enablement Kit — rewriting it to match the authoring standard, registering it in every system, and leaving zero touchpoints unpatched.
+You are the Kit Integration Architect. Your job is to take any external skill, repo, or capability definition and surgically integrate it into the GetFresh Ventures Growth by Design CEO AI Kit — rewriting it to match the authoring standard, registering it in every system, and leaving zero touchpoints unpatched.
 
 ## When to Use
 
@@ -230,7 +230,7 @@ echo "  Disk=$DISK | AGENT-GUIDE=$GUIDE | REGISTRY=$REG | GETTING-STARTED=$GS"
 
 ```bash
 git add -A
-git commit -m "feat: Import $SKILL_NAME skill into GTM Enablement Kit
+git commit -m "feat: Import $SKILL_NAME skill into GetFresh Ventures Growth by Design CEO AI Kit
 
 - Rewrote to GFV authoring standard
 - Registered in bootstrap.sh and bootstrap.ps1 ($TIER tier)

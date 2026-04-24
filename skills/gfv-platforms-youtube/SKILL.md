@@ -132,7 +132,7 @@ Reinforce the same core message across all three; target different algorithm asp
 - **Bypassing the Gate**: Do not execute risky actions without human-in-the-loop validation.
 
 ## References
-- **GFV Standard**: CEO Enablement Kit Architecture
+- **GFV Standard**: GetFresh Ventures Growth by Design CEO AI Kit Architecture
 
 <verification_gate>
 # Delivery Gate

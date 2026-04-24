@@ -611,7 +611,7 @@ All factual findings and systemic claims must utilize the following confidence i
 - **Bypassing the Gate**: Do not execute risky actions without human-in-the-loop validation.
 
 ## References
-- **GFV Standard**: CEO Enablement Kit Architecture
+- **GFV Standard**: GetFresh Ventures Growth by Design CEO AI Kit Architecture
 
 <verification_gate>
 **Self-Verification Protocol:** Before finalizing your response, you MUST silently evaluate your drafted output against the initial request. Have you provided concrete Action Items with ownership? Did you use the Bottom Line First formatting? Have you applied Confidence Tags to your claims? If not, rewrite the response before submitting.

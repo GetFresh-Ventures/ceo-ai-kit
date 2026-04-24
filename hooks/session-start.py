@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GetFresh GTM Enablement Kit for AI — Session Start Hook
+GetFresh Ventures Growth by Design CEO AI Kit — Session Start Hook
 Loads company brain context at the beginning of every Claude Code session.
 Reads preferences.json to customize behavior by user level.
 
@@ -63,7 +63,7 @@ def check_for_updates():
         
         # Get remote latest release tag (simplified check against GitHub API without auth)
         # Using a brief timeout so it never blocks the session start
-        url = "https://api.github.com/repos/GetFresh-Ventures/gfv_growth_by_design/releases/latest"
+        url = "https://api.github.com/repos/GetFresh-Ventures/ceo-ai-kit/releases/latest"
         req = urllib.request.Request(url, headers={'User-Agent': 'GFV-Kit-OTA-Check'})
         with urllib.request.urlopen(req, timeout=2.0) as response:
             data = json.loads(response.read().decode())

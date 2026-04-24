@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GFV GetFresh GTM Enablement Kit for AI - The Ralph Orchestration Loop
+# GFV GetFresh Ventures Growth by Design CEO AI Kit - The Ralph Orchestration Loop
 # Inspired by ralph-orchestrator. Allows unattended batch executions of an agent via CLI.
 
 set -e

@@ -101,7 +101,7 @@ When republishing: Set canonical to your original URL in Medium settings. Preven
 - **Bypassing the Gate**: Do not execute risky actions without human-in-the-loop validation.
 
 ## References
-- **GFV Standard**: CEO Enablement Kit Architecture
+- **GFV Standard**: GetFresh Ventures Growth by Design CEO AI Kit Architecture
 
 <verification_gate>
 # Delivery Gate

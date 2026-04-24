@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BlueBubbles API Bridge for GetFresh GTM Enablement Kit
+BlueBubbles API Bridge for GetFresh Ventures Growth by Design CEO AI Kit
 Provides a connector to read and send iMessages via a local BlueBubbles server.
 Ported from ElizaOS plugin-bluebubbles architectural constraints.
 """

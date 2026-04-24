@@ -269,7 +269,7 @@ Guides GitHub for parasite SEO, GEO (AI citation), and curated list creation. Gi
 - **Bypassing the Gate**: Do not execute risky actions without human-in-the-loop validation.
 
 ## References
-- **GFV Standard**: CEO Enablement Kit Architecture
+- **GFV Standard**: GetFresh Ventures Growth by Design CEO AI Kit Architecture
 
 <verification_gate>
 # Delivery Gate

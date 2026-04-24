@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GetFresh GTM Enablement Kit for AI — Session Stop Hook
+GetFresh Ventures Growth by Design CEO AI Kit — Session Stop Hook
 Saves session learnings and context to the brain directory.
 Reads preferences.json to determine auto-save behavior by tier.
 

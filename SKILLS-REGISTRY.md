@@ -1,4 +1,4 @@
-# CEO Enablement Kit — Skills Registry (Menu System)
+# GetFresh Ventures Growth by Design CEO AI Kit — Skills Registry (Menu System)
 
 > **Total Active Skills: 194**
 > This registry serves as the authoritative, gapless menu system for the Executive. Every skill listed here has been verified to comply with the CEO Kit architecture (Verification Gates, Keychain Secrets, and PIL memory bus integration).
@@ -107,7 +107,7 @@
 | [`hubspot-api`](skills/hubspot-api/) | **hubspot-api** | >   Access HubSpot CRM API for deals, contacts, companies, and engagements.   Covers PAT auth, deal pipeline queries,... |
 | [`hubspot-architect`](skills/hubspot-architect/) | **hubspot-architect** | "Build HubSpot CRM integrations, data pipelines, and sync workflows. Use when the user needs to set up HubSpot, creat... |
 | [`hubspot-contact-enrichment`](skills/hubspot-contact-enrichment/) | **hubspot-contact-enrichment** | Enrich incomplete HubSpot contacts using internal data sources (PIL ontology, Fathom transcripts, email domain heuris... |
-| [`import-skill`](skills/import-skill/) | **import-skill** | "Import an external repo, skill, or capability into the GTM Enablement Kit. Rewrites it to match the GFV authoring st... |
+| [`import-skill`](skills/import-skill/) | **import-skill** | "Import an external repo, skill, or capability into the GetFresh Ventures Growth by Design CEO AI Kit. Rewrites it to match the GFV authoring st... |
 | [`larry-loop`](skills/larry-loop/) | **larry-loop** | An autonomous content validation system. Focuses on distribution, iteration, and algorithmic doubling down over raw c... |
 | [`launch-strategy`](skills/launch-strategy/) | **launch-strategy** | "Plan product launches, feature announcements, and release strategies. Use when planning a launch, feature release, G... |
 | [`linear-api-access`](skills/linear-api-access/) | **linear-api-access** | Access Linear CRM for issue management, states, and team structures using direct GraphQL scripts. Replaces the unstab... |
@@ -153,7 +153,7 @@
 | [`notion-manager`](skills/notion-manager/) | **notion-manager** | "Query, create, and update pages and databases in Notion. Use when the user wants to manage their Notion workspace, s... |
 | [`offline-conversion-upload`](skills/offline-conversion-upload/) | **offline-conversion-upload** | Pull GCLID leads from Supabase, match to ServiceTitan completed jobs, generate CSV, and upload to Google Ads via brow... |
 | [`onboard`](skills/onboard/) | **onboard** | "Interactive setup wizard that adapts to the user's experience level. Teaches the AI the user's voice, team, prioriti... |
-| [`openclaw-orchestrator`](skills/openclaw-orchestrator/) | **openclaw-orchestrator** | >   Queen-led multi-agent orchestrator for CEO Enablement Kit. Manages hierarchical agent dispatch,   strategic/tacti... |
+| [`openclaw-orchestrator`](skills/openclaw-orchestrator/) | **openclaw-orchestrator** | >   Queen-led multi-agent orchestrator for GetFresh Ventures Growth by Design CEO AI Kit. Manages hierarchical agent dispatch,   strategic/tacti... |
 | [`outreach-sequence`](skills/outreach-sequence/) | **outreach-sequence** | "Design multi-touch outreach sequences with structured follow-up cadence, voice-model compliance, and CRM tracking. U... |
 | [`paid-ads-strategy`](skills/paid-ads-strategy/) | **paid-ads-strategy** | "Plan, launch, and optimize paid advertising campaigns across Google Ads, Meta, LinkedIn, Reddit, TikTok, and YouTube... |
 | [`pandadoc-api`](skills/pandadoc-api/) | **pandadoc-api** | >   Access PandaDoc API for contracts, proposals, and agreements.   Covers API key auth, document queries, status tra... |
@@ -166,7 +166,7 @@
 | [`ppc-keyword-strategy`](skills/ppc-keyword-strategy/) | **ppc-keyword-strategy** | Repeatable methodology for auditing and restructuring PPC keyword lists for home services campaigns. Covers keyword d... |
 | [`product-spec`](skills/product-spec/) | **product-spec** | "Convert a rough idea, meeting notes, or shorthand into a structured Product Requirements Document. Use when the user... |
 | [`programmatic-seo`](skills/programmatic-seo/) | **programmatic-seo** | "Create SEO-optimized pages at scale using templates, structured data, and AI-assisted copy differentiation. Covers l... |
-| [`project-release`](skills/project-release/) | **project-release** | Governed release workflow for GTM Enablement Kit projects. Bumps semantic version, updates CHANGELOG and README, tags... |
+| [`project-release`](skills/project-release/) | **project-release** | Governed release workflow for GetFresh Ventures Growth by Design CEO AI Kit projects. Bumps semantic version, updates CHANGELOG and README, tags... |
 | [`quickbooks-api`](skills/quickbooks-api/) | **quickbooks-api** | >   Access QuickBooks Online API for invoices, payments, customers, and bills.   Covers OAuth token auto-refresh, API... |
 | [`revenue-command`](skills/revenue-command/) | **revenue-command** | "Master GTM Visibility Command Center. Merges pipeline monitoring, deal deep-dives, sales enablement, and conversion ... |
 | [`review-pr`](skills/review-pr/) | **review-pr** | "Perform a structured code review on a pull request or git diff. Use when asked to review code, check a PR, audit cha... |

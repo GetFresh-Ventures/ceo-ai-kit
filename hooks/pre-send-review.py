@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GetFresh GTM Enablement Kit for AI — Pre-Send Review Hook
+GetFresh Ventures Growth by Design CEO AI Kit — Pre-Send Review Hook
 Blocks any outbound email/message from being sent without explicit approval.
 
 Install: Copy to ~/ceo-brain/.core/hooks/pre-send-review.py
@@ -52,7 +52,7 @@ def main():
                 "1. Show the full message content for review\n"
                 "2. Get explicit 'send it' approval\n"
                 "3. Then retry the send\n\n"
-                "This is a GetFresh GTM Enablement Kit for AI safety rule — no autonomous sending."
+                "This is a GetFresh Ventures Growth by Design CEO AI Kit safety rule — no autonomous sending."
             )
         }
         print(json.dumps(result))

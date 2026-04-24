@@ -2,7 +2,7 @@
 
 Most executives fail with AI because they treat it like a search engine or an intern. They type a quick question, get a generic answer, and conclude, "It's not there yet."
 
-To get ROI from Claude Code and this enablement kit, you need to change your mental model.
+To get ROI from Claude Code and this CEO AI Kit, you need to change your mental model.
 
 ## 1. Treat It Like a Chief of Staff
 You wouldn't tell a brilliant new Chief of Staff: "Write a cold email to Acme." You'd give them context: "We met Acme at the SaaS conference. They have a $500k problem with churn. Draft an email that leans on our case study, doesn't sound salesy, and asks for a 15-minute call on Thursday to share our data."
@@ -65,7 +65,7 @@ Don't use AI to completely replace human touch in relationships (e.g., auto-send
 You are the relationship owner. Claude is your intelligence layer.
 
 ## 6. Build Compound Intelligence
-Every session with your AI should make the next session better. This is why the enablement kit saves:
+Every session with your AI should make the next session better. This is why the CEO AI Kit saves:
 - **Voice model** → learns your communication style
 - **Decision log** → tracks patterns in your choices
 - **Meeting notes** → builds institutional memory
@@ -83,4 +83,4 @@ The biggest ROI comes from chaining skills together, not using them in isolation
 | New lead came in | `/competitive-intel` → `/outreach-sequence` → `/email-composer` |
 | After a client call | `/post-meeting-brief` → `/decision-logger` → `/email-composer` (follow-up) |
 
-The enablement kit is designed so skills feed into each other. Use them as a system, not as individual tools.
+the CEO AI Kit is designed so skills feed into each other. Use them as a system, not as individual tools.

@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-GetFresh GTM Enablement Kit for AI — Windows Bootstrap Script (v1.27.0)
+GetFresh Ventures Growth by Design CEO AI Kit — Windows Bootstrap Script (v1.27.0)
 Initializes the brain directory, configures tier-appropriate skills, installs
 hooks, and sets up Agent-Agnostic Contexts (Cursor, Claude, Gemini) for Windows.
 
@@ -77,7 +77,7 @@ if (-not $Quick) {
 }
 Write-Host ""
 
-Write-Host "🚀 Initializing GetFresh GTM Enablement Kit for AI..." -ForegroundColor Green
+Write-Host "🚀 Initializing GetFresh Ventures Growth by Design CEO AI Kit..." -ForegroundColor Green
 
 $CEO_BRAIN_DIR = Join-Path $HOME "ceo-brain"
 $GTM_BRAIN_DIR = Join-Path $HOME "gtm-brain"
@@ -205,7 +205,7 @@ if (Test-Path (Join-Path $REPO_DIR "AGENT.md")) {
 }
 
 $ruleContent = @"
-# GetFresh GTM Enablement Kit
+# GetFresh Ventures Growth by Design CEO AI Kit
 You are an Executive AI Assistant operating within the GFV Kit.
 
 CRITICAL:
@@ -340,7 +340,7 @@ Set-Location $PSScriptRoot
 # ─────────────────────────────────────────────────────────
 Write-Host ""
 Write-Host "╔═══════════════════════════════════════════════════════════════════╗" -ForegroundColor Green
-Write-Host "║  ✅  GTM ENABLEMENT KIT — INSTALLATION COMPLETE                  ║" -ForegroundColor Green
+Write-Host "║  ✅  GetFresh Ventures Growth by Design CEO AI Kit — INSTALLATION COMPLETE                  ║" -ForegroundColor Green
 Write-Host "╠═══════════════════════════════════════════════════════════════════╣" -ForegroundColor Green
 Write-Host "║                                                                   ║" -ForegroundColor Green
 Write-Host "║  Tier:   $tierName                                               ║" -ForegroundColor Green

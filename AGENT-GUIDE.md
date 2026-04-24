@@ -1,4 +1,4 @@
-# AGENT-GUIDE.md — GTM Enablement Kit
+# AGENT-GUIDE.md — GetFresh Ventures Growth by Design CEO AI Kit
 
 > **For AI agents.** If you are a coding agent (Claude Code, Cursor, Codex, Gemini) and this repo has been connected to your workspace, read this file first.
 
@@ -10,8 +10,8 @@ A modular skill system that transforms a coding agent into a CEO's Chief of Staf
 
 ```bash
 # Clone
-git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git
-cd gfv_growth_by_design
+git clone https://github.com/GetFresh-Ventures/ceo-ai-kit.git
+cd ceo-ai-kit
 
 # Run the installer (interactive — choose your tier)
 chmod +x bootstrap.sh && ./bootstrap.sh
@@ -60,7 +60,7 @@ Re-run `bootstrap.sh` anytime to change levels.
 ## Architecture
 
 ```
-gfv_growth_by_design/
+ceo-ai-kit/
 ├── AGENT.md                 # Operating rules — read after this file
 ├── AGENT-GUIDE.md           # This file — skill catalog and usage
 ├── bootstrap.sh/.ps1        # Installer

@@ -1,7 +1,7 @@
 # Getting Started — Your First 30 Minutes
 
 **The Executive Enablement Walkthrough**
-*For CEOs, founders, and senior leaders using the GetFresh GTM Enablement Kit (Growth by Design).*
+*For CEOs, founders, and senior leaders using the GetFresh Ventures Growth by Design CEO AI Kit (Growth by Design).*
 
 ---
 
@@ -44,7 +44,7 @@ Open your terminal:
 Paste this command and press Enter:
 
 ```bash
-git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Documents/GTM-Enablement-Kit
+git clone https://github.com/GetFresh-Ventures/ceo-ai-kit.git ~/Documents/GTM-Enablement-Kit
 ```
 
 > **What just happened?** You downloaded the entire kit to a highly visible folder in your Documents. Your data stays local — nothing is uploaded to the cloud.
@@ -222,7 +222,7 @@ The real ROI comes from consistent weekly use. Here's the recommended cadence:
 You can change your experience level anytime:
 
 ```bash
-cd ~/.gfv_growth_by_design
+cd ~/.ceo-ai-kit
 ./bootstrap.sh
 ```
 
@@ -279,7 +279,7 @@ Ensure the `~/ceo-brain/` and `~/gtm-brain/` directories exist and `gfv-brain-se
 
 ### "How do I update to the latest version?"
 ```bash
-cd ~/.gfv_growth_by_design
+cd ~/.ceo-ai-kit
 git pull
 ./bootstrap.sh
 ```

@@ -1,11 +1,11 @@
 # Changelog
 
-All notable changes to the GetFresh GTM Enablement Kit for AI will be documented in this file.
+All notable changes to the GetFresh Ventures Growth by Design CEO AI Kit will be documented in this file.
 
 ## 2026-04-24 11:30 AM CT — v1.39.0 — Agnostic Architecture & Privacy Hardening
 
 ### Why it matters
-This major release establishes absolute portability and privacy alignment across the entire CEO Enablement Kit. All proprietary client data, telemetry paths, internal project domains, and hardcoded personal markers have been programmatically scrubbed and replaced with generic environment variables. The community skill repository has been fully rebranded, and all 194 capabilities now strictly adhere to the unified architectural standard with definitive execution gates and registry validation.
+This major release establishes absolute portability and privacy alignment across the entire GetFresh Ventures Growth by Design CEO AI Kit. All proprietary client data, telemetry paths, internal project domains, and hardcoded personal markers have been programmatically scrubbed and replaced with generic environment variables. The community skill repository has been fully rebranded, and all 194 capabilities now strictly adhere to the unified architectural standard with definitive execution gates and registry validation.
 
 ### Changed
 - **Privacy Sanitization**: Conducted a repository-wide audit purging all hardcoded personal identities, email addresses, absolute proprietary file paths, and client domains.
@@ -18,7 +18,7 @@ This major release establishes absolute portability and privacy alignment across
 - **Registry Alignment**: Patched legacy metadata structures to restore 100% compliance against the validation compiler.
 
 
-## 2026-04-20 12:48 PM CT — v1.37.0 — CEO Enablement Kit Global Path Decoupling
+## 2026-04-20 12:48 PM CT — v1.37.0 — GetFresh Ventures Growth by Design CEO AI Kit Global Path Decoupling
 
 ### Changed
 - **`bootstrap.sh`** — Modified the initialization script to recursively symlink all native utilities into `~/.claude/tools/` and decoupled `.cursorrules` and `.windsurfrules` execution wrappers from localized directories.
@@ -43,7 +43,7 @@ This major release establishes absolute portability and privacy alignment across
 ## 2026-04-17 9:57 PM PT — v1.35.0 — CEO Command Center Master Re-Architecture
 
 ### Why it matters
-This release fundamentally reorganizes the GTM Enablement Kit around 4 primary "Master Command Centers": **Chief of Staff**, **Revenue Command**, **Strategic Advisory**, and **Content Intelligence**. The fragmented micro-skills have been rationalized and mapped through alias layers in the bootstrap scripts so that users have a unified interface without breaking older workflows. Key skills like `ugc-video` and `negotiation-advisor` have been rewritten to firmly enforce a data-first approach (pulling live Fathom/HubSpot transcript and funnel data).
+This release fundamentally reorganizes the GetFresh Ventures Growth by Design CEO AI Kit around 4 primary "Master Command Centers": **Chief of Staff**, **Revenue Command**, **Strategic Advisory**, and **Content Intelligence**. The fragmented micro-skills have been rationalized and mapped through alias layers in the bootstrap scripts so that users have a unified interface without breaking older workflows. Key skills like `ugc-video` and `negotiation-advisor` have been rewritten to firmly enforce a data-first approach (pulling live Fathom/HubSpot transcript and funnel data).
 
 ### Added
 - **`skills/revenue-command/`** — Master Command Center for pipeline management, combining the functionality of `pipeline-pulse` and `deal-review`.
@@ -185,7 +185,7 @@ This patch permanently resolves severe UX friction points and hardcoded agnostic
 ## 2026-04-16 4:52 PM PT — v1.32.0 — Agnostic Architecture Decoupling & Educator Persona
 
 ### Why it matters
-This release fundamentally severs the final dependencies tying the CEO Enablement Kit to proprietary Proactive Intelligence Layer (PIL) structures and specific IDE configurations (like `.claude`), ensuring zero-friction out-of-the-box operation on any CEO's machine. Additionally, it implements a revolutionary UI/UX profiling system that actively teaches non-technical executives how to command an IDE interface via the "Sherpa Protocol," bridging the gap between advanced GTM operations and entry-level coding fluency.
+This release fundamentally severs the final dependencies tying the GetFresh Ventures Growth by Design CEO AI Kit to proprietary Proactive Intelligence Layer (PIL) structures and specific IDE configurations (like `.claude`), ensuring zero-friction out-of-the-box operation on any CEO's machine. Additionally, it implements a revolutionary UI/UX profiling system that actively teaches non-technical executives how to command an IDE interface via the "Sherpa Protocol," bridging the gap between advanced GTM operations and entry-level coding fluency.
 
 ### Added
 - **`AGENT.md`** — Injected the "Educator Persona / Sherpa UX" ruleset, dynamically narrating mechanical AI operations (like executing background scripts) in plain English to educate beginners.
@@ -212,7 +212,7 @@ This release fundamentally severs the final dependencies tying the CEO Enablemen
 ## 2026-04-16 3:06 PM PT — v1.31.1 — GxD Rebranding Finalization
 
 ### Why it matters
-This patch completes the full structural alignment of the kit around the **Growth by Design (GxD)** architectural doctrine. We executed a total eradication of the localized "CEO Enablement Kit" nomenclature across all executable paths, terminal UI prompts, and physical dotfiles—solidifying this repository as the definitive **GetFresh GTM Enablement Kit**.
+This patch completes the full structural alignment of the kit around the **Growth by Design (GxD)** architectural doctrine. We executed a total eradication of the localized "GetFresh Ventures Growth by Design CEO AI Kit" nomenclature across all executable paths, terminal UI prompts, and physical dotfiles—solidifying this repository as the definitive **GetFresh Ventures Growth by Design CEO AI Kit**.
 
 ### Fixed
 - **Clone Architecture & Onboarding Paths:** Repathed the primary structural installation directories inside `bootstrap.sh`, `bootstrap.ps1`, and the core documentation from `CEO-Enablement-Kit` to `GTM-Enablement-Kit` to ensure zero fragmentation between the brand philosophy and the physical system pathways.
@@ -236,7 +236,7 @@ The previous onboarding funnels assumed an engineering baseline—requiring SSH 
 - **AI Agent Auto-Installers:** Injected native `curl`/`unzip` hooks and `nvm`/`node.js` dependency resolution chains into `bootstrap.sh`. The kit now seamlessly downloads MacOS Cursor Universal binaries or globally installs `@anthropic-ai/claude-code` completely under the hood, depending on the executive's preference.
 
 ### Changed
-- **Visual Clone Pathing:** Relocated the foundational clone target from the hidden `~/.gfv_growth_by_design` directory to a highly visible `~/Documents/GTM-Enablement-Kit` path.
+- **Visual Clone Pathing:** Relocated the foundational clone target from the hidden `~/.ceo-ai-kit` directory to a highly visible `~/Documents/GTM-Enablement-Kit` path.
 - **HTTPS Git Routing:** Eliminated the SSH `git@github.com` clone requisite that previously returned `Permission Denied` exceptions for business users, pivoting to unrestricted HTTPS routing.
 - **Documentation Restructure:** Overhauled `GETTING-STARTED.md` and `README.md` to omit CLI engineering instructions and instead utilize explicit, UI-driven navigation (e.g. `File > Open Folder`) to natively activate dotfile workspaces inside Cursor.
 
@@ -262,7 +262,7 @@ This release fundamentally evolves the AI assistant into a proactive, parallel-e
 ## 2026-04-15 11:35 AM PT — v1.29.0 — DevOps Hardening & CI/CD Governance
 
 ### Why it matters
-This release transforms the GetFresh GTM Enablement Kit from a localized script toolkit into a scalable, enterprise-grade deployment. By isolating dependencies into self-managed Virtual Environments and standardizing cross-platform OS locking, operational crashes have been virtually eliminated. Additionally, this release implements programmatic governance via GitHub Actions CI and Over-The-Air (OTA) architecture.
+This release transforms the GetFresh Ventures Growth by Design CEO AI Kit from a localized script toolkit into a scalable, enterprise-grade deployment. By isolating dependencies into self-managed Virtual Environments and standardizing cross-platform OS locking, operational crashes have been virtually eliminated. Additionally, this release implements programmatic governance via GitHub Actions CI and Over-The-Air (OTA) architecture.
 
 ### Added
 - **Dependency Isolation (venv)**: `bootstrap.sh` and `bootstrap.ps1` now programmatically generate a localized `venv` environment and resolve dependencies against `requirements.txt`, preventing OS PATH/versioning conflicts.
@@ -281,7 +281,7 @@ This release transforms the GetFresh GTM Enablement Kit from a localized script 
 ## 2026-04-15 11:15 AM PT — v1.28.0 — Enterprise Hardening (Circuit Breakers & Concurrency)
 
 ### Why it matters
-The GTM Enablement Kit is now fully enterprise-hardened. This release introduces Human-in-the-Loop circuit breakers to prevent autonomous agents from running high-risk tasks without approval, explicitly implements OS-level file locking to prevent data corruption during multi-agent DAG parallel executions, and automatically provisions IDE-native context rules across Mac and Windows. 
+The GetFresh Ventures Growth by Design CEO AI Kit is now fully enterprise-hardened. This release introduces Human-in-the-Loop circuit breakers to prevent autonomous agents from running high-risk tasks without approval, explicitly implements OS-level file locking to prevent data corruption during multi-agent DAG parallel executions, and automatically provisions IDE-native context rules across Mac and Windows. 
 
 ### Added
 - **Human-in-the-Loop Circuit Breakers**: `task_manager.py` dynamically intercepts tasks requiring executive approval. Modified `deal-review` and `hubspot-architect` to test this standard via `requires_human_approval: true` frontmatter tags.
@@ -551,7 +551,7 @@ This release closes two critical gaps: (1) a full credential hygiene sweep remov
 - **Zero hardcoded secrets remaining** across the entire codebase (verified via `grep -rn 'lin_api_'`)
 
 ### Enhanced — 4 Skills (in `.agents/skills`, not this repo)
-The following upgrades were applied to the shared `.agents/skills` directory used by the operational GFV workspace. They are referenced here for release tracking but do not ship as part of the GTM Enablement Kit repo:
+The following upgrades were applied to the shared `.agents/skills` directory used by the operational GFV workspace. They are referenced here for release tracking but do not ship as part of the GetFresh Ventures Growth by Design CEO AI Kit repo:
 - **`openclaw-orchestrator`** — Added Auto-Complexity Detection with 11 Routing Codes
 - **`security-pii-scanner`** — Added Protected File Patterns and Hardcoded Credential Scanner
 - **`gfv-dream-mode`** — Added Three-Phase Memory Protocol with checkpoint resumption
@@ -662,7 +662,7 @@ Audited 101 skills from the LarryBrain AI Agent Skill Marketplace. Rejected 73 (
 - **Morning Sync Alert:** Augmented the `session-start.py` hook to dynamically scan `~/gtm-brain/pending_approvals/` and output a "GETFRESH EXECUTIVE MORNING SYNC" alert with drafted deal rescue emails.
 
 ### Changed
-- **Final Rebranding:** Deeply updated all project identifiers (README, scripts, hooks, documentation) to formally adopt "GetFresh GTM Enablement Kit for AI", aligning with the "Growth by Design" (GxD) GTM model.
+- **Final Rebranding:** Deeply updated all project identifiers (README, scripts, hooks, documentation) to formally adopt "GetFresh Ventures Growth by Design CEO AI Kit", aligning with the "Growth by Design" (GxD) GTM model.
 - **OS Documentation:** Clarified OS compatibility in README explicitly denoting Windows execution via PowerShell.
 - **Always-On Requirement Clarification:** Added strong visual warnings inside README addressing the requirement of sleep-preventing utilities or VMs for EngineClaw cron reliability.
 
@@ -686,7 +686,7 @@ To provide CEOs with true "set and forget" autonomy, this release integrates the
 ## 2026-04-12 2:25 PM PT — v1.12.0 — Dual-Brain Data Segregation
 
 ### Why it matters
-The original `~/brain` directory natively combined both personal executive data (voice models, delegation matrices, meeting prep) and organizational capability data (pipeline revenue, ad campaigns) into a single node. In `v1.12.0`, the monolith has been refactored into the "Dual-Brain System." The GTM Enablement Kit now strictly isolates the active GTM state (`~/gtm-brain`) from the CEO's personal configuration identity (`~/ceo-brain`). This allows portfolio CEOs running multiple concurrent organizations to operate cleanly without capability cross-pollination. 
+The original `~/brain` directory natively combined both personal executive data (voice models, delegation matrices, meeting prep) and organizational capability data (pipeline revenue, ad campaigns) into a single node. In `v1.12.0`, the monolith has been refactored into the "Dual-Brain System." The GetFresh Ventures Growth by Design CEO AI Kit now strictly isolates the active GTM state (`~/gtm-brain`) from the CEO's personal configuration identity (`~/ceo-brain`). This allows portfolio CEOs running multiple concurrent organizations to operate cleanly without capability cross-pollination. 
 
 ### Added
 - **Dual-Brain Boot Sequence**: `bootstrap.sh` now independently maps and protects `~/ceo-brain` vs `~/gtm-brain` during the executive installation.
@@ -699,7 +699,7 @@ The original `~/brain` directory natively combined both personal executive data 
 ## 2026-04-12 2:10 PM CT — v1.11.0 — White-Glove Intake & Entity Deduplication
 
 ### Why it matters
-This release elevates the GTM Enablement Kit from a developer scaffold to an enterprise-grade "White-Glove" executive experience. It eliminates the manual text configuration prompts and implements a zero-touch agentic boot process that immediately runs a 4-phase ecosystem, delegation, and voice calibration wizard. Additionally, it integrates ML-based record linkage (Dedupe) to eliminate fragmented CRM entity data across the GFV ontology, and solidifies 3 new prompt-engineering constraints to prevent agent overfitting and boilerplate scripting.
+This release elevates the GetFresh Ventures Growth by Design CEO AI Kit from a developer scaffold to an enterprise-grade "White-Glove" executive experience. It eliminates the manual text configuration prompts and implements a zero-touch agentic boot process that immediately runs a 4-phase ecosystem, delegation, and voice calibration wizard. Additionally, it integrates ML-based record linkage (Dedupe) to eliminate fragmented CRM entity data across the GFV ontology, and solidifies 3 new prompt-engineering constraints to prevent agent overfitting and boilerplate scripting.
 
 ### Added
 - **`skills/onboard/SKILL.md`** — Completely rewrote the interactive wizard to extract the CEO's tech stack (Ecosystem Map), reporting structure (Delegation Map), and authenticate voice via URLs, culminating in a demonstration of immediate calendar MCP power.
@@ -839,7 +839,7 @@ This release takes 9 core operational skills from "report mode" to "resolve mode
 ## 2026-04-11 8:40 AM PT — v1.4.0 — CEO Enablement Infrastructure
 
 ### Why it matters
-This release transforms the GFV Enablement Kit from an advisory skill collection into a governed orchestration platform. CEOs now get inter-agent communication standards (preventing circular reasoning and groupthink), two-layer decision memory (so rejected proposals don't resurface), cascading risk modeling (modeling compound adversity across all business functions), and competitive intelligence systems. The chief-of-staff orchestrator was upgraded to v2.0 with 34-skill awareness, 5-phase consultation protocol, and formal quality verification loops before any output reaches the founder.
+This release transforms the GetFresh Ventures Growth by Design CEO AI Kit from an advisory skill collection into a governed orchestration platform. CEOs now get inter-agent communication standards (preventing circular reasoning and groupthink), two-layer decision memory (so rejected proposals don't resurface), cascading risk modeling (modeling compound adversity across all business functions), and competitive intelligence systems. The chief-of-staff orchestrator was upgraded to v2.0 with 34-skill awareness, 5-phase consultation protocol, and formal quality verification loops before any output reaches the founder.
 
 ### Added
 - **`skills/agent-protocol`** — Inter-agent communication standard: invoke/response syntax, loop prevention (depth=2, no circular), 4-step quality verification loop (self-verify → peer-verify → critic pre-screen → course correction), 3 standardized output formats, 10 non-negotiable communication rules
@@ -882,7 +882,7 @@ This release transforms the GFV Enablement Kit from an advisory skill collection
 ## 2026-04-10 4:53 PM PT — v1.3.0 — Autonomous Execution Hardening
 
 ### Why it matters
-This release hardens the GFV Enablement Kit from a static prompt library into a self-monitoring autonomous agent framework. CEOs now have native tooling for token cost visibility, secure deployment reviews, and persistent memory consolidation — closing the gap between ad-hoc AI usage and governed, repeatable execution.
+This release hardens the GetFresh Ventures Growth by Design CEO AI Kit from a static prompt library into a self-monitoring autonomous agent framework. CEOs now have native tooling for token cost visibility, secure deployment reviews, and persistent memory consolidation — closing the gap between ad-hoc AI usage and governed, repeatable execution.
 
 ### Added
 - **`tools/ccflare.py`** — Local executive dashboard for real-time Claude token burn tracking, including cache creation/read costs
@@ -1038,7 +1038,7 @@ This release hardens the GFV Enablement Kit from a static prompt library into a 
 ## Repository Structure
 
 ```
-gfv_growth_by_design/
+ceo-ai-kit/
 ├── AGENT.md                         ← AI operating rules (universal)
 ├── CHANGELOG.md                     ← Versioned release history
 ├── GETTING-STARTED.md               ← Executive enablement walkthrough (start here)

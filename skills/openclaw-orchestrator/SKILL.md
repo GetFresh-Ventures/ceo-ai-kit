@@ -1,7 +1,7 @@
 ---
 name: openclaw-orchestrator
 description: >
-  Queen-led multi-agent orchestrator for CEO Enablement Kit. Manages hierarchical agent dispatch,
+  Queen-led multi-agent orchestrator for GetFresh Ventures Growth by Design CEO AI Kit. Manages hierarchical agent dispatch,
   strategic/tactical/adaptive modes, royal directives, and succession planning.
   Derived from ruflo queen-coordinator + hive-mind-advanced patterns.
   Use when: multi-step GTM tasks, cross-system operations, complex client work, parallel agent needs.

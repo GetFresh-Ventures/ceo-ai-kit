@@ -1,13 +1,13 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/getfreshventures/gfv-assets/main/logo/gfv-logo-dark.png" alt="GetFresh Ventures Logo" height="60">
 
-  # GetFresh Ventures CEO Enablement Kit
+  # GetFresh Ventures Growth by Design CEO AI Kit
 
   <p align="center">
     <strong>Elevate an AI agent into an Executive Chief of Staff via Proactive Intelligence</strong>
   </p>
 
-  [![Version](https://img.shields.io/badge/version-v1.38.0-blue.svg)](https://github.com/getfreshventures/gfv_growth_by_design/releases)
+  [![Version](https://img.shields.io/badge/version-v1.38.0-blue.svg)](https://github.com/getfreshventures/ceo-ai-kit/releases)
   [![Status](https://img.shields.io/badge/status-production-success.svg)]()
   [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
   [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
@@ -36,7 +36,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
 
 ---
 
-## What's New in v1.37.0 (CEO Enablement Kit Path Decoupling)
+## What's New in v1.37.0 (GetFresh Ventures Growth by Design CEO AI Kit Path Decoupling)
 - **Universal Local Integration**: Configured `bootstrap.sh` to globally symlink all `~/.claude/tools/` into place for cross-repo edge computing stability without `venv` entanglement.
 - **Zero Hallucinated Stubs**: Surgically scoured 19 mocked legacy `python3 /home/user/scripts/*` integrations spread across `google-doc-creation`, `seo-audit`, `gfv-hooks`, and `scheduling-infra` out of existence, bridging their actions to native API tools and core local modules.
 - **iMessage Portation**: Replicated ElizaOS `plugin-bluebubbles` integration natively into `chief-of-staff` to command loop iOS communication streams.
@@ -73,7 +73,7 @@ This kit enables the proprietary **Growth by Design (GxD)** architecture directl
                              │
                              ▼
 ┌───────────────────────────────────────────────────────────────┐
-│  GetFresh GTM Enablement Kit                                  │
+│  GetFresh Ventures Growth by Design CEO AI Kit                                  │
 └──────┬──────────────┬─────────────────┬───────────────────────┘
        │              │                 │
        ▼              ▼                 ▼
@@ -157,7 +157,7 @@ Changes happen seamlessly within the IDE workspace. All backgrounds scripts exec
 ## Repository Structure
 
 ```text
-gfv_growth_by_design/
+ceo-ai-kit/
 ├── bootstrap.sh               # macOS/Linux setup installer
 ├── bootstrap.ps1              # Windows setup installer
 ├── AGENT.md                   # The Global Persona boundaries and identity
@@ -337,7 +337,7 @@ Audio synthesis and executive briefing generation.
 ## Quick Start
 
 ```bash
-git clone https://github.com/GetFresh-Ventures/gfv_growth_by_design.git ~/Documents/GTM-Enablement-Kit
+git clone https://github.com/GetFresh-Ventures/ceo-ai-kit.git ~/Documents/GTM-Enablement-Kit
 cd ~/Documents/GTM-Enablement-Kit
 ./bootstrap.sh          # Mac/Linux
 # .ootstrap.ps1       # Windows
@@ -349,6 +349,6 @@ Then open `~/Documents/GTM-Enablement-Kit` inside **Cursor** and type `/onboard`
 
 ## License & Repo
 
-- **Repository:** [github.com/GetFresh-Ventures/gfv_growth_by_design](https://github.com/GetFresh-Ventures/gfv_growth_by_design)
+- **Repository:** [github.com/GetFresh-Ventures/ceo-ai-kit](https://github.com/GetFresh-Ventures/ceo-ai-kit)
 - **Website:** [getfreshventures.com](https://getfreshventures.com)
 - **Primary use:** Go-To-Market Enablement Operating System by GetFresh Ventures, powered by the Growth by Design (GxD) model for scaling companies.

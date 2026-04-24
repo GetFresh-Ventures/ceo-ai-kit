@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# GetFresh GTM Enablement Kit — Bootstrap Script
+# GetFresh Ventures Growth by Design CEO AI Kit — Bootstrap Script
 # Initializes the brain directory, symlinks hooks into Claude Code, and sets up Agent-Agnostic Contexts (Cursor, Claude, Gemini)
 
 set -e
@@ -13,7 +13,7 @@ fi
 
 clear
 echo "╔═══════════════════════════════════════════════════════════════════╗"
-echo "║         GTM ENABLEMENT KIT  —  AI CHIEF OF STAFF                ║"
+echo "║         GetFresh Ventures Growth by Design CEO AI Kit  —  AI CHIEF OF STAFF                ║"
 echo "╚═══════════════════════════════════════════════════════════════════╝"
 echo ""
 echo "  This installs an AI Chief of Staff that knows your voice,"
@@ -312,7 +312,7 @@ if [ -f "$REPO_DIR/AGENT.md" ]; then
 fi
 
 cat > "$REPO_DIR/.cursorrules" << EOF
-# GetFresh GTM Enablement Kit
+# GetFresh Ventures Growth by Design CEO AI Kit
 You are an Executive AI Assistant operating within the GFV Kit.
 
 CRITICAL:
@@ -325,7 +325,7 @@ EOF
 echo "  → Generated native .cursorrules integration"
 
 cat > "$REPO_DIR/.windsurfrules" << EOF
-# GetFresh GTM Enablement Kit
+# GetFresh Ventures Growth by Design CEO AI Kit
 You are an Executive AI Assistant operating within the GFV Kit.
 
 CRITICAL:
