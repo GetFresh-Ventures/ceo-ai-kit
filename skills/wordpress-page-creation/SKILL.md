@@ -782,8 +782,8 @@ See `scripts/update_wh_page_v3.py` for the complete reference implementation. Ke
 |---------|--------|------------------|
 | Water Heater | `wh-` | `update_wh_page_v3.py` |
 | Plumbing | `plb-` | `update_plb_page.py` |
-| HVAC | `hvac-` | TBD |
-| Electrical | `elec-` | TBD |
+| HVAC | `hvac-` | `#1D4ED8` (Brand Blue) |
+| Electrical | `elec-` | `#F59E0B` (Amber) |
 
 ---
 

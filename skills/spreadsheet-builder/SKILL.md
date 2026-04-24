@@ -211,7 +211,7 @@ All factual findings and systemic claims must utilize the following confidence i
 
 - `financial-analyst` — deep financial analysis and commentary
 - `board-deck-builder` — visual board presentations
-- `investor-materials` — pitch deck and fundraising docs (coming soon)
+- `fundraise` — pitch deck and fundraising docs
 
 ## After This Skill
 💡 Suggest these next steps:

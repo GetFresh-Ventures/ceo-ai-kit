@@ -132,7 +132,7 @@ QB access tokens expire frequently. Before any QB query:
 | Vendor | QB Vendor ID |
 |--------|-------------|
 | Perplexity AI | 756 |
-| (others TBD — refresh QB to populate) |
+| (Other categories dynamically sync from QB) |
 
 ## Cost Optimization Checklist
 
