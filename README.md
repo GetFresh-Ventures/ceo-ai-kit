@@ -51,6 +51,7 @@ For a complete history of updates, see the [CHANGELOG.md](CHANGELOG.md).
 ```
 ┌───────────────────────────────────────────────────────────────┐
 │  AI Coding Assistants: Cursor · Windsurf · Claude Code        │
+│                        Codex · Gravity                        │
 └────────────────────────────┬──────────────────────────────────┘
                              │
                              ▼
