@@ -1,5 +1,8 @@
 ---
 name: wordpress-page-creation
+description: End-to-end methodology for creating high-conversion WordPress landing pages.
+  Use when: Requested by the Executive.
+  Skip when: Not applicable.
 ---
 
 # WordPress Page Creation Skill — Golden Rule
