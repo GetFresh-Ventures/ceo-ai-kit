@@ -123,7 +123,18 @@ Below the CEO-friendly sections, include:
 
 ---
 
-## STEP 5: Git Commit + Tag
+## STEP 5: Privacy & Artifact Audit (GATE: MUST PASS)
+
+Before committing, run a privacy check to ensure no internal systems or proprietary client data have leaked into the public repository:
+```bash
+grep -RiE "ServiceTitan|CAAI|ccflare|ccFlare|Utah|Iowa|Des Moines|Golden Rule" . --exclude-dir=.git --exclude-dir=node_modules || echo "Clean"
+```
+
+**GATE: You must confirm that NO proprietary client names, internal-only platform names (e.g., CAAI, internal API endpoints), or explicit internal locations exist in the tracked files before committing. If leaks are found, you must scrub them and generalize the terminology (e.g., 'Legacy Field Service Platform', 'Internal AI Infrastructure') before proceeding.**
+
+---
+
+## STEP 6: Git Commit + Tag
 
 Stage and commit:
 ```bash
@@ -142,7 +153,7 @@ git log -1 --oneline && git describe --tags --exact-match HEAD
 
 ---
 
-## STEP 6: Push to GitHub
+## STEP 7: Push to GitHub
 
 ```bash
 git push origin main --tags --force-with-lease
@@ -155,7 +166,7 @@ git log -1 --oneline origin/main
 
 ---
 
-## STEP 7: Publish GitHub Release
+## STEP 8: Publish GitHub Release
 
 Extract the changelog body into a temp file and publish using the GitHub CLI:
 ```bash
@@ -172,7 +183,7 @@ The release notes file must include:
 
 ---
 
-## STEP 8: Linear Sync (If Applicable)
+## STEP 9: Linear Sync (If Applicable)
 
 If the active environment is tied to a Linear Project:
 1. Draft a markdown payload matching this format:
@@ -212,7 +223,7 @@ Ensure the content body includes: GFV branding, getfreshventures.com URL, archit
 
 ---
 
-## STEP 9: Post-Release Verification
+## STEP 10: Post-Release Verification
 
 Final verification:
 ```bash
