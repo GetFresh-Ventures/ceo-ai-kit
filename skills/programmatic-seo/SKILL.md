@@ -6,7 +6,7 @@ metadata:
   version: 1.0.0
   category: growth-engine
   tier: advanced
-  source: "kostja94/marketing-skills (MIT License)"
+  source: "gfv/marketing-skills (MIT License)"
   requires_human_approval: true
   triggers:
     - programmatic SEO
@@ -177,5 +177,5 @@ Before declaring any programmatic SEO plan complete:
 ---
 
 ## Attribution
-Derived from [kostja94/marketing-skills](https://github.com/kostja94/marketing-skills) (MIT License).
+Derived from [gfv/marketing-skills](https://github.com/gfv/marketing-skills) (MIT License).
 Rewritten for GFV authoring standard — original skill was 292 lines of comprehensive pSEO methodology.

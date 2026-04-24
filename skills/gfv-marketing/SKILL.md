@@ -1,9 +1,10 @@
 ---
-name: seo-geo-claude
+name: gfv-marketing
 description: >-
-  SEO + GEO (Generative Engine Optimization) framework from aaron-he-zhu.
-  Covers build, commands, connectors, cross-cutting concerns, monitoring,
-  optimization, and research workflows for both traditional and AI search.
+  Comprehensive marketing skills library with 172 skills across analytics,
+  channels, content, pages, paid-ads, platforms (Pinterest, TikTok, YouTube,
+  LinkedIn, X, Reddit, GitHub, Medium), SEO, and strategies. Reference library
+  for marketing execution patterns.
 ---
 
 
@@ -31,19 +32,20 @@ Check `~/Documents/Code/gfv-brain/scripts/pil_config.py` for service mappings.
 ---
 
 
+# GFV Marketing Skills
 
-# SEO-GEO Claude Skills
+172-skill marketing reference library organized by category:
+- **analytics/** — tracking, attribution, funnel analysis
+- **channels/** — email, social, referral, organic
+- **components/** — CTAs, forms, landing page elements
+- **content/** — blog, video, podcast, whitepapers
+- **pages/** — landing pages, pricing pages, case studies
+- **paid-ads/** — Google Ads, Meta Ads, LinkedIn Ads
+- **platforms/** — Pinterest, TikTok, YouTube, LinkedIn, X, Reddit, GitHub, Medium
+- **seo/** — technical, on-page, off-page, local
+- **strategies/** — launch, growth funnel, retention
 
-Comprehensive SEO+GEO framework with modules for:
-- **build/** — page construction and deployment
-- **commands/** — CLI automation
-- **connectors/** — API integrations (GSC, GA4, etc.)
-- **cross-cutting/** — shared patterns (auth, logging, caching)
-- **monitor/** — rank tracking, indexation monitoring
-- **optimize/** — on-page, technical, content optimization
-- **research/** — keyword research, competitor analysis
-
-See AGENTS.md for full agent configuration.
+See skills/ subdirectory for individual SKILL.md files.
 
 
 <verification_gate>

@@ -57,10 +57,10 @@ This release fundamentally reorganizes the GTM Enablement Kit around 4 primary "
 This release completes a comprehensive audit and consolidation of 13 external open-source SEO and marketing repositories into the kit. Instead of blindly importing, we deep-mined each repo for non-redundant tactical methodologies and folded them into existing skills — the domain-consolidation model. All 80 skills now pass the 12-point `import-skill` verification pipeline (file integrity, installer parity, doc coverage, proprietary leak scan, quality bar).
 
 ### Added
-- **`skills/paid-ads-strategy/`** — PPC campaign strategy, bidding, audience targeting, and ROAS optimization across Google Ads, Meta, LinkedIn. Source: kostja94/marketing-skills.
-- **`skills/partnership-marketing/`** — Co-marketing, affiliate programs, technology partnerships, and partner ecosystem development. Source: kostja94/marketing-skills.
-- **`skills/programmatic-seo/`** — Template-based SEO pages at scale: location pages, comparison pages, integration pages, data-driven landing pages. Source: kostja94/marketing-skills.
-- **`skills/entity-optimizer/`** — Entity-first SEO for Knowledge Graph presence, entity linking, Knowledge Panel optimization, and semantic entity relationships. Source: aaron-he-zhu/seo-geo-claude-skills.
+- **`skills/paid-ads-strategy/`** — PPC campaign strategy, bidding, audience targeting, and ROAS optimization across Google Ads, Meta, LinkedIn. Source: gfv/marketing-skills.
+- **`skills/partnership-marketing/`** — Co-marketing, affiliate programs, technology partnerships, and partner ecosystem development. Source: gfv/marketing-skills.
+- **`skills/programmatic-seo/`** — Template-based SEO pages at scale: location pages, comparison pages, integration pages, data-driven landing pages. Source: gfv/marketing-skills.
+- **`skills/entity-optimizer/`** — Entity-first SEO for Knowledge Graph presence, entity linking, Knowledge Panel optimization, and semantic entity relationships. Source: aaron-he-zhu/gfv-seo-geo-claude-skills.
 
 ### Enhanced (Methodology Imports from External Repos)
 - **`ai-search-optimizer`** (+228 lines) — Added Princeton GEO 9 Optimization Methods with exact % boosts (Citations +40%, Statistics +37%, Keyword Stuffing -10%), AI platform ranking factor weights for ChatGPT/Perplexity/Google AI/Copilot, Query Fanout competitive analysis workflow, 230-rule audit coverage taxonomy, AEO 100-point scoring, robots.txt AI crawler rules, llms.txt standard, and GEO drift tracking.
@@ -72,12 +72,12 @@ This release completes a comprehensive audit and consolidation of 13 external op
 ### Source Attribution
 | Source Repo | What We Took |
 |-------------|-------------|
-| kostja94/marketing-skills | 3 new skills (paid-ads, partnerships, pSEO) |
-| aaron-he-zhu/seo-geo-claude-skills | 1 new skill (entity-optimizer), GEO drift, content decay, EEAT veto |
-| ReScienceLab/opc-skills | Princeton GEO methods, AI platform ranking factors, P0/P1/P2 system |
+| gfv/marketing-skills | 3 new skills (paid-ads, partnerships, pSEO) |
+| aaron-he-zhu/gfv-seo-geo-claude-skills | 1 new skill (entity-optimizer), GEO drift, content decay, EEAT veto |
+| ReScienceLab/gfv-skills | Princeton GEO methods, AI platform ranking factors, P0/P1/P2 system |
 | brightdata/geo-ai-agent | Query Fanout 6-step competitive workflow |
 | squirrelscan/squirrelscan | 21-category, 230-rule audit taxonomy |
-| addyosmani/agentic-seo | AEO scoring, llms.txt, Featured Snippet rules |
+| gfv/agentic-seo | AEO scoring, llms.txt, Featured Snippet rules |
 | Bhanunamikaze/Agentic-SEO-Skill | E-E-A-T framework, Dec 2025 impact data |
 | gbessoni/seobuild-onpage | 100-point content quality checklist |
 | saurabhsharma2u/search-console-mcp | GSC intelligence analysis methods |

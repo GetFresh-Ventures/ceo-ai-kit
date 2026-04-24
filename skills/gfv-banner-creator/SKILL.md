@@ -52,7 +52,7 @@ All generated files should be saved to the `.skill-archive` directory:
 
 **Example:**
 ```
-.skill-archive/banner-creator/2026-01-19-opc-banner/
+.skill-archive/banner-creator/2026-01-19-gfv-banner/
   banner-01.png
   banner-02.png
   ...
@@ -214,7 +214,7 @@ Generate at widest ratio, then crop:
 ## References
 
 - [references/formats.md](./references/formats.md) - Common banner sizes by platform
-- [examples/opc-banner-creation.md](./examples/opc-banner-creation.md) - Full example conversation
+- [examples/gfv-banner-creation.md](./examples/gfv-banner-creation.md) - Full example conversation
 
 
 <verification_gate>

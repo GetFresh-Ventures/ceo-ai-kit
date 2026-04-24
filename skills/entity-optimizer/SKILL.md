@@ -6,7 +6,7 @@ metadata:
   version: 1.0.0
   category: growth-engine
   tier: advanced
-  source: "aaron-he-zhu/seo-geo-claude-skills (Apache-2.0 License)"
+  source: "aaron-he-zhu/gfv-seo-geo-claude-skills (Apache-2.0 License)"
   requires_human_approval: false
   triggers:
     - Knowledge Panel
@@ -234,5 +234,5 @@ Before declaring any entity optimization complete:
 ---
 
 ## Attribution
-Derived from [aaron-he-zhu/seo-geo-claude-skills](https://github.com/aaron-he-zhu/seo-geo-claude-skills) (Apache-2.0 License).
+Derived from [aaron-he-zhu/gfv-seo-geo-claude-skills](https://github.com/aaron-he-zhu/gfv-seo-geo-claude-skills) (Apache-2.0 License).
 Rewritten for GFV authoring standard with consolidated entity audit methodology.

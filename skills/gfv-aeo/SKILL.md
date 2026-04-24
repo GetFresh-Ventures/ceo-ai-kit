@@ -1,7 +1,7 @@
 ---
-name: addyosmani-aeo
+name: gfv-aeo
 description: >
-  Answer Engine Optimization (AEO) toolkit by Addy Osmani. Node.js CLI for
+  Answer Engine Optimization (AEO) toolkit by GFV. Node.js CLI for
   optimizing content visibility in AI search engines (ChatGPT, Perplexity,
   Gemini, Copilot). Analyzes pages for AI-citation readiness, schema markup,
   and structured data patterns that AI engines prefer.
@@ -104,12 +104,12 @@ npm install -g aeo-tool  # or use npx
 ## Related Skills
 - **agentic-seo**: Traditional SEO audit (blue links)
 - **seo-audit-tools**: Comprehensive site-level SEO scan
-- **seo-geo-claude**: Full SEO + GEO framework
-- **opc-seo-geo**: SEO + GEO analysis tool
+- **gfv-seo-geo-claude**: Full SEO + GEO framework
+- **gfv-seo-geo**: SEO + GEO analysis tool
 - **seobuild-onpage**: SEO page writing for LLM citation
 
 ## References
-- **Source**: [AEO by Addy Osmani](https://github.com/nichochar/aeo)
+- **Source**: [AEO by GFV](https://github.com/nichochar/aeo)
 - **GEO Research**: Content with TL;DR + Key Takeaways cited ~35% more
 
 

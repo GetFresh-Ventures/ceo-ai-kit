@@ -62,7 +62,7 @@ Restructure your web content to be AI-extractable:
 
 ## AEO Readiness Score (100 Points)
 
-Score your site's readiness for AI agent consumption (source: addyosmani/agentic-seo):
+Score your site's readiness for AI agent consumption (source: gfv/agentic-seo):
 
 ### Discovery (25 pts)
 | Check | Points | What it looks for |

@@ -214,5 +214,5 @@ Skills are most powerful when composed:
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Architectural patterns (hierarchical topology, memory tiers, consensus concepts) — skills were planned but not shipped |
 | [SawyerHood/dev-browser](https://github.com/SawyerHood/dev-browser) | dev-browser (rewritten from 20-line stub to full GFV skill) |
 | [JeffLi1993/seo-audit-skill](https://github.com/JeffLi1993/seo-audit-skill) | seo-audit (consolidated basic + full tiers into single dual-mode skill) |
-| [kostja94/marketing-skills](https://github.com/kostja94/marketing-skills) | paid-ads-strategy, partnership-marketing, programmatic-seo (consolidated from 172 source skills) |
-| [aaron-he-zhu/seo-geo-claude-skills](https://github.com/aaron-he-zhu/seo-geo-claude-skills) | entity-optimizer (Knowledge Graph + AI entity resolution from 20-skill SEO/GEO library) |
+| [gfv/marketing-skills](https://github.com/gfv/marketing-skills) | paid-ads-strategy, partnership-marketing, programmatic-seo (consolidated from 172 source skills) |
+| [aaron-he-zhu/gfv-seo-geo-claude-skills](https://github.com/aaron-he-zhu/gfv-seo-geo-claude-skills) | entity-optimizer (Knowledge Graph + AI entity resolution from 20-skill SEO/GEO library) |

@@ -103,7 +103,7 @@ WebSearch: "site:{competitor.com} {keyword}"
 - Search volume and difficulty
 - Competitor keyword strategies
 - Long-tail keyword opportunities
-- International keyword conflicts (e.g., "OPC" = industrial automation in English markets)
+- International keyword conflicts (e.g., "GFV" = industrial automation in English markets)
 
 ### Step 3: GEO Optimization (AI Search Engines)
 
@@ -273,7 +273,7 @@ This skill works best with:
 - [references/schema-templates.md](./references/schema-templates.md) - JSON-LD templates
 - [references/seo-checklist.md](./references/seo-checklist.md) - Complete SEO audit checklist
 - [references/tools-and-apis.md](./references/tools-and-apis.md) - Tools and API reference
-- [examples/opc-skills-case-study.md](./examples/opc-skills-case-study.md) - Real-world optimization example
+- [examples/gfv-skills-case-study.md](./examples/gfv-skills-case-study.md) - Real-world optimization example
 
 
 <verification_gate>

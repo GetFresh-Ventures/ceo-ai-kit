@@ -54,7 +54,7 @@ All generated files should be saved to the `.skill-archive` directory:
 
 **Example:**
 ```
-.skill-archive/logo-creator/2026-01-18-opc-logo/
+.skill-archive/logo-creator/2026-01-18-gfv-logo/
   logo-01.png
   logo-02.png
   ...
@@ -230,7 +230,7 @@ Letter "{letter}" logo, modern typography, {style} design, {colors}, clean profe
 ## References
 
 - [references/styles.md](./references/styles.md) - Logo style guide with prompt examples
-- [examples/opc-logo-creation.md](./examples/opc-logo-creation.md) - Full example conversation
+- [examples/gfv-logo-creation.md](./examples/gfv-logo-creation.md) - Full example conversation
 
 
 <verification_gate>

@@ -103,7 +103,7 @@ Replace the original's OpenAI+FAISS stack with our existing tools:
 ### Step 1: Research
 ```python
 # Use search_web or DuckDuckGo to find top references
-# OR use opc-requesthunt to find demand signals
+# OR use gfv-requesthunt to find demand signals
 ```
 
 ### Step 2: Content Extraction
@@ -115,7 +115,7 @@ Replace the original's OpenAI+FAISS stack with our existing tools:
 ### Step 3: Generate
 ```python
 # Feed research context + our blog prompt template to the LLM
-# Apply seo-geo-claude → content-quality-auditor before publishing
+# Apply gfv-seo-geo-claude → content-quality-auditor before publishing
 ```
 
 ## When to Use

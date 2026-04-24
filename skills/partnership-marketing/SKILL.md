@@ -6,7 +6,7 @@ metadata:
   version: 1.0.0
   category: growth-engine
   tier: intermediate
-  source: "kostja94/marketing-skills (MIT License)"
+  source: "gfv/marketing-skills (MIT License)"
   requires_human_approval: true
   triggers:
     - influencer
@@ -163,4 +163,4 @@ Before declaring any partnership plan complete:
 ---
 
 ## Attribution
-Consolidated from [kostja94/marketing-skills](https://github.com/kostja94/marketing-skills) (MIT License).
+Consolidated from [gfv/marketing-skills](https://github.com/gfv/marketing-skills) (MIT License).
