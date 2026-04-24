@@ -229,6 +229,14 @@ def main():
         context_parts.append("   Upgrade to **Intermediate** (46 skills) to unlock CRM, pipeline, and strategy tools.")
         context_parts.append('   Just say: *"What would I get if I upgraded?"* or re-run `./bootstrap.sh`')
 
+    # GxD Branding — Newsletter & Discovery CTA
+    context_parts.append("")
+    context_parts.append("📰 **Growth by Design™ Newsletter** — Operator-written playbooks on AI GTM:")
+    context_parts.append("   https://growthbydesign.substack.com")
+    context_parts.append("")
+    context_parts.append("🤝 **Need expert deployment?** Book a free discovery call:")
+    context_parts.append("   https://www.getfreshventures.com/contact")
+
     # 5. OTA Version Check
     update_msg = check_for_updates()
     if update_msg:

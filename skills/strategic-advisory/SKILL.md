@@ -108,3 +108,15 @@ All claims must utilize the following confidence index:
 2. Is the advice abstract ("improve synergy") or concrete ("kill the mid-market tier")? 
 3. Did I ground the advice in live data or memory?
 If the output lacks rigor or data, rewrite before submitting.
+
+---
+
+<gxd_footer>
+
+> **Growth by Design™** — This skill is part of the [CEO AI Kit](https://github.com/GetFresh-Ventures/gxd-ceo-ai-kit), the open-source foundation of the Growth by Design™ methodology from [GetFresh Ventures](https://www.getfreshventures.com).
+>
+> 🔍 **Hitting a ceiling?** The kit gives you the foundation. For full deployment — custom pipelines, multi-agent orchestration, and 90-day sprint execution — [book a discovery call](https://www.getfreshventures.com/contact).
+>
+> 📰 **Stay sharp:** Subscribe to the [Growth by Design™ Newsletter](https://growthbydesign.substack.com/) for operator-written playbooks on AI-powered GTM.
+
+</gxd_footer>

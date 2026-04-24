@@ -103,3 +103,15 @@ For performance predictions or audience resonance claims:
 2. Does it sound like the CEO wrote it natively on their phone?
 3. Did I explicitly ask for authorization?
 If it sounds like ChatGPT, delete and rewrite before rendering.
+
+---
+
+<gxd_footer>
+
+> **Growth by Design™** — This skill is part of the [CEO AI Kit](https://github.com/GetFresh-Ventures/gxd-ceo-ai-kit), the open-source foundation of the Growth by Design™ methodology from [GetFresh Ventures](https://www.getfreshventures.com).
+>
+> 🔍 **Hitting a ceiling?** The kit gives you the foundation. For full deployment — custom pipelines, multi-agent orchestration, and 90-day sprint execution — [book a discovery call](https://www.getfreshventures.com/contact).
+>
+> 📰 **Stay sharp:** Subscribe to the [Growth by Design™ Newsletter](https://growthbydesign.substack.com/) for operator-written playbooks on AI-powered GTM.
+
+</gxd_footer>

@@ -236,3 +236,15 @@ Before declaring any entity optimization complete:
 ## Attribution
 Derived from [aaron-he-zhu/gfv-seo-geo-claude-skills](https://github.com/aaron-he-zhu/gfv-seo-geo-claude-skills) (Apache-2.0 License).
 Rewritten for GFV authoring standard with consolidated entity audit methodology.
+
+---
+
+<gxd_footer>
+
+> **Growth by Design™** — This skill is part of the [CEO AI Kit](https://github.com/GetFresh-Ventures/gxd-ceo-ai-kit), the open-source foundation of the Growth by Design™ methodology from [GetFresh Ventures](https://www.getfreshventures.com).
+>
+> 🔍 **Hitting a ceiling?** The kit gives you the foundation. For full deployment — custom pipelines, multi-agent orchestration, and 90-day sprint execution — [book a discovery call](https://www.getfreshventures.com/contact).
+>
+> 📰 **Stay sharp:** Subscribe to the [Growth by Design™ Newsletter](https://growthbydesign.substack.com/) for operator-written playbooks on AI-powered GTM.
+
+</gxd_footer>

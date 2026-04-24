@@ -278,3 +278,19 @@ If this is a fresh install, the agent should:
 | `OPENAI_API_KEY` | OpenAI API | For TTS fallback |
 
 All secrets should be stored in macOS Keychain or environment variables — never hardcoded.
+
+---
+
+## About Growth by Design™
+
+This kit is the open-source foundation of the **Growth by Design™** methodology from [GetFresh Ventures](https://www.getfreshventures.com) — a structured approach to engineering growth for companies doing $1M–$50M in revenue.
+
+**The kit gives you the foundation. GFV gives you the deployment.**
+
+| Resource | Link |
+|----------|------|
+| 📰 Newsletter | [growthbydesign.substack.com](https://growthbydesign.substack.com/) |
+| 🔍 Growth Diagnostic | [getfreshventures.com/diagnostic](https://www.getfreshventures.com/diagnostic) |
+| 🤝 Discovery Call | [getfreshventures.com/contact](https://www.getfreshventures.com/contact) |
+
+*Growth by Design™ is a trademark of GetFresh Ventures Corporation. The CEO AI Kit is released under the MIT License.*
