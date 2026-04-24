@@ -7,7 +7,7 @@
     <strong>Elevate an AI agent into an Executive Chief of Staff via Proactive Intelligence</strong>
   </p>
 
-  [![Version](https://img.shields.io/badge/version-v1.38.0-blue.svg)](https://github.com/getfreshventures/gxd-ceo-ai-kit/releases)
+  [![Version](https://img.shields.io/badge/version-v1.39.0-blue.svg)](https://github.com/GetFresh-Ventures/gxd-ceo-ai-kit/releases)
   [![Status](https://img.shields.io/badge/status-production-success.svg)]()
   [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
   [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
